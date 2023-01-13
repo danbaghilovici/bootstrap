@@ -1,0 +1,42 @@
+@import "https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans&display=swap";
+
+$enable-caret:                true !default;
+$enable-rounded:              false !default;
+$enable-shadows:              false !default;
+$enable-gradients:            false !default;
+$enable-transitions:          false !default;
+$enable-reduced-motion:       true !default;
+$enable-smooth-scroll:        false !default;
+$enable-grid-classes:         true !default;
+$enable-container-classes:    true !default;
+$enable-cssgrid:              false !default;
+$enable-button-pointers:      true !default;
+$enable-rfs:                  true !default;
+$enable-validation-icons:     true !default;
+$enable-negative-margins:     true !default;
+$enable-deprecation-messages: true !default;
+$enable-important-utilities:  true !default;
+
+$enable-dark-mode:            false !default;
+$color-mode-type:             data !default; // `data` or `media-query`
+$font-family-sans-serif:      "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", arial, sans-serif, !default;
+$font-family-monospace:       "IBM Plex Mono", sfmono-regular, menlo, monaco, consolas, "Liberation Mono", "Courier New", monospace !default;
+
+$gutter: 1rem !default;
+$grid-columns:                16 !default;
+$grid-gutter-width:           $gutter !default;
+$grid-row-columns:            6 !default;
+
+// Container padding
+
+$container-padding-x: $grid-gutter-width !default;
+$gutters-cs: (
+  0: 0,
+  1: 1px,
+  2: $gutter * .5,
+  3: $gutter,
+  4: $gutter * 1.5,
+  5: $gutter * 3,
+) !default;
+
+$gutters: $gutters-cs !default;
