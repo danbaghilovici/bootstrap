@@ -17,6 +17,24 @@ $enable-negative-margins:     true !default;
 $enable-deprecation-messages: true !default;
 $enable-important-utilities:  true !default;
 
+$blue: #0f62fe !default;
+$red: #da1e28 !default;
+
+$btn-hover-bg-shade-amount:       30% !default;
+$btn-hover-bg-tint-amount:        30% !default;
+
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #f4f4f4 !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #000 !default;
+$black:    #000 !default;
+
 $enable-dark-mode:            false !default;
 $color-mode-type:             data !default; // `data` or `media-query`
 $font-family-sans-serif:      "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", arial, sans-serif, !default;

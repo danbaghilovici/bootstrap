@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html    lang="en" data-bs-theme="dark">
+<html    lang="en" >
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
@@ -24,9 +24,9 @@
     }
   </style>
 </head>
-<body class="bg-dark">
+<body >
 
-<nav class="navbar bg-black navbar-expand-lg " >
+<nav class="navbar navbar-expand-lg " >
   <div class="container-lg">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -50,9 +50,8 @@
     </div>
   </div>
 </nav>
-<div class="container-fluid p-0 position-relative" style="height: 100vh">
-  <div class="" style="height: 100%;background-image: url('me.jpg');background-repeat: no-repeat;background-size: cover;background-position: right;filter: brightness(0.5);">
-  </div>
+<section class="container-fluid p-0 position-relative" style="height: 100vh">
+  <div class="" style="height: 100%;background-image: url('me.jpg');background-repeat: no-repeat;background-size: cover;background-position: right;filter: brightness(0.5);"></div>
   <div class="h-100 w-100 position-absolute top-0 left-0">
     <div class="container h-100" >
       <div class="row align-content-center h-100" >
@@ -67,36 +66,75 @@
       </div>
     </div>
   </div>
-</div>
+</section>
 <section class="container pt-5">
-  <p class="text-light">Donec vitae fermentum velit. Aenean dolor odio, eleifend sed tincidunt sed, consequat elementum massa. Proin pretium, felis eu mattis facilisis, mauris sapien ullamcorper enim, a hendrerit diam ante nec magna. Nam pharetra dolor sed nisi facilisis placerat. Morbi pharetra eros dolor. Ut scelerisque augue eget orci posuere, ut condimentum orci dapibus. Sed elementum ornare nulla, in faucibus lectus tincidunt vitae. Quisque erat lorem, tempor nec tortor a, dictum vestibulum sem. Nulla at elementum nulla, id fermentum nisl. Mauris gravida condimentum leo sit amet egestas. Praesent sed lacinia orci. Cras nec nisl volutpat, consectetur augue id, gravida enim. Proin lobortis iaculis dui vitae lobortis. Pellentesque accumsan tempor risus sed convallis.</p>
+  <p class="">Donec vitae fermentum velit. Aenean dolor odio, eleifend sed tincidunt sed, consequat elementum massa. Proin pretium, felis eu mattis facilisis, mauris sapien ullamcorper enim, a hendrerit diam ante nec magna. Nam pharetra dolor sed nisi facilisis placerat. Morbi pharetra eros dolor. Ut scelerisque augue eget orci posuere, ut condimentum orci dapibus. Sed elementum ornare nulla, in faucibus lectus tincidunt vitae. Quisque erat lorem, tempor nec tortor a, dictum vestibulum sem. Nulla at elementum nulla, id fermentum nisl. Mauris gravida condimentum leo sit amet egestas. Praesent sed lacinia orci. Cras nec nisl volutpat, consectetur augue id, gravida enim. Proin lobortis iaculis dui vitae lobortis. Pellentesque accumsan tempor risus sed convallis.</p>
+</section>
+<section class="container pt-5">
+  <button type="button" class="btn btn-primary">Primary</button>
+  <button type="button" class="btn btn-secondary">Secondary</button>
+  <button type="button" class="btn btn-success">Success</button>
+  <button type="button" class="btn btn-danger">Danger</button>
+  <button type="button" class="btn btn-warning">Warning</button>
+  <button type="button" class="btn btn-info">Info</button>
+  <button type="button" class="btn btn-light">Light</button>
+  <button type="button" class="btn btn-dark">Dark</button>
+  <button type="button" class="btn btn-link">Link</button>
+</section>
+<section class="container pt-5">
+  <nav aria-label="breadcrumb" class="bg-secondary">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item active" aria-current="page">Home</li>
+    </ol>
+  </nav>
+
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Library</li>
+    </ol>
+  </nav>
+
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item"><a href="#">Library</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Data</li>
+    </ol>
+  </nav>
 </section>
 <section class="container">
-  <div class="row g-1" >
+  <div class="row g-0" >
     <div class="col-8">
-      <div class="card w-100" >
+      <div class="card w-100 h-100 bg-secondary " >
         <div class="card-body">
-          <h5 class="card-title">Special title treatment</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <h6 class="card-subtitle text-muted"><strong>Industry</strong></h6>
+          <h5 class="card-title">Aerospace and defence</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="card-link stretched-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
         </div>
       </div>
     </div>
     <div class="col-8">
-      <div class="card w-100" >
+      <div class="card w-100 h-100 bg-dark text-bg-dark" >
         <div class="card-body">
-          <h5 class="card-title">Special title treatment</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <h6 class="card-subtitle text-muted"><strong>Industry</strong></h6>
+          <h5 class="card-title">Aerospace and defence</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
         </div>
       </div>
     </div>
     <div class="col-8">
-      <div class="card w-100" >
+      <div class="card w-100 h-100" >
         <div class="card-body">
-          <h5 class="card-title">Special title treatment</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <h6 class="card-subtitle text-muted"><strong>Industry</strong></h6>
+          <h5 class="card-title">Aerospace and defence</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
         </div>
       </div>
     </div>
@@ -114,7 +152,7 @@
   </div>
 </section>
 <hr>
-<div class="container-fluid bg-black">
+<div class="container-fluid ">
   <footer class="py-5 container-md">
     <div class="row">
       <div class="col-6 col-md-2 mb-3">

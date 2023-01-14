@@ -2,3 +2,9 @@
   min-width: 10rem;
   text-align: left;
 }
+
+.card{
+  &:hover{
+    background: #0a58ca;
+  }
+}
