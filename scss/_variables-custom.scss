@@ -30,7 +30,7 @@ $gray-300: #dee2e6 !default;
 $gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
 $gray-600: #f4f4f4 !default;
-$gray-700: #495057 !default;
+$gray-700: #e5e5e5 !default;
 $gray-800: #343a40 !default;
 $gray-900: #000 !default;
 $black:    #000 !default;
@@ -58,3 +58,9 @@ $gutters-cs: (
 ) !default;
 
 $gutters: $gutters-cs !default;
+$dropdown-dark-bg:                  $gray-900 !default;
+//$input-btn-focus-width:         .25rem !default;
+//$input-btn-focus-color-opacity: 0 !default;
+//$input-btn-focus-box-shadow:    0 0 0 $input-btn-focus-width $blue !default;
+
+//$input-focus-border-color: $blue !default;

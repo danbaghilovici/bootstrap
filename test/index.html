@@ -26,16 +26,16 @@
 </head>
 <body >
 
-<nav class="navbar navbar-expand-lg " >
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
   <div class="container-lg">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="#">IBM [Platform]</a>
+    <a class="navbar-brand" href="#">Dan Baghilovici</a>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="#">Front Page</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
@@ -44,8 +44,19 @@
           <a class="nav-link disabled">Disabled</a>
         </li>
       </ul>
-      <div class="d-flex" >
-
+      <div class="d-flex text-bg-dark" >
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Language: English
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item" href="#">Romana</a></li>
+              <li><a class="dropdown-item" href="#">Espanol</a></li>
+              <li><a class="dropdown-item active" href="#">English</a></li>
+            </ul>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
@@ -68,7 +79,21 @@
   </div>
 </section>
 <section class="container pt-5">
-  <p class="">Donec vitae fermentum velit. Aenean dolor odio, eleifend sed tincidunt sed, consequat elementum massa. Proin pretium, felis eu mattis facilisis, mauris sapien ullamcorper enim, a hendrerit diam ante nec magna. Nam pharetra dolor sed nisi facilisis placerat. Morbi pharetra eros dolor. Ut scelerisque augue eget orci posuere, ut condimentum orci dapibus. Sed elementum ornare nulla, in faucibus lectus tincidunt vitae. Quisque erat lorem, tempor nec tortor a, dictum vestibulum sem. Nulla at elementum nulla, id fermentum nisl. Mauris gravida condimentum leo sit amet egestas. Praesent sed lacinia orci. Cras nec nisl volutpat, consectetur augue id, gravida enim. Proin lobortis iaculis dui vitae lobortis. Pellentesque accumsan tempor risus sed convallis.</p>
+  <p class="">Donec vitae fermentum velit. Aenean dolor odio, eleifend sed <a href="#">tincidunt sed, consequat elementum massa</a>. Proin pretium, felis eu mattis facilisis, mauris sapien ullamcorper enim, a hendrerit diam ante nec magna. Nam pharetra dolor sed nisi facilisis placerat. Morbi pharetra eros dolor. Ut scelerisque augue eget orci posuere, ut condimentum orci dapibus. Sed elementum ornare nulla, in faucibus lectus tincidunt vitae. Quisque erat lorem, tempor nec tortor a, dictum vestibulum sem. Nulla at elementum nulla, id fermentum nisl. Mauris gravida condimentum leo sit amet egestas. Praesent sed lacinia orci. Cras nec nisl volutpat, consectetur augue id, gravida enim. Proin lobortis iaculis dui vitae lobortis. Pellentesque accumsan tempor risus sed convallis.</p>
+  <table class="table table-striped">
+    <tr>
+      <th>Core technologies</th>
+      <th>Frameworks / Libraries / Tool kits / Utilities</th>
+    </tr>
+    <tr>
+      <td>Java</td>
+      <td>Spring, Vertx</td>
+    </tr>
+    <tr>
+      <td>Javascript</td>
+      <td>NodeJS, Angular</td>
+    </tr>
+  </table>
 </section>
 <section class="container pt-5">
   <button type="button" class="btn btn-primary">Primary</button>
@@ -105,7 +130,7 @@
 </section>
 <section class="container">
   <div class="row g-0" >
-    <div class="col-8">
+    <div class="col-4">
       <div class="card w-100 h-100 bg-secondary " >
         <div class="card-body">
           <h6 class="card-subtitle text-muted"><strong>Industry</strong></h6>
@@ -116,49 +141,90 @@
         </div>
       </div>
     </div>
-    <div class="col-8">
+    <div class="col-4">
+      <div class="card w-100 h-100">
+        <div class="card-body" >
+          <h6 class="card-subtitle text-muted"><strong>Industry</strong></h6>
+          <h5 class="card-title">Aerospace and defence</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="card w-100 h-100" >
+        <div class="card-body" >
+          <h6 class="card-subtitle text-muted"><strong>Industry</strong></h6>
+          <h5 class="card-title">Aerospace and defence</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="card w-100 h-100" >
+        <div class="card-body">
+          <h6 class="card-subtitle text-muted"><strong>Industry</strong></h6>
+          <h5 class="card-title">Aerospace and defence</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="card w-100 h-100" >
+        <div class="card-body">
+          <h6 class="card-subtitle text-muted"><strong>Industry</strong></h6>
+          <h5 class="card-title">Aerospace and defence</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="card w-100 h-100" >
+        <div class="card-body">
+          <h6 class="card-subtitle text-muted"><strong>Industry</strong></h6>
+          <h5 class="card-title">Aerospace and defence</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="card w-100 h-100" >
+        <div class="card-body">
+          <h6 class="card-subtitle text-muted"><strong>Industry</strong></h6>
+          <h5 class="card-title">Aerospace and defence</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-4">
       <div class="card w-100 h-100 bg-dark text-bg-dark" >
         <div class="card-body">
-          <h6 class="card-subtitle text-muted"><strong>Industry</strong></h6>
-          <h5 class="card-title">Aerospace and defence</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="card-link">Card link</a>
-          <a href="#" class="card-link">Another link</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-8">
-      <div class="card w-100 h-100" >
-        <div class="card-body">
-          <h6 class="card-subtitle text-muted"><strong>Industry</strong></h6>
-          <h5 class="card-title">Aerospace and defence</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="card-link">Card link</a>
-          <a href="#" class="card-link">Another link</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-8">
-      <div class="card w-100 h-100" >
-        <div class="card-body">
-          <h6 class="card-subtitle text-muted"><strong>Industry</strong></h6>
-          <h5 class="card-title">Aerospace and defence</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="card-link">Card link</a>
-          <a href="#" class="card-link">Another link</a>
+          <h1 class="card-title">Discover more blog posts</h1>
+          <a href="#" class="card-link stretched-link" style="opacity: 0"></a>
         </div>
       </div>
     </div>
   </div>
 </section>
 <hr>
-<div class="container-fluid ">
-  <footer class="py-5 container-md">
+<div class="container-fluid bg-dark text-bg-dark">
+  <footer class="py-5 container-md ">
     <div class="row">
       <div class="col-6 col-md-2 mb-3">
         <h5>Section</h5>
         <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-secondary">Home</a></li>
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
