@@ -10,7 +10,14 @@
 }
 
 .card{
-  &:hover{
-    background: $gray-700;
+  //&:hover{
+  //  background: $gray-700;
+  //}
+
+  .card-link{
+    svg{
+      vertical-align: baseline;
+      float: right;
+    }
   }
 }
