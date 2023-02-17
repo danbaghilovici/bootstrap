@@ -41,7 +41,7 @@ $font-family-sans-serif:      "IBM Plex Sans", system-ui, -apple-system, "Segoe 
 $font-family-monospace:       "IBM Plex Mono", sfmono-regular, menlo, monaco, consolas, "Liberation Mono", "Courier New", monospace !default;
 
 $gutter: 1rem !default;
-$grid-columns:                16 !default;
+$grid-columns:                12 !default;
 $grid-gutter-width:           $gutter !default;
 $grid-row-columns:            6 !default;
 
@@ -64,3 +64,28 @@ $dropdown-dark-bg:                  $gray-900 !default;
 //$input-btn-focus-box-shadow:    0 0 0 $input-btn-focus-width $blue !default;
 
 //$input-focus-border-color: $blue !default;
+
+//$container-max-widths: (
+//  sm: 540px,
+//  md: 720px,
+//  lg: 960px,
+//  xl: 1140px,
+//  xxl: 1420px
+//) !default;
+//@include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-border-radius-lg);
+
+//$btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-border-radius-lg
+//$input-btn-padding-y-lg:      3rem !default;
+
+//$btn-padding-y-sm:            .25rem !default;
+//$btn-padding-y:               .75rem !default;
+//$btn-padding-y-lg:            1.5rem !default;
+
+$input-btn-padding-y-sm:    .25rem !default;
+$input-btn-padding-y:       .75rem !default;
+$input-btn-padding-y-lg:    1.5rem !default;
+
+
+$input-btn-padding-x-sm:      1rem !default;
+$input-btn-padding-x:         1rem !default;
+$input-btn-padding-x-lg:      1rem !default;

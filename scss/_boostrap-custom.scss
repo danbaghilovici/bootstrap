@@ -4,20 +4,244 @@
 @import "maps";
 @import "mixins";
 @import "utilities";
+// Helpers
+@import "helpers";
+
+// Utilities
+@import "utilities/api";
+
 .btn{
   min-width: 10rem;
   text-align: left;
+  @extend .fs-6;
 }
+
+
 
 .card{
   //&:hover{
   //  background: $gray-700;
   //}
+  @extend .h-100;
+  @extend .w-100;
+
+  div.card-img-top{
+    max-height: 25rem!important;
+    > *{
+      @extend .w-100;
+      @extend .h-100;
+  }
+
+
+  }
+
+  .card-body{
+    @extend  .h-100;
+    @extend .w-100;
+    @extend .d-flex;
+    @extend .flex-column;
+    @extend .justify-content-between;
+    min-height: 15rem !important;
+
+    .card-text{
+      flex: 3;
+    }
+    a{
+      @extend .text-decoration-none;
+
+    }
+  }
+  .card-footer{
+    @extend .bg-transparent;
+    @extend .border-0;
+    @extend .d-flex;
+    @extend .flex-row;
+    @extend .justify-content-start;
+
+    &:has(.btn-group){
+      @extend .p-0;
+      //@extend .pb-0;
+      //@extend .pt-1;
+      @extend .m-0;
+      //@extend .justify-content-end;
+    }
+
+    a{
+      @extend .text-decoration-none;
+      @extend .w-100;
+
+      svg{
+        float:right;
+      }
+    }
+  }
 
   .card-link{
     svg {
+      @extend .ms-2;
+      vertical-align: middle;
+    }
+  }
+  .card-link-full{
+    svg {
       float: right;
-      vertical-align: baseline;
+      vertical-align: middle;
     }
   }
 }
+.leadspace{
+  @extend .container-fluid;
+  @extend .position-relative;
+  @extend .p-0;
+  height: calc(100vh - ($navbar-brand-height + $navbar-brand-padding-y));
+
+  .lead-media{
+    @extend .h-100;
+    @extend .bg-dark;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    filter: brightness(0.5);
+    background-image: url('/img/bgs/me.jpg');
+  }
+
+  .lead-body{
+    @extend .h-100;
+    @extend .w-100;
+    // todo find why this is needed
+    @extend .position-absolute;
+    @extend .top-0;
+    @extend .left-0 !optional;
+  }
+}
+
+section.container{
+  .section-header{
+    @extend .col-sm-12;
+    @extend .col-lg-3;
+
+    .section-header-text{
+      @extend .pb-sm-1;
+      //@extend .px-sm-3;
+    }
+
+  }
+  .section-header-full{
+    @extend .col-sm-12;
+
+    .section-header-text-full{
+      @extend .pb-sm-4;
+      @extend .display-5;
+    }
+  }
+  .section-content{
+    @extend .col;
+  }
+}
+//// tile
+//.tile{
+//  // todo maybe not the entire card
+//  @extend .card;
+//  min-height: 10rem;
+//  @extend .w-100;
+//  @extend .h-100;
+//  // position
+//  @extend .d-flex;
+//  @extend .flex-column;
+//  @extend .align-items-start;
+//  @extend .justify-content-start;
+//
+//  .tile-content{
+//    @extend .card-body;
+//    @extend .d-flex;
+//    @extend .flex-column;
+//    @extend .align-items-start;
+//    @extend .justify-content-start;
+//
+//  }
+//}
+//
+//.tile-card{
+//  @extend .card;
+//  min-height: 10rem;
+//  height: 20rem;
+//  @extend .w-100;
+//  //@extend .h-100;
+//  // position
+//  @extend .d-flex;
+//  @extend .flex-column;
+//  @extend .align-items-start;
+//  @extend .justify-content-start;
+//
+//  &.tile-card-feature{
+//    @extend .flex-row;
+//    @extend .align-items-start;
+//    @extend .justify-content-start;
+//  }
+//
+//  &.tile-card-sm{
+//    max-height: 10rem;
+//
+//  }
+//  &.tile-card-lg{
+//    height: 40rem;
+//
+//  }
+//
+//  &.tile-card-link{
+//    .tile-card__body{
+//      @extend .h-100;
+//      a{
+//        @extend .stretched-link;
+//      }
+//    }
+//
+//
+//  }
+//
+//  .tile-card__media{
+//    @extend .w-100;
+//    //@extend .h-100;
+//    height: 20rem;
+//    img,video{
+//      @extend .w-100;
+//      @extend .h-100;
+//    }
+//  }
+//
+//  .tile-card__body{
+//    @extend .card-body;
+//    @extend .w-100;
+//    @extend .d-flex;
+//    @extend .flex-column;
+//    @extend .align-items-start;
+//    @extend .justify-content-between;
+//    max-height: 20rem;
+//
+//    .tile-card__body__title{
+//      @extend .card-title;
+//      flex: 1;
+//    }
+//
+//    .tile-card__body__subtitle{
+//      @extend .card-subtitle;
+//      @extend .text-muted;
+//      @extend .mb-1;
+//      flex: 0;
+//    }
+//
+//    .tile-card__body__text{
+//      flex: 3;
+//    }
+//    a{
+//
+//      @extend .text-decoration-none;
+//      @extend .ms-1;
+//    }
+//  }
+//}
+
+//.btn.btn-lg , .btn-group-lg > .btn{
+//  @extend .pt-0;
+//  //padding-top: 0;
+//}
