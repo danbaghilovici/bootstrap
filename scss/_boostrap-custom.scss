@@ -19,9 +19,13 @@
 
 
 .card{
-  //&:hover{
-  //  background: $gray-700;
-  //}
+  &:has(a.card-link){
+    &:hover{
+      @extend .bg-light;
+      @extend .text-bg-light;
+    }
+  }
+
   @extend .h-100;
   @extend .w-100;
 
@@ -41,7 +45,7 @@
     @extend .d-flex;
     @extend .flex-column;
     @extend .justify-content-between;
-    min-height: 15rem !important;
+    min-height: 10rem !important;
 
     .card-text{
       flex: 3;
@@ -57,8 +61,12 @@
     @extend .d-flex;
     @extend .flex-row;
     @extend .justify-content-start;
+    // todo check this
+    padding-bottom: 1rem !important;
+    padding-top: 0 !important;
+    //@extend .pb-3;
 
-    &:has(.btn-group){
+    &:has(.btn-group, .btn-group-lg){
       @extend .p-0;
       //@extend .pb-0;
       //@extend .pt-1;
@@ -66,26 +74,24 @@
       //@extend .justify-content-end;
     }
 
-    a{
-      @extend .text-decoration-none;
-      @extend .w-100;
-
-      svg{
-        float:right;
-      }
-    }
+    //a{
+    //  @extend .text-decoration-none;
+    //  @extend .w-100;
+    //
+    //  svg{
+    //    float:right;
+    //  }
+    //}
   }
 
   .card-link{
+    @extend .stretched-link;
+    @extend .text-decoration-none;
+    @extend .w-100;
     svg {
-      @extend .ms-2;
+      @extend .ms-0;
       vertical-align: middle;
-    }
-  }
-  .card-link-full{
-    svg {
       float: right;
-      vertical-align: middle;
     }
   }
 }
@@ -102,7 +108,6 @@
     background-size: cover;
     background-position: right;
     filter: brightness(0.5);
-    background-image: url('/img/bgs/me.jpg');
   }
 
   .lead-body{
