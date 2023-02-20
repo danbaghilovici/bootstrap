@@ -34,10 +34,9 @@
     > *{
       @extend .w-100;
       @extend .h-100;
+    }
   }
 
-
-  }
 
   .card-body{
     @extend  .h-100;
@@ -45,14 +44,17 @@
     @extend .d-flex;
     @extend .flex-column;
     @extend .justify-content-between;
-    min-height: 10rem !important;
+    min-height: 15rem !important;
+
+    &.card-body-sm{
+      min-height: 7rem !important;
+    }
 
     .card-text{
       flex: 3;
     }
     a{
       @extend .text-decoration-none;
-
     }
   }
   .card-footer{
@@ -136,7 +138,7 @@ section.container{
 
     .section-header-text-full{
       @extend .pb-sm-4;
-      @extend .display-5;
+      @extend .display-6;
     }
   }
   .section-content{
