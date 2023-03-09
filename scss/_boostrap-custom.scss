@@ -14,6 +14,9 @@
   min-width: 10rem;
   text-align: left;
   @extend .fs-6;
+  &.btn-icon{
+    min-width: initial;
+  }
 }
 
 
@@ -145,6 +148,25 @@ section.container{
     @extend .col;
   }
 }
+
+.container-alert{
+  @extend .container;
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+
+  .alert{
+    svg{
+      vertical-align: sub;
+    }
+    p{
+      @extend .d-inline;
+    }
+  }
+}
+
 //// tile
 //.tile{
 //  // todo maybe not the entire card
