@@ -59,6 +59,7 @@
     color: var(--#{$prefix}pagination-active-color);
     @include gradient-bg(var(--#{$prefix}pagination-active-bg));
     border-color: var(--#{$prefix}pagination-active-border-color);
+    border-bottom: solid 2px var(--#{$prefix}pagination-active-border-color);
   }
 
   &.disabled,

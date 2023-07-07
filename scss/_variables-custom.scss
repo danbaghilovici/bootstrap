@@ -17,6 +17,10 @@ $enable-negative-margins:     true !default;
 $enable-deprecation-messages: true !default;
 $enable-important-utilities:  true !default;
 
+$font-size-base:              .875rem !default;
+$font-size-sm:                .75rem !default;
+$font-size-lg:                1rem !default;
+
 $blue: #0f62fe !default;
 $red: #da1e28 !default;
 
@@ -91,3 +95,15 @@ $input-btn-padding-x:         1rem !default;
 $input-btn-padding-x-lg:      1rem !default;
 
 //$card-spacer-y:             2rem !default;
+
+$pagination-bg:                transparentize(#f00,1) !default;
+$pagination-border-width:     0 !default;
+$pagination-disabled-bg:      transparentize(#f00,1) !default;
+$pagination-active-color:     $black !default;
+$pagination-active-bg:        transparentize(#f00,1) !default;
+$pagination-color:            $black !default;
+
+$pagination-padding-y:              .75rem !default;
+$pagination-padding-x:              .75rem !default;
+
+//$pagination-disabled-color:
