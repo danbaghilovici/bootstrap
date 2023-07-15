@@ -9,17 +9,80 @@
 
 // Utilities
 @import "utilities/api";
+/* stylelint-disable */
+i[class^="bi"]{
+  font-size: 1rem;
+}
 
 .btn{
   min-width: 10rem;
   text-align: left;
   @extend .fs-6;
-  &.btn-icon{
-    min-width: initial;
+  &:focus-visible{
+    box-sizing: border-box;
   }
+  i{
+    float: right;
+    vertical-align: middle;
+  }
+  &.btn-icon-only{
+    &.btn-sm{
+      width: 2rem;
+      min-width: 2rem;
+      height: 2.125rem;
+    }
+    &.btn-lg{
+      height: 4.375rem;
+      width: 4.375rem;
+      padding-top: $btn-padding-y;
+      padding-bottom: $btn-padding-y;
+    }
+    i{
+      float: none;
+    }
+    --#{$prefix}btn-padding-x: 0;
+    --#{$prefix}btn-padding-y: 0;
+    min-width: 3rem;
+    width: 3rem;
+    height: 3.125rem;
+    text-align: center;
+  }
+
+  &:disabled,
+  &.disabled,
+  fieldset:disabled & {
+    pointer-events: initial;
+    cursor: not-allowed;
+  }
+  &.btn-lg{
+    padding-top: $btn-padding-y;
+    padding-bottom: $btn-padding-y-lg;
+  }
+
+  &:focus-visible {
+    // todo this needs revision
+    //color: #000;
+    border-color: $gray-600;
+    outline: 1px solid $gray-600;
+    outline-offset: 1px;
+    // Avoid using mixin so we can pass custom focus shadow properly
+    @if $enable-shadows {
+      box-shadow: var(--#{$prefix}btn-box-shadow), var(--#{$prefix}btn-focus-box-shadow);
+    } @else {
+      box-shadow: none;
+    }
+  }
+  // todo maybe this needs to be added too
+  //.btn-check:focus-visible + & {
+  //  border-color: var(--#{$prefix}btn-hover-border-color);
+  //  outline: 0;
+  //  // Avoid using mixin so we can pass custom focus shadow properly
+  //  @if $enable-shadows {
+  //    box-shadow: var(--#{$prefix}btn-box-shadow), var(--#{$prefix}btn-focus-box-shadow);
+  //  } @else {
+  //    box-shadow: var(--#{$prefix}btn-focus-box-shadow);
+  //  }
 }
-
-
 
 .card{
   &:has(a.card-link){
@@ -153,8 +216,8 @@ section.container{
   @extend .container;
   position: absolute;
   top: 4rem;
-  left: 0;
   right: 0;
+  left: 0;
   margin: 0 auto;
 
   .alert{
