@@ -19,11 +19,11 @@ import Toast from './src/toast.js'
 import Tooltip from './src/tooltip.js'
 
 export default {
-  // Alert,
-  Button
+  Alert,
+  Button,
   // Carousel,
   // Collapse,
-  // Dropdown,
+  Dropdown
   // Modal,
   // Offcanvas,
   // Popover,
