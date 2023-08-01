@@ -26,9 +26,9 @@ i[class^="bi"] {
   font-size: 1rem;
 }
 
-footer{
+footer , nav{
   i[class^="bi"] {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     vertical-align: baseline;
   }
 }
@@ -331,4 +331,16 @@ section.container {
       @extend .d-inline;
     }
   }
+}
+// todo find out why this does not work
+//.navbar-nav {
+//  .nav-link{
+//    &:hover{
+//      border-bottom: 1px solid black !important;
+//    }
+//  }
+//}
+.bg-dark-tooltip {
+  --bs-tooltip-bg: var(--bs-white);
+  --bs-tooltip-color: var(--bs-black);
 }

@@ -16,13 +16,13 @@ import Collapse from './src/collapse.js'
 // import ScrollSpy from './src/scrollspy.js'
 // import Tab from './src/tab.js'
 // import Toast from './src/toast.js'
-// import Tooltip from './src/tooltip.js'
+import Tooltip from './src/tooltip.js'
 
 export default {
   Alert,
   Button,
   // Carousel,
-  Collapse
+  Collapse,
   // Dropdown
   // Modal,
   // Offcanvas,
@@ -30,5 +30,5 @@ export default {
   // ScrollSpy,
   // Tab,
   // Toast,
-  // Tooltip
+  Tooltip
 }
