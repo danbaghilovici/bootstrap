@@ -132,6 +132,25 @@ $font-size-lg:                1.5rem !default;
 $font-family-sans-serif:      "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", arial, sans-serif, !default;
 $font-family-monospace:       "IBM Plex Mono", sfmono-regular, menlo, monaco, consolas, "Liberation Mono", "Courier New", monospace !default;
 
+$h1-font-size:                $font-size-base * 2.5 !default;
+$h2-font-size:                $font-size-base * 2 !default;
+$h3-font-size:                $font-size-base * 1.75 !default;
+$h4-font-size:                $font-size-base * 1.5 !default;
+$h5-font-size:                $font-size-base * 1.25 !default;
+$h6-font-size:                $font-size-base !default;
+$h7-font-size:                $font-size-sm !default;
+$h8-font-size:                $font-size-base * .625 !default;
+
+$font-sizes: (
+  1: $h1-font-size,
+  2: $h2-font-size,
+  3: $h3-font-size,
+  4: $h4-font-size,
+  5: $h5-font-size,
+  6: $h6-font-size,
+  7: $h7-font-size,
+  8: $h8-font-size
+) !default;
 
 $font-weight-lighter:         lighter !default;
 $font-weight-light:           300 !default;
@@ -140,6 +159,8 @@ $font-weight-medium:          500 !default;
 $font-weight-semibold:        600 !default;
 $font-weight-bold:            700 !default;
 $font-weight-bolder:          bolder !default;
+
+$font-weight-base:            $font-weight-light !default;
 // spacing
 
 $gutter:                      1rem !default;
@@ -201,3 +222,18 @@ $link-hover-decoration:       underline !default;
 //$form-label-font-style:                 null !default;
 //$form-label-font-weight:                null !default;
 //$form-label-color:                      null !default;
+/// maybe modify this:
+$input-padding-y:                       .5rem !default;
+$input-padding-x:                       .5rem !default;
+$input-font-family:                     $font-weight-light !default;
+$input-font-size:                       $font-size-sm !default;
+//$input-font-weight:                     $font-weight-base !default;
+//$input-line-height:                     $input-btn-line-height !default;
+
+$input-padding-y-sm:                    $input-btn-padding-y-sm !default;
+$input-padding-x-sm:                    $input-btn-padding-y-sm !default;
+//$input-font-size-sm:                    $input-btn-font-size-sm !default;
+//
+//$input-padding-y-lg:                    $input-btn-padding-y-lg !default;
+//$input-padding-x-lg:                    $input-btn-padding-x-lg !default;
+//$input-font-size-lg:                    $input-btn-font-size-lg !default;
