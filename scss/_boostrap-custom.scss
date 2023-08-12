@@ -34,6 +34,15 @@ footer , nav{
 }
 
 form {
+  input[type="text"],input[type="email"],textarea {
+    border-bottom: 1px solid $primary !important;
+  }
+  input:invalid,textarea:invalid {
+    border-bottom: 1px solid $danger !important;
+  }
+  //input:valid,textarea:valid {
+  //  border-bottom: 1px solid $success !important;
+  //}
   label.form-label {
     @extend .small;
 
@@ -349,10 +358,11 @@ section.container {
 //  list-style: square;
 //}
 #resume-iframe{
-  height: 1150px;
+  width: 215mm;
+  height: 300mm;
   overflow: hidden !important;
   pointer-events: none !important;
-  @extend .w-100;
+  //@extend .w-100;
 }
 #resumeDownloadLink{
   @include media-breakpoint-up(lg) {
