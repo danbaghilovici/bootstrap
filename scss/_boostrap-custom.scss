@@ -354,15 +354,12 @@ section.container {
   --bs-tooltip-color: var(--bs-black);
 }
 
-//li{
-//  list-style: square;
-//}
+
 #resume-iframe{
-  width: 215mm;
-  height: 300mm;
+  width: 211mm;
+  height: 298mm;
   overflow: hidden !important;
   pointer-events: none !important;
-  //@extend .w-100;
 }
 #resumeDownloadLink{
   @include media-breakpoint-up(lg) {
@@ -376,5 +373,20 @@ section.container {
   }
   @include media-breakpoint-only(sm) {
     width: 100%;
+  }
+}
+
+.blog-post article {
+  ul li {
+    list-style: square;
+  }
+  table{
+    @extend .table;
+    //@extend .table-primary;
+    @extend .table-striped;
+    @extend .table-hover;
+  }
+  blockquote{
+    @extend .blockquote;
   }
 }
