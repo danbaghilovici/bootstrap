@@ -1,0 +1,8 @@
+.breadcrumb{
+  @extend .fw-bold;
+  /* stylelint-disable */
+  .breadcrumb-item a ,.breadcrumb-item.active{
+    @extend .text-decoration-none;
+    text-transform: uppercase;
+  }
+}

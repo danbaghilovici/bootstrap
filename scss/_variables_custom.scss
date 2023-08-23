@@ -1,7 +1,5 @@
 @import "functions";
 
-
-
 $enable-caret:                true !default;
 $enable-rounded:              false !default;
 $enable-shadows:              false !default;
@@ -31,7 +29,8 @@ $position-values: (
   100: 100%
 ) !default;
 
-
+$variable-prefix:             bs- !default; // Deprecated in v5.2.0 for the shorter `$prefix`
+$prefix:                      $variable-prefix !default;
 
 @import "https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap";
 
@@ -83,3 +82,17 @@ $font-sizes: (
   6: $h6-font-size
 ) !default;
 // scss-docs-end font-sizes
+
+// scss-docs-start breadcrumb-variables
+$breadcrumb-font-size:              $font-size-sm !default;
+$breadcrumb-padding-y:              0 !default;
+$breadcrumb-padding-x:              0 !default;
+$breadcrumb-item-padding-x:         .5rem !default;
+$breadcrumb-margin-bottom:          1rem !default;
+$breadcrumb-bg:                     null !default;
+$breadcrumb-divider-color:          var(--#{$prefix}secondary-color) !default;
+$breadcrumb-active-color:           var(--#{$prefix}secondary-color) !default;
+$breadcrumb-divider:                quote("/") !default;
+$breadcrumb-divider-flipped:        $breadcrumb-divider !default;
+$breadcrumb-border-radius:          null !default;
+// scss-docs-end breadcrumb-variables
