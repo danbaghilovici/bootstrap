@@ -1,5 +1,8 @@
 @import "functions";
 
+$red:     #fe3d1e !default;
+$green:   #003828 !default;
+
 $enable-caret:                true !default;
 $enable-rounded:              false !default;
 $enable-shadows:              false !default;
@@ -58,7 +61,7 @@ $font-weight-semibold:        600 !default;
 $font-weight-bold:            700 !default;
 $font-weight-bolder:          bolder !default;
 
-$font-weight-base:            $font-weight-normal !default;
+$font-weight-base:            $font-weight-medium !default;
 
 $line-height-base:            1.5 !default;
 $line-height-sm:              1.25 !default;
@@ -96,3 +99,5 @@ $breadcrumb-divider:                quote("/") !default;
 $breadcrumb-divider-flipped:        $breadcrumb-divider !default;
 $breadcrumb-border-radius:          null !default;
 // scss-docs-end breadcrumb-variables
+
+$navbar-nav-link-padding-x:         2rem !default;

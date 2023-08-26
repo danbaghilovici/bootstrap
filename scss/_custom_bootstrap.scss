@@ -6,3 +6,12 @@
     text-transform: uppercase;
   }
 }
+
+nav{
+  &.navbar{
+    & .nav-link{
+      text-transform: uppercase;
+      @extend .fw-bold;
+    }
+  }
+}
