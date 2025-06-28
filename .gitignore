@@ -37,9 +37,9 @@ Thumbs.db
 /dist-sass/
 /js/coverage/
 /node_modules/
-dist/**
-js/**
-dist
+/dist/**
+/js/**
+/dist
 
 # Site
 /site/dist
