@@ -162,7 +162,7 @@ ul[class^="dropdown"] {
       &:hover {
         //background-color: red!important;
         @extend .bg-body-tertiary;
-        @extend .text-bg-light;
+        @extend .text-bg-light !optional;
       }
     }
   }
@@ -246,7 +246,7 @@ ul[class^="dropdown"] {
 
   .lead-media {
     @extend .h-100;
-    @extend .bg-dark;
+    @extend .bg-dark !optional;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right;
@@ -355,11 +355,44 @@ section.container {
 }
 
 
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #FFF;
+  border-bottom-color: #FF3D00;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  position: absolute;
+  top:0;
+  left: 0;
+}
+
+#resume-container{
+  position: relative;
+  height: 71rem;
+}
+
 #resume-iframe{
+  background-color: transparent;
   width: 211mm;
   height: 298mm;
   overflow: hidden !important;
   pointer-events: none !important;
+  position: absolute;
+  top:0;
+  left: 0;
+  bottom:0;
 }
 #resumeDownloadLink{
   @include media-breakpoint-up(lg) {

@@ -12,7 +12,7 @@ $theme: "lux" !default;
 // Color system
 //
 
-$white:    #fff !default;
+$white:    #ffffff !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #f7f7f9 !default;
 $gray-300: #eceeef !default;
@@ -22,6 +22,9 @@ $gray-600: #919aa1 !default;
 $gray-700: #55595c !default;
 $gray-800: #343a40 !default;
 $gray-900: #1a1a1a !default;
+$carbon-secondary-grey: #393939 !default;
+$carbon-gray: #161616 !default;
+$carbon-body-gray: #121212 !default;
 $black:    #000 !default;
 
 $blue:    #007bff !default;
@@ -35,20 +38,20 @@ $green:   #4bbf73 !default;
 $teal:    #20c997 !default;
 $cyan:    #1f9bcf !default;
 
-$primary:       $gray-900 !default;
-$secondary:     $white !default;
+$primary:       $blue !default;
+$secondary:     $carbon-secondary-grey !default;
 $success:       $green !default;
-$info:          $cyan !default;
+$info:          $carbon-body-gray !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $white !default;
-$dark:          $black!default;
+$dark:          $carbon-gray !default;
 
 $min-contrast-ratio:   2.3 !default;
 
 // Body
 
-$body-color:                $gray-700 !default;
+$body-color:                $carbon-body-gray !default;
 
 // Fonts
 
