@@ -1,8 +1,5 @@
 # Ignore docs files
 /_site/
-# Hugo files
-/resources/
-/.hugo_build.lock
 
 # Numerous always-ignore extensions
 *.diff
@@ -29,7 +26,6 @@
 *.sublime-workspace
 nbproject
 Thumbs.db
-/.vscode/
 # Local Netlify folder
 .netlify
 
@@ -41,6 +37,15 @@ Thumbs.db
 /dist-sass/
 /js/coverage/
 /node_modules/
+<<<<<<< HEAD
 /dist/
 /js/
 dist
+=======
+
+# Site
+/site/dist
+/site/node_modules
+/site/.astro
+/site/public
+>>>>>>> main

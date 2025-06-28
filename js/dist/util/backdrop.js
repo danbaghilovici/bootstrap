@@ -1,5 +1,9 @@
 /*!
+<<<<<<< HEAD
   * Bootstrap backdrop.js v5.3.1 (https://getbootstrap.com/)
+=======
+  * Bootstrap backdrop.js v5.3.7 (https://getbootstrap.com/)
+>>>>>>> main
   * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -33,7 +37,6 @@
     // if false, we use the backdrop helper without adding any element to the dom
     rootElement: 'body' // give the choice to place backdrop under different elements
   };
-
   const DefaultType = {
     className: 'string',
     clickCallback: '(function|null)',

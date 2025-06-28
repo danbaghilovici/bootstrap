@@ -1,5 +1,9 @@
 /*!
+<<<<<<< HEAD
   * Bootstrap selector-engine.js v5.3.1 (https://getbootstrap.com/)
+=======
+  * Bootstrap selector-engine.js v5.3.7 (https://getbootstrap.com/)
+>>>>>>> main
   * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -35,7 +39,7 @@
       }
       selector = hrefAttribute && hrefAttribute !== '#' ? hrefAttribute.trim() : null;
     }
-    return index_js.parseSelector(selector);
+    return selector ? selector.split(',').map(sel => index_js.parseSelector(sel)).join(',') : null;
   };
   const SelectorEngine = {
     find(selector, element = document.documentElement) {

@@ -3,7 +3,7 @@
 /*!
  * Script to create the built examples zip archive;
  * requires the `zip` command to be present!
- * Copyright 2020-2023 The Bootstrap Authors
+ * Copyright 2020-2025 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
@@ -88,9 +88,9 @@ for (const file of sh.find(`${distFolder}/**/*.html`)) {
     .toString()
     .replace(new RegExp(`"/docs/${versionShort}/`, 'g'), '"../')
     .replace(/"..\/dist\//g, '"../assets/dist/')
-    .replace(/(<link href="\.\.\/.*) integrity=".*>/g, '$1>')
-    .replace(/(<script src="\.\.\/.*) integrity=".*>/g, '$1></script>')
-    .replace(/( +)<!-- favicons(.|\n)+<style>/i, '    <style>')
+    .replace(/(<link href="\.\.\/[^"]*"[^>]*) integrity="[^"]*"/g, '$1')
+    .replace(/<link[^>]*href="\.\.\/assets\/img\/favicons\/[^"]*"[^>]*>/g, '')
+    .replace(/(<script src="\.\.\/[^"]*"[^>]*) integrity="[^"]*"/g, '$1')
   new sh.ShellString(fileContents).to(file)
 }
 
