@@ -1,0 +1,21 @@
+{
+  "name": "bootstrap-trophy-theme",
+  "version": "1.0.0",
+  "description": "Bootstrap theme inspired by Trophy soccer club website",
+  "main": "scss/bootstrap-trophy.scss",
+  "scripts": {
+    "build": "sass scss/bootstrap-trophy.scss:dist/css/bootstrap-trophy.css --style=expanded",
+    "build-min": "sass scss/bootstrap-trophy.scss:dist/css/bootstrap-trophy.min.css --style=compressed",
+    "watch": "sass --watch scss/bootstrap-trophy.scss:dist/css/bootstrap-trophy.css --style=expanded",
+    "build-all": "npm run build && npm run build-min"
+  },
+  "keywords": ["bootstrap", "theme", "trophy", "soccer", "sports", "css", "scss"],
+  "author": "AI Assistant",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.57.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.0"
+  }
+}

@@ -1,0 +1,262 @@
+// Trophy Typography Styles
+// Based on the Trophy soccer club website design
+
+// Import Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600;700;900&family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+// Base typography
+body {
+  font-family: $trophy-font-family;
+  font-size: $trophy-p-font-size;
+  line-height: $trophy-p-line-height;
+  font-weight: $trophy-font-weight-normal;
+  color: $trophy-accent;
+}
+
+// Headings
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: $trophy-headings-font-family;
+  font-weight: $trophy-headings-font-weight;
+  line-height: $trophy-headings-line-height;
+  color: $trophy-headings-color;
+  margin-bottom: $trophy-headings-margin-bottom;
+  margin-top: 0;
+}
+
+// Specific heading sizes based on Trophy design
+h1, .h1 {
+  font-size: $trophy-h1-font-size;
+  font-weight: $trophy-font-weight-bold;
+  
+  @media (max-width: 768px) {
+    font-size: calc(#{$trophy-h1-font-size} * 0.75);
+  }
+  
+  @media (max-width: 480px) {
+    font-size: calc(#{$trophy-h1-font-size} * 0.6);
+  }
+}
+
+h2, .h2 {
+  font-size: $trophy-h2-font-size;
+  font-weight: $trophy-font-weight-bold;
+  
+  @media (max-width: 768px) {
+    font-size: calc(#{$trophy-h2-font-size} * 0.85);
+  }
+  
+  @media (max-width: 480px) {
+    font-size: calc(#{$trophy-h2-font-size} * 0.7);
+  }
+}
+
+h3, .h3 {
+  font-size: $trophy-h3-font-size;
+  font-weight: $trophy-font-weight-bold;
+  
+  @media (max-width: 768px) {
+    font-size: calc(#{$trophy-h3-font-size} * 0.9);
+  }
+}
+
+h4, .h4 {
+  font-size: $trophy-h4-font-size;
+  font-weight: $trophy-font-weight-semibold;
+  
+  @media (max-width: 768px) {
+    font-size: calc(#{$trophy-h4-font-size} * 0.95);
+  }
+}
+
+h5, .h5 {
+  font-size: $trophy-h5-font-size;
+  font-weight: $trophy-font-weight-semibold;
+}
+
+h6, .h6 {
+  font-size: $trophy-h6-font-size;
+  font-weight: $trophy-font-weight-medium;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+// Paragraphs
+p {
+  font-size: $trophy-p-font-size;
+  line-height: $trophy-p-line-height;
+  margin-bottom: 1rem;
+  
+  &.lead {
+    font-size: calc(#{$trophy-p-font-size} * 1.25);
+    font-weight: $trophy-font-weight-light;
+    line-height: 1.5;
+  }
+  
+  &.small {
+    font-size: calc(#{$trophy-p-font-size} * 0.875);
+  }
+}
+
+// Text utilities with Trophy styling
+.trophy-text-primary {
+  color: $trophy-primary !important;
+}
+
+.trophy-text-secondary {
+  color: $trophy-secondary !important;
+}
+
+.trophy-text-accent {
+  color: $trophy-accent !important;
+}
+
+.trophy-text-light {
+  color: $trophy-light !important;
+}
+
+.trophy-text-gray {
+  color: $trophy-gray !important;
+}
+
+// Typography weight utilities
+.trophy-fw-light {
+  font-weight: $trophy-font-weight-light !important;
+}
+
+.trophy-fw-normal {
+  font-weight: $trophy-font-weight-normal !important;
+}
+
+.trophy-fw-medium {
+  font-weight: $trophy-font-weight-medium !important;
+}
+
+.trophy-fw-semibold {
+  font-weight: $trophy-font-weight-semibold !important;
+}
+
+.trophy-fw-bold {
+  font-weight: $trophy-font-weight-bold !important;
+}
+
+// Typography size utilities
+.trophy-fs-small {
+  font-size: calc(#{$trophy-p-font-size} * 0.875) !important;
+}
+
+.trophy-fs-normal {
+  font-size: $trophy-p-font-size !important;
+}
+
+.trophy-fs-large {
+  font-size: calc(#{$trophy-p-font-size} * 1.25) !important;
+}
+
+.trophy-fs-xlarge {
+  font-size: calc(#{$trophy-p-font-size} * 1.5) !important;
+}
+
+// Trophy specific heading styles
+.trophy-heading-hero {
+  font-size: calc(#{$trophy-h1-font-size} * 1.2);
+  font-weight: $trophy-font-weight-bold;
+  line-height: 1.1;
+  color: $trophy-primary;
+  
+  @media (max-width: 768px) {
+    font-size: $trophy-h1-font-size;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: calc(#{$trophy-h1-font-size} * 0.8);
+  }
+}
+
+.trophy-heading-section {
+  font-size: $trophy-h2-font-size;
+  font-weight: $trophy-font-weight-bold;
+  color: $trophy-accent;
+  margin-bottom: 2rem;
+  position: relative;
+  
+  &::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: $trophy-primary;
+    margin-top: 1rem;
+  }
+}
+
+// Lists
+ul, ol {
+  font-size: $trophy-p-font-size;
+  line-height: $trophy-p-line-height;
+  
+  li {
+    margin-bottom: 0.5rem;
+  }
+}
+
+// Links
+a {
+  color: $trophy-primary;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  
+  &:hover,
+  &:focus {
+    color: darken($trophy-primary, 15%);
+    text-decoration: underline;
+  }
+}
+
+// Blockquotes
+blockquote {
+  font-size: calc(#{$trophy-p-font-size} * 1.15);
+  font-style: italic;
+  line-height: 1.6;
+  color: $trophy-gray;
+  border-left: 4px solid $trophy-primary;
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+  
+  footer {
+    font-size: calc(#{$trophy-p-font-size} * 0.875);
+    font-style: normal;
+    color: $trophy-accent;
+    margin-top: 1rem;
+    
+    &::before {
+      content: '— ';
+    }
+  }
+}
+
+// Code and preformatted text
+code {
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', 'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+  font-size: calc(#{$trophy-p-font-size} * 0.875);
+  color: $trophy-accent;
+  background-color: lighten($trophy-gray, 45%);
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+}
+
+pre {
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', 'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+  font-size: calc(#{$trophy-p-font-size} * 0.875);
+  line-height: 1.4;
+  color: $trophy-accent;
+  background-color: lighten($trophy-gray, 45%);
+  padding: 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+  
+  code {
+    background: transparent;
+    padding: 0;
+  }
+}

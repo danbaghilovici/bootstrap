@@ -1,0 +1,207 @@
+// Trophy Theme Button Styles
+// Inspired by Trophy soccer club website
+
+// Import Trophy variables first
+@import "trophy-variables";
+
+// Minimal button variant (text-only style from Trophy)
+@mixin trophy-btn-minimal($color: $trophy-primary, $hover-color: $trophy-dark) {
+  --#{$prefix}btn-color: #{$color};
+  --#{$prefix}btn-bg: transparent;
+  --#{$prefix}btn-border-color: transparent;
+  --#{$prefix}btn-hover-color: #{$hover-color};
+  --#{$prefix}btn-hover-bg: transparent;
+  --#{$prefix}btn-hover-border-color: transparent;
+  --#{$prefix}btn-focus-shadow-rgb: #{to-rgb($color)};
+  --#{$prefix}btn-active-color: #{$hover-color};
+  --#{$prefix}btn-active-bg: transparent;
+  --#{$prefix}btn-active-border-color: transparent;
+  --#{$prefix}btn-active-shadow: none;
+  --#{$prefix}btn-disabled-color: #{$color};
+  --#{$prefix}btn-disabled-bg: transparent;
+  --#{$prefix}btn-disabled-border-color: transparent;
+
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  position: relative;
+  border-style: solid;
+  border-width: $trophy-btn-border-width;
+  border-radius: $trophy-btn-border-radius !important;
+  overflow: hidden;
+
+  &:hover {
+    transform: translateY(-1px);
+  }
+
+  // Icon support
+  i {
+    margin-left: .5rem;
+  }
+
+  &:hover i {
+    transform: translateX(3px);
+  }
+}
+
+// Trophy outline button variant
+@mixin trophy-btn-outline($color: $trophy-primary, $hover-bg: $trophy-primary, $hover-color: $trophy-dark) {
+  --#{$prefix}btn-color: #{$color};
+  --#{$prefix}btn-bg: transparent;
+  --#{$prefix}btn-border-color: #{$color};
+  --#{$prefix}btn-hover-color: #{$hover-color};
+  --#{$prefix}btn-hover-bg: #{$hover-bg};
+  --#{$prefix}btn-hover-border-color: #{$hover-bg};
+  --#{$prefix}btn-focus-shadow-rgb: #{to-rgb($color)};
+  --#{$prefix}btn-active-color: #{$hover-color};
+  --#{$prefix}btn-active-bg: #{$hover-bg};
+  --#{$prefix}btn-active-border-color: #{$hover-bg};
+  --#{$prefix}btn-active-shadow: none;
+  --#{$prefix}btn-disabled-color: #{$color};
+  --#{$prefix}btn-disabled-bg: transparent;
+  --#{$prefix}btn-disabled-border-color: #{$color};
+
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  border-style: solid;
+  border-width: $trophy-btn-border-width;
+  border-radius: $trophy-btn-border-radius !important;
+
+  &:hover {
+    transform: translateY(-1px);
+  }
+
+  // Icon support
+  i {
+    margin-left: .5rem;
+  }
+
+  &:hover i {
+    transform: translateX(3px);
+  }
+}
+
+// Trophy solid button variant
+@mixin trophy-btn-solid($bg: $trophy-primary, $color: $trophy-dark, $border: $trophy-primary, $hover-bg: shade-color($trophy-primary, 15%), $hover-border: shade-color($trophy-primary, 15%)) {
+  --#{$prefix}btn-color: #{$color};
+  --#{$prefix}btn-bg: #{$bg};
+  --#{$prefix}btn-border-color: #{$border};
+  --#{$prefix}btn-hover-color: #{$color};
+  --#{$prefix}btn-hover-bg: #{$hover-bg};
+  --#{$prefix}btn-hover-border-color: #{$hover-border};
+  --#{$prefix}btn-focus-shadow-rgb: #{to-rgb($bg)};
+  --#{$prefix}btn-active-color: #{$color};
+  --#{$prefix}btn-active-bg: #{$hover-bg};
+  --#{$prefix}btn-active-border-color: #{$hover-border};
+  --#{$prefix}btn-active-shadow: none;
+  --#{$prefix}btn-disabled-color: #{$color};
+  --#{$prefix}btn-disabled-bg: #{$bg};
+  --#{$prefix}btn-disabled-border-color: #{$border};
+
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  border-style: solid;
+  border-width: $trophy-btn-border-width;
+  border-radius: $trophy-btn-border-radius !important;
+
+  &:hover {
+    transform: translateY(-1px);
+  }
+
+  // Icon support
+  i {
+    margin-left: .5rem;
+  }
+
+  &:hover i {
+    transform: translateX(3px);
+  }
+}
+
+// Trophy button styles with high specificity
+.btn.btn-trophy-minimal {
+  @include trophy-btn-minimal();
+}
+
+.btn.btn-trophy-minimal-secondary {
+  @include trophy-btn-minimal($trophy-secondary, $trophy-dark);
+}
+
+.btn.btn-trophy-outline {
+  @include trophy-btn-outline();
+}
+
+.btn.btn-trophy-outline-secondary {
+  @include trophy-btn-outline($trophy-secondary, $trophy-secondary, $trophy-dark);
+}
+
+.btn.btn-trophy-solid {
+  @include trophy-btn-solid();
+}
+
+.btn.btn-trophy-solid-secondary {
+  @include trophy-btn-solid($trophy-secondary, $trophy-dark, $trophy-secondary, shade-color($trophy-secondary, 15%), shade-color($trophy-secondary, 15%));
+}
+
+// Trophy button sizes (matching the inspiration) with high specificity
+.btn.btn-trophy-xs {
+  @include button-size($trophy-btn-padding-y-xs, $trophy-btn-padding-x-xs, $trophy-btn-font-size-xs, $trophy-btn-border-radius);
+  border-radius: $trophy-btn-border-radius !important;
+}
+
+.btn.btn-trophy-sm {
+  @include button-size($trophy-btn-padding-y-sm, $trophy-btn-padding-x-sm, $trophy-btn-font-size-sm, $trophy-btn-border-radius);
+  border-radius: $trophy-btn-border-radius !important;
+}
+
+.btn.btn-trophy-md {
+  @include button-size($trophy-btn-padding-y, $trophy-btn-padding-x, $trophy-btn-font-size, $trophy-btn-border-radius);
+  border-radius: $trophy-btn-border-radius !important;
+}
+
+.btn.btn-trophy-lg {
+  @include button-size($trophy-btn-padding-y-lg, $trophy-btn-padding-x-lg, $trophy-btn-font-size-lg, $trophy-btn-border-radius);
+  border-radius: $trophy-btn-border-radius !important;
+}
+
+.btn.btn-trophy-xl {
+  @include button-size($trophy-btn-padding-y-xl, $trophy-btn-padding-x-xl, $trophy-btn-font-size-xl, $trophy-btn-border-radius);
+  border-radius: $trophy-btn-border-radius !important;
+}
+
+// Override default Bootstrap button styles with Trophy aesthetics
+.btn {
+  text-transform: uppercase;
+  font-weight: $trophy-btn-font-weight;
+  letter-spacing: .5px;
+  border-style: solid;
+  border-width: $trophy-btn-border-width;
+  border-radius: $trophy-btn-border-radius !important;
+
+  &:hover {
+    transform: translateY(-1px);
+  }
+
+  // Icon support for all buttons
+  &:hover i {
+    transform: translateX(3px);
+  }
+}
+
+// Update primary button to match Trophy style - using higher specificity
+.btn.btn-primary {
+  @include trophy-btn-solid($primary, $trophy-dark, $primary);
+}
+
+// Update secondary button to match Trophy style - using higher specificity
+.btn.btn-secondary {
+  @include trophy-btn-solid($trophy-secondary, $trophy-dark, $trophy-secondary);
+}
+
+// Update outline buttons - using higher specificity
+.btn.btn-outline-primary {
+  @include trophy-btn-outline($primary, $primary, $trophy-dark);
+}
+
+.btn.btn-outline-secondary {
+  @include trophy-btn-outline($trophy-secondary, $trophy-secondary, $trophy-dark);
+}

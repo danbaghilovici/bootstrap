@@ -1,0 +1,721 @@
+// Trophy Theme Navbar Styles
+// Enhanced navigation with multi-level submenus inspired by Trophy soccer club website
+
+// Import Trophy variables first
+@import "trophy-variables";
+
+// Trophy Navbar Variables
+$trophy-navbar-height: 80px !default;
+$trophy-navbar-padding-y: 1rem !default;
+$trophy-navbar-padding-x: 1.5rem !default;
+$trophy-navbar-bg: rgba(255, 255, 255, 0.95) !default;
+$trophy-navbar-border-bottom: 1px solid rgba(0, 0, 0, 0.1) !default;
+$trophy-navbar-backdrop-filter: blur(10px) !default;
+
+// Navigation link styles
+$trophy-nav-link-color: $trophy-accent !default;
+$trophy-nav-link-hover-color: $trophy-primary !default;
+$trophy-nav-link-active-color: $trophy-primary !default;
+$trophy-nav-link-padding-x: 1.25rem !default;
+$trophy-nav-link-padding-y: 0.75rem !default;
+$trophy-nav-link-font-weight: $trophy-font-weight-medium !default;
+$trophy-nav-link-font-size: 0.9rem !default;
+$trophy-nav-link-text-transform: uppercase !default;
+$trophy-nav-link-letter-spacing: 0.5px !default;
+
+// Dropdown styles
+$trophy-dropdown-bg: #ffffff !default;
+$trophy-dropdown-border: 1px solid rgba(0, 0, 0, 0.1) !default;
+$trophy-dropdown-border-radius: 0 !default;
+$trophy-dropdown-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !default;
+$trophy-dropdown-min-width: 220px !default;
+$trophy-dropdown-padding: 1rem 0 !default;
+$trophy-dropdown-margin-top: 0.25rem !default;
+
+// Dropdown item styles
+$trophy-dropdown-item-padding-x: 1.5rem !default;
+$trophy-dropdown-item-padding-y: 0.75rem !default;
+$trophy-dropdown-item-color: $trophy-accent !default;
+$trophy-dropdown-item-hover-color: $trophy-primary !default;
+$trophy-dropdown-item-hover-bg: rgba($trophy-primary, 0.05) !default;
+$trophy-dropdown-item-active-color: $trophy-primary !default;
+$trophy-dropdown-item-active-bg: rgba($trophy-primary, 0.1) !default;
+
+// Submenu (third level) styles
+$trophy-submenu-offset-x: 100% !default;
+$trophy-submenu-offset-y: -0.5rem !default;
+
+// Mobile menu styles
+$trophy-mobile-menu-bg: #ffffff !default;
+$trophy-mobile-toggler-size: 2rem !default;
+
+// Trophy navbar base styles
+.navbar-trophy {
+  background: $trophy-navbar-bg;
+  backdrop-filter: $trophy-navbar-backdrop-filter;
+  border-bottom: $trophy-navbar-border-bottom;
+  padding: $trophy-navbar-padding-y $trophy-navbar-padding-x;
+  min-height: $trophy-navbar-height;
+  transition: all 0.3s ease-in-out;
+
+  // Brand styling
+  .navbar-brand {
+    font-family: $trophy-font-family-primary;
+    font-weight: $trophy-font-weight-bold;
+    font-size: 1.5rem;
+    color: $trophy-accent;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    &:hover {
+      color: $trophy-primary;
+      transform: translateY(-1px);
+    }
+  }
+
+  // Navigation links
+  .navbar-nav {
+    .nav-item {
+      position: relative;
+      margin: 0 0.25rem;
+
+      .nav-link {
+        color: $trophy-nav-link-color;
+        font-weight: $trophy-nav-link-font-weight;
+        font-size: $trophy-nav-link-font-size;
+        text-transform: $trophy-nav-link-text-transform;
+        letter-spacing: $trophy-nav-link-letter-spacing;
+        padding: $trophy-nav-link-padding-y $trophy-nav-link-padding-x;
+        border-radius: 0;
+        transition: all 0.3s ease-in-out;
+        position: relative;
+
+        &:hover {
+          color: $trophy-nav-link-hover-color;
+          transform: translateY(-1px);
+        }
+
+        &.active,
+        &:focus {
+          color: $trophy-nav-link-active-color;
+        }
+
+        // Arrow indicator for dropdown items
+        &.dropdown-toggle::after {
+          content: "\f107"; // FontAwesome angle-down
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          border: none;
+          font-size: 0.8rem;
+          margin-left: 0.5rem;
+          vertical-align: middle;
+          transition: transform 0.3s ease-in-out;
+        }
+
+        &.dropdown-toggle[aria-expanded="true"]::after {
+          transform: rotate(180deg);
+        }
+      }
+
+      // Dropdown hover effect
+      &:hover > .nav-link {
+        color: $trophy-nav-link-hover-color;
+      }
+    }
+  }
+
+  // Mobile toggler customization
+  .navbar-toggler {
+    border: none;
+    padding: 0.25rem;
+    width: $trophy-mobile-toggler-size;
+    height: $trophy-mobile-toggler-size;
+    
+    &:focus {
+      box-shadow: none;
+    }
+
+    .navbar-toggler-icon {
+      background-image: none;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &::before {
+        content: "\f0c9"; // FontAwesome bars
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        font-size: 1.2rem;
+        color: $trophy-accent;
+      }
+    }
+
+    &[aria-expanded="true"] .navbar-toggler-icon::before {
+      content: "\f00d"; // FontAwesome times
+    }
+  }
+
+  // Navbar badge styling for notifications
+  .badge {
+    position: absolute;
+    top: -0.25rem;
+    right: -0.25rem;
+    font-size: 0.7rem;
+    padding: 0.25rem 0.4rem;
+  }
+}
+
+// Trophy dropdown menu styles
+.dropdown-menu-trophy {
+  background: $trophy-dropdown-bg;
+  border: $trophy-dropdown-border;
+  border-radius: $trophy-dropdown-border-radius;
+  box-shadow: $trophy-dropdown-box-shadow;
+  min-width: $trophy-dropdown-min-width;
+  padding: $trophy-dropdown-padding;
+  margin-top: $trophy-dropdown-margin-top;
+  animation: trophy-dropdown-fade-in 0.3s ease-out;
+
+  .dropdown-item {
+    color: $trophy-dropdown-item-color;
+    padding: $trophy-dropdown-item-padding-y $trophy-dropdown-item-padding-x;
+    font-weight: $trophy-font-weight-normal;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+
+    &:hover {
+      color: $trophy-dropdown-item-hover-color;
+      background-color: $trophy-dropdown-item-hover-bg;
+      transform: translateX(3px);
+    }
+
+    &:active,
+    &.active {
+      color: $trophy-dropdown-item-active-color;
+      background-color: $trophy-dropdown-item-active-bg;
+    }
+
+    // Submenu arrow
+    &.dropdown-toggle::after {
+      content: "\f105"; // FontAwesome angle-right
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      border: none;
+      font-size: 0.8rem;
+      float: right;
+      margin-top: 0.2rem;
+    }
+  }
+
+  .dropdown-divider {
+    margin: 0.75rem 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
+
+// Enhanced submenu positioning and behavior
+.dropdown-submenu {
+  position: relative;
+
+  .dropdown-menu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin-left: 0.125rem;
+    border-radius: $trophy-dropdown-border-radius;
+  }
+
+  &:hover > .dropdown-menu {
+    display: block;
+  }
+
+  > a::after {
+    content: "\f105"; // FontAwesome angle-right
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    float: right;
+    margin-top: 0.2rem;
+    border: none;
+    transform: rotate(0deg);
+  }
+}
+
+// Multi-level dropdown support
+.dropdown-menu-trophy {
+  .dropdown {
+    position: relative;
+
+    .dropdown-menu {
+      position: absolute;
+      top: $trophy-submenu-offset-y;
+      left: $trophy-submenu-offset-x;
+      margin: 0;
+      display: none;
+    }
+
+    &:hover > .dropdown-menu {
+      display: block;
+      animation: trophy-submenu-slide-in 0.3s ease-out;
+    }
+  }
+}
+
+// Trophy mega menu support
+.mega-menu-trophy {
+  position: static;
+
+  .dropdown-menu {
+    left: 0;
+    right: 0;
+    width: 100%;
+    border-radius: 0;
+    padding: 2rem;
+    margin-top: 0;
+
+    .container {
+      max-width: 1200px;
+    }
+
+    .mega-menu-column {
+      .mega-menu-title {
+        font-weight: $trophy-font-weight-bold;
+        font-size: 1rem;
+        color: $trophy-accent;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid $trophy-primary;
+      }
+
+      .mega-menu-item {
+        display: block;
+        color: $trophy-dropdown-item-color;
+        padding: 0.5rem 0;
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          color: $trophy-dropdown-item-hover-color;
+          transform: translateX(5px);
+        }
+      }
+    }
+  }
+}
+
+// Sticky navbar enhancement
+.navbar-trophy.sticky-top {
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+// Mobile navbar styles
+@media (max-width: 991.98px) {
+  .navbar-trophy {
+    .navbar-collapse {
+      background: $trophy-mobile-menu-bg;
+      border-radius: 0.5rem;
+      margin-top: 1rem;
+      padding: 1rem;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-nav {
+      .nav-item {
+        margin: 0.25rem 0;
+
+        .nav-link {
+          padding: 0.75rem 1rem;
+          border-radius: 0.25rem;
+
+          &:hover {
+            background-color: rgba($trophy-primary, 0.1);
+            transform: none;
+          }
+        }
+      }
+    }
+
+    .dropdown-menu-trophy {
+      position: static;
+      display: none;
+      float: none;
+      width: 100%;
+      margin: 0;
+      background-color: rgba($trophy-primary, 0.05);
+      border: none;
+      box-shadow: none;
+
+      &.show {
+        display: block;
+      }
+
+      .dropdown-item {
+        padding-left: 2rem;
+        
+        &:hover {
+          transform: none;
+          background-color: rgba($trophy-primary, 0.1);
+        }
+      }
+    }
+  }
+}
+
+// Animation keyframes
+@keyframes trophy-dropdown-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes trophy-submenu-slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes trophy-search-slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Utility classes for navbar variations
+.navbar-trophy-transparent {
+  background: transparent;
+  border-bottom: none;
+  backdrop-filter: none;
+
+  .nav-link {
+    color: #ffffff;
+
+    &:hover {
+      color: $trophy-primary;
+    }
+  }
+
+  .navbar-brand {
+    color: #ffffff;
+
+    &:hover {
+      color: $trophy-primary;
+    }
+  }
+}
+
+.navbar-trophy-dark {
+  background: $trophy-dark;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+  .nav-link {
+    color: #ffffff;
+
+    &:hover {
+      color: $trophy-primary;
+    }
+  }
+
+  .navbar-brand {
+    color: #ffffff;
+
+    &:hover {
+      color: $trophy-primary;
+    }
+  }
+
+  .navbar-toggler-icon::before {
+    color: #ffffff;
+  }
+}
+
+// Enhanced Bootstrap dropdown integration
+.navbar .dropdown-menu {
+  @extend .dropdown-menu-trophy;
+}
+
+// Trophy navbar size variants
+.navbar-trophy-sm {
+  min-height: 60px;
+  padding: 0.5rem 1rem;
+
+  .nav-link {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+}
+
+.navbar-trophy-lg {
+  min-height: 100px;
+  padding: 1.5rem 2rem;
+
+  .nav-link {
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+// Off-canvas navigation for complex menus
+.navbar-trophy-offcanvas {
+  .offcanvas {
+    background: $trophy-mobile-menu-bg;
+    border: none;
+    width: 350px;
+
+    .offcanvas-header {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      padding: 1.5rem;
+
+      .offcanvas-title {
+        font-family: $trophy-font-family-primary;
+        font-weight: $trophy-font-weight-bold;
+        font-size: 1.25rem;
+        color: $trophy-accent;
+      }
+
+      .btn-close {
+        background: none;
+        opacity: 0.7;
+        
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+
+    .offcanvas-body {
+      padding: 1.5rem;
+
+      .nav-link {
+        color: $trophy-nav-link-color;
+        padding: 0.75rem 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        font-weight: $trophy-nav-link-font-weight;
+        text-transform: $trophy-nav-link-text-transform;
+        letter-spacing: $trophy-nav-link-letter-spacing;
+
+        &:hover {
+          color: $trophy-nav-link-hover-color;
+          background: rgba($trophy-primary, 0.05);
+          padding-left: 0.5rem;
+        }
+
+        i {
+          width: 1.5rem;
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+// Language selector dropdown
+.navbar-language-selector {
+  .dropdown-toggle::after {
+    display: none;
+  }
+
+  .flag-icon {
+    width: 1.25rem;
+    height: auto;
+    margin-right: 0.5rem;
+  }
+
+  .dropdown-menu {
+    min-width: 150px;
+
+    .dropdown-item {
+      display: flex;
+      align-items: center;
+      font-size: 0.9rem;
+
+      .flag-icon {
+        margin-right: 0.75rem;
+      }
+    }
+  }
+}
+
+// Navbar search integration
+.navbar-search {
+  position: relative;
+
+  .search-toggle {
+    border: none;
+    background: none;
+    color: $trophy-nav-link-color;
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      color: $trophy-nav-link-hover-color;
+      transform: scale(1.1);
+    }
+  }
+
+  .search-form {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.25rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    padding: 1rem;
+    width: 300px;
+    display: none;
+    z-index: 1050;
+
+    &.show {
+      display: block;
+      animation: trophy-search-slide-down 0.3s ease-out;
+    }
+
+    .input-group {
+      .form-control {
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 0;
+        font-size: 0.9rem;
+
+        &:focus {
+          border-color: $trophy-primary;
+          box-shadow: 0 0 0 0.2rem rgba($trophy-primary, 0.25);
+        }
+      }
+
+      .btn {
+        border-radius: 0;
+        border-color: $trophy-primary;
+        background: $trophy-primary;
+        color: $trophy-dark;
+
+        &:hover {
+          background: shade-color($trophy-primary, 15%);
+          border-color: shade-color($trophy-primary, 15%);
+        }
+      }
+    }
+  }
+}
+
+// Notification dropdown
+.navbar-notifications {
+  .notification-badge {
+    position: absolute;
+    top: 0.25rem;
+    right: 0.25rem;
+    background: #dc3545;
+    color: white;
+    border-radius: 50%;
+    width: 0.75rem;
+    height: 0.75rem;
+    font-size: 0.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .dropdown-menu {
+    width: 320px;
+    max-height: 400px;
+    overflow-y: auto;
+
+    .notification-header {
+      padding: 1rem 1.5rem 0.5rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      font-weight: $trophy-font-weight-bold;
+      color: $trophy-accent;
+    }
+
+    .notification-item {
+      padding: 1rem 1.5rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: rgba($trophy-primary, 0.05);
+      }
+
+      .notification-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        background: rgba($trophy-primary, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 1rem;
+        color: $trophy-primary;
+      }
+
+      .notification-content {
+        flex: 1;
+
+        .notification-title {
+          font-weight: $trophy-font-weight-medium;
+          font-size: 0.9rem;
+          margin-bottom: 0.25rem;
+        }
+
+        .notification-text {
+          font-size: 0.8rem;
+          color: #6c757d;
+          margin-bottom: 0.25rem;
+        }
+
+        .notification-time {
+          font-size: 0.75rem;
+          color: #adb5bd;
+        }
+      }
+
+      &.unread {
+        background-color: rgba($trophy-primary, 0.02);
+        
+        .notification-title {
+          font-weight: $trophy-font-weight-semibold;
+        }
+      }
+    }
+
+    .notification-footer {
+      padding: 0.75rem 1.5rem;
+      text-align: center;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+      a {
+        color: $trophy-primary;
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: $trophy-font-weight-medium;
+
+        &:hover {
+          color: shade-color($trophy-primary, 15%);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,126 @@
+// Trophy Theme - Complete Bootstrap theme inspired by Trophy soccer club website
+@import "mixins/banner";
+@include bsBanner("");
+
+// Import Trophy theme variables first
+@import "trophy-variables";
+
+// scss-docs-start import-stack
+// Configuration
+@import "functions";
+@import "variables";
+@import "variables-dark";
+@import "maps";
+@import "mixins";
+@import "utilities";
+
+// Layout & components
+@import "root";
+@import "reboot";
+@import "type";
+@import "images";
+@import "containers";
+@import "grid";
+@import "tables";
+@import "forms";
+@import "buttons";
+@import "transitions";
+@import "dropdown";
+@import "button-group";
+@import "nav";
+@import "navbar";
+@import "card";
+@import "accordion";
+@import "breadcrumb";
+@import "pagination";
+@import "badge";
+@import "alert";
+@import "progress";
+@import "list-group";
+@import "close";
+@import "toasts";
+@import "modal";
+@import "tooltip";
+@import "popover";
+@import "carousel";
+@import "spinners";
+@import "offcanvas";
+@import "placeholders";
+
+// Helpers
+@import "helpers";
+
+// Utilities
+@import "utilities/api";
+// scss-docs-end import-stack
+
+// Trophy theme customizations
+@import "trophy-buttons";
+@import "trophy-typography";
+@import "trophy-forms";
+
+// Additional Trophy theme styles
+// Clean card styles
+.card {
+  border-radius: 0;
+  border: 1px solid rgba($trophy-gray, 0.3);
+  box-shadow: none;
+}
+
+// Navigation improvements
+.navbar {
+  font-weight: $trophy-font-weight-semibold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+// Clean, minimal badge styles
+.badge {
+  border-radius: 0;
+  font-weight: $trophy-font-weight-semibold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+// Trophy breadcrumb styles
+.breadcrumb {
+  background-color: transparent;
+  border-radius: 0;
+  padding: 0.75rem 0;
+  margin-bottom: 0;
+  font-weight: $trophy-font-weight-normal;
+  font-size: 0.9rem;
+}
+
+.breadcrumb-item {
+  // ...existing code...
+  
+  a {
+    color: $trophy-gray;
+    text-decoration: none;
+    font-weight: $trophy-font-weight-semibold;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      color: $trophy-primary;
+      text-decoration: none;
+    }
+  }
+  
+  &.active {
+    color: $trophy-dark;
+    font-weight: $trophy-font-weight-bold;
+  }
+  
+  + .breadcrumb-item::before {
+    color: $trophy-gray;
+    font-weight: normal;
+  }
+}
+
+// Alert styles
+.alert {
+  border-radius: 0;
+  border: none;
+  font-weight: $trophy-font-weight-normal;
+}

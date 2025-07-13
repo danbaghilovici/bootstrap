@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimal Button Test</title>
+    <style>
+        body {
+            padding: 50px;
+            font-family: Arial, sans-serif;
+        }
+        
+        .test-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 10px;
+            background-color: #c0e728;
+            color: #221f1b;
+            border: 1px solid #c0e728;
+            border-radius: 0;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+        }
+        
+        .test-btn:hover {
+            background-color: #a3c422;
+            border-color: #a3c422;
+            transform: translateY(-1px);
+        }
+        
+        .test-btn-outline {
+            background-color: transparent;
+            color: #c0e728;
+            border-color: #c0e728;
+        }
+        
+        .test-btn-outline:hover {
+            background-color: #c0e728;
+            color: #221f1b;
+        }
+        
+        /* Force square corners */
+        .test-btn,
+        .test-btn-outline {
+            border-radius: 0 !important;
+            -webkit-border-radius: 0 !important;
+            -moz-border-radius: 0 !important;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pure CSS Button Test</h1>
+    
+    <div>
+        <a href="#" class="test-btn">Pure CSS Solid Button</a>
+        <a href="#" class="test-btn test-btn-outline">Pure CSS Outline Button</a>
+    </div>
+    
+    <hr style="margin: 40px 0;">
+    
+    <h1>Bootstrap Button Test</h1>
+    
+    <!-- Only load Bootstrap CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <div>
+        <a href="#" class="btn btn-trophy-solid btn-trophy-xl" style="border-radius: 0 !important;">Bootstrap Trophy Solid</a>
+        <a href="#" class="btn btn-trophy-outline btn-trophy-xl" style="border-radius: 0 !important;">Bootstrap Trophy Outline</a>
+    </div>
+    
+    <div style="margin-top: 20px;">
+        <button class="btn" style="
+            background-color: #c0e728; 
+            color: #221f1b; 
+            border: 1px solid #c0e728;
+            border-radius: 0 !important;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 1.25rem 3rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+        ">Manual Bootstrap Button</button>
+    </div>
+</body>
+</html>

@@ -2,6 +2,19 @@
 //
 // Variables should follow the `$component-state-property-size` formula for
 // consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+//
+// ========================================================================
+// TROPHY THEME CUSTOMIZATIONS
+// ========================================================================
+// This file has been customized for the Trophy soccer club theme.
+// Key changes include:
+// - Color system updated to use Trophy brand colors (#43ec6b primary, #3cefd2 secondary)
+// - Typography switched to Titillium Web font family
+// - Font sizes and spacing adjusted to match Trophy design
+// - Border radius set to 0 for sharp, modern corners
+// - Button styling updated for Trophy aesthetic
+// - Shadows lightened for cleaner look
+// ========================================================================
 
 // Color system
 
@@ -36,6 +49,7 @@ $grays: (
 // fusv-enable
 
 // scss-docs-start color-variables
+// Trophy Theme Colors - Updated to match Trophy soccer club branding
 $blue:    #0d6efd !default;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
@@ -43,8 +57,8 @@ $pink:    #d63384 !default;
 $red:     #dc3545 !default;
 $orange:  #fd7e14 !default;
 $yellow:  #ffc107 !default;
-$green:   #198754 !default;
-$teal:    #20c997 !default;
+$green:   #c0e728 !default; // Trophy primary green - updated
+$teal:    #3cefd2 !default; // Trophy secondary teal
 $cyan:    #0dcaf0 !default;
 // scss-docs-end color-variables
 
@@ -298,14 +312,15 @@ $cyans: (
 // fusv-enable
 
 // scss-docs-start theme-color-variables
-$primary:       $blue !default;
-$secondary:     $gray-600 !default;
-$success:       $green !default;
+// Trophy Theme Color Mappings
+$primary:       $green !default;        // Trophy primary green (#c0e728)
+$secondary:     $teal !default;         // Trophy secondary teal (#3cefd2)
+$success:       $green !default;        // Use Trophy green for success
 $info:          $cyan !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
-$light:         $gray-100 !default;
-$dark:          $gray-900 !default;
+$light:         #ffffff !default;       // Trophy light
+$dark:          #221f1b !default;       // Trophy dark
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
@@ -435,7 +450,7 @@ $position-values: (
 // Settings for the `<body>` element.
 
 $body-text-align:           null !default;
-$body-color:                $gray-900 !default;
+$body-color:                #221f1b !default;  // Trophy dark color
 $body-bg:                   $white !default;
 
 $body-secondary-color:      rgba($body-color, .75) !default;
@@ -444,7 +459,7 @@ $body-secondary-bg:         $gray-200 !default;
 $body-tertiary-color:       rgba($body-color, .5) !default;
 $body-tertiary-bg:          $gray-100 !default;
 
-$body-emphasis-color:       $black !default;
+$body-emphasis-color:       #000000 !default;  // Trophy accent (black)
 
 // Links
 //
@@ -544,31 +559,34 @@ $border-color-translucent:    rgba($black, .175) !default;
 // scss-docs-end border-variables
 
 // scss-docs-start border-radius-variables
-$border-radius:               .375rem !default;
-$border-radius-sm:            .25rem !default;
-$border-radius-lg:            .5rem !default;
-$border-radius-xl:            1rem !default;
-$border-radius-xxl:           2rem !default;
-$border-radius-pill:          50rem !default;
+// Trophy Theme - Sharp, clean corners (no border radius)
+$border-radius:               0 !default;        // Trophy uses sharp corners
+$border-radius-sm:            0 !default;        // Trophy uses sharp corners
+$border-radius-lg:            0 !default;        // Trophy uses sharp corners
+$border-radius-xl:            0 !default;        // Trophy uses sharp corners
+$border-radius-xxl:           0 !default;        // Trophy uses sharp corners
+$border-radius-pill:          50rem !default;    // Keep pill for special cases
 // scss-docs-end border-radius-variables
 // fusv-disable
 $border-radius-2xl:           $border-radius-xxl !default; // Deprecated in v5.3.0
 // fusv-enable
 
 // scss-docs-start box-shadow-variables
-$box-shadow:                  0 .5rem 1rem rgba($black, .15) !default;
-$box-shadow-sm:               0 .125rem .25rem rgba($black, .075) !default;
-$box-shadow-lg:               0 1rem 3rem rgba($black, .175) !default;
-$box-shadow-inset:            inset 0 1px 2px rgba($black, .075) !default;
+// Trophy Theme - Subtle shadows for depth without heavy styling
+$box-shadow:                  0 .5rem 1rem rgba($black, .1) !default;  // Lighter shadows
+$box-shadow-sm:               0 .125rem .25rem rgba($black, .05) !default; // Very subtle
+$box-shadow-lg:               0 1rem 3rem rgba($black, .125) !default;    // Lighter large shadow
+$box-shadow-inset:            inset 0 1px 2px rgba($black, .05) !default; // Subtle inset
 // scss-docs-end box-shadow-variables
 
-$component-active-color:      $white !default;
-$component-active-bg:         $primary !default;
+$component-active-color:      #221f1b !default;  // Trophy dark for active text
+$component-active-bg:         $primary !default; // Trophy green for active background
 
 // scss-docs-start focus-ring-variables
+// Trophy focus styling
 $focus-ring-width:      .25rem !default;
 $focus-ring-opacity:    .25 !default;
-$focus-ring-color:      rgba($primary, $focus-ring-opacity) !default;
+$focus-ring-color:      rgba($primary, $focus-ring-opacity) !default; // Trophy green focus
 $focus-ring-blur:       0 !default;
 $focus-ring-box-shadow: 0 0 $focus-ring-blur $focus-ring-width $focus-ring-color !default;
 // scss-docs-end focus-ring-variables
@@ -603,16 +621,17 @@ $aspect-ratios: (
 
 // scss-docs-start font-variables
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+// Trophy Theme Typography - Using Trophy's brand fonts
+$font-family-sans-serif:      'Titillium Web', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 // stylelint-enable value-keyword-case
 $font-family-base:            var(--#{$prefix}font-sans-serif) !default;
 $font-family-code:            var(--#{$prefix}font-monospace) !default;
 
 // $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings, and margins
-// $font-size-base affects the font size of the body text
+// $font-size-base affects the font size of the body text - Trophy uses 15px base
 $font-size-root:              null !default;
-$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+$font-size-base:              0.9375rem !default; // 15px Trophy base font size
 $font-size-sm:                $font-size-base * .875 !default;
 $font-size-lg:                $font-size-base * 1.25 !default;
 
@@ -626,16 +645,18 @@ $font-weight-bolder:          bolder !default;
 
 $font-weight-base:            $font-weight-normal !default;
 
-$line-height-base:            1.5 !default;
+// Trophy typography spacing and line heights
+$line-height-base:            1.6 !default;  // Trophy uses 1.6 for better readability
 $line-height-sm:              1.25 !default;
 $line-height-lg:              2 !default;
 
-$h1-font-size:                $font-size-base * 2.5 !default;
-$h2-font-size:                $font-size-base * 2 !default;
-$h3-font-size:                $font-size-base * 1.75 !default;
-$h4-font-size:                $font-size-base * 1.5 !default;
-$h5-font-size:                $font-size-base * 1.25 !default;
-$h6-font-size:                $font-size-base !default;
+// Trophy heading sizes - based on Trophy inspiration design
+$h1-font-size:                3.75rem !default;   // 60px - Trophy large headings
+$h2-font-size:                2.25rem !default;   // 36px
+$h3-font-size:                1.5625rem !default; // 25px
+$h4-font-size:                1.375rem !default;  // 22px
+$h5-font-size:                1.25rem !default;   // 20px
+$h6-font-size:                0.8125rem !default; // 13px
 // scss-docs-end font-variables
 
 // scss-docs-start font-sizes
@@ -650,12 +671,13 @@ $font-sizes: (
 // scss-docs-end font-sizes
 
 // scss-docs-start headings-variables
-$headings-margin-bottom:      $spacer * .5 !default;
-$headings-font-family:        null !default;
+// Trophy heading styling
+$headings-margin-bottom:      1rem !default;      // Trophy heading spacing
+$headings-font-family:        'Titillium Web', sans-serif !default; // Trophy primary font
 $headings-font-style:         null !default;
-$headings-font-weight:        500 !default;
-$headings-line-height:        1.2 !default;
-$headings-color:              inherit !default;
+$headings-font-weight:        700 !default;       // Trophy uses bold headings
+$headings-line-height:        1.2 !default;       // Trophy tight line height
+$headings-color:              #000000 !default;   // Trophy accent (black)
 // scss-docs-end headings-variables
 
 // scss-docs-start display-headings
@@ -815,30 +837,31 @@ $input-btn-border-width:      var(--#{$prefix}border-width) !default;
 // For each of Bootstrap's buttons, define text, background, and border color.
 
 // scss-docs-start btn-variables
+// Trophy Button Styling
 $btn-color:                   var(--#{$prefix}body-color) !default;
-$btn-padding-y:               $input-btn-padding-y !default;
-$btn-padding-x:               $input-btn-padding-x !default;
-$btn-font-family:             $input-btn-font-family !default;
-$btn-font-size:               $input-btn-font-size !default;
-$btn-line-height:             $input-btn-line-height !default;
+$btn-padding-y:               0.5rem !default;            // Trophy button padding
+$btn-padding-x:               1.5rem !default;            // Trophy button padding
+$btn-font-family:             'Titillium Web', sans-serif !default; // Trophy font
+$btn-font-size:               0.9rem !default;            // Trophy button font size
+$btn-line-height:             1.2 !default;               // Trophy tight line height
 $btn-white-space:             null !default; // Set to `nowrap` to prevent text wrapping
 
-$btn-padding-y-sm:            $input-btn-padding-y-sm !default;
-$btn-padding-x-sm:            $input-btn-padding-x-sm !default;
-$btn-font-size-sm:            $input-btn-font-size-sm !default;
+$btn-padding-y-sm:            0.375rem !default;          // Trophy small button
+$btn-padding-x-sm:            1rem !default;              // Trophy small button
+$btn-font-size-sm:            0.8rem !default;            // Trophy small button
 
-$btn-padding-y-lg:            $input-btn-padding-y-lg !default;
-$btn-padding-x-lg:            $input-btn-padding-x-lg !default;
-$btn-font-size-lg:            $input-btn-font-size-lg !default;
+$btn-padding-y-lg:            0.75rem !default;           // Trophy large button
+$btn-padding-x-lg:            2rem !default;              // Trophy large button
+$btn-font-size-lg:            1rem !default;              // Trophy large button
 
-$btn-border-width:            $input-btn-border-width !default;
+$btn-border-width:            1px !default;               // Trophy border width
 
-$btn-font-weight:             $font-weight-normal !default;
-$btn-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075) !default;
+$btn-font-weight:             600 !default;               // Trophy semibold weight
+$btn-box-shadow:              none !default;              // Trophy clean look - no shadows
 $btn-focus-width:             $input-btn-focus-width !default;
-$btn-focus-box-shadow:        $input-btn-focus-box-shadow !default;
+$btn-focus-box-shadow:        none !default;              // Trophy clean focus
 $btn-disabled-opacity:        .65 !default;
-$btn-active-box-shadow:       inset 0 3px 5px rgba($black, .125) !default;
+$btn-active-box-shadow:       none !default;              // Trophy clean active state
 
 $btn-link-color:              var(--#{$prefix}link-color) !default;
 $btn-link-hover-color:        var(--#{$prefix}link-hover-color) !default;
@@ -846,11 +869,12 @@ $btn-link-disabled-color:     $gray-600 !default;
 $btn-link-focus-shadow-rgb:   to-rgb(mix(color-contrast($link-color), $link-color, 15%)) !default;
 
 // Allows for customizing button radius independently from global border radius
-$btn-border-radius:           var(--#{$prefix}border-radius) !default;
-$btn-border-radius-sm:        var(--#{$prefix}border-radius-sm) !default;
-$btn-border-radius-lg:        var(--#{$prefix}border-radius-lg) !default;
+// Trophy uses sharp corners (no border radius)
+$btn-border-radius:           0 !default;                 // Trophy sharp corners
+$btn-border-radius-sm:        0 !default;                 // Trophy sharp corners
+$btn-border-radius-lg:        0 !default;                 // Trophy sharp corners
 
-$btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
+$btn-transition:              all 0.3s ease-in-out !default; // Trophy smooth transitions
 
 $btn-hover-bg-shade-amount:       15% !default;
 $btn-hover-bg-tint-amount:        15% !default;

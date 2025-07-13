@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trophy Theme Variables Demo</title>
+    
+    <!-- Trophy Bootstrap CSS with updated variables -->
+    <link href="dist/css/bootstrap.css" rel="stylesheet">
+    
+    <!-- Trophy Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        body {
+            padding-top: 2rem;
+        }
+        
+        .color-swatch {
+            width: 100px;
+            height: 60px;
+            border: 1px solid #ddd;
+            display: inline-block;
+            margin-right: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .demo-section {
+            padding: 2rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .demo-section:last-child {
+            border-bottom: none;
+        }
+        
+        .variable-showcase {
+            background: #f8f9fa;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-left: 4px solid var(--bs-primary);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="demo-section text-center">
+            <h1 class="display-4 fw-bold">
+                <i class="fas fa-trophy text-primary me-3"></i>
+                Trophy Theme Variables
+            </h1>
+            <p class="lead">
+                Bootstrap variables customized to match the Trophy soccer club brand identity
+            </p>
+        </div>
+
+        <!-- Color System -->
+        <div class="demo-section">
+            <h2 class="mb-4">Color System</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Theme Colors</h4>
+                    <div class="mb-3">
+                        <div class="color-swatch bg-primary"></div>
+                        <strong>Primary:</strong> #43ec6b (Trophy Green)
+                    </div>
+                    <div class="mb-3">
+                        <div class="color-swatch bg-secondary"></div>
+                        <strong>Secondary:</strong> #3cefd2 (Trophy Teal)
+                    </div>
+                    <div class="mb-3">
+                        <div class="color-swatch bg-success"></div>
+                        <strong>Success:</strong> #43ec6b (Trophy Green)
+                    </div>
+                    <div class="mb-3">
+                        <div class="color-swatch bg-dark"></div>
+                        <strong>Dark:</strong> #221f1b (Trophy Dark)
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h4>Color Usage Examples</h4>
+                    <p class="text-primary">This text uses the Trophy primary color</p>
+                    <p class="text-secondary">This text uses the Trophy secondary color</p>
+                    <div class="alert alert-primary" role="alert">
+                        Primary alert with Trophy green background
+                    </div>
+                    <div class="alert alert-secondary" role="alert">
+                        Secondary alert with Trophy teal background
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Typography -->
+        <div class="demo-section">
+            <h2 class="mb-4">Typography - Titillium Web Font</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h1>Heading 1 - 60px</h1>
+                    <h2>Heading 2 - 36px</h2>
+                    <h3>Heading 3 - 25px</h3>
+                    <h4>Heading 4 - 22px</h4>
+                    <h5>Heading 5 - 20px</h5>
+                    <h6>Heading 6 - 13px</h6>
+                </div>
+                <div class="col-md-6">
+                    <p class="fs-1">Display text (.fs-1)</p>
+                    <p class="fs-3">Large text (.fs-3)</p>
+                    <p>Regular paragraph text - 15px base size with 1.6 line height for optimal readability in the Trophy theme.</p>
+                    <p class="small">Small text for fine print and captions</p>
+                    
+                    <div class="variable-showcase">
+                        <strong>Trophy Typography Variables:</strong><br>
+                        Font Family: Titillium Web<br>
+                        Base Size: 15px (0.9375rem)<br>
+                        Line Height: 1.6<br>
+                        Heading Weight: 700 (Bold)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="demo-section">
+            <h2 class="mb-4">Button System</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Button Variants</h4>
+                    <div class="d-flex flex-wrap gap-2 mb-3">
+                        <button class="btn btn-primary">Primary</button>
+                        <button class="btn btn-secondary">Secondary</button>
+                        <button class="btn btn-success">Success</button>
+                        <button class="btn btn-outline-primary">Outline Primary</button>
+                        <button class="btn btn-outline-secondary">Outline Secondary</button>
+                    </div>
+                    
+                    <h4>Button Sizes</h4>
+                    <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
+                        <button class="btn btn-primary btn-sm">Small</button>
+                        <button class="btn btn-primary">Default</button>
+                        <button class="btn btn-primary btn-lg">Large</button>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="variable-showcase">
+                        <strong>Trophy Button Features:</strong><br>
+                        • Sharp corners (border-radius: 0)<br>
+                        • Semibold font weight (600)<br>
+                        • No shadows for clean look<br>
+                        • Smooth transitions (0.3s)<br>
+                        • Titillium Web font family<br>
+                        • Uppercase text transformation<br>
+                        • Custom padding and spacing
+                    </div>
+                    
+                    <h4>Button States</h4>
+                    <div class="d-flex flex-wrap gap-2">
+                        <button class="btn btn-primary">Normal</button>
+                        <button class="btn btn-primary" disabled>Disabled</button>
+                        <button class="btn btn-primary active">Active</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Forms -->
+        <div class="demo-section">
+            <h2 class="mb-4">Form Elements</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleEmail" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleEmail" placeholder="Enter email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleSelect" class="form-label">Select option</label>
+                            <select class="form-select" id="exampleSelect">
+                                <option>Choose...</option>
+                                <option>Option 1</option>
+                                <option>Option 2</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleTextarea" class="form-label">Message</label>
+                            <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck">
+                            <label class="form-check-label" for="exampleCheck">
+                                Check me out
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <div class="variable-showcase">
+                        <strong>Trophy Form Features:</strong><br>
+                        • Sharp corners on inputs<br>
+                        • Trophy green focus states<br>
+                        • Consistent with button styling<br>
+                        • Clean, minimal shadows<br>
+                        • Proper contrast ratios
+                    </div>
+                    
+                    <h4>Input Variants</h4>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" placeholder="Default input">
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control form-control-sm" placeholder="Small input">
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control form-control-lg" placeholder="Large input">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cards & Components -->
+        <div class="demo-section">
+            <h2 class="mb-4">Cards & Components</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header bg-primary text-dark">
+                            <h5 class="card-title mb-0">Trophy Card</h5>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Card with Trophy styling - sharp corners and clean design.</p>
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header bg-secondary text-dark">
+                            <h5 class="card-title mb-0">Secondary Card</h5>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Card with Trophy secondary color styling.</p>
+                            <a href="#" class="btn btn-outline-secondary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="variable-showcase">
+                        <strong>Trophy Component Features:</strong><br>
+                        • Sharp corners throughout<br>
+                        • Subtle shadows<br>
+                        • Trophy color scheme<br>
+                        • Consistent spacing<br>
+                        • Clean, modern aesthetic
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Badge & Progress -->
+        <div class="demo-section">
+            <h2 class="mb-4">Badges & Progress</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Badges</h4>
+                    <p>
+                        <span class="badge bg-primary me-2">Primary</span>
+                        <span class="badge bg-secondary me-2">Secondary</span>
+                        <span class="badge bg-success me-2">Success</span>
+                        <span class="badge bg-danger me-2">Danger</span>
+                    </p>
+                    
+                    <h4>Progress Bars</h4>
+                    <div class="progress mb-3">
+                        <div class="progress-bar" role="progressbar" style="width: 75%"></div>
+                    </div>
+                    <div class="progress mb-3">
+                        <div class="progress-bar bg-secondary" role="progressbar" style="width: 50%"></div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h4>Alerts</h4>
+                    <div class="alert alert-primary" role="alert">
+                        <i class="fas fa-info-circle me-2"></i>
+                        Primary alert with Trophy green styling
+                    </div>
+                    <div class="alert alert-secondary" role="alert">
+                        <i class="fas fa-star me-2"></i>
+                        Secondary alert with Trophy teal styling
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Variable Summary -->
+        <div class="demo-section">
+            <h2 class="mb-4">Variable Summary</h2>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Variable Category</th>
+                                    <th>Key Changes</th>
+                                    <th>Trophy Values</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Colors</strong></td>
+                                    <td>Primary, Secondary, Success, Dark</td>
+                                    <td>#43ec6b, #3cefd2, #43ec6b, #221f1b</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Typography</strong></td>
+                                    <td>Font family, Base size, Line height, Headings</td>
+                                    <td>Titillium Web, 15px, 1.6, Bold 700</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Border Radius</strong></td>
+                                    <td>All sizes set to 0</td>
+                                    <td>Sharp corners throughout</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Buttons</strong></td>
+                                    <td>Padding, Font weight, Shadows, Transitions</td>
+                                    <td>Custom spacing, 600 weight, No shadows, 0.3s</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Shadows</strong></td>
+                                    <td>Lightened for cleaner look</td>
+                                    <td>Reduced opacity, Subtle depth</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="text-center py-4 border-top">
+            <p class="mb-0 text-muted">
+                <i class="fas fa-trophy text-primary me-2"></i>
+                Trophy Theme Variables - Customized Bootstrap for Soccer Club Excellence
+            </p>
+        </footer>
+    </div>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

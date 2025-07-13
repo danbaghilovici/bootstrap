@@ -1,0 +1,2941 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trophy Soccer Team - Junior Division</title>
+    <!-- Bootstrap CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts - Titillium Web -->
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Apply Titillium Web font family */
+        body {
+            font-family: 'Titillium Web', sans-serif;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+        }
+        
+        /* Hero Section Styles */
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                        url('https://images.unsplash.com/photo-1551698618-1dfe5d97d256?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            position: relative;
+        }
+        
+        .hero-content {
+            text-align: center;
+            z-index: 2;
+        }
+        
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 700;
+            letter-spacing: -2px;
+            margin-bottom: 1rem;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        /* Process Section */
+        .process-section {
+            padding: 100px 0;
+            background-color: #f8f9fa;
+        }
+        
+        .process-item {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .process-icon {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(135deg, #c0e728 0%, #a4c926 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            font-size: 4rem;
+            font-weight: 700;
+            color: white;
+            box-shadow: 0 10px 30px rgba(192, 231, 40, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .process-icon::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, transparent 0%, rgba(255, 255, 255, 0.1) 50%, transparent 100%);
+            border-radius: 50%;
+        }
+        
+        .process-icon:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 20px 40px rgba(192, 231, 40, 0.4);
+        }
+        
+        .process-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .process-description {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.6;
+            max-width: 280px;
+            margin: 0 auto;
+        }
+        
+        /* Blog Section */
+        .blog-section {
+            padding: 80px 0;
+        }
+        
+        .blog-card {
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .blog-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .blog-card .card-body {
+            padding: 20px;
+        }
+        
+        .blog-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        /* Testimonials Section */
+        .testimonials-section {
+            background-color: #f8f9fa;
+            padding: 80px 0;
+        }
+        
+        .testimonial-card {
+            text-align: center;
+            padding: 40px 20px;
+            background: white;
+            margin: 0 10px;
+        }
+        
+        .testimonial-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            object-fit: cover;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .testimonial-name {
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .testimonial-position {
+            color: #c0e728;
+            font-size: 0.9rem;
+        }
+        
+        /* Custom separators */
+        .custom-separator {
+            width: 60px;
+            height: 4px;
+            background-color: #c0e728;
+            margin: 20px auto;
+        }
+        
+        /* Section headings */
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Navigation customizations */
+        .navbar-brand img {
+            height: 50px;
+        }
+        
+        /* Top Contact Bar */
+        .top-contact-bar {
+            background-color: #003828;
+            color: white;
+            padding: 10px 0;
+            font-size: 0.9rem;
+        }
+        
+        .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+        
+        .contact-item i {
+            color: #c0e728;
+            margin-right: 8px;
+            font-size: 0.8rem;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .social-link {
+            color: white;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 0;
+        }
+        
+        .social-link:hover {
+            color: #c0e728;
+            background: rgba(192, 231, 40, 0.2);
+        }
+        
+        /* White Navigation Bar */
+        .navbar {
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 15px 0;
+        }
+        
+        .navbar-light .navbar-nav .nav-link {
+            color: #333;
+            font-weight: 600;
+            padding: 10px 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar-light .navbar-nav .nav-link:hover,
+        .navbar-light .navbar-nav .nav-link.active {
+            color: #c0e728;
+        }
+        
+        .navbar-light .navbar-nav .dropdown-menu {
+            border: none;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 0;
+            margin-top: 0;
+        }
+        
+        .navbar-light .navbar-nav .dropdown-item {
+            color: #333;
+            padding: 10px 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar-light .navbar-nav .dropdown-item:hover {
+            background-color: #c0e728;
+            color: #221f1b;
+        }
+        
+        .nav-cart-link {
+            color: #333;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-cart-link:hover {
+            color: #c0e728;
+        }
+        
+        /* Header Structure */
+        .top-contact-bar {
+            background-color: #003828;
+            color: white;
+            padding: 10px 0;
+            font-size: 0.9rem;
+        }
+        
+        /* Navigation Wrapper */
+        .navbar-wrapper {
+            background-color: #003828;
+            padding: 0;
+            width: 100%;
+        }
+        
+        /* Navigation */
+        .navbar {
+            background-color: white !important;
+            padding: 15px 0;
+            border-radius: 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+        }
+        
+        .navbar .navbar-brand svg {
+            height: 45px;
+        }
+        
+        /* Remove body padding since navbar is no longer fixed */
+        body {
+            padding-top: 0;
+        }
+        
+        /* Navbar items styling */
+        .navbar-nav .nav-link {
+            font-weight: 500;
+            padding: 8px 16px !important;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar-nav .nav-link:hover {
+            color: #c0e728 !important;
+            transform: translateY(-1px);
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 575px) {
+            .navbar {
+                padding: 10px 0;
+            }
+            
+            .navbar .navbar-brand svg {
+                height: 40px;
+            }
+        }
+        
+        /* Stats Section */
+        .stats-section {
+            background-color: #c0e728;
+            padding: 60px 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+            color: #003828;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Gallery Section */
+        .gallery-section {
+            padding: 80px 0;
+        }
+        
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 30px;
+            cursor: pointer;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(192, 231, 40, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+        
+        .gallery-icon {
+            color: white;
+            font-size: 2rem;
+        }
+        
+        /* Sponsors Section */
+        .sponsors-section {
+            padding: 60px 0;
+            background-color: white;
+        }
+        
+        .sponsor-logo {
+            height: 80px;
+            object-fit: contain;
+            filter: grayscale(100%);
+            opacity: 0.6;
+            transition: all 0.3s ease;
+        }
+        
+        .sponsor-logo:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+        
+        /* Comprehensive Trophy button override */
+        .hero-section .btn,
+        .newsletter-section .btn,
+        a.btn.btn-trophy-solid,
+        a.btn.btn-trophy-outline,
+        button.btn.btn-trophy-solid,
+        button.btn {
+            border-radius: 0 !important;
+            -webkit-border-radius: 0 !important;
+            -moz-border-radius: 0 !important;
+            -ms-border-radius: 0 !important;
+            -o-border-radius: 0 !important;
+        }
+        
+        /* Force Trophy styling with ultra-high specificity */
+        .hero-section a.btn.btn-trophy-solid.btn-trophy-xl {
+            background-color: #c0e728 !important;
+            color: #221f1b !important;
+            border: 1px solid #c0e728 !important;
+            border-radius: 0 !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.5px !important;
+            font-weight: 600 !important;
+            padding: 1.25rem 3rem !important;
+            font-size: 1.2rem !important;
+        }
+        
+        .hero-section a.btn.btn-trophy-outline.btn-trophy-xl {
+            background-color: transparent !important;
+            color: #c0e728 !important;
+            border: 1px solid #c0e728 !important;
+            border-radius: 0 !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.5px !important;
+            font-weight: 600 !important;
+            padding: 1.25rem 3rem !important;
+            font-size: 1.2rem !important;
+        }
+        
+        .hero-section a.btn.btn-trophy-outline.btn-trophy-xl:hover {
+            background-color: #c0e728 !important;
+            color: #221f1b !important;
+            border-color: #c0e728 !important;
+        }
+        
+        .hero-section a.btn:hover {
+            transform: translateY(-1px) !important;
+        }
+        
+        /* Override any potential browser defaults */
+        * {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+        
+        /* Floating Features Section */
+        .floating-features-section {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+            position: relative;
+            margin-top: -60px;
+            z-index: 10;
+        }
+        
+        .floating-feature-card {
+            background: white;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 0;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .floating-feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #c0e728 0%, #a3c422 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            color: #221f1b;
+            font-size: 2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .floating-feature-card:hover .feature-icon {
+            transform: scale(1.1);
+        }
+        
+        .feature-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #221f1b;
+            margin-bottom: 15px;
+        }
+        
+        .feature-description {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+        
+        /* Equipment Section */
+        .equipment-section {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+        
+        .equipment-hero-card {
+            height: 500px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .equipment-hero-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .equipment-hero-bg {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+        
+        .equipment-hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0, 56, 40, 0.8) 0%, rgba(0, 56, 40, 0.6) 100%);
+            display: flex;
+            align-items: flex-end;
+            padding: 40px;
+        }
+        
+        .equipment-hero-content {
+            color: white;
+        }
+        
+        .equipment-hero-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+        
+        .equipment-hero-description {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+        
+        .equipment-hero-card .btn {
+            background-color: #c0e728;
+            color: #221f1b;
+            border: none;
+            padding: 12px 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .equipment-hero-card .btn:hover {
+            background-color: #a3c422;
+            color: #221f1b;
+            transform: translateY(-2px);
+        }
+        
+        /* Round Images Section */
+        .round-images-section {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .round-image-item {
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .round-image-wrapper {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 25px;
+        }
+        
+        .round-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #c0e728;
+            transition: all 0.3s ease;
+        }
+        
+        .round-image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(192, 231, 40, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: all 0.3s ease;
+            color: #221f1b;
+            font-size: 2rem;
+        }
+        
+        .round-image-wrapper:hover .round-image-overlay {
+            opacity: 1;
+        }
+        
+        .round-image-wrapper:hover .round-image {
+            transform: scale(1.05);
+        }
+        
+        .round-image-content {
+            padding: 0 15px;
+        }
+        
+        .round-image-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #221f1b;
+            margin-bottom: 8px;
+        }
+        
+        .round-image-subtitle {
+            color: #c0e728;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .round-image-description {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+        
+        .round-image-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        button, input[type="submit"], input[type="button"] {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+        
+        /* Timetable Section */
+        .timetable-section {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+        
+        .schedule-nav .btn-group {
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 0;
+            overflow: hidden;
+        }
+        
+        .btn-schedule {
+            background-color: white;
+            color: #333;
+            border: none;
+            padding: 15px 30px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            border-radius: 0 !important;
+        }
+        
+        .btn-schedule:hover,
+        .btn-schedule.active {
+            background-color: #c0e728;
+            color: #221f1b;
+            transform: translateY(-2px);
+        }
+        
+        .schedule-table-wrapper {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        
+        .schedule-table-wrapper.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .schedule-table {
+            background: white;
+            border-radius: 0;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 0;
+        }
+        
+        .schedule-table thead th {
+            background: linear-gradient(135deg, #003828 0%, #004d36 100%);
+            color: white;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 20px 15px;
+            border: none;
+            font-size: 0.9rem;
+        }
+        
+        .schedule-table tbody td {
+            padding: 15px;
+            border: 1px solid #e9ecef;
+            vertical-align: top;
+            height: 100px;
+            min-width: 140px;
+        }
+        
+        .time-slot {
+            background-color: #f8f9fa !important;
+            font-weight: 700;
+            color: #003828;
+            text-align: center;
+            font-size: 0.9rem;
+            vertical-align: middle !important;
+        }
+        
+        .schedule-item {
+            background: linear-gradient(135deg, #c0e728 0%, #a4c926 100%);
+            color: #221f1b;
+            padding: 10px;
+            border-radius: 0;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .schedule-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(192, 231, 40, 0.4);
+        }
+        
+        .schedule-item.youth-u10 { background: linear-gradient(135deg, #c0e728 0%, #a4c926 100%); color: #221f1b; }
+        .schedule-item.youth-u12 { background: linear-gradient(135deg, #a4c926 0%, #8fb01f 100%); color: #221f1b; }
+        .schedule-item.youth-u14 { background: linear-gradient(135deg, #8fb01f 0%, #7a9918 100%); color: white; }
+        .schedule-item.youth-u16 { background: linear-gradient(135deg, #7a9918 0%, #658211 100%); color: white; }
+        .schedule-item.youth-match { background: linear-gradient(135deg, #d4e026 0%, #c0e728 100%); color: #221f1b; }
+        .schedule-item.senior-team { background: linear-gradient(135deg, #658211 0%, #506a0e 100%); color: white; }
+        .schedule-item.senior-reserve { background: linear-gradient(135deg, #506a0e 0%, #3b530b 100%); color: white; }
+        .schedule-item.senior-match { background: linear-gradient(135deg, #e5f030 0%, #d4e026 100%); color: #221f1b; }
+        
+        .schedule-title {
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 3px;
+        }
+        
+        .schedule-coach {
+            font-size: 0.75rem;
+            opacity: 0.9;
+            margin-bottom: 2px;
+        }
+        
+        .schedule-location {
+            font-size: 0.7rem;
+            opacity: 0.8;
+            font-style: italic;
+        }
+        
+        /* Matches Grid */
+        .matches-grid {
+            margin-top: 20px;
+        }
+        
+        .match-card {
+            background: white;
+            border-radius: 0;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .match-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .match-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #f1f1f1;
+        }
+        
+        .match-league {
+            background: linear-gradient(135deg, #c0e728 0%, #a4c926 100%);
+            color: #221f1b;
+            padding: 5px 12px;
+            border-radius: 0;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .match-date {
+            color: #666;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .match-teams {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        
+        .match-team {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            flex: 1;
+        }
+        
+        .match-team img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-bottom: 8px;
+            border: 3px solid #f1f1f1;
+        }
+        
+        .match-team.home img {
+            border-color: #c0e728;
+        }
+        
+        .match-team span {
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: #333;
+        }
+        
+        .match-vs {
+            font-weight: 700;
+            color: #221f1b;
+            font-size: 1.2rem;
+            margin: 0 20px;
+            background: linear-gradient(135deg, #c0e728 0%, #a4c926 100%);
+            width: 40px;
+            height: 40px;
+            border-radius: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .match-details {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 0;
+        }
+        
+        .match-time,
+        .match-location {
+            display: flex;
+            align-items: center;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .match-time i,
+        .match-location i {
+            color: #c0e728;
+            margin-right: 8px;
+            font-size: 0.8rem;
+        }
+        
+        .match-actions {
+            text-align: center;
+        }
+        
+        .match-actions .btn {
+            border-radius: 0;
+            padding: 10px 25px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 0.8rem;
+        }
+        
+        /* Call to Action Section */
+        .cta-section {
+            background: linear-gradient(135deg, #c0e728 0%, #a4c926 100%);
+            padding: 40px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-image: url('https://images.unsplash.com/photo-1551698618-1dfe5d97d256?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1;
+            z-index: 1;
+        }
+        
+        .cta-content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+        
+        .cta-text {
+            flex: 1;
+        }
+        
+        .cta-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #003828;
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+        
+        .cta-subtitle {
+            font-size: 1rem;
+            color: #221f1b;
+            margin-bottom: 0;
+            opacity: 0.8;
+        }
+        
+        .btn-cta {
+            background-color: #003828;
+            color: white;
+            border: 2px solid #003828;
+            padding: 12px 30px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 0;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            flex-shrink: 0;
+        }
+        
+        .btn-cta:hover {
+            background-color: transparent;
+            color: #003828;
+            border-color: #003828;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 56, 40, 0.3);
+        }
+        
+        .btn-cta i {
+            font-size: 0.9rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .btn-cta:hover i {
+            transform: translateX(3px);
+        }
+        
+        @media (max-width: 768px) {
+            .cta-section {
+                padding: 30px 0;
+            }
+            
+            .cta-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+            
+            .cta-title {
+                font-size: 1.5rem;
+                margin-bottom: 8px;
+            }
+            
+            .cta-subtitle {
+                font-size: 0.95rem;
+                margin-bottom: 15px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .cta-section {
+                padding: 25px 0;
+            }
+            
+            .cta-title {
+                font-size: 1.3rem;
+            }
+            
+            .cta-subtitle {
+                font-size: 0.9rem;
+            }
+            
+            .btn-cta {
+                padding: 10px 25px;
+                font-size: 0.9rem;
+            }
+        }
+        
+        /* Footer Styles */
+        .footer-section {
+            background: #1a1a1a;
+            color: #ffffff;
+        }
+        
+        .footer-main {
+            padding: 60px 0 40px;
+            background: linear-gradient(135deg, #003828 0%, #002d1f 100%);
+        }
+        
+        .footer-about {
+            padding-right: 20px;
+        }
+        
+        .footer-logo {
+            max-width: 180px;
+            height: auto;
+        }
+        
+        .footer-description {
+            color: #cccccc;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            font-size: 0.95rem;
+        }
+        
+        .footer-contact-quick {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .contact-quick-item {
+            display: flex;
+            align-items: center;
+            color: #cccccc;
+            font-size: 0.9rem;
+        }
+        
+        .contact-quick-item i {
+            color: #c0e728;
+            width: 20px;
+            margin-right: 10px;
+            font-size: 0.9rem;
+        }
+        
+        .footer-title {
+            color: #ffffff;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            position: relative;
+        }
+        
+        .footer-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 30px;
+            height: 2px;
+            background: #c0e728;
+        }
+        
+        .footer-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .footer-menu li {
+            margin-bottom: 8px;
+        }
+        
+        .footer-menu a {
+            color: #cccccc;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .footer-menu a:hover {
+            color: #c0e728;
+            transform: translateX(5px);
+        }
+        
+        .training-times {
+            margin-bottom: 20px;
+        }
+        
+        .training-time {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 0;
+        }
+        
+        .training-time strong {
+            color: #c0e728;
+            font-size: 0.9rem;
+            margin-bottom: 2px;
+        }
+        
+        .training-time span {
+            color: #cccccc;
+            font-size: 0.85rem;
+        }
+        
+        .btn-footer-cta {
+            background: transparent;
+            border: 1px solid #c0e728;
+            color: #c0e728;
+            padding: 8px 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-radius: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-footer-cta:hover {
+            background: #c0e728;
+            color: #221f1b;
+            transform: translateY(-2px);
+        }
+        
+        .footer-contact .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .footer-contact .contact-item {
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .footer-contact .contact-item i {
+            color: #c0e728;
+            width: 20px;
+            margin-right: 12px;
+            margin-top: 3px;
+            font-size: 0.9rem;
+        }
+        
+        .footer-contact .contact-item div {
+            flex: 1;
+        }
+        
+        .footer-contact .contact-item strong {
+            color: #ffffff;
+            display: block;
+            font-size: 0.9rem;
+            margin-bottom: 3px;
+        }
+        
+        .footer-contact .contact-item span {
+            color: #cccccc;
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+        
+        /* Newsletter Section */
+        .footer-newsletter {
+            background: #c0e728;
+            padding: 30px 0;
+        }
+        
+        .newsletter-content h4 {
+            color: #221f1b;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        
+        .newsletter-content p {
+            color: #444;
+            margin-bottom: 0;
+            font-size: 0.95rem;
+        }
+        
+        .footer-newsletter-form .input-group {
+            max-width: 400px;
+            margin-left: auto;
+        }
+        
+        .newsletter-input {
+            border: none;
+            padding: 12px 15px;
+            font-size: 0.9rem;
+            border-radius: 0;
+            background: #ffffff;
+            color: #333;
+        }
+        
+        .newsletter-input:focus {
+            box-shadow: none;
+            border-color: #003828;
+            outline: none;
+        }
+        
+        .btn-newsletter {
+            background: #003828;
+            border: none;
+            color: #ffffff;
+            padding: 12px 20px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 0.85rem;
+            border-radius: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-newsletter:hover {
+            background: #002d1f;
+            color: #ffffff;
+        }
+        
+        /* Footer Bottom */
+        .footer-bottom {
+            background: #000000;
+            padding: 20px 0;
+        }
+        
+        .footer-copyright {
+            margin: 0;
+        }
+        
+        .footer-copyright p {
+            color: #888888;
+            margin: 0;
+            font-size: 0.85rem;
+        }
+        
+        .footer-copyright a {
+            color: #c0e728;
+            text-decoration: none;
+        }
+        
+        .footer-copyright a:hover {
+            color: #ffffff;
+        }
+        
+        .footer-social {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 15px;
+        }
+        
+        .social-label {
+            color: #888888;
+            font-size: 0.85rem;
+            margin-right: 10px;
+        }
+        
+        .footer-social .social-links {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .footer-social .social-link {
+            width: 35px;
+            height: 35px;
+            background: #333333;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            border-radius: 0;
+            font-size: 0.9rem;
+        }
+        
+        .footer-social .social-link:hover {
+            background: #c0e728;
+            color: #221f1b;
+            transform: translateY(-3px);
+        }
+        
+        /* Footer Responsive */
+        @media (max-width: 768px) {
+            .footer-main {
+                padding: 40px 0 30px;
+            }
+            
+            .footer-about {
+                padding-right: 0;
+                margin-bottom: 30px;
+            }
+            
+            .footer-title {
+                font-size: 1.1rem;
+                margin-bottom: 20px;
+            }
+            
+            .footer-newsletter {
+                padding: 25px 0;
+            }
+            
+            .newsletter-content {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            
+            .footer-newsletter-form .input-group {
+                margin-left: 0;
+            }
+            
+            .footer-social {
+                justify-content: center;
+                margin-top: 15px;
+            }
+            
+            .footer-copyright {
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .footer-newsletter-form .input-group {
+                flex-direction: column;
+            }
+            
+            .footer-newsletter-form .input-group .form-control,
+            .footer-newsletter-form .input-group .btn {
+                border-radius: 0;
+            }
+            
+            .footer-newsletter-form .input-group .btn {
+                margin-top: 10px;
+            }
+        }
+        
+        /* Video Section */
+        .video-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: white;
+            position: relative;
+        }
+        
+        .video-container {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .video-wrapper {
+            position: relative;
+            background: #000;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+            margin-top: 40px;
+        }
+        
+        .video-embed {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+        }
+        
+        .video-embed iframe,
+        .video-embed video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .video-play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #c0e728 0%, #a4c926 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+            box-shadow: 0 10px 30px rgba(192, 231, 40, 0.4);
+        }
+        
+        .video-play-button:hover {
+            transform: translate(-50%, -50%) scale(1.1);
+            box-shadow: 0 15px 40px rgba(192, 231, 40, 0.6);
+        }
+        
+        .video-play-button i {
+            font-size: 24px;
+            color: white;
+            margin-left: 3px; /* Slight offset for visual centering */
+        }
+        
+        .video-thumbnail {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        
+        .video-thumbnail:hover {
+            transform: scale(1.02);
+        }
+        
+        .video-stats {
+            margin-top: 50px;
+        }
+        
+        .video-stat {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .video-stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #c0e728;
+            display: block;
+            line-height: 1;
+        }
+        
+        .video-stat-label {
+            font-size: 1.1rem;
+            color: #ccc;
+            margin-top: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .video-section {
+                padding: 60px 0;
+            }
+            
+            .video-wrapper {
+                margin-top: 30px;
+            }
+            
+            .video-play-button {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .video-play-button i {
+                font-size: 18px;
+            }
+            
+            .video-stat-number {
+                font-size: 2rem;
+            }
+            
+            .video-stat-label {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>    <!-- Top Contact Bar -->
+    <div class="top-contact-bar">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 col-md-7">
+                    <div class="contact-info">
+                        <span class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            (555) 123-4567
+                        </span>
+                        <span class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            info@trophysoccer.com
+                        </span>
+                        <span class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            123 Soccer Street, Sports City
+                        </span>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-5">
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Wrapper -->
+    <div class="navbar-wrapper">
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white" id="mainNavbar">
+            <div class="container">
+                <div class="d-flex align-items-center justify-content-between w-100">
+                    <a class="navbar-brand" href="#">
+                        <svg width="200" height="50" viewBox="0 0 200 50" alt="Trophy Logo">
+                            <rect width="200" height="50" fill="#c0e728"/>
+                            <text x="100" y="32" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#003828">TROPHY</text>
+                        </svg>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown">
+                            Home
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Soccer Club</a></li>
+                            <li><a class="dropdown-item" href="#">Junior Soccer Team</a></li>
+                            <li><a class="dropdown-item" href="#">Soccer Coach</a></li>
+                            <li><a class="dropdown-item" href="#">Shop Home</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-bs-toggle="dropdown">
+                            Pages
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">About Us</a></li>
+                            <li><a class="dropdown-item" href="#">Club History</a></li>
+                            <li><a class="dropdown-item" href="#">Our Team</a></li>
+                            <li><a class="dropdown-item" href="#">Contact Us</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#shop">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <div class="d-flex ms-3">
+                    <a href="#" class="nav-cart-link me-3">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="badge bg-primary">0</span>
+                    </a>
+                </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="hero-content">
+                        <h1 class="hero-title">We Never Stop Dreaming Big</h1>
+                        <p class="hero-subtitle">Lorem ipsum dolor sit amet, consecte adipiscingum elit etiam vel neque</p>
+                        <div class="d-flex gap-3 justify-content-center flex-wrap">
+                            <a href="#" class="btn btn-trophy-solid btn-trophy-xl">
+                                Read More <i class="fas fa-chevron-right"></i>
+                            </a>
+                            <a href="#" class="btn btn-trophy-outline btn-trophy-xl">
+                                See More <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Feature Section -->
+    <section class="floating-features-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="floating-feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-futbol"></i>
+                        </div>
+                        <h4 class="feature-title">Professional Training</h4>
+                        <p class="feature-description">Expert coaching with proven techniques to develop fundamental skills and advanced strategies.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="floating-feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h4 class="feature-title">Championship Legacy</h4>
+                        <p class="feature-description">25+ championships won with a track record of developing winning teams and individual champions.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="floating-feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4 class="feature-title">Youth Development</h4>
+                        <p class="feature-description">Specialized programs for young athletes focusing on skill development and character building.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog/News Section -->
+    <section class="blog-section" id="blog">
+        <div class="container">
+            <div class="section-title">
+                <h2>Latest News</h2>
+                <p class="section-subtitle">Stay updated with our latest achievements and upcoming events</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card blog-card shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1579952363873-27d3bfad9c0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Basics First">
+                        <div class="card-body">
+                            <h5 class="blog-title">Basics First</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, est ne zril tibique. Pro ei purto legere maluisset. Quod vidisse imperdiet ius eu, mel eruditi detraxi...</p>
+                            <a href="#" class="btn btn-link btn-sm p-0 text-primary">
+                                Read More <i class="fas fa-arrow-right ms-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card blog-card shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Born Champions">
+                        <div class="card-body">
+                            <h5 class="blog-title">Born Champions</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, est ne zril tibique. Pro ei purto legere maluisset. Quod vidisse imperdiet ius eu, mel eruditi detraxi...</p>
+                            <a href="#" class="btn btn-link btn-sm p-0 text-primary">
+                                Read More <i class="fas fa-arrow-right ms-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card blog-card shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1560272564-c83b66b1ad12?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Challenge It">
+                        <div class="card-body">
+                            <h5 class="blog-title">Challenge It!</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, est ne zril tibique. Pro ei purto legere maluisset. Quod vidisse imperdiet ius eu, mel eruditi detraxi...</p>
+                            <a href="#" class="btn btn-link btn-sm p-0 text-primary">
+                                Read More <i class="fas fa-arrow-right ms-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <div class="stat-item">
+                        <span class="stat-number">150+</span>
+                        <span class="stat-label">Players Trained</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <div class="stat-item">
+                        <span class="stat-number">25</span>
+                        <span class="stat-label">Championships Won</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <div class="stat-item">
+                        <span class="stat-number">12</span>
+                        <span class="stat-label">Professional Coaches</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item">
+                        <span class="stat-number">8</span>
+                        <span class="stat-label">Years of Excellence</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipment For Beginners Section -->
+    <section class="equipment-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="equipment-hero-card">
+                        <div class="equipment-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                            <div class="equipment-hero-overlay">
+                                <div class="equipment-hero-content">
+                                    <h3 class="equipment-hero-title">Equipment For Beginners</h3>
+                                    <p class="equipment-hero-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac tincidunt massa. Phasellus vel sem eu dolor congue vehicula. Vestibulum ut mi in nunc tempor tincidunt id eget mauris. Duis laoreet sit amet libero quis cursus. Donec dui ipsum.</p>
+                                    <a href="#" class="btn btn-trophy-solid">READ MORE <i class="fas fa-chevron-right ms-2"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="equipment-hero-card">
+                        <div class="equipment-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1551698618-1dfe5d97d256?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                            <div class="equipment-hero-overlay">
+                                <div class="equipment-hero-content">
+                                    <h3 class="equipment-hero-title">Developing Basic Techniques</h3>
+                                    <p class="equipment-hero-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac tincidunt massa. Phasellus vel sem eu dolor congue vehicula. Vestibulum ut mi in nunc tempor tincidunt id eget mauris. Duis laoreet sit amet libero quis cursus. Donec dui ipsum.</p>
+                                    <a href="#" class="btn btn-trophy-solid">READ MORE <i class="fas fa-chevron-right ms-2"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="equipment-hero-card">
+                        <div class="equipment-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1579952363873-27d3bfad9c0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                            <div class="equipment-hero-overlay">
+                                <div class="equipment-hero-content">
+                                    <h3 class="equipment-hero-title">Ultimate Coaching Approach</h3>
+                                    <p class="equipment-hero-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac tincidunt massa. Phasellus vel sem eu dolor congue vehicula. Vestibulum ut mi in nunc tempor tincidunt id eget mauris. Duis laoreet sit amet libero quis cursus. Donec dui ipsum.</p>
+                                    <a href="#" class="btn btn-trophy-solid">READ MORE <i class="fas fa-chevron-right ms-2"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Training Process</h2>
+                <p class="section-subtitle">Four essential steps to develop champions</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-item">
+                        <div class="process-icon">
+                            1
+                        </div>
+                        <h4 class="process-title">Preparation</h4>
+                        <p class="process-description">Get ready with proper equipment, mindset, and physical conditioning for optimal performance.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-item">
+                        <div class="process-icon">
+                            2
+                        </div>
+                        <h4 class="process-title">Training</h4>
+                        <p class="process-description">Intensive skill development sessions with experienced coaches and structured practice routines.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-item">
+                        <div class="process-icon">
+                            3
+                        </div>
+                        <h4 class="process-title">Motivation</h4>
+                        <p class="process-description">Build mental strength, team spirit, and unwavering determination to achieve your goals.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-item">
+                        <div class="process-icon">
+                            4
+                        </div>
+                        <h4 class="process-title">Realization</h4>
+                        <p class="process-description">Achieve your full potential and realize your dreams through consistent effort and dedication.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="section-title text-start">
+                        <h2 class="text-white">See Our Champions in Action</h2>
+                        <p class="section-subtitle text-white-50">Watch how our training methodology transforms young athletes into confident players</p>
+                    </div>
+                    <p class="text-white-50 mb-4">
+                        Experience the intensity, passion, and dedication that defines Trophy Soccer Team. Our comprehensive training approach combines technical skills, tactical awareness, and mental preparation to develop complete players.
+                    </p>
+                    <div class="row video-stats">
+                        <div class="col-4">
+                            <div class="video-stat">
+                                <span class="video-stat-number">500+</span>
+                                <div class="video-stat-label">Players Trained</div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="video-stat">
+                                <span class="video-stat-number">15</span>
+                                <div class="video-stat-label">Championships</div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="video-stat">
+                                <span class="video-stat-number">8</span>
+                                <div class="video-stat-label">Years Experience</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="video-container">
+                        <div class="video-wrapper">
+                            <div class="video-embed">
+                                <!-- Video thumbnail with play button overlay -->
+                                <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1993&q=80" 
+                                     alt="Trophy Soccer Team Training Video" 
+                                     class="video-thumbnail"
+                                     onclick="playVideo()">
+                                <div class="video-play-button" onclick="playVideo()">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>What People Say</h2>
+                <p class="section-subtitle">Hear from our players, parents, and community</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-card">
+                        <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Evan Hook" class="testimonial-avatar">
+                        <p class="testimonial-text">Lorem ipsum dolor sit amet, feugiat delicata liberavisse id cum, no quo maiorum intellegebat, liber regione eu sit. Mea cu case ludus integre, vide viderer eleifend.</p>
+                        <div class="custom-separator"></div>
+                        <h5 class="testimonial-name">Evan Hook</h5>
+                        <p class="testimonial-position">Player</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-card">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Rob Bask" class="testimonial-avatar">
+                        <p class="testimonial-text">Lorem ipsum dolor sit amet, feugiat delicata liberavisse id cum, no quo maiorum intellegebat, liber regione eu sit. Mea cu case ludus integre, vide viderer eleifend.</p>
+                        <div class="custom-separator"></div>
+                        <h5 class="testimonial-name">Rob Bask</h5>
+                        <p class="testimonial-position">Personal Coach</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-card">
+                        <img src="https://images.unsplash.com/photo-1507591064344-4c6ce005b128?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Jim Evans" class="testimonial-avatar">
+                        <p class="testimonial-text">Lorem ipsum dolor sit amet, feugiat delicata liberavisse id cum, no quo maiorum intellegebat, liber regione eu sit. Mea cu case ludus integre, vide viderer eleifend.</p>
+                        <div class="custom-separator"></div>
+                        <h5 class="testimonial-name">Jim Evans</h5>
+                        <p class="testimonial-position">PR Manager</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery/Portfolio Section -->
+    <section class="gallery-section" id="portfolio">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Gallery</h2>
+                <p class="section-subtitle">Capturing moments of excellence and team spirit</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Training Session">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus gallery-icon"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1556056504-5c7696c4c28d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Match Day">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus gallery-icon"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1551958219-acbc608c6377?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Victory Celebration">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus gallery-icon"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1489944440615-453fc2b6a9a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Team Building">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus gallery-icon"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Skills Training">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus gallery-icon"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Championship">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus gallery-icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sponsors Section -->
+    <section class="sponsors-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Sponsors</h2>
+                <p class="section-subtitle">Proud partners supporting our journey to excellence</p>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-2 col-md-4 col-6 text-center mb-4">
+                    <svg width="150" height="80" viewBox="0 0 150 80" class="sponsor-logo" alt="Sponsor 1">
+                        <rect width="150" height="80" fill="#f8f9fa" stroke="#dee2e6"/>
+                        <text x="75" y="45" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#6c757d">NIKE</text>
+                    </svg>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 text-center mb-4">
+                    <svg width="150" height="80" viewBox="0 0 150 80" class="sponsor-logo" alt="Sponsor 2">
+                        <rect width="150" height="80" fill="#f8f9fa" stroke="#dee2e6"/>
+                        <text x="75" y="45" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#6c757d">ADIDAS</text>
+                    </svg>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 text-center mb-4">
+                    <svg width="150" height="80" viewBox="0 0 150 80" class="sponsor-logo" alt="Sponsor 3">
+                        <rect width="150" height="80" fill="#f8f9fa" stroke="#dee2e6"/>
+                        <text x="75" y="45" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#6c757d">PUMA</text>
+                    </svg>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 text-center mb-4">
+                    <svg width="150" height="80" viewBox="0 0 150 80" class="sponsor-logo" alt="Sponsor 4">
+                        <rect width="150" height="80" fill="#f8f9fa" stroke="#dee2e6"/>
+                        <text x="75" y="45" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#6c757d">UMBRO</text>
+                    </svg>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 text-center mb-4">
+                    <svg width="150" height="80" viewBox="0 0 150 80" class="sponsor-logo" alt="Sponsor 5">
+                        <rect width="150" height="80" fill="#f8f9fa" stroke="#dee2e6"/>
+                        <text x="75" y="45" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#6c757d">SPALDING</text>
+                    </svg>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 text-center mb-4">
+                    <svg width="150" height="80" viewBox="0 0 150 80" class="sponsor-logo" alt="Sponsor 6">
+                        <rect width="150" height="80" fill="#f8f9fa" stroke="#dee2e6"/>
+                        <text x="75" y="45" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#6c757d">UNDER ARMOUR</text>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <div class="cta-text">
+                    <h2 class="cta-title">Become a part of our team and be like your favorite football stars.</h2>
+                    <p class="cta-subtitle">Join Trophy Soccer Club today and start your journey to becoming a champion.</p>
+                </div>
+                <div class="cta-action">
+                    <a href="#" class="btn btn-cta">
+                        Join Our Team
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Round Images Section -->
+    <section class="round-images-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Meet Our Champions</h2>
+                <p class="section-subtitle">Discover the talented individuals who make Trophy Soccer Club exceptional</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="round-image-item">
+                        <div class="round-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Alex Rodriguez" class="round-image">
+                            <div class="round-image-overlay">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                        <div class="round-image-content">
+                            <h4 class="round-image-title">Alex Rodriguez</h4>
+                            <p class="round-image-subtitle">Star Forward</p>
+                            <p class="round-image-description">Leading scorer with 25 goals this season. Known for exceptional speed and precision.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="round-image-item">
+                        <div class="round-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Marcus Johnson" class="round-image">
+                            <div class="round-image-overlay">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                        <div class="round-image-content">
+                            <h4 class="round-image-title">Marcus Johnson</h4>
+                            <p class="round-image-subtitle">Team Captain</p>
+                            <p class="round-image-description">Veteran midfielder with outstanding leadership skills and tactical awareness.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="round-image-item">
+                        <div class="round-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="David Chen" class="round-image">
+                            <div class="round-image-overlay">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                        <div class="round-image-content">
+                            <h4 class="round-image-title">David Chen</h4>
+                            <p class="round-image-subtitle">Goalkeeper</p>
+                            <p class="round-image-description">Reliable last line of defense with incredible reflexes and game-saving stops.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="round-image-item">
+                        <div class="round-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Sofia Martinez" class="round-image">
+                            <div class="round-image-overlay">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                        <div class="round-image-content">
+                            <h4 class="round-image-title">Sofia Martinez</h4>
+                            <p class="round-image-subtitle">Rising Star</p>
+                            <p class="round-image-description">Young talent with incredible potential and dedication to the sport.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timetable/Schedule Section -->
+    <section class="timetable-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Training Schedule</h2>
+                <p class="section-subtitle">Weekly training sessions and match schedules for all teams</p>
+            </div>
+            
+            <!-- Schedule Navigation -->
+            <div class="schedule-nav text-center mb-5">
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-schedule active" data-schedule="youth">Youth Teams</button>
+                    <button type="button" class="btn btn-schedule" data-schedule="senior">Senior Teams</button>
+                    <button type="button" class="btn btn-schedule" data-schedule="matches">Matches</button>
+                </div>
+            </div>
+
+            <!-- Youth Teams Schedule -->
+            <div class="schedule-table-wrapper active" id="youth-schedule">
+                <div class="table-responsive">
+                    <table class="table schedule-table">
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>Monday</th>
+                                <th>Tuesday</th>
+                                <th>Wednesday</th>
+                                <th>Thursday</th>
+                                <th>Friday</th>
+                                <th>Saturday</th>
+                                <th>Sunday</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="time-slot">9:00 AM</td>
+                                <td>
+                                    <div class="schedule-item youth-u10">
+                                        <div class="schedule-title">U-10 Training</div>
+                                        <div class="schedule-coach">Coach Mario</div>
+                                        <div class="schedule-location">Field A</div>
+                                    </div>
+                                </td>
+                                <td></td>
+                                <td>
+                                    <div class="schedule-item youth-u10">
+                                        <div class="schedule-title">U-10 Training</div>
+                                        <div class="schedule-coach">Coach Mario</div>
+                                        <div class="schedule-location">Field A</div>
+                                    </div>
+                                </td>
+                                <td></td>
+                                <td>
+                                    <div class="schedule-item youth-u10">
+                                        <div class="schedule-title">U-10 Skills</div>
+                                        <div class="schedule-coach">Coach Mario</div>
+                                        <div class="schedule-location">Field A</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="schedule-item youth-match">
+                                        <div class="schedule-title">U-10 Match</div>
+                                        <div class="schedule-coach">vs Eagles</div>
+                                        <div class="schedule-location">Home</div>
+                                    </div>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="time-slot">11:00 AM</td>
+                                <td>
+                                    <div class="schedule-item youth-u12">
+                                        <div class="schedule-title">U-12 Training</div>
+                                        <div class="schedule-coach">Coach Donald</div>
+                                        <div class="schedule-location">Field B</div>
+                                    </div>
+                                </td>
+                                <td></td>
+                                <td>
+                                    <div class="schedule-item youth-u12">
+                                        <div class="schedule-title">U-12 Training</div>
+                                        <div class="schedule-coach">Coach Donald</div>
+                                        <div class="schedule-location">Field B</div>
+                                    </div>
+                                </td>
+                                <td></td>
+                                <td>
+                                    <div class="schedule-item youth-u12">
+                                        <div class="schedule-title">U-12 Tactics</div>
+                                        <div class="schedule-coach">Coach Donald</div>
+                                        <div class="schedule-location">Field B</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="schedule-item youth-match">
+                                        <div class="schedule-title">U-12 Match</div>
+                                        <div class="schedule-coach">vs Lions</div>
+                                        <div class="schedule-location">Away</div>
+                                    </div>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="time-slot">2:00 PM</td>
+                                <td></td>
+                                <td>
+                                    <div class="schedule-item youth-u14">
+                                        <div class="schedule-title">U-14 Training</div>
+                                        <div class="schedule-coach">Coach Roger</div>
+                                        <div class="schedule-location">Field C</div>
+                                    </div>
+                                </td>
+                                <td></td>
+                                <td>
+                                    <div class="schedule-item youth-u14">
+                                        <div class="schedule-title">U-14 Training</div>
+                                        <div class="schedule-coach">Coach Roger</div>
+                                        <div class="schedule-location">Field C</div>
+                                    </div>
+                                </td>
+                                <td></td>
+                                <td>
+                                    <div class="schedule-item youth-match">
+                                        <div class="schedule-title">U-14 Match</div>
+                                        <div class="schedule-coach">vs Panthers</div>
+                                        <div class="schedule-location">Home</div>
+                                    </div>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="time-slot">4:00 PM</td>
+                                <td></td>
+                                <td>
+                                    <div class="schedule-item youth-u16">
+                                        <div class="schedule-title">U-16 Training</div>
+                                        <div class="schedule-coach">Coach Max</div>
+                                        <div class="schedule-location">Field D</div>
+                                    </div>
+                                </td>
+                                <td></td>
+                                <td>
+                                    <div class="schedule-item youth-u16">
+                                        <div class="schedule-title">U-16 Training</div>
+                                        <div class="schedule-coach">Coach Max</div>
+                                        <div class="schedule-location">Field D</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="schedule-item youth-u16">
+                                        <div class="schedule-title">U-16 Fitness</div>
+                                        <div class="schedule-coach">Coach Max</div>
+                                        <div class="schedule-location">Gym</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="schedule-item youth-match">
+                                        <div class="schedule-title">U-16 Match</div>
+                                        <div class="schedule-coach">vs Wolves</div>
+                                        <div class="schedule-location">Away</div>
+                                    </div>
+                                </td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Senior Teams Schedule -->
+            <div class="schedule-table-wrapper" id="senior-schedule">
+                <div class="table-responsive">
+                    <table class="table schedule-table">
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>Monday</th>
+                                <th>Tuesday</th>
+                                <th>Wednesday</th>
+                                <th>Thursday</th>
+                                <th>Friday</th>
+                                <th>Saturday</th>
+                                <th>Sunday</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="time-slot">6:00 PM</td>
+                                <td>
+                                    <div class="schedule-item senior-team">
+                                        <div class="schedule-title">First Team</div>
+                                        <div class="schedule-coach">Head Coach</div>
+                                        <div class="schedule-location">Main Field</div>
+                                    </div>
+                                </td>
+                                <td></td>
+                                <td>
+                                    <div class="schedule-item senior-team">
+                                        <div class="schedule-title">First Team</div>
+                                        <div class="schedule-coach">Head Coach</div>
+                                        <div class="schedule-location">Main Field</div>
+                                    </div>
+                                </td>
+                                <td></td>
+                                <td>
+                                    <div class="schedule-item senior-team">
+                                        <div class="schedule-title">Team Meeting</div>
+                                        <div class="schedule-coach">Head Coach</div>
+                                        <div class="schedule-location">Club House</div>
+                                    </div>
+                                </td>
+                                <td></td>
+                                <td>
+                                    <div class="schedule-item senior-match">
+                                        <div class="schedule-title">League Match</div>
+                                        <div class="schedule-coach">vs City FC</div>
+                                        <div class="schedule-location">Stadium</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="time-slot">8:00 PM</td>
+                                <td></td>
+                                <td>
+                                    <div class="schedule-item senior-reserve">
+                                        <div class="schedule-title">Reserve Team</div>
+                                        <div class="schedule-coach">Assistant Coach</div>
+                                        <div class="schedule-location">Field B</div>
+                                    </div>
+                                </td>
+                                <td></td>
+                                <td>
+                                    <div class="schedule-item senior-reserve">
+                                        <div class="schedule-title">Reserve Team</div>
+                                        <div class="schedule-coach">Assistant Coach</div>
+                                        <div class="schedule-location">Field B</div>
+                                    </div>
+                                </td>
+                                <td></td>
+                                <td>
+                                    <div class="schedule-item senior-match">
+                                        <div class="schedule-title">Reserve Match</div>
+                                        <div class="schedule-coach">vs United Reserves</div>
+                                        <div class="schedule-location">Away</div>
+                                    </div>
+                                </td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Matches Schedule -->
+            <div class="schedule-table-wrapper" id="matches-schedule">
+                <div class="matches-grid">
+                    <div class="row">
+                        <div class="col-lg-6 mb-4">
+                            <div class="match-card">
+                                <div class="match-header">
+                                    <span class="match-league">Youth League</span>
+                                    <span class="match-date">Saturday, Dec 16</span>
+                                </div>
+                                <div class="match-teams">
+                                    <div class="match-team home">
+                                        <svg width="60" height="60" viewBox="0 0 60 60" alt="Trophy">
+                                            <circle cx="30" cy="30" r="30" fill="#c0e728"/>
+                                            <text x="30" y="38" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#003828">T</text>
+                                        </svg>
+                                        <span>Trophy FC</span>
+                                    </div>
+                                    <div class="match-vs">VS</div>
+                                    <div class="match-team away">
+                                        <svg width="60" height="60" viewBox="0 0 60 60" alt="Eagles">
+                                            <circle cx="30" cy="30" r="30" fill="#666666"/>
+                                            <text x="30" y="38" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#ffffff">E</text>
+                                        </svg>
+                                        <span>Eagles FC</span>
+                                    </div>
+                                </div>
+                                <div class="match-details">
+                                    <div class="match-time">
+                                        <i class="fas fa-clock"></i>
+                                        <span>10:00 AM</span>
+                                    </div>
+                                    <div class="match-location">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>Trophy Stadium</span>
+                                    </div>
+                                </div>
+                                <div class="match-actions">
+                                    <button class="btn btn-trophy-outline btn-sm">Buy Tickets</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 mb-4">
+                            <div class="match-card">
+                                <div class="match-header">
+                                    <span class="match-league">Senior League</span>
+                                    <span class="match-date">Sunday, Dec 17</span>
+                                </div>
+                                <div class="match-teams">
+                                    <div class="match-team home">
+                                        <svg width="60" height="60" viewBox="0 0 60 60" alt="Trophy">
+                                            <circle cx="30" cy="30" r="30" fill="#c0e728"/>
+                                            <text x="30" y="38" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#003828">T</text>
+                                        </svg>
+                                        <span>Trophy FC</span>
+                                    </div>
+                                    <div class="match-vs">VS</div>
+                                    <div class="match-team away">
+                                        <svg width="60" height="60" viewBox="0 0 60 60" alt="City">
+                                            <circle cx="30" cy="30" r="30" fill="#666666"/>
+                                            <text x="30" y="38" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#ffffff">C</text>
+                                        </svg>
+                                        <span>City FC</span>
+                                    </div>
+                                </div>
+                                <div class="match-details">
+                                    <div class="match-time">
+                                        <i class="fas fa-clock"></i>
+                                        <span>3:00 PM</span>
+                                    </div>
+                                    <div class="match-location">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>Central Stadium</span>
+                                    </div>
+                                </div>
+                                <div class="match-actions">
+                                    <button class="btn btn-trophy-outline btn-sm">Buy Tickets</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 mb-4">
+                            <div class="match-card">
+                                <div class="match-header">
+                                    <span class="match-league">Youth League</span>
+                                    <span class="match-date">Saturday, Dec 23</span>
+                                </div>
+                                <div class="match-teams">
+                                    <div class="match-team away">
+                                        <svg width="60" height="60" viewBox="0 0 60 60" alt="Lions">
+                                            <circle cx="30" cy="30" r="30" fill="#666666"/>
+                                            <text x="30" y="38" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#ffffff">L</text>
+                                        </svg>
+                                        <span>Lions FC</span>
+                                    </div>
+                                    <div class="match-vs">VS</div>
+                                    <div class="match-team home">
+                                        <svg width="60" height="60" viewBox="0 0 60 60" alt="Trophy">
+                                            <circle cx="30" cy="30" r="30" fill="#c0e728"/>
+                                            <text x="30" y="38" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#003828">T</text>
+                                        </svg>
+                                        <span>Trophy FC</span>
+                                    </div>
+                                </div>
+                                <div class="match-details">
+                                    <div class="match-time">
+                                        <i class="fas fa-clock"></i>
+                                        <span>11:00 AM</span>
+                                    </div>
+                                    <div class="match-location">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>Lions Ground</span>
+                                    </div>
+                                </div>
+                                <div class="match-actions">
+                                    <button class="btn btn-trophy-outline btn-sm">Get Directions</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 mb-4">
+                            <div class="match-card">
+                                <div class="match-header">
+                                    <span class="match-league">Cup Final</span>
+                                    <span class="match-date">Sunday, Dec 31</span>
+                                </div>
+                                <div class="match-teams">
+                                    <div class="match-team home">
+                                        <svg width="60" height="60" viewBox="0 0 60 60" alt="Trophy">
+                                            <circle cx="30" cy="30" r="30" fill="#c0e728"/>
+                                            <text x="30" y="38" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#003828">T</text>
+                                        </svg>
+                                        <span>Trophy FC</span>
+                                    </div>
+                                    <div class="match-vs">VS</div>
+                                    <div class="match-team away">
+                                        <svg width="60" height="60" viewBox="0 0 60 60" alt="Warriors">
+                                            <circle cx="30" cy="30" r="30" fill="#666666"/>
+                                            <text x="30" y="38" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#ffffff">W</text>
+                                        </svg>
+                                        <span>Warriors FC</span>
+                                    </div>
+                                </div>
+                                <div class="match-details">
+                                    <div class="match-time">
+                                        <i class="fas fa-clock"></i>
+                                        <span>4:00 PM</span>
+                                    </div>
+                                    <div class="match-location">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>Grand Stadium</span>
+                                    </div>
+                                </div>
+                                <div class="match-actions">
+                                    <button class="btn btn-trophy-solid btn-sm">Final Tickets</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section" id="contact">
+        <!-- Newsletter Section -->
+        <div class="footer-newsletter">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="newsletter-content">
+                            <h4>Stay Connected with Trophy Soccer</h4>
+                            <p>Get the latest updates, training tips, and exclusive content delivered to your inbox.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="newsletter-form">
+                            <form class="footer-newsletter-form">
+                                <div class="input-group">
+                                    <input type="email" class="form-control newsletter-input" placeholder="Enter your email address" required>
+                                    <button class="btn btn-newsletter" type="submit">
+                                        Subscribe
+                                        <i class="fas fa-paper-plane ms-2"></i>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Footer Content -->
+        <div class="footer-main">
+            <div class="container">
+                <div class="row">
+                    <!-- About Column -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="footer-about">
+                            <svg width="200" height="50" viewBox="0 0 200 50" class="footer-logo mb-3" alt="Trophy Logo">
+                                <rect width="200" height="50" fill="#c0e728"/>
+                                <text x="100" y="32" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#003828">TROPHY</text>
+                            </svg>
+                            <p class="footer-description">
+                                Developing champions on and off the field. Trophy Soccer Club has been nurturing young talent for over 8 years, creating not just skilled players but confident individuals ready to take on any challenge.
+                            </p>
+                            <div class="footer-contact-quick">
+                                <div class="contact-quick-item">
+                                    <i class="fas fa-phone"></i>
+                                    <span>(555) 123-4567</span>
+                                </div>
+                                <div class="contact-quick-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>info@trophysoccer.com</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Quick Links -->
+                    <div class="col-lg-2 col-md-6 mb-4">
+                        <div class="footer-links">
+                            <h5 class="footer-title">Quick Links</h5>
+                            <ul class="footer-menu">
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Our History</a></li>
+                                <li><a href="#">Coaching Staff</a></li>
+                                <li><a href="#">Facilities</a></li>
+                                <li><a href="#">News & Events</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Programs -->
+                    <div class="col-lg-2 col-md-6 mb-4">
+                        <div class="footer-links">
+                            <h5 class="footer-title">Programs</h5>
+                            <ul class="footer-menu">
+                                <li><a href="#">Youth Academy</a></li>
+                                <li><a href="#">Junior League</a></li>
+                                <li><a href="#">Training Camps</a></li>
+                                <li><a href="#">Private Coaching</a></li>
+                                <li><a href="#">Summer Programs</a></li>
+                                <li><a href="#">Tournaments</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Training Schedule -->
+                    <div class="col-lg-2 col-md-6 mb-4">
+                        <div class="footer-links">
+                            <h5 class="footer-title">Training</h5>
+                            <div class="training-times">
+                                <div class="training-time">
+                                    <strong>Weekdays</strong>
+                                    <span>4:00 PM - 8:00 PM</span>
+                                </div>
+                                <div class="training-time">
+                                    <strong>Saturdays</strong>
+                                    <span>9:00 AM - 5:00 PM</span>
+                                </div>
+                                <div class="training-time">
+                                    <strong>Sundays</strong>
+                                    <span>Match Days</span>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-footer-cta">View Full Schedule</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact & Location -->
+                    <div class="col-lg-2 col-md-6 mb-4">
+                        <div class="footer-contact">
+                            <h5 class="footer-title">Visit Us</h5>
+                            <div class="contact-info">
+                                <div class="contact-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <div>
+                                        <strong>Trophy Soccer Club</strong>
+                                        <span>123 Soccer Street<br>Sports City, SC 12345</span>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-clock"></i>
+                                    <div>
+                                        <strong>Office Hours</strong>
+                                        <span>Mon-Fri: 9AM-6PM<br>Sat: 9AM-3PM</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="footer-copyright">
+                            <p>&copy; 2025 Trophy Soccer Club. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="footer-social">
+                            <span class="social-label">Follow Us:</span>
+                            <div class="social-links">
+                                <a href="#" class="social-link" aria-label="Facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="Twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="YouTube">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="LinkedIn">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Scripts -->
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerOffset = 80;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Newsletter form submission
+        document.querySelector('.footer-newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input[type="email"]').value;
+            alert('Thank you for subscribing! We\'ll keep you updated with the latest news.');
+            this.reset();
+        });
+
+        // Stats counter animation (simple version)
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number');
+            counters.forEach(counter => {
+                const target = parseInt(counter.textContent.replace(/\D/g, ''));
+                const increment = target / 50;
+                let current = 0;
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        counter.textContent = counter.textContent.replace(/\d+/, target);
+                        clearInterval(timer);
+                    } else {
+                        counter.textContent = counter.textContent.replace(/\d+/, Math.floor(current));
+                    }
+                }, 30);
+            });
+        }
+
+        // Trigger counter animation when stats section comes into view
+        const statsSection = document.querySelector('.stats-section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
+
+        if (statsSection) {
+            observer.observe(statsSection);
+        }
+
+        // Video play functionality
+        function playVideo() {
+            const videoWrapper = document.querySelector('.video-wrapper');
+            const videoEmbed = document.querySelector('.video-embed');
+            const videoThumbnail = document.querySelector('.video-thumbnail');
+            const videoPlayButton = document.querySelector('.video-play-button');
+
+            // Replace thumbnail with actual video iframe
+            const videoHTML = `
+                <iframe 
+                    src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&controls=1&modestbranding=1&rel=0"
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            `;
+            
+            // Hide thumbnail and play button, show video
+            videoThumbnail.style.display = 'none';
+            videoPlayButton.style.display = 'none';
+            videoEmbed.innerHTML = videoHTML;
+        }
+
+        // Timetable functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const scheduleButtons = document.querySelectorAll('.btn-schedule');
+            const scheduleWrappers = document.querySelectorAll('.schedule-table-wrapper');
+
+            scheduleButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const targetSchedule = this.getAttribute('data-schedule');
+
+                    // Remove active class from all buttons and wrappers
+                    scheduleButtons.forEach(btn => btn.classList.remove('active'));
+                    scheduleWrappers.forEach(wrapper => wrapper.classList.remove('active'));
+
+                    // Add active class to clicked button
+                    this.classList.add('active');
+
+                    // Show corresponding schedule
+                    const targetWrapper = document.getElementById(targetSchedule + '-schedule');
+                    if (targetWrapper) {
+                        targetWrapper.classList.add('active');
+                    }
+                });
+            });
+
+            // Schedule item click handlers
+            const scheduleItems = document.querySelectorAll('.schedule-item');
+            scheduleItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const title = this.querySelector('.schedule-title').textContent;
+                    const coach = this.querySelector('.schedule-coach').textContent;
+                    const location = this.querySelector('.schedule-location').textContent;
+                    
+                    alert(`${title}\\nCoach: ${coach}\\nLocation: ${location}\\n\\nClick to view more details or register!`);
+                });
+            });
+
+            // Match card interactions
+            const matchCards = document.querySelectorAll('.match-card');
+            matchCards.forEach(card => {
+                card.addEventListener('click', function(e) {
+                    if (!e.target.classList.contains('btn')) {
+                        const teams = this.querySelector('.match-teams').textContent.trim();
+                        const date = this.querySelector('.match-date').textContent;
+                        const time = this.querySelector('.match-time span').textContent;
+                        const location = this.querySelector('.match-location span').textContent;
+                        
+                        alert(`Match Details:\\n${teams}\\n${date} at ${time}\\nVenue: ${location}\\n\\nClick Buy Tickets button to purchase!`);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

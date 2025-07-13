@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pure Square Button Test</title>
+    <style>
+        body {
+            padding: 50px;
+            font-family: 'Titillium Web', sans-serif;
+            background-color: #f8f9fa;
+        }
+        
+        .hero-test {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                        url('https://images.unsplash.com/photo-1551698618-1dfe5d97d256?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .test-button {
+            display: inline-block;
+            padding: 20px 50px;
+            margin: 10px;
+            background-color: #c0e728;
+            color: #221f1b;
+            border: 1px solid #c0e728;
+            border-radius: 0;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            -ms-border-radius: 0;
+            -o-border-radius: 0;
+        }
+        
+        .test-button:hover {
+            background-color: #a3c422;
+            border-color: #a3c422;
+            transform: translateY(-1px);
+            text-decoration: none;
+            color: #221f1b;
+        }
+        
+        .test-button-outline {
+            background-color: transparent;
+            color: #c0e728;
+            border-color: #c0e728;
+        }
+        
+        .test-button-outline:hover {
+            background-color: #c0e728;
+            color: #221f1b;
+            border-color: #c0e728;
+        }
+        
+        /* Force all elements to be square */
+        * {
+            border-radius: 0 !important;
+            -webkit-border-radius: 0 !important;
+            -moz-border-radius: 0 !important;
+            -ms-border-radius: 0 !important;
+            -o-border-radius: 0 !important;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .button-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .test-section {
+            background: white;
+            padding: 30px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .test-section h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero-test">
+        <div>
+            <h1>Trophy Soccer Club</h1>
+            <p>Pure CSS Square Button Test</p>
+            <div class="button-container">
+                <a href="#" class="test-button">Read More</a>
+                <a href="#" class="test-button test-button-outline">See More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Manual Square Buttons</h2>
+        <div class="button-container">
+            <button style="
+                padding: 20px 50px;
+                background-color: #c0e728;
+                color: #221f1b;
+                border: 1px solid #c0e728;
+                border-radius: 0;
+                text-transform: uppercase;
+                font-weight: 600;
+                letter-spacing: 0.5px;
+                font-size: 1.2rem;
+                cursor: pointer;
+            ">Manual Button 1</button>
+            
+            <button style="
+                padding: 20px 50px;
+                background-color: transparent;
+                color: #c0e728;
+                border: 1px solid #c0e728;
+                border-radius: 0;
+                text-transform: uppercase;
+                font-weight: 600;
+                letter-spacing: 0.5px;
+                font-size: 1.2rem;
+                cursor: pointer;
+            ">Manual Button 2</button>
+        </div>
+    </div>
+    
+    <div class="test-section">
+        <h2>What we expect to see:</h2>
+        <p>All buttons should have perfectly square corners (no rounding) and Trophy colors.</p>
+        <p>Background: #c0e728 (lime green), Text: #221f1b (dark brown)</p>
+    </div>
+</body>
+</html>

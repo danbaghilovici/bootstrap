@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trophy Theme - New Primary Color #c0e728</title>
+    
+    <!-- Trophy Bootstrap CSS with new primary color -->
+    <link href="dist/css/bootstrap.css" rel="stylesheet">
+    
+    <!-- Trophy Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        body {
+            padding: 2rem 0;
+        }
+        
+        .color-preview {
+            width: 120px;
+            height: 80px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #221f1b;
+            margin-bottom: 1rem;
+        }
+        
+        .demo-section {
+            padding: 2rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #c0e728, #3cefd2);
+            color: #221f1b;
+            padding: 4rem 0;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section with New Colors -->
+    <div class="hero-section">
+        <div class="container">
+            <h1 class="display-3 fw-bold mb-4">
+                <i class="fas fa-trophy me-3"></i>
+                Trophy FC
+            </h1>
+            <p class="lead fs-4 mb-4">
+                Now featuring the new vibrant primary color #c0e728
+            </p>
+            <div class="d-flex justify-content-center gap-3">
+                <button class="btn btn-dark btn-lg">
+                    <i class="fas fa-play me-2"></i>
+                    Get Started
+                </button>
+                <button class="btn btn-outline-dark btn-lg">
+                    <i class="fas fa-info-circle me-2"></i>
+                    Learn More
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Color Showcase -->
+        <div class="demo-section">
+            <h2 class="mb-4">New Primary Color: #c0e728</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="color-preview bg-primary">
+                        #c0e728
+                    </div>
+                    <h5>Primary Color</h5>
+                    <p class="text-muted">Bright lime green - energetic and modern</p>
+                </div>
+                <div class="col-md-3">
+                    <div class="color-preview bg-secondary">
+                        #3cefd2
+                    </div>
+                    <h5>Secondary Color</h5>
+                    <p class="text-muted">Trophy teal - complementary accent</p>
+                </div>
+                <div class="col-md-3">
+                    <div class="color-preview" style="background-color: #221f1b; color: white;">
+                        #221f1b
+                    </div>
+                    <h5>Dark Color</h5>
+                    <p class="text-muted">Trophy dark - professional contrast</p>
+                </div>
+                <div class="col-md-3">
+                    <div class="color-preview" style="background-color: #ffffff; border: 2px solid #ddd;">
+                        #ffffff
+                    </div>
+                    <h5>Light Color</h5>
+                    <p class="text-muted">Clean white background</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Button Examples -->
+        <div class="demo-section">
+            <h2 class="mb-4">Button Examples</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Solid Buttons</h4>
+                    <div class="d-flex flex-wrap gap-2 mb-4">
+                        <button class="btn btn-primary">
+                            <i class="fas fa-star me-2"></i>Primary
+                        </button>
+                        <button class="btn btn-secondary">
+                            <i class="fas fa-heart me-2"></i>Secondary
+                        </button>
+                        <button class="btn btn-success">
+                            <i class="fas fa-check me-2"></i>Success
+                        </button>
+                        <button class="btn btn-dark">
+                            <i class="fas fa-shield me-2"></i>Dark
+                        </button>
+                    </div>
+                    
+                    <h4>Button Sizes</h4>
+                    <div class="d-flex flex-wrap align-items-center gap-2">
+                        <button class="btn btn-primary btn-sm">Small</button>
+                        <button class="btn btn-primary">Default</button>
+                        <button class="btn btn-primary btn-lg">Large</button>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h4>Outline Buttons</h4>
+                    <div class="d-flex flex-wrap gap-2 mb-4">
+                        <button class="btn btn-outline-primary">
+                            <i class="fas fa-futbol me-2"></i>Primary
+                        </button>
+                        <button class="btn btn-outline-secondary">
+                            <i class="fas fa-trophy me-2"></i>Secondary
+                        </button>
+                        <button class="btn btn-outline-success">
+                            <i class="fas fa-medal me-2"></i>Success
+                        </button>
+                        <button class="btn btn-outline-dark">
+                            <i class="fas fa-flag me-2"></i>Dark
+                        </button>
+                    </div>
+                    
+                    <h4>Special Effects</h4>
+                    <button class="btn btn-primary me-2" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <i class="fas fa-rocket me-2"></i>Hover Effect
+                    </button>
+                    <button class="btn btn-outline-primary" style="text-transform: uppercase; letter-spacing: 1px;">
+                        <i class="fas fa-bolt me-2"></i>Trophy Style
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Component Examples -->
+        <div class="demo-section">
+            <h2 class="mb-4">Component Examples</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header bg-primary text-dark">
+                            <h5 class="card-title mb-0">
+                                <i class="fas fa-trophy me-2"></i>
+                                Championship Card
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">This card showcases the new primary color in action.</p>
+                            <div class="progress mb-3">
+                                <div class="progress-bar" role="progressbar" style="width: 75%"></div>
+                            </div>
+                            <button class="btn btn-primary btn-sm">
+                                <i class="fas fa-arrow-right me-1"></i>View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header bg-secondary text-dark">
+                            <h5 class="card-title mb-0">
+                                <i class="fas fa-users me-2"></i>
+                                Team Stats
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Secondary color card with team information.</p>
+                            <div class="d-flex justify-content-between">
+                                <span class="badge bg-primary">Wins: 15</span>
+                                <span class="badge bg-secondary">Draws: 3</span>
+                                <span class="badge bg-success">Goals: 42</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="alert alert-primary" role="alert">
+                        <h4 class="alert-heading">
+                            <i class="fas fa-bullhorn me-2"></i>
+                            Match Alert!
+                        </h4>
+                        <p>The new primary color creates great contrast and visibility for important messages.</p>
+                        <hr>
+                        <p class="mb-0">Next match: Tomorrow at 3:00 PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Color Comparison -->
+        <div class="demo-section">
+            <h2 class="mb-4">Color Update Comparison</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Previous Primary Color</h4>
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="color-preview me-3" style="background-color: #43ec6b;">
+                            #43ec6b
+                        </div>
+                        <div>
+                            <strong>Old Green</strong><br>
+                            <small class="text-muted">Softer, more pastel tone</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h4>New Primary Color</h4>
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="color-preview me-3 bg-primary">
+                            #c0e728
+                        </div>
+                        <div>
+                            <strong>New Lime Green</strong><br>
+                            <small class="text-muted">Brighter, more energetic</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="alert alert-success" role="alert">
+                <i class="fas fa-check-circle me-2"></i>
+                <strong>Color Update Applied!</strong> The new primary color #c0e728 has been successfully integrated across all Bootstrap components.
+            </div>
+        </div>
+
+        <!-- Forms with New Color -->
+        <div class="demo-section">
+            <h2 class="mb-4">Form Elements</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <form>
+                        <div class="mb-3">
+                            <label for="playerName" class="form-label">Player Name</label>
+                            <input type="text" class="form-control" id="playerName" placeholder="Enter player name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="position" class="form-label">Position</label>
+                            <select class="form-select" id="position">
+                                <option>Select position...</option>
+                                <option>Forward</option>
+                                <option>Midfielder</option>
+                                <option>Defender</option>
+                                <option>Goalkeeper</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="captain">
+                            <label class="form-check-label" for="captain">
+                                Team Captain
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-save me-2"></i>Save Player
+                        </button>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <h4>Form Focus States</h4>
+                    <p class="text-muted">Click on form elements to see the new primary color in focus states.</p>
+                    
+                    <div class="mb-3">
+                        <input type="text" class="form-control" placeholder="Focus to see new color" 
+                               onfocus="this.style.borderColor='#c0e728'; this.style.boxShadow='0 0 0 0.25rem rgba(192, 231, 40, 0.25)'"
+                               onblur="this.style.borderColor=''; this.style.boxShadow=''">
+                    </div>
+                    
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="fas fa-search"></i>
+                        </span>
+                        <input type="text" class="form-control" placeholder="Search players...">
+                        <button class="btn btn-primary" type="button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container text-center">
+            <h5>
+                <i class="fas fa-trophy text-primary me-2"></i>
+                Trophy FC - Updated Theme
+            </h5>
+            <p class="mb-0">
+                Primary color updated to <code class="text-primary">#c0e728</code> - 
+                A bright, energetic lime green perfect for a championship team!
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

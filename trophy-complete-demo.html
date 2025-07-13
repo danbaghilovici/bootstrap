@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trophy Bootstrap Theme - Complete Demo</title>
+    <link href="dist/css/bootstrap-trophy.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .demo-section {
+            margin: 4rem 0;
+            padding: 3rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        .demo-section:last-child {
+            border-bottom: none;
+        }
+        .color-demo {
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            margin: 0.5rem;
+            border-radius: 5px;
+            position: relative;
+        }
+        .color-demo span {
+            position: absolute;
+            bottom: 5px;
+            left: 5px;
+            color: white;
+            font-size: 0.75rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+        .bg-trophy-primary {
+            background-color: #43ec6b;
+        }
+        .bg-trophy-secondary {
+            background-color: #3cefd2;
+        }
+        .bg-trophy-accent {
+            background-color: #000000;
+        }
+        .bg-trophy-dark {
+            background-color: #221f1b;
+        }
+        .bg-trophy-gray {
+            background-color: #5c5a5b;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header Section -->
+        <div class="demo-section text-center">
+            <h1 class="display-1 mb-4">Trophy Bootstrap Theme</h1>
+            <p class="lead">A complete Bootstrap theme inspired by the Trophy soccer club website, featuring custom typography and button styles.</p>
+        </div>
+
+        <!-- Typography Section -->
+        <div class="demo-section">
+            <h2 class="display-4">Typography Showcase</h2>
+            <div class="row">
+                <div class="col-lg-8">
+                    <h1>Heading 1 - Large Hero Text</h1>
+                    <p>This is the largest heading, perfect for hero sections and main titles. Based on Trophy's 60px design.</p>
+                    
+                    <h2>Heading 2 - Section Headers</h2>
+                    <p>Medium-sized headings ideal for section titles and important subheadings. Based on Trophy's 36px design.</p>
+                    
+                    <h3>Heading 3 - Subsection Headers</h3>
+                    <p>Great for organizing content within sections. Based on Trophy's 25px design.</p>
+                    
+                    <h4>Heading 4 - Content Headers</h4>
+                    <p>Perfect for smaller content divisions. Based on Trophy's 22px design.</p>
+                    
+                    <h5>Heading 5 - Small Headers</h5>
+                    <p>For minor headings and labels. Based on Trophy's 20px design.</p>
+                    
+                    <h6>Heading 6 - Tiny Headers</h6>
+                    <p>The smallest heading size, often used for captions. Based on Trophy's 13px design.</p>
+                    
+                    <hr class="my-4">
+                    
+                    <p><strong>Paragraph Text:</strong> This is the standard paragraph text, designed to be highly readable and based on Trophy's 15px font size. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    
+                    <p class="lead">Lead Paragraph: This is a lead paragraph that stands out from regular text. It's slightly larger and lighter in weight, perfect for introductions and important messages.</p>
+                    
+                    <p class="small">Small Text: This is smaller text, useful for fine print, captions, and secondary information.</p>
+                </div>
+                <div class="col-lg-4">
+                    <h4>Text Utilities</h4>
+                    <p class="text-primary">Primary colored text</p>
+                    <p class="text-secondary">Secondary colored text</p>
+                    <p class="text-dark">Dark colored text</p>
+                    <p class="text-muted">Muted colored text</p>
+                    
+                    <h4>Font Weights</h4>
+                    <p class="fw-light">Light weight text</p>
+                    <p class="fw-normal">Normal weight text</p>
+                    <p class="fw-medium">Medium weight text</p>
+                    <p class="fw-semibold">Semibold weight text</p>
+                    <p class="fw-bold">Bold weight text</p>
+                    
+                    <h4>Font Sizes</h4>
+                    <p class="fs-6">Small font size</p>
+                    <p class="fs-5">Normal font size</p>
+                    <p class="fs-4">Large font size</p>
+                    <p class="fs-3">Extra large font size</p>
+                </div>
+            </div>
+            
+            <div class="row mt-4">
+                <div class="col-12">
+                    <blockquote class="blockquote">
+                        <p>"This is a blockquote demonstrating the Trophy theme's quote styling. It features a beautiful left border and italic text."</p>
+                        <footer class="blockquote-footer">Trophy Theme Designer</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+
+        <!-- Button Styles Section -->
+        <div class="demo-section">
+            <h2 class="display-4">Button Styles</h2>
+            
+            <div class="mb-4">
+                <h4>Link Buttons</h4>
+                <p>Clean, text-based buttons with hover effects:</p>
+                <button type="button" class="btn btn-link me-2">Link Style</button>
+                <button type="button" class="btn btn-link btn-sm me-2">Small Link</button>
+                <button type="button" class="btn btn-link btn-lg me-2">Large Link</button>
+                <button type="button" class="btn btn-link" disabled>Disabled</button>
+            </div>
+
+            <div class="mb-4">
+                <h4>Outline Buttons</h4>
+                <p>Buttons with borders that fill on hover:</p>
+                <button type="button" class="btn btn-outline-primary me-2">Outline</button>
+                <button type="button" class="btn btn-outline-primary btn-sm me-2">Small Outline</button>
+                <button type="button" class="btn btn-outline-primary btn-lg me-2">Large Outline</button>
+                <button type="button" class="btn btn-outline-primary" disabled>Disabled</button>
+            </div>
+
+            <div class="mb-4">
+                <h4>Solid Buttons</h4>
+                <p>Filled buttons with the primary color:</p>
+                <button type="button" class="btn btn-primary me-2">Primary</button>
+                <button type="button" class="btn btn-primary btn-sm me-2">Small Primary</button>
+                <button type="button" class="btn btn-primary btn-lg me-2">Large Primary</button>
+                <button type="button" class="btn btn-primary" disabled>Disabled</button>
+            </div>
+
+            <div class="mb-4">
+                <h4>Button Sizes</h4>
+                <p>All button sizes available:</p>
+                <button type="button" class="btn btn-primary btn-sm me-2">Small</button>
+                <button type="button" class="btn btn-primary me-2">Default</button>
+                <button type="button" class="btn btn-primary btn-lg me-2">Large</button>
+            </div>
+
+            <div class="mb-4">
+                <h4>Bootstrap Integration</h4>
+                <p>Trophy buttons work with Bootstrap button groups and other components:</p>
+                <div class="btn-group" role="group" aria-label="Button group example">
+                    <button type="button" class="btn btn-outline-primary">Left</button>
+                    <button type="button" class="btn btn-outline-primary">Middle</button>
+                    <button type="button" class="btn btn-outline-primary">Right</button>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <h4>Standard Bootstrap Buttons (with Trophy Theme)</h4>
+                <p>Standard Bootstrap buttons automatically styled with Trophy theme:</p>
+                <button type="button" class="btn btn-primary me-2">Primary</button>
+                <button type="button" class="btn btn-secondary me-2">Secondary</button>
+                <button type="button" class="btn btn-outline-primary me-2">Outline Primary</button>
+                <button type="button" class="btn btn-outline-secondary me-2">Outline Secondary</button>
+            </div>
+        </div>
+
+        <!-- Breadcrumbs Section -->
+        <div class="demo-section">
+            <h2 class="display-4">Navigation Components</h2>
+            
+            <div class="mb-4">
+                <h4>Breadcrumbs</h4>
+                <p>Clean breadcrumb navigation styled with Trophy theme:</p>
+                
+                <!-- Basic Breadcrumb -->
+                <nav aria-label="breadcrumb" class="mb-3">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Current Page</li>
+                    </ol>
+                </nav>
+
+                <!-- Multi-level Breadcrumb -->
+                <nav aria-label="breadcrumb" class="mb-3">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Products</a></li>
+                        <li class="breadcrumb-item"><a href="#">Sports Equipment</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Soccer Balls</li>
+                    </ol>
+                </nav>
+
+                <!-- Breadcrumb with Icons -->
+                <nav aria-label="breadcrumb" class="mb-3">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#"><i class="fas fa-home me-1"></i>Home</a></li>
+                        <li class="breadcrumb-item"><a href="#"><i class="fas fa-users me-1"></i>Team</a></li>
+                        <li class="breadcrumb-item active" aria-current="page"><i class="fas fa-trophy me-1"></i>Achievements</li>
+                    </ol>
+                </nav>
+
+                <!-- Breadcrumb for Trophy Club Context -->
+                <nav aria-label="breadcrumb" class="mb-3">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Trophy FC</a></li>
+                        <li class="breadcrumb-item"><a href="#">News</a></li>
+                        <li class="breadcrumb-item"><a href="#">Match Reports</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Championship Final 2025</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Color Palette Section -->
+        <div class="demo-section">
+            <h2 class="display-4">Color Palette</h2>
+            <div class="row">
+                <div class="col-12">
+                    <p>The Trophy theme color palette based on the Trophy soccer club design:</p>
+                    <div class="d-flex flex-wrap">
+                        <div class="color-demo bg-trophy-primary">
+                            <span>Primary</span>
+                        </div>
+                        <div class="color-demo bg-trophy-secondary">
+                            <span>Secondary</span>
+                        </div>
+                        <div class="color-demo bg-trophy-accent">
+                            <span>Accent</span>
+                        </div>
+                        <div class="color-demo bg-trophy-dark">
+                            <span>Dark</span>
+                        </div>
+                        <div class="color-demo bg-trophy-gray">
+                            <span>Gray</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- List and Content Examples -->
+        <div class="demo-section">
+            <h2 class="display-4">Content Examples</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Unordered List</h4>
+                    <ul>
+                        <li>Clean, modern typography</li>
+                        <li>Trophy-inspired color scheme</li>
+                        <li>Responsive button styles</li>
+                        <li>Bootstrap 5 compatibility</li>
+                        <li>Easy customization</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h4>Ordered List</h4>
+                    <ol>
+                        <li>Download the Trophy theme</li>
+                        <li>Include the CSS file</li>
+                        <li>Use Trophy button classes</li>
+                        <li>Apply typography utilities</li>
+                        <li>Enjoy your modern design</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <!-- Code Example -->
+        <div class="demo-section">
+            <h2 class="display-4">Code Examples</h2>
+            <p>Here's how to use the Trophy theme components:</p>
+            
+            <h5>HTML Button Examples:</h5>
+            <pre><code>&lt;button class="btn btn-link"&gt;Link Style Button&lt;/button&gt;
+&lt;button class="btn btn-outline-primary"&gt;Outline Button&lt;/button&gt;
+&lt;button class="btn btn-primary"&gt;Primary Button&lt;/button&gt;</code></pre>
+
+            <h5>Typography Classes:</h5>
+            <pre><code>&lt;h1 class="display-1"&gt;Hero Heading&lt;/h1&gt;
+&lt;h2 class="display-4"&gt;Section Heading&lt;/h2&gt;
+&lt;p class="text-primary fw-semibold"&gt;Styled Text&lt;/p&gt;</code></pre>
+
+            <h5>Breadcrumb Navigation:</h5>
+            <pre><code>&lt;nav aria-label="breadcrumb"&gt;
+  &lt;ol class="breadcrumb"&gt;
+    &lt;li class="breadcrumb-item"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="breadcrumb-item"&gt;&lt;a href="#"&gt;Products&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="breadcrumb-item active" aria-current="page"&gt;Current Page&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/nav&gt;</code></pre>
+        </div>
+
+        <!-- Forms Section -->
+        <div class="demo-section">
+            <h2 class="display-4">Forms</h2>
+            <p>Clean, professional forms styled to match Trophy's design:</p>
+            
+            <div class="row">
+                <div class="col-lg-6">
+                    <h4>Contact Form</h4>
+                    <form class="mb-4">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Name:" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Email Address:" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="4" placeholder="Message:" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit Message</button>
+                    </form>
+                </div>
+                <div class="col-lg-6">
+                    <h4>Newsletter Signup</h4>
+                    <div class="mb-3">
+                        <form class="d-flex">
+                            <input type="email" class="form-control me-2" placeholder="Email" required>
+                            <button type="submit" class="btn btn-primary">SIGN UP</button>
+                        </form>
+                    </div>
+                    
+                    <h4>Form with Labels</h4>
+                    <form>
+                        <div class="mb-3">
+                            <label for="userName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="userName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="userEmail" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="userEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="subscribe" checked>
+                                <label class="form-check-label" for="subscribe">
+                                    Subscribe to newsletter
+                                </label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-outline-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="mt-4">                    <p><a href="trophy-forms-demo.html" class="text-primary">→ View complete forms demo</a></p>
+            </div>
+        </div>
+
+        <!-- Links Example -->
+        <div class="demo-section">
+            <h2 class="display-4">Links and Navigation</h2>
+            <p>Links are styled with the Trophy primary color: <a href="#">This is a sample link</a> that changes color on hover.</p>
+            
+            <nav class="navbar navbar-expand-lg navbar-light bg-light mt-3">
+                <div class="container-fluid">
+                    <a class="navbar-brand fw-bold" href="#">Trophy</a>
+                    <div class="navbar-nav">
+                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="#">Contact</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Footer -->
+        <footer class="demo-section text-center">
+            <hr>
+            <p class="text-muted">
+                Trophy Bootstrap Theme &copy; 2025 | 
+                Inspired by <a href="https://trophy.qodeinteractive.com/" target="_blank">Trophy Soccer Club</a>
+            </p>
+        </footer>
+    </div>
+
+    <!-- Bootstrap JS (optional for interactive components) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

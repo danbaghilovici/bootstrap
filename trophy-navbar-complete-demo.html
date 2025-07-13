@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trophy Enhanced Navbar - Complete Demo</title>
+    
+    <!-- Compiled Trophy Bootstrap CSS -->
+    <link href="dist/css/bootstrap.css" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts (Trophy theme fonts) -->
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&family=Fira+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            padding-top: 120px; /* Account for fixed navbar */
+        }
+        
+        .demo-section {
+            padding: 3rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .demo-section:last-child {
+            border-bottom: none;
+        }
+        
+        .code-block {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 0.375rem;
+            padding: 1rem;
+            margin: 1rem 0;
+            overflow-x: auto;
+        }
+        
+        .feature-highlight {
+            background: linear-gradient(135deg, #43ec6b, #3cefd2);
+            color: #221f1b;
+            padding: 4rem 0;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Enhanced Trophy Navbar with All Features -->
+    <nav class="navbar navbar-expand-lg navbar-trophy fixed-top">
+        <div class="container-fluid">
+            <!-- Brand with Trophy Icon -->
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-trophy me-2"></i>
+                Trophy FC Pro
+            </a>
+
+            <!-- Search Toggle for Desktop -->
+            <div class="navbar-search d-none d-lg-block me-3">
+                <button class="search-toggle" type="button" id="searchToggle">
+                    <i class="fas fa-search"></i>
+                </button>
+                <div class="search-form" id="searchForm">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search...">
+                        <button class="btn btn-trophy-solid" type="button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile toggle button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Main Navigation -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!-- Home with Rich Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-home me-1"></i>Home
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-trophy dropdown-item-icon">
+                            <li><h6 class="dropdown-header-trophy">Main Pages</h6></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-futbol"></i>Soccer Club</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-child"></i>Junior Soccer Team</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-chalkboard-teacher"></i>Soccer Coach</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-store"></i>Shop Home</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><h6 class="dropdown-header-trophy">Special Pages</h6></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-star"></i>Soccer Star Showcase</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-venus"></i>Women's Soccer Team</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-rocket"></i>Landing Page</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Teams with Multi-Level Dropdowns -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-users me-1"></i>Teams
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-trophy">
+                            <li><a class="dropdown-item" href="#">First Team</a></li>
+                            <li><a class="dropdown-item" href="#">Reserves</a></li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                                    Youth Teams
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-trophy">
+                                    <li><a class="dropdown-item" href="#">U21 Squad</a></li>
+                                    <li><a class="dropdown-item" href="#">U18 Squad</a></li>
+                                    <li><a class="dropdown-item" href="#">U16 Squad</a></li>
+                                    <li><a class="dropdown-item" href="#">U14 Squad</a></li>
+                                    <li class="dropdown-submenu">
+                                        <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                                            Academy Teams
+                                        </a>
+                                        <ul class="dropdown-menu dropdown-menu-trophy">
+                                            <li><a class="dropdown-item" href="#">Academy A</a></li>
+                                            <li><a class="dropdown-item" href="#">Academy B</a></li>
+                                            <li><a class="dropdown-item" href="#">Academy C</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                                    Women's Teams
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-trophy">
+                                    <li><a class="dropdown-item" href="#">Women's First Team</a></li>
+                                    <li><a class="dropdown-item" href="#">Women's Reserves</a></li>
+                                    <li><a class="dropdown-item" href="#">Girls U18</a></li>
+                                    <li><a class="dropdown-item" href="#">Girls U16</a></li>
+                                </ul>
+                            </li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Coaching Staff</a></li>
+                            <li><a class="dropdown-item" href="#">Medical Team</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Competitions with Complex Structure -->
+                    <li class="nav-item dropdown mega-menu-trophy">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-trophy me-1"></i>Competitions
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-trophy">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <h6 class="mega-menu-title">League Competitions</h6>
+                                        <a href="#" class="mega-menu-item">Premier League</a>
+                                        <a href="#" class="mega-menu-item">Championship</a>
+                                        <a href="#" class="mega-menu-item">League One</a>
+                                        <a href="#" class="mega-menu-item">League Two</a>
+                                        <a href="#" class="mega-menu-item">National League</a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h6 class="mega-menu-title">Cup Competitions</h6>
+                                        <a href="#" class="mega-menu-item">FA Cup</a>
+                                        <a href="#" class="mega-menu-item">EFL Cup</a>
+                                        <a href="#" class="mega-menu-item">Community Shield</a>
+                                        <a href="#" class="mega-menu-item">EFL Trophy</a>
+                                        <a href="#" class="mega-menu-item">Youth Cup</a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h6 class="mega-menu-title">European Competitions</h6>
+                                        <a href="#" class="mega-menu-item">Champions League</a>
+                                        <a href="#" class="mega-menu-item">Europa League</a>
+                                        <a href="#" class="mega-menu-item">Conference League</a>
+                                        <a href="#" class="mega-menu-item">Super Cup</a>
+                                        <a href="#" class="mega-menu-item">Club World Cup</a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h6 class="mega-menu-title">International</h6>
+                                        <a href="#" class="mega-menu-item">World Cup</a>
+                                        <a href="#" class="mega-menu-item">European Championship</a>
+                                        <a href="#" class="mega-menu-item">Nations League</a>
+                                        <a href="#" class="mega-menu-item">Friendlies</a>
+                                        <a href="#" class="mega-menu-item">Qualifiers</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- News with Search -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-newspaper me-1"></i>News
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-trophy">
+                            <li class="dropdown-search">
+                                <input type="text" class="form-control" placeholder="Search news...">
+                            </li>
+                            <li><h6 class="dropdown-header-trophy">Latest News</h6></li>
+                            <li><a class="dropdown-item" href="#">Transfer Updates</a></li>
+                            <li><a class="dropdown-item" href="#">Match Reports</a></li>
+                            <li><a class="dropdown-item" href="#">Player Interviews</a></li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                                    Categories
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-trophy">
+                                    <li><a class="dropdown-item" href="#">First Team</a></li>
+                                    <li><a class="dropdown-item" href="#">Academy</a></li>
+                                    <li><a class="dropdown-item" href="#">Women's Team</a></li>
+                                    <li><a class="dropdown-item" href="#">Community</a></li>
+                                </ul>
+                            </li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Press Room</a></li>
+                            <li><a class="dropdown-item" href="#">Media Centre</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Tickets -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-ticket-alt me-1"></i>Tickets
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-trophy">
+                            <li><a class="dropdown-item" href="#">Buy Tickets</a></li>
+                            <li><a class="dropdown-item" href="#">Season Tickets</a></li>
+                            <li><a class="dropdown-item" href="#">Hospitality</a></li>
+                            <li><a class="dropdown-item" href="#">Away Travel</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Ticket Office</a></li>
+                            <li><a class="dropdown-item" href="#">Terms & Conditions</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- Right side navigation -->
+                <ul class="navbar-nav">
+                    <!-- Language Selector -->
+                    <li class="nav-item dropdown navbar-language-selector">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-globe me-1"></i>EN
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-trophy dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-flag me-2"></i>English</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-flag me-2"></i>Español</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-flag me-2"></i>Français</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-flag me-2"></i>Deutsch</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Notifications -->
+                    <li class="nav-item dropdown navbar-notifications">
+                        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-bell"></i>
+                            <span class="notification-badge">3</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-trophy dropdown-menu-end">
+                            <div class="notification-header">
+                                <i class="fas fa-bell me-2"></i>Notifications (3)
+                            </div>
+                            <div class="notification-item unread d-flex">
+                                <div class="notification-icon">
+                                    <i class="fas fa-futbol"></i>
+                                </div>
+                                <div class="notification-content">
+                                    <div class="notification-title">Match Result</div>
+                                    <div class="notification-text">Trophy FC 3-1 Rivals United</div>
+                                    <div class="notification-time">2 minutes ago</div>
+                                </div>
+                            </div>
+                            <div class="notification-item d-flex">
+                                <div class="notification-icon">
+                                    <i class="fas fa-user-plus"></i>
+                                </div>
+                                <div class="notification-content">
+                                    <div class="notification-title">New Signing</div>
+                                    <div class="notification-text">John Smith joins Trophy FC</div>
+                                    <div class="notification-time">1 hour ago</div>
+                                </div>
+                            </div>
+                            <div class="notification-item d-flex">
+                                <div class="notification-icon">
+                                    <i class="fas fa-calendar"></i>
+                                </div>
+                                <div class="notification-content">
+                                    <div class="notification-title">Next Match</div>
+                                    <div class="notification-text">vs City FC - Saturday 3PM</div>
+                                    <div class="notification-time">2 hours ago</div>
+                                </div>
+                            </div>
+                            <div class="notification-footer">
+                                <a href="#">View All Notifications</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- User Account -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-user-circle me-1"></i>Account
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-trophy dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-user me-2"></i>My Profile</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-ticket-alt me-2"></i>My Tickets</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-shopping-cart me-2"></i>Orders</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-heart me-2"></i>Favorites</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i>Settings</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Shopping Cart -->
+                    <li class="nav-item">
+                        <a class="nav-link position-relative" href="#">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="badge bg-primary rounded-pill position-absolute top-0 start-100 translate-middle">3</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb Navigation -->
+    <div class="container-fluid navbar-with-breadcrumb py-2 bg-light">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Teams</a></li>
+                <li class="breadcrumb-item active" aria-current="page">First Team</li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container-fluid">
+        <!-- Hero Section -->
+        <div class="feature-highlight text-center">
+            <div class="container">
+                <h1 class="display-4 fw-bold mb-4">
+                    <i class="fas fa-trophy me-3"></i>
+                    Trophy Enhanced Navbar
+                </h1>
+                <p class="lead mb-4">
+                    The most comprehensive navigation system for your Bootstrap projects with multi-level dropdowns, mega menus, and Trophy theme integration.
+                </p>
+                <div class="d-flex justify-content-center gap-3">
+                    <button class="btn btn-trophy-solid btn-trophy-lg">
+                        <i class="fas fa-play me-2"></i>View Demo
+                    </button>
+                    <button class="btn btn-trophy-outline btn-trophy-lg">
+                        <i class="fas fa-code me-2"></i>View Code
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <div class="demo-section">
+            <div class="container">
+                <h2 class="text-center mb-5">Navigation Features Showcase</h2>
+                <div class="row g-4">
+                    <div class="col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="fas fa-layer-group fa-3x text-primary mb-3"></i>
+                                <h5>Multi-Level Dropdowns</h5>
+                                <p class="text-muted">Navigate through multiple levels of nested menus with smooth animations and hover effects.</p>
+                                <div class="code-block">
+                                    <small>Check the "Teams" menu for 3-level navigation example</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="fas fa-th-large fa-3x text-primary mb-3"></i>
+                                <h5>Mega Menu</h5>
+                                <p class="text-muted">Display extensive content in organized columns with the mega menu functionality.</p>
+                                <div class="code-block">
+                                    <small>See "Competitions" menu for mega menu example</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="fas fa-search fa-3x text-primary mb-3"></i>
+                                <h5>Integrated Search</h5>
+                                <p class="text-muted">Built-in search functionality with dropdown integration and form controls.</p>
+                                <div class="code-block">
+                                    <small>Try the search icon in the navbar and News dropdown</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="fas fa-bell fa-3x text-primary mb-3"></i>
+                                <h5>Notification Center</h5>
+                                <p class="text-muted">Rich notification dropdown with badges, icons, and organized content display.</p>
+                                <div class="code-block">
+                                    <small>Click the bell icon to see notifications</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="fas fa-palette fa-3x text-primary mb-3"></i>
+                                <h5>Trophy Theme</h5>
+                                <p class="text-muted">Fully integrated with Trophy theme colors, typography, and design language.</p>
+                                <div class="code-block">
+                                    <small>Consistent styling throughout all components</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="fas fa-mobile-alt fa-3x text-primary mb-3"></i>
+                                <h5>Mobile Responsive</h5>
+                                <p class="text-muted">Adaptive design that works perfectly on all devices with touch-friendly interactions.</p>
+                                <div class="code-block">
+                                    <small>Resize browser to see mobile behavior</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Code Examples Section -->
+        <div class="demo-section bg-light">
+            <div class="container">
+                <h2 class="text-center mb-5">Implementation Examples</h2>
+                
+                <div class="row">
+                    <div class="col-lg-6 mb-4">
+                        <h4>Basic Multi-Level Dropdown</h4>
+                        <div class="code-block">
+                            <pre><code>&lt;li class="nav-item dropdown"&gt;
+  &lt;a class="nav-link dropdown-toggle" href="#" 
+     data-bs-toggle="dropdown"&gt;Teams&lt;/a&gt;
+  &lt;ul class="dropdown-menu dropdown-menu-trophy"&gt;
+    &lt;li class="dropdown-submenu"&gt;
+      &lt;a class="dropdown-item dropdown-toggle" 
+         href="#"&gt;Youth Teams&lt;/a&gt;
+      &lt;ul class="dropdown-menu dropdown-menu-trophy"&gt;
+        &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;U21&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;U18&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/li&gt;</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6 mb-4">
+                        <h4>Mega Menu Structure</h4>
+                        <div class="code-block">
+                            <pre><code>&lt;li class="nav-item dropdown mega-menu-trophy"&gt;
+  &lt;a class="nav-link dropdown-toggle" href="#" 
+     data-bs-toggle="dropdown"&gt;Competitions&lt;/a&gt;
+  &lt;div class="dropdown-menu dropdown-menu-trophy"&gt;
+    &lt;div class="container"&gt;
+      &lt;div class="row"&gt;
+        &lt;div class="col-md-3"&gt;
+          &lt;h6 class="mega-menu-title"&gt;League&lt;/h6&gt;
+          &lt;a href="#" class="mega-menu-item"&gt;Premier&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/li&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-6 mb-4">
+                        <h4>Notification Dropdown</h4>
+                        <div class="code-block">
+                            <pre><code>&lt;li class="nav-item dropdown navbar-notifications"&gt;
+  &lt;a class="nav-link" href="#" data-bs-toggle="dropdown"&gt;
+    &lt;i class="fas fa-bell"&gt;&lt;/i&gt;
+    &lt;span class="notification-badge"&gt;3&lt;/span&gt;
+  &lt;/a&gt;
+  &lt;div class="dropdown-menu dropdown-menu-trophy"&gt;
+    &lt;div class="notification-item d-flex"&gt;
+      &lt;div class="notification-icon"&gt;
+        &lt;i class="fas fa-futbol"&gt;&lt;/i&gt;
+      &lt;/div&gt;
+      &lt;div class="notification-content"&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/li&gt;</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6 mb-4">
+                        <h4>Search Integration</h4>
+                        <div class="code-block">
+                            <pre><code>&lt;div class="navbar-search"&gt;
+  &lt;button class="search-toggle" id="searchToggle"&gt;
+    &lt;i class="fas fa-search"&gt;&lt;/i&gt;
+  &lt;/button&gt;
+  &lt;div class="search-form" id="searchForm"&gt;
+    &lt;div class="input-group"&gt;
+      &lt;input type="text" class="form-control" 
+             placeholder="Search..."&gt;
+      &lt;button class="btn btn-trophy-solid"&gt;
+        &lt;i class="fas fa-search"&gt;&lt;/i&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Features -->
+        <div class="demo-section">
+            <div class="container">
+                <h2 class="text-center mb-5">Additional Navbar Variants</h2>
+                
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5><i class="fas fa-adjust me-2"></i>Dark Theme</h5>
+                                <p class="text-muted">Add <code>.navbar-trophy-dark</code> class for dark theme variant.</p>
+                                <button class="btn btn-trophy-outline btn-sm" onclick="toggleDarkNavbar()">Try Dark Theme</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5><i class="fas fa-ghost me-2"></i>Transparent</h5>
+                                <p class="text-muted">Use <code>.navbar-trophy-transparent</code> for transparent overlay.</p>
+                                <button class="btn btn-trophy-outline btn-sm" onclick="toggleTransparentNavbar()">Try Transparent</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5><i class="fas fa-compress-arrows-alt me-2"></i>Size Variants</h5>
+                                <p class="text-muted">Available in <code>.navbar-trophy-sm</code> and <code>.navbar-trophy-lg</code> sizes.</p>
+                                <button class="btn btn-trophy-outline btn-sm" onclick="toggleNavbarSize()">Try Large Size</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Enhanced dropdown behavior for multi-level menus
+        document.addEventListener('DOMContentLoaded', function() {
+            // Search toggle functionality
+            const searchToggle = document.getElementById('searchToggle');
+            const searchForm = document.getElementById('searchForm');
+            
+            if (searchToggle && searchForm) {
+                searchToggle.addEventListener('click', function() {
+                    searchForm.classList.toggle('show');
+                });
+                
+                // Close search when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!searchToggle.contains(e.target) && !searchForm.contains(e.target)) {
+                        searchForm.classList.remove('show');
+                    }
+                });
+            }
+            
+            // Handle nested dropdown hover on desktop
+            const dropdownSubmenus = document.querySelectorAll('.dropdown-submenu');
+            
+            dropdownSubmenus.forEach(submenu => {
+                const toggle = submenu.querySelector('.dropdown-toggle');
+                const menu = submenu.querySelector('.dropdown-menu');
+                
+                if (toggle && menu) {
+                    // Show on hover for desktop
+                    submenu.addEventListener('mouseenter', function() {
+                        if (window.innerWidth > 991) {
+                            menu.style.display = 'block';
+                            menu.classList.add('show');
+                        }
+                    });
+                    
+                    // Hide on mouse leave for desktop
+                    submenu.addEventListener('mouseleave', function() {
+                        if (window.innerWidth > 991) {
+                            menu.style.display = 'none';
+                            menu.classList.remove('show');
+                        }
+                    });
+                    
+                    // Toggle on click for mobile
+                    toggle.addEventListener('click', function(e) {
+                        if (window.innerWidth <= 991) {
+                            e.preventDefault();
+                            const isShown = menu.classList.contains('show');
+                            menu.classList.toggle('show', !isShown);
+                            menu.style.display = isShown ? 'none' : 'block';
+                        }
+                    });
+                }
+            });
+            
+            // Enhanced sticky navbar
+            const navbar = document.querySelector('.navbar-trophy');
+            if (navbar) {
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > 100) {
+                        navbar.classList.add('sticky-enhanced');
+                    } else {
+                        navbar.classList.remove('sticky-enhanced');
+                    }
+                });
+            }
+        });
+        
+        // Demo functions for testing variants
+        function toggleDarkNavbar() {
+            const navbar = document.querySelector('.navbar-trophy');
+            navbar.classList.toggle('navbar-trophy-dark');
+        }
+        
+        function toggleTransparentNavbar() {
+            const navbar = document.querySelector('.navbar-trophy');
+            navbar.classList.toggle('navbar-trophy-transparent');
+        }
+        
+        function toggleNavbarSize() {
+            const navbar = document.querySelector('.navbar-trophy');
+            if (navbar.classList.contains('navbar-trophy-lg')) {
+                navbar.classList.remove('navbar-trophy-lg');
+                navbar.classList.add('navbar-trophy-sm');
+            } else if (navbar.classList.contains('navbar-trophy-sm')) {
+                navbar.classList.remove('navbar-trophy-sm');
+            } else {
+                navbar.classList.add('navbar-trophy-lg');
+            }
+        }
+    </script>
+</body>
+</html>

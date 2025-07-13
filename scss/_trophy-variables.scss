@@ -1,0 +1,135 @@
+// Trophy Theme Variables
+// Based on the Trophy soccer club website design
+
+// Colors
+$trophy-primary: #c0e728 !default;
+$trophy-secondary: #3cefd2 !default;
+$trophy-accent: #000000 !default;
+$trophy-dark: #221f1b !default;
+$trophy-light: #ffffff !default;
+$trophy-gray: #5c5a5b !default;
+
+// Typography - Based on Trophy inspiration
+$trophy-font-family-primary: 'Titillium Web', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$trophy-font-family-secondary: 'Fira Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$trophy-font-family: $trophy-font-family-primary !default;
+
+$trophy-font-weight-light: 300 !default;
+$trophy-font-weight-normal: 400 !default;
+$trophy-font-weight-medium: 500 !default;
+$trophy-font-weight-semibold: 600 !default;
+$trophy-font-weight-bold: 700 !default;
+
+// Heading sizes based on Trophy inspiration (converted to rem)
+$trophy-h1-font-size: 3.75rem !default; // 60px / 16px = 3.75rem
+$trophy-h2-font-size: 2.25rem !default; // 36px / 16px = 2.25rem
+$trophy-h3-font-size: 1.5625rem !default; // 25px / 16px = 1.5625rem
+$trophy-h4-font-size: 1.375rem !default; // 22px / 16px = 1.375rem
+$trophy-h5-font-size: 1.25rem !default; // 20px / 16px = 1.25rem
+$trophy-h6-font-size: 0.8125rem !default; // 13px / 16px = 0.8125rem
+
+// Base paragraph size
+$trophy-p-font-size: 0.9375rem !default; // 15px / 16px = 0.9375rem
+$trophy-p-line-height: 1.6 !default;
+
+// Heading styles
+$trophy-headings-font-family: $trophy-font-family-primary !default;
+$trophy-headings-font-weight: $trophy-font-weight-bold !default;
+$trophy-headings-line-height: 1.2 !default;
+$trophy-headings-color: $trophy-accent !default;
+$trophy-headings-margin-bottom: 1rem !default;
+
+// Button variables inspired by Trophy theme
+$trophy-btn-font-family: $trophy-font-family !default;
+$trophy-btn-font-weight: $trophy-font-weight-semibold !default;
+$trophy-btn-line-height: 1.2 !default;
+$trophy-btn-border-radius: 0 !default; // Trophy uses sharp corners
+$trophy-btn-border-width: 1px !default;
+$trophy-btn-transition: all 0.3s ease-in-out !default;
+
+// Button sizes (Trophy has small, medium, large, huge)
+$trophy-btn-padding-y-xs: 0.25rem !default;
+$trophy-btn-padding-x-xs: 0.75rem !default;
+$trophy-btn-font-size-xs: 0.7rem !default;
+
+$trophy-btn-padding-y-sm: 0.375rem !default;
+$trophy-btn-padding-x-sm: 1rem !default;
+$trophy-btn-font-size-sm: 0.8rem !default;
+
+$trophy-btn-padding-y: 0.5rem !default;
+$trophy-btn-padding-x: 1.5rem !default;
+$trophy-btn-font-size: 0.9rem !default;
+
+$trophy-btn-padding-y-lg: 1rem !default;
+$trophy-btn-padding-x-lg: 2.5rem !default;
+$trophy-btn-font-size-lg: 1.1rem !default;
+
+$trophy-btn-padding-y-xl: 1.25rem !default;
+$trophy-btn-padding-x-xl: 3rem !default;
+$trophy-btn-font-size-xl: 1.2rem !default;
+
+// Button styles
+$trophy-btn-box-shadow: none !default;
+$trophy-btn-focus-box-shadow: none !default;
+$trophy-btn-active-shadow: none !default;
+
+// Override Bootstrap variables with Trophy theme
+$primary: $trophy-primary !default;
+$secondary: $trophy-secondary !default;
+$success: $trophy-accent !default;
+$dark: $trophy-dark !default;
+$light: $trophy-light !default;
+
+// Typography overrides
+$font-family-sans-serif: $trophy-font-family !default;
+$font-family-base: $font-family-sans-serif !default;
+
+// Bootstrap heading variables using Trophy values
+$h1-font-size: $trophy-h1-font-size !default;
+$h2-font-size: $trophy-h2-font-size !default;
+$h3-font-size: $trophy-h3-font-size !default;
+$h4-font-size: $trophy-h4-font-size !default;
+$h5-font-size: $trophy-h5-font-size !default;
+$h6-font-size: $trophy-h6-font-size !default;
+
+$headings-font-family: $trophy-headings-font-family !default;
+$headings-font-weight: $trophy-headings-font-weight !default;
+$headings-line-height: $trophy-headings-line-height !default;
+$headings-color: $trophy-headings-color !default;
+$headings-margin-bottom: $trophy-headings-margin-bottom !default;
+
+// Body typography
+$font-size-base: $trophy-p-font-size !default;
+$line-height-base: $trophy-p-line-height !default;
+$font-weight-base: $trophy-font-weight-normal !default;
+
+// Color variables
+$body-color: $trophy-accent !default;
+$primary: $trophy-primary !default;
+$secondary: $trophy-secondary !default;
+$dark: $trophy-dark !default;
+$light: $trophy-light !default;
+
+// Button overrides
+$btn-font-family: $trophy-btn-font-family !default;
+$btn-font-weight: $trophy-btn-font-weight !default;
+$btn-line-height: $trophy-btn-line-height !default;
+$btn-border-radius: $trophy-btn-border-radius !default;
+$btn-border-width: $trophy-btn-border-width !default;
+$btn-box-shadow: $trophy-btn-box-shadow !default;
+$btn-focus-box-shadow: $trophy-btn-focus-box-shadow !default;
+$btn-active-box-shadow: $trophy-btn-active-shadow !default;
+$btn-transition: $trophy-btn-transition !default;
+
+// Button sizes
+$btn-padding-y-sm: $trophy-btn-padding-y-sm !default;
+$btn-padding-x-sm: $trophy-btn-padding-x-sm !default;
+$btn-font-size-sm: $trophy-btn-font-size-sm !default;
+
+$btn-padding-y: $trophy-btn-padding-y !default;
+$btn-padding-x: $trophy-btn-padding-x !default;
+$btn-font-size: $trophy-btn-font-size !default;
+
+$btn-padding-y-lg: $trophy-btn-padding-y-lg !default;
+$btn-padding-x-lg: $trophy-btn-padding-x-lg !default;
+$btn-font-size-lg: $trophy-btn-font-size-lg !default;
