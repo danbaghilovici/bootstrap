@@ -44,3 +44,5 @@ Thumbs.db
 /site/.astro
 /site/public
 /dist
+
+package-lock.json
