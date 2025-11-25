@@ -102,7 +102,9 @@
     "watch-js-docs": "nodemon --watch site/src/assets/ --ext js --exec \"npm run js-lint\"",
     "astro-dev": "astro dev --root site --port 9001",
     "astro-build": "astro build --root site && rm -rf _site && cp -r site/dist _site",
-    "astro-preview": "astro preview --root site --port 9001"
+    "astro-preview": "astro preview --root site --port 9001",
+    "watch-theme": "nodemon --watch scss/ --ext scss --exec \"npm run build-theme\"",
+    "build-theme": "npm run css && cp dist/css/bootstrap.min.css ../../themes/bs-carbon/static/css/styles.min.css"
   },
   "peerDependencies": {
     "@popperjs/core": "^2.11.8"
