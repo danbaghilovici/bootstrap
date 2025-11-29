@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carbon Progress Bar Demo</title>
+  <link rel="stylesheet" href="../dist/css/bootstrap.css">
+  <style>
+    body {
+      padding: 2rem;
+      background-color: #f4f4f4;
+    }
+    .demo-section {
+      background: white;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .demo-section h2 {
+      margin-bottom: 1rem;
+      font-size: 1.25rem;
+    }
+    .demo-section p {
+      color: #525252;
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+    }
+    .demo-container {
+      background: #e0e0e0;
+      padding: 1.5rem;
+    }
+    .demo-container .progress {
+      margin-bottom: 1rem;
+    }
+    .demo-container .progress:last-child {
+      margin-bottom: 0;
+    }
+    pre {
+      background: #161616;
+      color: #f4f4f4;
+      padding: 1rem;
+      margin-top: 1rem;
+      font-size: 0.75rem;
+      overflow-x: auto;
+    }
+    code {
+      font-family: "IBM Plex Mono", monospace;
+    }
+    .demo-label {
+      font-size: 0.875rem;
+      color: #525252;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Carbon Progress Bar Demo</h1>
+  <p>Progress bar component styled with Carbon Design System specifications.</p>
+
+  <!-- Default Progress Bars -->
+  <div class="demo-section">
+    <h2>Default Progress Bar (8px height)</h2>
+    <p>Standard progress bar with various completion percentages.</p>
+    <div class="demo-container">
+      <div class="demo-label">0%</div>
+      <div class="progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar" style="width: 0%"></div>
+      </div>
+      <div class="demo-label">25%</div>
+      <div class="progress" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar" style="width: 25%"></div>
+      </div>
+      <div class="demo-label">50%</div>
+      <div class="progress" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar" style="width: 50%"></div>
+      </div>
+      <div class="demo-label">75%</div>
+      <div class="progress" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar" style="width: 75%"></div>
+      </div>
+      <div class="demo-label">100%</div>
+      <div class="progress" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar" style="width: 100%"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Small Variant -->
+  <div class="demo-section">
+    <h2>Small Variant (4px height)</h2>
+    <p>Compact progress bar using <code>.progress-sm</code> modifier.</p>
+    <div class="demo-container">
+      <div class="demo-label">25%</div>
+      <div class="progress progress-sm" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar" style="width: 25%"></div>
+      </div>
+      <div class="demo-label">50%</div>
+      <div class="progress progress-sm" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar" style="width: 50%"></div>
+      </div>
+      <div class="demo-label">75%</div>
+      <div class="progress progress-sm" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar" style="width: 75%"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Success State -->
+  <div class="demo-section">
+    <h2>Success State</h2>
+    <p>Progress bar indicating successful completion using <code>.progress-success</code> or <code>.progress-bar-success</code>.</p>
+    <div class="demo-container">
+      <div class="demo-label">Container class: .progress-success</div>
+      <div class="progress progress-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar" style="width: 100%"></div>
+      </div>
+      <div class="demo-label">Bar class: .progress-bar-success</div>
+      <div class="progress" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar progress-bar-success" style="width: 100%"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Error State -->
+  <div class="demo-section">
+    <h2>Error State</h2>
+    <p>Progress bar indicating an error using <code>.progress-error</code> or <code>.progress-bar-error</code>.</p>
+    <div class="demo-container">
+      <div class="demo-label">Container class: .progress-error</div>
+      <div class="progress progress-error" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar" style="width: 65%"></div>
+      </div>
+      <div class="demo-label">Bar class: .progress-bar-error</div>
+      <div class="progress" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar progress-bar-error" style="width: 65%"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- With Labels -->
+  <div class="demo-section">
+    <h2>With Labels</h2>
+    <p>Progress bar with percentage label inside the bar.</p>
+    <div class="demo-container">
+      <div class="progress" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 1.25rem;">
+        <div class="progress-bar" style="width: 25%">25%</div>
+      </div>
+      <div class="progress" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="height: 1.25rem;">
+        <div class="progress-bar" style="width: 50%">50%</div>
+      </div>
+      <div class="progress" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="height: 1.25rem;">
+        <div class="progress-bar" style="width: 75%">75%</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stacked -->
+  <div class="demo-section">
+    <h2>Stacked Progress Bars</h2>
+    <p>Multiple progress bars stacked together.</p>
+    <div class="demo-container">
+      <div class="progress-stacked">
+        <div class="progress" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width: 15%">
+          <div class="progress-bar"></div>
+        </div>
+        <div class="progress" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%">
+          <div class="progress-bar progress-bar-success"></div>
+        </div>
+        <div class="progress" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+          <div class="progress-bar progress-bar-error"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HTML Structure Reference -->
+  <div class="demo-section">
+    <h2>HTML Structure Reference</h2>
+    <p>Copy this HTML structure to use the progress bar component.</p>
+    <pre><code>&lt;!-- Default progress bar --&gt;
+&lt;div class="progress" role="progressbar"
+     aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"&gt;
+  &lt;div class="progress-bar" style="width: 50%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Small variant --&gt;
+&lt;div class="progress progress-sm" role="progressbar"&gt;
+  &lt;div class="progress-bar" style="width: 50%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Success state --&gt;
+&lt;div class="progress progress-success" role="progressbar"&gt;
+  &lt;div class="progress-bar" style="width: 100%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Error state --&gt;
+&lt;div class="progress progress-error" role="progressbar"&gt;
+  &lt;div class="progress-bar" style="width: 65%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- With label --&gt;
+&lt;div class="progress" role="progressbar" style="height: 1.25rem;"&gt;
+  &lt;div class="progress-bar" style="width: 75%"&gt;75%&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+  </div>
+
+  <!-- Carbon Design Specs -->
+  <div class="demo-section">
+    <h2>Carbon Design Specifications</h2>
+    <table class="table table-sm">
+      <thead>
+        <tr>
+          <th>Property</th>
+          <th>Value</th>
+          <th>Carbon Token</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Track background</td>
+          <td><code>#f4f4f4</code></td>
+          <td><code>$layer</code></td>
+        </tr>
+        <tr>
+          <td>Track height (default)</td>
+          <td><code>8px (0.5rem)</code></td>
+          <td>Carbon standard</td>
+        </tr>
+        <tr>
+          <td>Track height (small)</td>
+          <td><code>4px (0.25rem)</code></td>
+          <td>Carbon small variant</td>
+        </tr>
+        <tr>
+          <td>Border radius</td>
+          <td><code>0</code></td>
+          <td>Square corners</td>
+        </tr>
+        <tr>
+          <td>Box shadow</td>
+          <td><code>none</code></td>
+          <td>Flat design</td>
+        </tr>
+        <tr>
+          <td>Bar color (default)</td>
+          <td><code>#0f62fe</code></td>
+          <td><code>$interactive</code></td>
+        </tr>
+        <tr>
+          <td>Bar color (success)</td>
+          <td><code>#24a148</code></td>
+          <td><code>$support-success</code></td>
+        </tr>
+        <tr>
+          <td>Bar color (error)</td>
+          <td><code>#da1e28</code></td>
+          <td><code>$support-error</code></td>
+        </tr>
+        <tr>
+          <td>Text on bar</td>
+          <td><code>#ffffff</code></td>
+          <td>White</td>
+        </tr>
+        <tr>
+          <td>Min width</td>
+          <td><code>48px</code></td>
+          <td>Carbon minimum</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- CSS Classes Reference -->
+  <div class="demo-section">
+    <h2>CSS Classes Reference</h2>
+    <table class="table table-sm">
+      <thead>
+        <tr>
+          <th>Class</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>.progress</code></td>
+          <td>Main container (track), default 8px height</td>
+        </tr>
+        <tr>
+          <td><code>.progress-bar</code></td>
+          <td>Inner bar/indicator element</td>
+        </tr>
+        <tr>
+          <td><code>.progress-sm</code></td>
+          <td>Small variant modifier (4px height)</td>
+        </tr>
+        <tr>
+          <td><code>.progress-success</code></td>
+          <td>Success state on container (green bar)</td>
+        </tr>
+        <tr>
+          <td><code>.progress-bar-success</code></td>
+          <td>Success state on bar element</td>
+        </tr>
+        <tr>
+          <td><code>.progress-error</code></td>
+          <td>Error state on container (red bar)</td>
+        </tr>
+        <tr>
+          <td><code>.progress-bar-error</code></td>
+          <td>Error state on bar element</td>
+        </tr>
+        <tr>
+          <td><code>.progress-stacked</code></td>
+          <td>Container for stacked progress bars</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>

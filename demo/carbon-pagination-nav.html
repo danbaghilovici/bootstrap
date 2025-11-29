@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carbon Pagination Nav Demo</title>
+  <link rel="stylesheet" href="../dist/css/bootstrap.css">
+  <style>
+    body {
+      padding: 2rem;
+      background-color: #f4f4f4;
+    }
+    .demo-section {
+      background: white;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .demo-section h2 {
+      margin-bottom: 1rem;
+      font-size: 1.25rem;
+    }
+    .demo-section p {
+      color: #525252;
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+    }
+    .demo-container {
+      background: #e0e0e0;
+      padding: 1rem;
+    }
+    pre {
+      background: #161616;
+      color: #f4f4f4;
+      padding: 1rem;
+      margin-top: 1rem;
+      font-size: 0.75rem;
+      overflow-x: auto;
+    }
+    code {
+      font-family: "IBM Plex Mono", monospace;
+    }
+  </style>
+</head>
+<body>
+  <h1>Carbon Pagination Nav Demo</h1>
+  <p>Full pagination bar component with items-per-page selector and page navigation.</p>
+
+  <!-- Default Size -->
+  <div class="demo-section">
+    <h2>Default Size (40px height)</h2>
+    <p>Standard pagination nav with all elements.</p>
+    <div class="demo-container">
+      <nav class="pagination-nav" aria-label="Table pagination">
+        <div class="pagination-nav-left">
+          <label class="pagination-nav-label" for="pageSize1">Items per page:</label>
+          <select class="pagination-nav-select" id="pageSize1">
+            <option value="10">10</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+          </select>
+          <span class="pagination-nav-text">1-10 of 100 items</span>
+        </div>
+        <div class="pagination-nav-right">
+          <select class="pagination-nav-select pagination-nav-select-page" id="pageNum1" aria-label="Page number">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+          <span class="pagination-nav-text">of 10 pages</span>
+          <button class="pagination-nav-btn" disabled aria-label="Previous page">
+            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <button class="pagination-nav-btn" aria-label="Next page">
+            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Small Size -->
+  <div class="demo-section">
+    <h2>Small Size (32px height)</h2>
+    <p>Compact variant using <code>.pagination-nav-sm</code> modifier.</p>
+    <div class="demo-container">
+      <nav class="pagination-nav pagination-nav-sm" aria-label="Table pagination">
+        <div class="pagination-nav-left">
+          <label class="pagination-nav-label" for="pageSize2">Items per page:</label>
+          <select class="pagination-nav-select" id="pageSize2">
+            <option value="10">10</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+          </select>
+          <span class="pagination-nav-text">1-10 of 50 items</span>
+        </div>
+        <div class="pagination-nav-right">
+          <select class="pagination-nav-select pagination-nav-select-page" id="pageNum2" aria-label="Page number">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+          <span class="pagination-nav-text">of 5 pages</span>
+          <button class="pagination-nav-btn" disabled aria-label="Previous page">
+            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <button class="pagination-nav-btn" aria-label="Next page">
+            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Large Size -->
+  <div class="demo-section">
+    <h2>Large Size (48px height)</h2>
+    <p>Larger variant using <code>.pagination-nav-lg</code> modifier.</p>
+    <div class="demo-container">
+      <nav class="pagination-nav pagination-nav-lg" aria-label="Table pagination">
+        <div class="pagination-nav-left">
+          <label class="pagination-nav-label" for="pageSize3">Items per page:</label>
+          <select class="pagination-nav-select" id="pageSize3">
+            <option value="10">10</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+          </select>
+          <span class="pagination-nav-text">1-10 of 200 items</span>
+        </div>
+        <div class="pagination-nav-right">
+          <select class="pagination-nav-select pagination-nav-select-page" id="pageNum3" aria-label="Page number">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+          <span class="pagination-nav-text">of 20 pages</span>
+          <button class="pagination-nav-btn" disabled aria-label="Previous page">
+            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <button class="pagination-nav-btn" aria-label="Next page">
+            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Middle Page State -->
+  <div class="demo-section">
+    <h2>Middle Page (Both Buttons Active)</h2>
+    <p>When on a middle page, both navigation buttons are enabled.</p>
+    <div class="demo-container">
+      <nav class="pagination-nav" aria-label="Table pagination">
+        <div class="pagination-nav-left">
+          <label class="pagination-nav-label" for="pageSize4">Items per page:</label>
+          <select class="pagination-nav-select" id="pageSize4">
+            <option value="10">10</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+          </select>
+          <span class="pagination-nav-text">31-40 of 100 items</span>
+        </div>
+        <div class="pagination-nav-right">
+          <select class="pagination-nav-select pagination-nav-select-page" id="pageNum4" aria-label="Page number">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4" selected>4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+          <span class="pagination-nav-text">of 10 pages</span>
+          <button class="pagination-nav-btn" aria-label="Previous page">
+            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <button class="pagination-nav-btn" aria-label="Next page">
+            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Last Page State -->
+  <div class="demo-section">
+    <h2>Last Page (Next Button Disabled)</h2>
+    <p>When on the last page, the next button is disabled.</p>
+    <div class="demo-container">
+      <nav class="pagination-nav" aria-label="Table pagination">
+        <div class="pagination-nav-left">
+          <label class="pagination-nav-label" for="pageSize5">Items per page:</label>
+          <select class="pagination-nav-select" id="pageSize5">
+            <option value="10">10</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+          </select>
+          <span class="pagination-nav-text">91-100 of 100 items</span>
+        </div>
+        <div class="pagination-nav-right">
+          <select class="pagination-nav-select pagination-nav-select-page" id="pageNum5" aria-label="Page number">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10" selected>10</option>
+          </select>
+          <span class="pagination-nav-text">of 10 pages</span>
+          <button class="pagination-nav-btn" aria-label="Previous page">
+            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <button class="pagination-nav-btn" disabled aria-label="Next page">
+            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <!-- HTML Structure Reference -->
+  <div class="demo-section">
+    <h2>HTML Structure Reference</h2>
+    <p>Copy this HTML structure to use the pagination nav component.</p>
+    <pre><code>&lt;nav class="pagination-nav" aria-label="Table pagination"&gt;
+  &lt;div class="pagination-nav-left"&gt;
+    &lt;label class="pagination-nav-label" for="pageSize"&gt;Items per page:&lt;/label&gt;
+    &lt;select class="pagination-nav-select" id="pageSize"&gt;
+      &lt;option value="10"&gt;10&lt;/option&gt;
+      &lt;option value="25"&gt;25&lt;/option&gt;
+      &lt;option value="50"&gt;50&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;span class="pagination-nav-text"&gt;1-10 of 100 items&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class="pagination-nav-right"&gt;
+    &lt;select class="pagination-nav-select pagination-nav-select-page"
+            id="pageNum" aria-label="Page number"&gt;
+      &lt;option value="1"&gt;1&lt;/option&gt;
+      &lt;!-- ... more pages ... --&gt;
+    &lt;/select&gt;
+    &lt;span class="pagination-nav-text"&gt;of 10 pages&lt;/span&gt;
+    &lt;button class="pagination-nav-btn" disabled aria-label="Previous page"&gt;
+      &lt;svg viewBox="0 0 16 16"&gt;
+        &lt;path d="M10 12L6 8l4-4" stroke="currentColor"
+              stroke-width="1.5" fill="none"/&gt;
+      &lt;/svg&gt;
+    &lt;/button&gt;
+    &lt;button class="pagination-nav-btn" aria-label="Next page"&gt;
+      &lt;svg viewBox="0 0 16 16"&gt;
+        &lt;path d="M6 12l4-4-4-4" stroke="currentColor"
+              stroke-width="1.5" fill="none"/&gt;
+      &lt;/svg&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;</code></pre>
+  </div>
+
+  <!-- CSS Classes Reference -->
+  <div class="demo-section">
+    <h2>CSS Classes Reference</h2>
+    <table class="table table-sm">
+      <thead>
+        <tr>
+          <th>Class</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>.pagination-nav</code></td>
+          <td>Main container (uses flexbox, default 40px height)</td>
+        </tr>
+        <tr>
+          <td><code>.pagination-nav-sm</code></td>
+          <td>Small variant modifier (32px height)</td>
+        </tr>
+        <tr>
+          <td><code>.pagination-nav-lg</code></td>
+          <td>Large variant modifier (48px height)</td>
+        </tr>
+        <tr>
+          <td><code>.pagination-nav-left</code></td>
+          <td>Left section container (items per page)</td>
+        </tr>
+        <tr>
+          <td><code>.pagination-nav-right</code></td>
+          <td>Right section container (page navigation)</td>
+        </tr>
+        <tr>
+          <td><code>.pagination-nav-label</code></td>
+          <td>Text label (e.g., "Items per page:")</td>
+        </tr>
+        <tr>
+          <td><code>.pagination-nav-select</code></td>
+          <td>Styled select dropdown</td>
+        </tr>
+        <tr>
+          <td><code>.pagination-nav-select-page</code></td>
+          <td>Compact page number select</td>
+        </tr>
+        <tr>
+          <td><code>.pagination-nav-text</code></td>
+          <td>Text spans (item ranges, page counts)</td>
+        </tr>
+        <tr>
+          <td><code>.pagination-nav-btn</code></td>
+          <td>Prev/Next navigation buttons</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carbon Toast Demo</title>
+  <link rel="stylesheet" href="../dist/css/bootstrap.css">
+  <style>
+    body {
+      padding: 2rem;
+      background-color: #f4f4f4;
+    }
+    .demo-section {
+      background: white;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .demo-section h2 {
+      margin-bottom: 1rem;
+      font-size: 1.25rem;
+    }
+    .demo-section p {
+      color: #525252;
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+    }
+    .demo-container {
+      background: #e0e0e0;
+      padding: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      align-items: center;
+    }
+    pre {
+      background: #161616;
+      color: #f4f4f4;
+      padding: 1rem;
+      margin-top: 1rem;
+      font-size: 0.75rem;
+      overflow-x: auto;
+    }
+    code {
+      font-family: "IBM Plex Mono", monospace;
+    }
+    /* Toast container positioning for demo */
+    .toast-container {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      z-index: 1100;
+    }
+  </style>
+</head>
+<body>
+  <h1>Carbon Toast Demo</h1>
+  <p>Toast component styled with Carbon Design System notification specifications.</p>
+
+  <!-- Toast Triggers -->
+  <div class="demo-section">
+    <h2>Toast Variants</h2>
+    <p>Click buttons to show different toast variants. Each variant has a colored left accent border indicating status.</p>
+    <div class="demo-container">
+      <button type="button" class="btn btn-primary" onclick="showToast('defaultToast')">
+        Default Toast
+      </button>
+      <button type="button" class="btn btn-success" onclick="showToast('successToast')">
+        Success Toast
+      </button>
+      <button type="button" class="btn btn-warning" onclick="showToast('warningToast')">
+        Warning Toast
+      </button>
+      <button type="button" class="btn btn-danger" onclick="showToast('dangerToast')">
+        Danger Toast
+      </button>
+      <button type="button" class="btn btn-info" onclick="showToast('infoToast')">
+        Info Toast
+      </button>
+    </div>
+  </div>
+
+  <!-- Static Toast Examples -->
+  <div class="demo-section">
+    <h2>Static Toast Examples</h2>
+    <p>Static display of all toast variants showing the left accent border colors.</p>
+    <div class="demo-container" style="flex-direction: column; align-items: stretch; max-width: 400px; margin: 0 auto;">
+      <!-- Default Toast -->
+      <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <strong class="me-auto">Default</strong>
+          <small class="text-body-secondary">just now</small>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+          Default toast with blue left accent border.
+        </div>
+      </div>
+
+      <!-- Success Toast -->
+      <div class="toast toast-success show" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <strong class="me-auto">Success</strong>
+          <small class="text-body-secondary">2 mins ago</small>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+          Success toast with green left accent border.
+        </div>
+      </div>
+
+      <!-- Warning Toast -->
+      <div class="toast toast-warning show" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <strong class="me-auto">Warning</strong>
+          <small class="text-body-secondary">5 mins ago</small>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+          Warning toast with yellow left accent border.
+        </div>
+      </div>
+
+      <!-- Danger Toast -->
+      <div class="toast toast-danger show" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <strong class="me-auto">Error</strong>
+          <small class="text-body-secondary">10 mins ago</small>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+          Danger toast with red left accent border.
+        </div>
+      </div>
+
+      <!-- Info Toast -->
+      <div class="toast toast-info show" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <strong class="me-auto">Info</strong>
+          <small class="text-body-secondary">15 mins ago</small>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+          Info toast with blue-70 left accent border.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HTML Structure Reference -->
+  <div class="demo-section">
+    <h2>HTML Structure Reference</h2>
+    <p>Copy this HTML structure to use the toast component.</p>
+    <pre><code>&lt;!-- Toast container (position fixed) --&gt;
+&lt;div class="toast-container position-fixed top-0 end-0 p-3"&gt;
+
+  &lt;!-- Default toast --&gt;
+  &lt;div class="toast" role="alert" aria-live="assertive" aria-atomic="true"&gt;
+    &lt;div class="toast-header"&gt;
+      &lt;strong class="me-auto"&gt;Notification&lt;/strong&gt;
+      &lt;small class="text-body-secondary"&gt;just now&lt;/small&gt;
+      &lt;button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"&gt;&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="toast-body"&gt;
+      Your message here.
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;!-- Toast variants (add class to .toast element) --&gt;
+&lt;div class="toast toast-success"&gt;...&lt;/div&gt;  &lt;!-- Green border --&gt;
+&lt;div class="toast toast-warning"&gt;...&lt;/div&gt;  &lt;!-- Yellow border --&gt;
+&lt;div class="toast toast-danger"&gt;...&lt;/div&gt;   &lt;!-- Red border --&gt;
+&lt;div class="toast toast-info"&gt;...&lt;/div&gt;     &lt;!-- Blue-70 border --&gt;
+
+&lt;!-- Initialize toast via JavaScript --&gt;
+&lt;script&gt;
+  const toastEl = document.getElementById('myToast');
+  const toast = new bootstrap.Toast(toastEl);
+  toast.show();
+&lt;/script&gt;
+
+&lt;!-- Or use data attributes --&gt;
+&lt;button type="button" data-bs-toggle="toast" data-bs-target="#myToast"&gt;
+  Show Toast
+&lt;/button&gt;</code></pre>
+  </div>
+
+  <!-- Carbon Design Specs -->
+  <div class="demo-section">
+    <h2>Carbon Design Specifications</h2>
+    <table class="table table-sm">
+      <thead>
+        <tr>
+          <th>Property</th>
+          <th>Value</th>
+          <th>Carbon Token</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Background color</td>
+          <td><code>#ffffff</code></td>
+          <td><code>$layer</code> (White)</td>
+        </tr>
+        <tr>
+          <td>Text color</td>
+          <td><code>#161616</code></td>
+          <td><code>$text-primary</code> (Gray 100)</td>
+        </tr>
+        <tr>
+          <td>Border color</td>
+          <td><code>#e0e0e0</code></td>
+          <td><code>$border-subtle</code> (Gray 20)</td>
+        </tr>
+        <tr>
+          <td>Border radius</td>
+          <td><code>0</code></td>
+          <td>Square corners</td>
+        </tr>
+        <tr>
+          <td>Box shadow</td>
+          <td><code>0 2px 6px rgba(0,0,0,0.3)</code></td>
+          <td>Carbon drop shadow</td>
+        </tr>
+        <tr>
+          <td>Left border width</td>
+          <td><code>3px</code></td>
+          <td>Status accent</td>
+        </tr>
+        <tr>
+          <td>Default left border</td>
+          <td><code>#0f62fe</code></td>
+          <td>Blue 60</td>
+        </tr>
+        <tr>
+          <td>Success left border</td>
+          <td><code>#24a148</code></td>
+          <td>Green 50</td>
+        </tr>
+        <tr>
+          <td>Warning left border</td>
+          <td><code>#f1c21b</code></td>
+          <td>Yellow 30</td>
+        </tr>
+        <tr>
+          <td>Danger left border</td>
+          <td><code>#da1e28</code></td>
+          <td>Red 60</td>
+        </tr>
+        <tr>
+          <td>Info left border</td>
+          <td><code>#0043ce</code></td>
+          <td>Blue 70</td>
+        </tr>
+        <tr>
+          <td>Timestamp color</td>
+          <td><code>#525252</code></td>
+          <td><code>$text-secondary</code> (Gray 70)</td>
+        </tr>
+        <tr>
+          <td>Font size</td>
+          <td><code>0.875rem (14px)</code></td>
+          <td>body-01</td>
+        </tr>
+        <tr>
+          <td>Padding</td>
+          <td><code>0.75rem (12px)</code></td>
+          <td><code>$spacing-04</code></td>
+        </tr>
+        <tr>
+          <td>Max width</td>
+          <td><code>350px</code></td>
+          <td>Carbon standard</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- CSS Classes Reference -->
+  <div class="demo-section">
+    <h2>CSS Classes Reference</h2>
+    <table class="table table-sm">
+      <thead>
+        <tr>
+          <th>Class</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>.toast</code></td>
+          <td>Base toast container with blue left border</td>
+        </tr>
+        <tr>
+          <td><code>.toast-success</code></td>
+          <td>Green left border for success messages</td>
+        </tr>
+        <tr>
+          <td><code>.toast-warning</code></td>
+          <td>Yellow left border for warning messages</td>
+        </tr>
+        <tr>
+          <td><code>.toast-danger</code></td>
+          <td>Red left border for error messages</td>
+        </tr>
+        <tr>
+          <td><code>.toast-info</code></td>
+          <td>Blue-70 left border for info messages</td>
+        </tr>
+        <tr>
+          <td><code>.toast-header</code></td>
+          <td>Header with title, timestamp, and close button</td>
+        </tr>
+        <tr>
+          <td><code>.toast-body</code></td>
+          <td>Main content area</td>
+        </tr>
+        <tr>
+          <td><code>.toast-container</code></td>
+          <td>Container for stacking multiple toasts</td>
+        </tr>
+        <tr>
+          <td><code>.show</code></td>
+          <td>Makes toast visible</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Live Toast Container -->
+  <div class="toast-container">
+    <!-- Default Toast -->
+    <div class="toast" id="defaultToast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto">Notification</strong>
+        <small class="text-body-secondary">just now</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        This is a default toast notification.
+      </div>
+    </div>
+
+    <!-- Success Toast -->
+    <div class="toast toast-success" id="successToast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto">Success</strong>
+        <small class="text-body-secondary">just now</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        Operation completed successfully!
+      </div>
+    </div>
+
+    <!-- Warning Toast -->
+    <div class="toast toast-warning" id="warningToast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto">Warning</strong>
+        <small class="text-body-secondary">just now</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        Please review before continuing.
+      </div>
+    </div>
+
+    <!-- Danger Toast -->
+    <div class="toast toast-danger" id="dangerToast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto">Error</strong>
+        <small class="text-body-secondary">just now</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        An error occurred. Please try again.
+      </div>
+    </div>
+
+    <!-- Info Toast -->
+    <div class="toast toast-info" id="infoToast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto">Info</strong>
+        <small class="text-body-secondary">just now</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        Here's some helpful information.
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="../dist/js/bootstrap.bundle.js"></script>
+  <script>
+    // Function to show toast by ID
+    function showToast(toastId) {
+      const toastEl = document.getElementById(toastId);
+      const toast = new bootstrap.Toast(toastEl);
+      toast.show();
+    }
+  </script>
+</body>
+</html>

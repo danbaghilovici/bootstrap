@@ -1,0 +1,41 @@
+// Carbon Dropdown Customizations
+// Focus outline not available via Bootstrap variables
+// Reference: https://carbondesignsystem.com/components/dropdown/style/
+
+// -----------------------------------------------------------------------------
+// Dropdown Menu Width and Gap Fix
+// -----------------------------------------------------------------------------
+.dropdown-menu {
+  min-width: 100%;              // Match width to .dropdown container (trigger button)
+  margin-top: 0 !important;     // Ensure no gap between trigger and menu
+}
+
+// -----------------------------------------------------------------------------
+// Dropdown Item Borders (Carbon style separators)
+// -----------------------------------------------------------------------------
+.dropdown-item {
+  border-bottom: 1px solid $gray-200;  // Carbon: $border-subtle
+
+  // Last item: no bottom border
+  &:last-child,
+  li:last-child > & {
+    border-bottom: none;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Dropdown Item Focus State
+// -----------------------------------------------------------------------------
+.dropdown-item:focus {
+  outline: 2px solid $primary;  // Carbon: $focus (Blue 60)
+  outline-offset: -2px;         // Carbon: inset outline
+  box-shadow: none;             // Disable Bootstrap's focus shadow
+}
+
+// -----------------------------------------------------------------------------
+// Dropdown Header Typography
+// -----------------------------------------------------------------------------
+.dropdown-header {
+  font-size: .75rem;            // Carbon: 12px label
+  font-weight: 600;             // Carbon: semibold
+}

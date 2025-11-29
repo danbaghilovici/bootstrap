@@ -1,0 +1,19 @@
+// Carbon Modal Customizations
+// Title typography not available via Bootstrap variables
+// Reference: https://carbondesignsystem.com/components/modal/style/
+
+// -----------------------------------------------------------------------------
+// Modal Title Typography
+// -----------------------------------------------------------------------------
+.modal-title {
+  font-size: 1.25rem;    // Carbon: 20px heading-03
+  font-weight: 400;      // Carbon: regular weight
+}
+
+// -----------------------------------------------------------------------------
+// Close Button Focus State
+// -----------------------------------------------------------------------------
+.modal-header .btn-close:focus-visible {
+  outline: 2px solid $primary;  // Carbon: $focus (Blue 60)
+  outline-offset: 1px;
+}

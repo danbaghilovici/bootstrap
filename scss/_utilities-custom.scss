@@ -1,0 +1,42 @@
+// ============================================================================
+// Carbon Utility Customizations
+// ============================================================================
+// Remove rounded circle and pill utilities to maintain square design language
+// Reference: https://carbondesignsystem.com/elements/spacing/overview/
+// stylelint-disable scss/dollar-variable-default
+
+// Helper function to remove circle and pill from rounded utility values
+@function remove-rounded-variants($values) {
+  @return map-remove($values, "circle", "pill");
+}
+
+// Update each rounded utility to remove circle and pill values
+$utilities: map-merge(
+  $utilities,
+  (
+    "rounded": map-merge(
+      map-get($utilities, "rounded"),
+      (values: remove-rounded-variants(map-get(map-get($utilities, "rounded"), "values")))
+    ),
+    "rounded-top": map-merge(
+      map-get($utilities, "rounded-top"),
+      (values: remove-rounded-variants(map-get(map-get($utilities, "rounded-top"), "values")))
+    ),
+    "rounded-end": map-merge(
+      map-get($utilities, "rounded-end"),
+      (values: remove-rounded-variants(map-get(map-get($utilities, "rounded-end"), "values")))
+    ),
+    "rounded-bottom": map-merge(
+      map-get($utilities, "rounded-bottom"),
+      (values: remove-rounded-variants(map-get(map-get($utilities, "rounded-bottom"), "values")))
+    ),
+    "rounded-start": map-merge(
+      map-get($utilities, "rounded-start"),
+      (values: remove-rounded-variants(map-get(map-get($utilities, "rounded-start"), "values")))
+    )
+  )
+);
+
+// ============================================================================
+// End Carbon Utility Customizations
+// ============================================================================

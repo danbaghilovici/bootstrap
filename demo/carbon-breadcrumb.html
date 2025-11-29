@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Carbon Design System Breadcrumb Demo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'IBM Plex Sans', sans-serif;
+      }
+      code {
+        font-family: 'IBM Plex Mono', monospace;
+      }
+      section {
+        margin-bottom: 3rem;
+      }
+      h2 {
+        border-bottom: 1px solid var(--bs-gray-300);
+        padding-bottom: 0.5rem;
+        margin-bottom: 1.5rem;
+      }
+      .spec-table {
+        font-size: 0.875rem;
+      }
+      .spec-table th {
+        font-weight: 600;
+      }
+      .demo-box {
+        background: var(--bs-gray-100);
+        padding: 1.5rem;
+        border-radius: 0;
+        margin-bottom: 1rem;
+      }
+    </style>
+  </head>
+  <body class="py-5">
+    <div class="container">
+      <!-- Header -->
+      <header class="mb-5">
+        <h1>Carbon Design System Breadcrumb</h1>
+        <p class="lead text-body-secondary">Bootstrap theme customized with IBM Carbon Design System breadcrumb styling</p>
+      </header>
+
+      <!-- Basic Breadcrumb -->
+      <section>
+        <h2>Basic Breadcrumb</h2>
+        <p class="text-body-secondary mb-4">Carbon-styled breadcrumb with Blue 60 links and forward slash separator</p>
+
+        <div class="demo-box">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item"><a href="#">Products</a></li>
+              <li class="breadcrumb-item"><a href="#">Category</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Current Page</li>
+            </ol>
+          </nav>
+        </div>
+
+        <table class="table spec-table">
+          <thead>
+            <tr>
+              <th>Property</th>
+              <th>Carbon Value</th>
+              <th>Bootstrap Default</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Font size</td>
+              <td><code>0.875rem</code> (14px)</td>
+              <td><code>null</code> (inherits)</td>
+            </tr>
+            <tr>
+              <td>Link color</td>
+              <td><code>#0f62fe</code> (Blue 60)</td>
+              <td>Link color</td>
+            </tr>
+            <tr>
+              <td>Separator</td>
+              <td><code>/</code> (forward slash)</td>
+              <td><code>/</code></td>
+            </tr>
+            <tr>
+              <td>Separator color</td>
+              <td><code>#161616</code> (Gray 100)</td>
+              <td>Secondary color</td>
+            </tr>
+            <tr>
+              <td>Active color</td>
+              <td><code>#161616</code> (Gray 100)</td>
+              <td>Secondary color</td>
+            </tr>
+            <tr>
+              <td>Item spacing</td>
+              <td><code>0.5rem</code> (8px)</td>
+              <td><code>0.5rem</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Multi-level Breadcrumb -->
+      <section>
+        <h2>Multi-level Breadcrumb</h2>
+        <p class="text-body-secondary mb-4">Deeper navigation paths with multiple levels</p>
+
+        <div class="demo-box">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+              <li class="breadcrumb-item"><a href="#">Settings</a></li>
+              <li class="breadcrumb-item"><a href="#">Account</a></li>
+              <li class="breadcrumb-item"><a href="#">Security</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Two-Factor Authentication</li>
+            </ol>
+          </nav>
+        </div>
+      </section>
+
+      <!-- Short Breadcrumb -->
+      <section>
+        <h2>Short Breadcrumb</h2>
+        <p class="text-body-secondary mb-4">Simple two-level navigation</p>
+
+        <div class="demo-box">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">About</li>
+            </ol>
+          </nav>
+        </div>
+      </section>
+
+      <!-- Focus States -->
+      <section>
+        <h2>Focus States</h2>
+        <p class="text-body-secondary mb-4">Tab through links to see Carbon's 1px solid Blue 60 focus ring</p>
+
+        <div class="demo-box">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Tab to this link</a></li>
+              <li class="breadcrumb-item"><a href="#">Then this one</a></li>
+              <li class="breadcrumb-item"><a href="#">And this one</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Active (no focus)</li>
+            </ol>
+          </nav>
+        </div>
+
+        <table class="table spec-table">
+          <thead>
+            <tr>
+              <th>State</th>
+              <th>Style</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Focus</td>
+              <td><code>outline: 1px solid #0f62fe; outline-offset: 0</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Hover States -->
+      <section>
+        <h2>Hover States</h2>
+        <p class="text-body-secondary mb-4">Hover over links to see Blue 70 color and underline</p>
+
+        <div class="demo-box">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Hover over me</a></li>
+              <li class="breadcrumb-item"><a href="#">Or me</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Active (no hover)</li>
+            </ol>
+          </nav>
+        </div>
+
+        <table class="table spec-table">
+          <thead>
+            <tr>
+              <th>State</th>
+              <th>Color</th>
+              <th>Decoration</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Default</td>
+              <td><code>#0f62fe</code> (Blue 60)</td>
+              <td>None</td>
+            </tr>
+            <tr>
+              <td>Hover</td>
+              <td><code>#0043ce</code> (Blue 70)</td>
+              <td>Underline</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Color Reference -->
+      <section>
+        <h2>Color Reference</h2>
+        <p class="text-body-secondary mb-4">Carbon color tokens used for breadcrumb styling</p>
+
+        <table class="table spec-table">
+          <thead>
+            <tr>
+              <th>Element</th>
+              <th>Color</th>
+              <th>Carbon Token</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Link (default)</td>
+              <td><span style="display:inline-block;width:16px;height:16px;background:#0f62fe;vertical-align:middle;margin-right:8px;"></span><code>#0f62fe</code></td>
+              <td>Blue 60 / $link-primary</td>
+            </tr>
+            <tr>
+              <td>Link (hover)</td>
+              <td><span style="display:inline-block;width:16px;height:16px;background:#0043ce;vertical-align:middle;margin-right:8px;"></span><code>#0043ce</code></td>
+              <td>Blue 70 / $link-primary-hover</td>
+            </tr>
+            <tr>
+              <td>Separator</td>
+              <td><span style="display:inline-block;width:16px;height:16px;background:#161616;vertical-align:middle;margin-right:8px;"></span><code>#161616</code></td>
+              <td>Gray 100 / $text-primary</td>
+            </tr>
+            <tr>
+              <td>Active item</td>
+              <td><span style="display:inline-block;width:16px;height:16px;background:#161616;vertical-align:middle;margin-right:8px;"></span><code>#161616</code></td>
+              <td>Gray 100 / $text-primary</td>
+            </tr>
+            <tr>
+              <td>Focus outline</td>
+              <td><span style="display:inline-block;width:16px;height:16px;background:#0f62fe;vertical-align:middle;margin-right:8px;"></span><code>#0f62fe</code></td>
+              <td>Blue 60 / $focus</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+    </div>
+  </body>
+</html>

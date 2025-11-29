@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Carbon Design System Spacing Demo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'IBM Plex Sans', sans-serif;
+      }
+      code {
+        font-family: 'IBM Plex Mono', monospace;
+      }
+      section {
+        margin-bottom: 3rem;
+      }
+      h2 {
+        border-bottom: 1px solid var(--bs-gray-300);
+        padding-bottom: 0.5rem;
+        margin-bottom: 1.5rem;
+      }
+      .spacer-visual {
+        background: var(--bs-primary);
+        opacity: 0.8;
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .spacer-info {
+        font-size: 0.875rem;
+        color: var(--bs-gray-600);
+      }
+      .spacing-row {
+        display: flex;
+        align-items: center;
+        padding: 0.75rem 0;
+        border-bottom: 1px solid var(--bs-gray-200);
+      }
+      .spacing-row:last-child {
+        border-bottom: none;
+      }
+      .spacing-key {
+        width: 80px;
+        font-weight: 600;
+      }
+      .spacing-visual-container {
+        width: 200px;
+      }
+      .spacing-value {
+        width: 120px;
+      }
+      .spacing-token {
+        flex: 1;
+      }
+      .demo-box {
+        background: var(--bs-gray-100);
+        border: 1px dashed var(--bs-gray-400);
+      }
+      .demo-content {
+        background: var(--bs-primary);
+        color: white;
+        text-align: center;
+        padding: 0.5rem;
+      }
+      .utility-demo {
+        background: var(--bs-gray-100);
+        margin-bottom: 0.5rem;
+      }
+      .utility-inner {
+        background: var(--bs-info);
+        color: white;
+        padding: 0.5rem;
+        font-size: 0.875rem;
+      }
+    </style>
+  </head>
+  <body class="py-5">
+    <div class="container">
+      <!-- Header -->
+      <header class="mb-5">
+        <h1>Carbon Design System Spacing</h1>
+        <p class="lead text-body-secondary">Bootstrap theme customized with IBM Carbon Design System spacing scale</p>
+      </header>
+
+      <!-- Spacing Scale -->
+      <section>
+        <h2>Spacing Scale</h2>
+        <p class="text-body-secondary mb-4">Carbon spacing tokens mapped to Bootstrap's $spacers map. Keys 0-5 maintain Bootstrap compatibility, keys 6-9 add additional Carbon values.</p>
+
+        <div class="bg-light p-3 rounded">
+          <div class="spacing-row fw-bold">
+            <div class="spacing-key">Key</div>
+            <div class="spacing-visual-container">Visual</div>
+            <div class="spacing-value">Value</div>
+            <div class="spacing-token">Carbon Token</div>
+          </div>
+
+          <div class="spacing-row">
+            <div class="spacing-key">0</div>
+            <div class="spacing-visual-container">
+              <span class="spacer-info">No spacing</span>
+            </div>
+            <div class="spacing-value"><code>0</code></div>
+            <div class="spacing-token">-</div>
+          </div>
+
+          <div class="spacing-row">
+            <div class="spacing-key">6</div>
+            <div class="spacing-visual-container">
+              <div class="spacer-visual" style="width: 2px; height: 16px;"></div>
+            </div>
+            <div class="spacing-value"><code>0.125rem</code> (2px)</div>
+            <div class="spacing-token">spacing-01</div>
+          </div>
+
+          <div class="spacing-row">
+            <div class="spacing-key">1</div>
+            <div class="spacing-visual-container">
+              <div class="spacer-visual" style="width: 4px; height: 16px;"></div>
+            </div>
+            <div class="spacing-value"><code>0.25rem</code> (4px)</div>
+            <div class="spacing-token">spacing-02</div>
+          </div>
+
+          <div class="spacing-row">
+            <div class="spacing-key">2</div>
+            <div class="spacing-visual-container">
+              <div class="spacer-visual" style="width: 8px; height: 16px;"></div>
+            </div>
+            <div class="spacing-value"><code>0.5rem</code> (8px)</div>
+            <div class="spacing-token">spacing-03</div>
+          </div>
+
+          <div class="spacing-row">
+            <div class="spacing-key">7</div>
+            <div class="spacing-visual-container">
+              <div class="spacer-visual" style="width: 12px; height: 16px;"></div>
+            </div>
+            <div class="spacing-value"><code>0.75rem</code> (12px)</div>
+            <div class="spacing-token">spacing-04</div>
+          </div>
+
+          <div class="spacing-row">
+            <div class="spacing-key">3</div>
+            <div class="spacing-visual-container">
+              <div class="spacer-visual" style="width: 16px; height: 16px;"></div>
+            </div>
+            <div class="spacing-value"><code>1rem</code> (16px)</div>
+            <div class="spacing-token">spacing-05</div>
+          </div>
+
+          <div class="spacing-row">
+            <div class="spacing-key">4</div>
+            <div class="spacing-visual-container">
+              <div class="spacer-visual" style="width: 24px; height: 16px;"></div>
+            </div>
+            <div class="spacing-value"><code>1.5rem</code> (24px)</div>
+            <div class="spacing-token">spacing-06</div>
+          </div>
+
+          <div class="spacing-row">
+            <div class="spacing-key">8</div>
+            <div class="spacing-visual-container">
+              <div class="spacer-visual" style="width: 32px; height: 16px;"></div>
+            </div>
+            <div class="spacing-value"><code>2rem</code> (32px)</div>
+            <div class="spacing-token">spacing-07</div>
+          </div>
+
+          <div class="spacing-row">
+            <div class="spacing-key">9</div>
+            <div class="spacing-visual-container">
+              <div class="spacer-visual" style="width: 40px; height: 16px;"></div>
+            </div>
+            <div class="spacing-value"><code>2.5rem</code> (40px)</div>
+            <div class="spacing-token">spacing-08</div>
+          </div>
+
+          <div class="spacing-row">
+            <div class="spacing-key">5</div>
+            <div class="spacing-visual-container">
+              <div class="spacer-visual" style="width: 48px; height: 16px;"></div>
+            </div>
+            <div class="spacing-value"><code>3rem</code> (48px)</div>
+            <div class="spacing-token">spacing-09</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Margin Utilities -->
+      <section>
+        <h2>Margin Utilities</h2>
+        <p class="text-body-secondary mb-4">Using <code>.m-*</code> classes with Carbon spacing values</p>
+
+        <div class="row">
+          <div class="col-md-6">
+            <h5>Margin All Sides</h5>
+            <div class="demo-box mb-3">
+              <div class="m-1 demo-content">.m-1 (4px)</div>
+            </div>
+            <div class="demo-box mb-3">
+              <div class="m-2 demo-content">.m-2 (8px)</div>
+            </div>
+            <div class="demo-box mb-3">
+              <div class="m-3 demo-content">.m-3 (16px)</div>
+            </div>
+            <div class="demo-box mb-3">
+              <div class="m-4 demo-content">.m-4 (24px)</div>
+            </div>
+            <div class="demo-box mb-3">
+              <div class="m-5 demo-content">.m-5 (48px)</div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h5>Extended Margin Values</h5>
+            <div class="demo-box mb-3">
+              <div class="m-6 demo-content">.m-6 (2px)</div>
+            </div>
+            <div class="demo-box mb-3">
+              <div class="m-7 demo-content">.m-7 (12px)</div>
+            </div>
+            <div class="demo-box mb-3">
+              <div class="m-8 demo-content">.m-8 (32px)</div>
+            </div>
+            <div class="demo-box mb-3">
+              <div class="m-9 demo-content">.m-9 (40px)</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Padding Utilities -->
+      <section>
+        <h2>Padding Utilities</h2>
+        <p class="text-body-secondary mb-4">Using <code>.p-*</code> classes with Carbon spacing values</p>
+
+        <div class="row g-3">
+          <div class="col-md-4">
+            <div class="utility-demo">
+              <div class="utility-inner p-1">.p-1 (4px)</div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="utility-demo">
+              <div class="utility-inner p-2">.p-2 (8px)</div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="utility-demo">
+              <div class="utility-inner p-3">.p-3 (16px)</div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="utility-demo">
+              <div class="utility-inner p-4">.p-4 (24px)</div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="utility-demo">
+              <div class="utility-inner p-5">.p-5 (48px)</div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="utility-demo">
+              <div class="utility-inner p-8">.p-8 (32px)</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Directional Spacing -->
+      <section>
+        <h2>Directional Spacing</h2>
+        <p class="text-body-secondary mb-4">Applying spacing to specific sides</p>
+
+        <div class="row g-4">
+          <div class="col-md-6">
+            <h5>Horizontal (X-axis)</h5>
+            <div class="utility-demo">
+              <div class="utility-inner px-3">.px-3 (16px left/right)</div>
+            </div>
+            <div class="utility-demo">
+              <div class="utility-inner mx-4">.mx-4 (24px left/right margin)</div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h5>Vertical (Y-axis)</h5>
+            <div class="utility-demo">
+              <div class="utility-inner py-3">.py-3 (16px top/bottom)</div>
+            </div>
+            <div class="utility-demo">
+              <div class="utility-inner my-4">.my-4 (24px top/bottom margin)</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4 mt-2">
+          <div class="col-md-3">
+            <h6>Top</h6>
+            <div class="utility-demo">
+              <div class="utility-inner pt-4">.pt-4</div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <h6>End (Right)</h6>
+            <div class="utility-demo">
+              <div class="utility-inner pe-4">.pe-4</div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <h6>Bottom</h6>
+            <div class="utility-demo">
+              <div class="utility-inner pb-4">.pb-4</div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <h6>Start (Left)</h6>
+            <div class="utility-demo">
+              <div class="utility-inner ps-4">.ps-4</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gap Utilities -->
+      <section>
+        <h2>Gap Utilities</h2>
+        <p class="text-body-secondary mb-4">Using <code>.gap-*</code> classes with flexbox and grid</p>
+
+        <h5>Flexbox Gap</h5>
+        <div class="d-flex flex-wrap gap-3 mb-4">
+          <div class="bg-primary text-white p-3">Item 1</div>
+          <div class="bg-primary text-white p-3">Item 2</div>
+          <div class="bg-primary text-white p-3">Item 3</div>
+          <div class="bg-primary text-white p-3">Item 4</div>
+        </div>
+        <p class="type-info mb-4"><code>.d-flex .gap-3</code> - 16px gap between items</p>
+
+        <h5>Row/Column Gap</h5>
+        <div class="d-flex flex-wrap row-gap-2 column-gap-4 mb-3">
+          <div class="bg-secondary text-white p-3">Item A</div>
+          <div class="bg-secondary text-white p-3">Item B</div>
+          <div class="bg-secondary text-white p-3">Item C</div>
+          <div class="bg-secondary text-white p-3">Item D</div>
+          <div class="bg-secondary text-white p-3">Item E</div>
+          <div class="bg-secondary text-white p-3">Item F</div>
+        </div>
+        <p class="type-info"><code>.row-gap-2</code> (8px vertical) + <code>.column-gap-4</code> (24px horizontal)</p>
+      </section>
+
+      <!-- Spacing Scale Reference -->
+      <section>
+        <h2>Spacing Scale Reference</h2>
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Bootstrap Key</th>
+                <th>Value</th>
+                <th>Pixels</th>
+                <th>Carbon Token</th>
+                <th>Utility Classes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>0px</td>
+                <td>-</td>
+                <td><code>.m-0</code>, <code>.p-0</code>, <code>.gap-0</code></td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>0.125rem</td>
+                <td>2px</td>
+                <td>spacing-01</td>
+                <td><code>.m-6</code>, <code>.p-6</code>, <code>.gap-6</code></td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>0.25rem</td>
+                <td>4px</td>
+                <td>spacing-02</td>
+                <td><code>.m-1</code>, <code>.p-1</code>, <code>.gap-1</code></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>0.5rem</td>
+                <td>8px</td>
+                <td>spacing-03</td>
+                <td><code>.m-2</code>, <code>.p-2</code>, <code>.gap-2</code></td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>0.75rem</td>
+                <td>12px</td>
+                <td>spacing-04</td>
+                <td><code>.m-7</code>, <code>.p-7</code>, <code>.gap-7</code></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>1rem</td>
+                <td>16px</td>
+                <td>spacing-05</td>
+                <td><code>.m-3</code>, <code>.p-3</code>, <code>.gap-3</code></td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>1.5rem</td>
+                <td>24px</td>
+                <td>spacing-06</td>
+                <td><code>.m-4</code>, <code>.p-4</code>, <code>.gap-4</code></td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>2rem</td>
+                <td>32px</td>
+                <td>spacing-07</td>
+                <td><code>.m-8</code>, <code>.p-8</code>, <code>.gap-8</code></td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>2.5rem</td>
+                <td>40px</td>
+                <td>spacing-08</td>
+                <td><code>.m-9</code>, <code>.p-9</code>, <code>.gap-9</code></td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>3rem</td>
+                <td>48px</td>
+                <td>spacing-09</td>
+                <td><code>.m-5</code>, <code>.p-5</code>, <code>.gap-5</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="mt-5 pt-4 border-top text-body-secondary">
+        <p>
+          <small>
+            Carbon Design System spacing integration for Bootstrap 5.3.8<br>
+            Reference: <a href="https://carbondesignsystem.com/elements/spacing/overview/" target="_blank">Carbon Spacing Documentation</a>
+          </small>
+        </p>
+      </footer>
+    </div>
+
+    <script src="../dist/js/bootstrap.bundle.js"></script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+// Carbon Form Customizations
+// Focus outline and hover states not available via Bootstrap variables
+// Reference: https://carbondesignsystem.com/components/form/style/
+
+// -----------------------------------------------------------------------------
+// Form Control Focus State (Outline instead of box-shadow)
+// -----------------------------------------------------------------------------
+.form-control:focus,
+.form-select:focus {
+  outline: 2px solid $primary;  // Carbon: $focus (Blue 60)
+  outline-offset: -2px;         // Carbon: inset outline
+}
+
+// -----------------------------------------------------------------------------
+// Form Control Hover State
+// -----------------------------------------------------------------------------
+.form-control:hover:not(:disabled):not(:focus),
+.form-select:hover:not(:disabled):not(:focus) {
+  border-color: $gray-900;      // Carbon: $border-strong-hover (#161616)
+}
+
+// -----------------------------------------------------------------------------
+// Validation Focus States
+// -----------------------------------------------------------------------------
+.form-control.is-invalid:focus,
+.form-select.is-invalid:focus {
+  outline: 2px solid $danger;   // Carbon: $support-error (Red 60)
+  outline-offset: -2px;
+}
+
+.form-control.is-valid:focus,
+.form-select.is-valid:focus {
+  outline: 2px solid $success;  // Carbon: $support-success (Green 50)
+  outline-offset: -2px;
+}
+
+// -----------------------------------------------------------------------------
+// Input Group Addon Focus State
+// -----------------------------------------------------------------------------
+.input-group:focus-within .input-group-text {
+  border-color: $primary;       // Carbon: match focus border
+}

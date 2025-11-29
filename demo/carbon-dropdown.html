@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carbon Dropdown Demo</title>
+  <link rel="stylesheet" href="../dist/css/bootstrap.css">
+  <style>
+    body {
+      padding: 2rem;
+      background-color: #f4f4f4;
+    }
+    .demo-section {
+      background: white;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .demo-section h2 {
+      margin-bottom: 1rem;
+      font-size: 1.25rem;
+    }
+    .demo-section p {
+      color: #525252;
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+    }
+    .demo-container {
+      background: #e0e0e0;
+      padding: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    pre {
+      background: #161616;
+      color: #f4f4f4;
+      padding: 1rem;
+      margin-top: 1rem;
+      font-size: 0.75rem;
+      overflow-x: auto;
+    }
+    code {
+      font-family: "IBM Plex Mono", monospace;
+    }
+  </style>
+</head>
+<body>
+  <h1>Carbon Dropdown Demo</h1>
+  <p>Dropdown component styled with Carbon Design System specifications.</p>
+
+  <!-- Basic Dropdown -->
+  <div class="demo-section">
+    <h2>Basic Dropdown</h2>
+    <p>Standard dropdown menu with items. Note the square corners, subtle border, and drop shadow.</p>
+    <div class="demo-container">
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Dropdown button
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </div>
+
+      <div class="dropdown">
+        <a class="btn btn-primary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Dropdown link
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dropdown with Header and Divider -->
+  <div class="demo-section">
+    <h2>Headers and Dividers</h2>
+    <p>Dropdown with headers (12px, semibold, gray) and dividers for grouping items.</p>
+    <div class="demo-container">
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Grouped menu
+        </button>
+        <ul class="dropdown-menu">
+          <li><h6 class="dropdown-header">Section 1</h6></li>
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><h6 class="dropdown-header">Section 2</h6></li>
+          <li><a class="dropdown-item" href="#">Something else</a></li>
+          <li><a class="dropdown-item" href="#">Final action</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Active and Disabled States -->
+  <div class="demo-section">
+    <h2>Active and Disabled States</h2>
+    <p>Active items have blue background with white text. Disabled items have gray text.</p>
+    <div class="demo-container">
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          With states
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Regular item</a></li>
+          <li><a class="dropdown-item active" href="#" aria-current="true">Active item</a></li>
+          <li><a class="dropdown-item" href="#">Another item</a></li>
+          <li><a class="dropdown-item disabled" aria-disabled="true">Disabled item</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dark Dropdown -->
+  <div class="demo-section">
+    <h2>Dark Dropdown</h2>
+    <p>Dark variant with dark background and light text for dark UI contexts.</p>
+    <div class="demo-container" style="background: #161616;">
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Dark dropdown
+        </button>
+        <ul class="dropdown-menu dropdown-menu-dark">
+          <li><h6 class="dropdown-header">Dark header</h6></li>
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item active" href="#">Active item</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item disabled" aria-disabled="true">Disabled</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Split Button Dropdown -->
+  <div class="demo-section">
+    <h2>Split Button Dropdown</h2>
+    <p>Split button with separate action button and dropdown toggle.</p>
+    <div class="demo-container">
+      <div class="btn-group">
+        <button type="button" class="btn btn-primary">Action</button>
+        <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+          <span class="visually-hidden">Toggle Dropdown</span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </div>
+
+      <div class="btn-group">
+        <button type="button" class="btn btn-danger">Delete</button>
+        <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+          <span class="visually-hidden">Toggle Dropdown</span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Delete selected</a></li>
+          <li><a class="dropdown-item" href="#">Delete all</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="#">Cancel</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dropdown Directions -->
+  <div class="demo-section">
+    <h2>Dropdown Directions</h2>
+    <p>Dropdowns can open in different directions: down (default), up, end, start.</p>
+    <div class="demo-container">
+      <!-- Dropup -->
+      <div class="btn-group dropup">
+        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          Dropup
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+        </ul>
+      </div>
+
+      <!-- Dropend -->
+      <div class="btn-group dropend">
+        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          Dropend
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+        </ul>
+      </div>
+
+      <!-- Dropstart -->
+      <div class="btn-group dropstart">
+        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          Dropstart
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- HTML Structure Reference -->
+  <div class="demo-section">
+    <h2>HTML Structure Reference</h2>
+    <p>Copy this HTML structure to use the dropdown component.</p>
+    <pre><code>&lt;!-- Basic dropdown --&gt;
+&lt;div class="dropdown"&gt;
+  &lt;button class="btn btn-secondary dropdown-toggle" type="button"
+          data-bs-toggle="dropdown" aria-expanded="false"&gt;
+    Dropdown button
+  &lt;/button&gt;
+  &lt;ul class="dropdown-menu"&gt;
+    &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;!-- With header and divider --&gt;
+&lt;ul class="dropdown-menu"&gt;
+  &lt;li&gt;&lt;h6 class="dropdown-header"&gt;Section Header&lt;/h6&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;hr class="dropdown-divider"&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- Item states --&gt;
+&lt;a class="dropdown-item active" href="#"&gt;Active item&lt;/a&gt;
+&lt;a class="dropdown-item disabled" aria-disabled="true"&gt;Disabled item&lt;/a&gt;
+
+&lt;!-- Dark variant --&gt;
+&lt;ul class="dropdown-menu dropdown-menu-dark"&gt;...&lt;/ul&gt;
+
+&lt;!-- Directions --&gt;
+&lt;div class="btn-group dropup"&gt;...&lt;/div&gt;
+&lt;div class="btn-group dropend"&gt;...&lt;/div&gt;
+&lt;div class="btn-group dropstart"&gt;...&lt;/div&gt;
+
+&lt;!-- Split button --&gt;
+&lt;div class="btn-group"&gt;
+  &lt;button type="button" class="btn btn-primary"&gt;Action&lt;/button&gt;
+  &lt;button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split"
+          data-bs-toggle="dropdown" aria-expanded="false"&gt;
+    &lt;span class="visually-hidden"&gt;Toggle Dropdown&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class="dropdown-menu"&gt;...&lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+  </div>
+
+  <!-- Carbon Design Specs -->
+  <div class="demo-section">
+    <h2>Carbon Design Specifications</h2>
+    <table class="table table-sm">
+      <thead>
+        <tr>
+          <th>Property</th>
+          <th>Value</th>
+          <th>Carbon Token</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Menu background</td>
+          <td><code>#ffffff</code></td>
+          <td><code>$layer</code> (White)</td>
+        </tr>
+        <tr>
+          <td>Menu text color</td>
+          <td><code>#161616</code></td>
+          <td><code>$text-primary</code> (Gray 100)</td>
+        </tr>
+        <tr>
+          <td>Menu border</td>
+          <td><code>1px solid #e0e0e0</code></td>
+          <td><code>$border-subtle</code> (Gray 20)</td>
+        </tr>
+        <tr>
+          <td>Menu border radius</td>
+          <td><code>0</code></td>
+          <td>Square corners</td>
+        </tr>
+        <tr>
+          <td>Menu box shadow</td>
+          <td><code>0 2px 6px rgba(0,0,0,0.3)</code></td>
+          <td>Carbon drop shadow</td>
+        </tr>
+        <tr>
+          <td>Item font size</td>
+          <td><code>0.875rem (14px)</code></td>
+          <td>body-01</td>
+        </tr>
+        <tr>
+          <td>Item padding</td>
+          <td><code>0.5rem 1rem (8px 16px)</code></td>
+          <td><code>$spacing-03 $spacing-05</code></td>
+        </tr>
+        <tr>
+          <td>Hover background</td>
+          <td><code>#e0e0e0</code></td>
+          <td><code>$hover-ui</code> (Gray 20)</td>
+        </tr>
+        <tr>
+          <td>Active background</td>
+          <td><code>#0f62fe</code></td>
+          <td>Blue 60</td>
+        </tr>
+        <tr>
+          <td>Active text</td>
+          <td><code>#ffffff</code></td>
+          <td>White</td>
+        </tr>
+        <tr>
+          <td>Disabled text</td>
+          <td><code>#c6c6c6</code></td>
+          <td><code>$text-disabled</code> (Gray 30)</td>
+        </tr>
+        <tr>
+          <td>Focus outline</td>
+          <td><code>2px solid #0f62fe</code></td>
+          <td><code>$focus</code> (Blue 60)</td>
+        </tr>
+        <tr>
+          <td>Focus offset</td>
+          <td><code>-2px</code></td>
+          <td>Inset outline</td>
+        </tr>
+        <tr>
+          <td>Divider color</td>
+          <td><code>#e0e0e0</code></td>
+          <td><code>$border-subtle</code> (Gray 20)</td>
+        </tr>
+        <tr>
+          <td>Header font size</td>
+          <td><code>0.75rem (12px)</code></td>
+          <td>label-01</td>
+        </tr>
+        <tr>
+          <td>Header color</td>
+          <td><code>#525252</code></td>
+          <td><code>$text-secondary</code> (Gray 70)</td>
+        </tr>
+        <tr>
+          <td>Header weight</td>
+          <td><code>600</code></td>
+          <td>Semibold</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- CSS Classes Reference -->
+  <div class="demo-section">
+    <h2>CSS Classes Reference</h2>
+    <table class="table table-sm">
+      <thead>
+        <tr>
+          <th>Class</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>.dropdown</code></td>
+          <td>Container for dropdown trigger and menu</td>
+        </tr>
+        <tr>
+          <td><code>.dropdown-toggle</code></td>
+          <td>Trigger button/link with caret icon</td>
+        </tr>
+        <tr>
+          <td><code>.dropdown-menu</code></td>
+          <td>Menu container</td>
+        </tr>
+        <tr>
+          <td><code>.dropdown-item</code></td>
+          <td>Menu item (link or button)</td>
+        </tr>
+        <tr>
+          <td><code>.dropdown-header</code></td>
+          <td>Section header text</td>
+        </tr>
+        <tr>
+          <td><code>.dropdown-divider</code></td>
+          <td>Horizontal separator line</td>
+        </tr>
+        <tr>
+          <td><code>.dropdown-menu-dark</code></td>
+          <td>Dark theme variant</td>
+        </tr>
+        <tr>
+          <td><code>.active</code></td>
+          <td>Active/selected item state</td>
+        </tr>
+        <tr>
+          <td><code>.disabled</code></td>
+          <td>Disabled item state</td>
+        </tr>
+        <tr>
+          <td><code>.dropup</code></td>
+          <td>Opens menu upward</td>
+        </tr>
+        <tr>
+          <td><code>.dropend</code></td>
+          <td>Opens menu to the right</td>
+        </tr>
+        <tr>
+          <td><code>.dropstart</code></td>
+          <td>Opens menu to the left</td>
+        </tr>
+        <tr>
+          <td><code>.dropdown-toggle-split</code></td>
+          <td>Split button dropdown toggle</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="../dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

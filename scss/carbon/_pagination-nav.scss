@@ -1,0 +1,182 @@
+// Carbon Pagination Nav Component
+// Full pagination bar with items-per-page, item count, and page navigation
+// Reference: https://carbondesignsystem.com/components/pagination/usage/
+
+// -----------------------------------------------------------------------------
+// Base Component
+// -----------------------------------------------------------------------------
+.pagination-nav {
+  // CSS Custom Properties (for runtime theming)
+  --#{$prefix}pagination-nav-height: #{$pagination-nav-height};
+  --#{$prefix}pagination-nav-height-sm: #{$pagination-nav-height-sm};
+  --#{$prefix}pagination-nav-height-lg: #{$pagination-nav-height-lg};
+  --#{$prefix}pagination-nav-font-size: #{$pagination-nav-font-size};
+  --#{$prefix}pagination-nav-padding-x: #{$pagination-nav-padding-x};
+  --#{$prefix}pagination-nav-color: #{$pagination-nav-color};
+  --#{$prefix}pagination-nav-bg: #{$pagination-nav-bg};
+  --#{$prefix}pagination-nav-border-color: #{$pagination-nav-border-color};
+  --#{$prefix}pagination-nav-select-bg: #{$pagination-nav-select-bg};
+  --#{$prefix}pagination-nav-select-hover-bg: #{$pagination-nav-select-hover-bg};
+  --#{$prefix}pagination-nav-select-border-color: #{$pagination-nav-select-border-color};
+  --#{$prefix}pagination-nav-select-disabled-color: #{$pagination-nav-select-disabled-color};
+  --#{$prefix}pagination-nav-btn-hover-bg: #{$pagination-nav-btn-hover-bg};
+  --#{$prefix}pagination-nav-btn-disabled-color: #{$pagination-nav-btn-disabled-color};
+  --#{$prefix}pagination-nav-btn-focus-color: #{$pagination-nav-btn-focus-color};
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: var(--#{$prefix}pagination-nav-height);
+  font-size: var(--#{$prefix}pagination-nav-font-size);
+  color: var(--#{$prefix}pagination-nav-color);
+  background-color: var(--#{$prefix}pagination-nav-bg);
+  border-top: 1px solid var(--#{$prefix}pagination-nav-border-color);
+}
+
+// -----------------------------------------------------------------------------
+// Layout Sections
+// -----------------------------------------------------------------------------
+.pagination-nav-left,
+.pagination-nav-right {
+  display: flex;
+  gap: var(--#{$prefix}pagination-nav-padding-x);
+  align-items: center;
+  height: 100%;
+}
+
+.pagination-nav-left {
+  padding-left: var(--#{$prefix}pagination-nav-padding-x);
+}
+
+.pagination-nav-right {
+  padding-right: .5rem;
+}
+
+// -----------------------------------------------------------------------------
+// Divider (optional vertical separator)
+// -----------------------------------------------------------------------------
+.pagination-nav-divider {
+  width: 1px;
+  height: 100%;
+  background-color: var(--#{$prefix}pagination-nav-border-color);
+}
+
+// -----------------------------------------------------------------------------
+// Label ("Items per page:")
+// -----------------------------------------------------------------------------
+.pagination-nav-label {
+  color: var(--#{$prefix}pagination-nav-color);
+  white-space: nowrap;
+}
+
+// -----------------------------------------------------------------------------
+// Text (item ranges, page counts)
+// -----------------------------------------------------------------------------
+.pagination-nav-text {
+  color: var(--#{$prefix}pagination-nav-color);
+  white-space: nowrap;
+}
+
+.pagination-nav-text-secondary {
+  color: var(--#{$prefix}body-secondary-color);
+}
+
+// -----------------------------------------------------------------------------
+// Select Dropdowns
+// -----------------------------------------------------------------------------
+.pagination-nav-select {
+  height: var(--#{$prefix}pagination-nav-height);
+  padding: .5rem 2.5rem .5rem var(--#{$prefix}pagination-nav-padding-x);
+  font-size: inherit;
+  color: var(--#{$prefix}pagination-nav-color);
+  appearance: none;
+  background-color: var(--#{$prefix}pagination-nav-select-bg);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right .75rem center;
+  background-size: 1rem;
+  border: 0;
+  border-bottom: 1px solid var(--#{$prefix}pagination-nav-select-border-color);
+
+  &:hover {
+    background-color: var(--#{$prefix}pagination-nav-select-hover-bg);
+  }
+
+  &:focus {
+    outline: 2px solid var(--#{$prefix}pagination-nav-btn-focus-color);
+    outline-offset: -2px;
+  }
+
+  &:disabled {
+    color: var(--#{$prefix}pagination-nav-select-disabled-color);
+    cursor: not-allowed;
+    background-color: var(--#{$prefix}pagination-nav-select-bg);
+  }
+}
+
+// Compact select for page number (narrower)
+.pagination-nav-select-page {
+  min-width: 3.5rem;
+  padding-right: 2rem;
+  text-align: center;
+}
+
+// -----------------------------------------------------------------------------
+// Navigation Buttons (prev/next)
+// -----------------------------------------------------------------------------
+.pagination-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--#{$prefix}pagination-nav-height);
+  height: var(--#{$prefix}pagination-nav-height);
+  padding: 0;
+  color: var(--#{$prefix}pagination-nav-color);
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+
+  &:hover:not(:disabled) {
+    background-color: var(--#{$prefix}pagination-nav-btn-hover-bg);
+  }
+
+  &:focus {
+    outline: 2px solid var(--#{$prefix}pagination-nav-btn-focus-color);
+    outline-offset: -2px;
+  }
+
+  &:disabled {
+    color: var(--#{$prefix}pagination-nav-btn-disabled-color);
+    cursor: not-allowed;
+  }
+
+  svg {
+    width: 1rem;
+    height: 1rem;
+    fill: currentcolor;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Size Variants
+// -----------------------------------------------------------------------------
+
+// Small (32px)
+.pagination-nav-sm {
+  --#{$prefix}pagination-nav-height: #{$pagination-nav-height-sm};
+
+  .pagination-nav-select {
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+  }
+}
+
+// Large (48px)
+.pagination-nav-lg {
+  --#{$prefix}pagination-nav-height: #{$pagination-nav-height-lg};
+
+  .pagination-nav-select {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+  }
+}

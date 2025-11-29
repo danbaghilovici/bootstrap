@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carbon Tooltip Demo</title>
+  <link rel="stylesheet" href="../dist/css/bootstrap.css">
+  <style>
+    body {
+      padding: 2rem;
+      background-color: #f4f4f4;
+    }
+    .demo-section {
+      background: white;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .demo-section h2 {
+      margin-bottom: 1rem;
+      font-size: 1.25rem;
+    }
+    .demo-section p {
+      color: #525252;
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+    }
+    .demo-container {
+      background: #e0e0e0;
+      padding: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      align-items: center;
+    }
+    pre {
+      background: #161616;
+      color: #f4f4f4;
+      padding: 1rem;
+      margin-top: 1rem;
+      font-size: 0.75rem;
+      overflow-x: auto;
+    }
+    code {
+      font-family: "IBM Plex Mono", monospace;
+    }
+    .demo-label {
+      font-size: 0.875rem;
+      color: #525252;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Carbon Tooltip Demo</h1>
+  <p>Tooltip component styled with Carbon Design System specifications.</p>
+
+  <!-- Tooltip Placements -->
+  <div class="demo-section">
+    <h2>Tooltip Placements</h2>
+    <p>Tooltips can be positioned on top, bottom, left, or right of the trigger element.</p>
+    <div class="demo-container">
+      <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">
+        Top
+      </button>
+      <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right" title="Tooltip on right">
+        Right
+      </button>
+      <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tooltip on bottom">
+        Bottom
+      </button>
+      <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip on left">
+        Left
+      </button>
+    </div>
+  </div>
+
+  <!-- Tooltip on Links -->
+  <div class="demo-section">
+    <h2>Tooltip on Links</h2>
+    <p>Tooltips can be attached to inline links for contextual help.</p>
+    <div class="demo-container">
+      <p class="mb-0">
+        Hover over this <a href="#" data-bs-toggle="tooltip" title="This is a helpful tooltip">linked text</a> to see the tooltip.
+      </p>
+    </div>
+  </div>
+
+  <!-- Long Text Tooltip -->
+  <div class="demo-section">
+    <h2>Long Text Tooltip</h2>
+    <p>Tooltips can contain longer descriptions. Max-width is 288px.</p>
+    <div class="demo-container">
+      <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" title="This is a longer tooltip message that demonstrates how text wraps within the tooltip container when it exceeds the maximum width.">
+        Hover for long tooltip
+      </button>
+    </div>
+  </div>
+
+  <!-- Focus Trigger -->
+  <div class="demo-section">
+    <h2>Focus Trigger</h2>
+    <p>Tooltips can be triggered by keyboard focus for accessibility.</p>
+    <div class="demo-container">
+      <input type="text" class="form-control" style="max-width: 250px;" data-bs-toggle="tooltip" data-bs-trigger="focus" title="Focus triggered tooltip" placeholder="Focus on this input">
+    </div>
+  </div>
+
+  <!-- HTML Structure Reference -->
+  <div class="demo-section">
+    <h2>HTML Structure Reference</h2>
+    <p>Copy this HTML structure to use the tooltip component.</p>
+    <pre><code>&lt;!-- Button with tooltip --&gt;
+&lt;button type="button" class="btn btn-secondary"
+        data-bs-toggle="tooltip"
+        data-bs-placement="top"
+        title="Tooltip text"&gt;
+  Button text
+&lt;/button&gt;
+
+&lt;!-- Link with tooltip --&gt;
+&lt;a href="#" data-bs-toggle="tooltip" title="Tooltip text"&gt;
+  Link text
+&lt;/a&gt;
+
+&lt;!-- Focus trigger (for inputs) --&gt;
+&lt;input type="text" class="form-control"
+       data-bs-toggle="tooltip"
+       data-bs-trigger="focus"
+       title="Tooltip text"&gt;
+
+&lt;!-- Initialize all tooltips via JavaScript --&gt;
+&lt;script&gt;
+  const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+  const tooltipList = [...tooltipTriggerList].map(el =&gt; new bootstrap.Tooltip(el));
+&lt;/script&gt;</code></pre>
+  </div>
+
+  <!-- Carbon Design Specs -->
+  <div class="demo-section">
+    <h2>Carbon Design Specifications</h2>
+    <table class="table table-sm">
+      <thead>
+        <tr>
+          <th>Property</th>
+          <th>Value</th>
+          <th>Carbon Token</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Background color</td>
+          <td><code>#393939</code></td>
+          <td><code>$inverse-02</code> (Gray 80)</td>
+        </tr>
+        <tr>
+          <td>Text color</td>
+          <td><code>#ffffff</code></td>
+          <td><code>$inverse-01</code> (White)</td>
+        </tr>
+        <tr>
+          <td>Font size</td>
+          <td><code>0.875rem (14px)</code></td>
+          <td>body-01</td>
+        </tr>
+        <tr>
+          <td>Max width</td>
+          <td><code>288px</code></td>
+          <td>Carbon standard</td>
+        </tr>
+        <tr>
+          <td>Border radius</td>
+          <td><code>2px</code></td>
+          <td>Carbon standard</td>
+        </tr>
+        <tr>
+          <td>Padding vertical</td>
+          <td><code>0.5rem (8px)</code></td>
+          <td><code>$spacing-03</code></td>
+        </tr>
+        <tr>
+          <td>Padding horizontal</td>
+          <td><code>1rem (16px)</code></td>
+          <td><code>$spacing-05</code></td>
+        </tr>
+        <tr>
+          <td>Arrow width</td>
+          <td><code>0.5rem (8px)</code></td>
+          <td>Carbon caret</td>
+        </tr>
+        <tr>
+          <td>Arrow height</td>
+          <td><code>0.25rem (4px)</code></td>
+          <td>Carbon caret</td>
+        </tr>
+        <tr>
+          <td>Box shadow</td>
+          <td><code>0 2px 6px rgba(0,0,0,0.3)</code></td>
+          <td>Carbon drop shadow</td>
+        </tr>
+        <tr>
+          <td>Opacity</td>
+          <td><code>1</code></td>
+          <td>Fully opaque</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- CSS Classes Reference -->
+  <div class="demo-section">
+    <h2>CSS Classes Reference</h2>
+    <table class="table table-sm">
+      <thead>
+        <tr>
+          <th>Class</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>.tooltip</code></td>
+          <td>Main tooltip container (generated by JS)</td>
+        </tr>
+        <tr>
+          <td><code>.tooltip-inner</code></td>
+          <td>Inner content wrapper with background and padding</td>
+        </tr>
+        <tr>
+          <td><code>.tooltip-arrow</code></td>
+          <td>Arrow/caret element pointing to trigger</td>
+        </tr>
+        <tr>
+          <td><code>.bs-tooltip-top</code></td>
+          <td>Tooltip positioned above trigger</td>
+        </tr>
+        <tr>
+          <td><code>.bs-tooltip-bottom</code></td>
+          <td>Tooltip positioned below trigger</td>
+        </tr>
+        <tr>
+          <td><code>.bs-tooltip-start</code></td>
+          <td>Tooltip positioned to the left (start)</td>
+        </tr>
+        <tr>
+          <td><code>.bs-tooltip-end</code></td>
+          <td>Tooltip positioned to the right (end)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="../dist/js/bootstrap.bundle.js"></script>
+  <script>
+    // Initialize all tooltips
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    const tooltipList = [...tooltipTriggerList].map(el => new bootstrap.Tooltip(el));
+  </script>
+</body>
+</html>

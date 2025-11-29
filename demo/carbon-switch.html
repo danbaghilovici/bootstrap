@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carbon Switch Demo</title>
+  <link rel="stylesheet" href="../dist/css/bootstrap.css">
+  <style>
+    body {
+      padding: 2rem;
+      background-color: #f4f4f4;
+    }
+    .demo-section {
+      background: white;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .demo-section h2 {
+      margin-bottom: 1rem;
+      font-size: 1.25rem;
+    }
+    .demo-section p {
+      color: #525252;
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+    }
+    .demo-container {
+      background: #e0e0e0;
+      padding: 1.5rem;
+    }
+    .demo-container .form-switch {
+      margin-bottom: 1rem;
+    }
+    .demo-container .form-switch:last-child {
+      margin-bottom: 0;
+    }
+    pre {
+      background: #161616;
+      color: #f4f4f4;
+      padding: 1rem;
+      margin-top: 1rem;
+      font-size: 0.75rem;
+      overflow-x: auto;
+    }
+    code {
+      font-family: "IBM Plex Mono", monospace;
+    }
+    .demo-label {
+      font-size: 0.875rem;
+      color: #525252;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Carbon Switch Demo</h1>
+  <p>Switch/toggle component styled with Carbon Design System specifications.</p>
+
+  <!-- Default Switch States -->
+  <div class="demo-section">
+    <h2>Default Switch (48px × 24px)</h2>
+    <p>Standard switch showing OFF and ON states.</p>
+    <div class="demo-container">
+      <div class="demo-label">OFF state</div>
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" role="switch" id="switchOff">
+        <label class="form-check-label" for="switchOff">Switch label</label>
+      </div>
+      <div class="demo-label">ON state (checked)</div>
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" role="switch" id="switchOn" checked>
+        <label class="form-check-label" for="switchOn">Switch label</label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Focus State -->
+  <div class="demo-section">
+    <h2>Focus State</h2>
+    <p>Tab to the switch to see the focus outline (2px blue with 1px offset).</p>
+    <div class="demo-container">
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" role="switch" id="switchFocus">
+        <label class="form-check-label" for="switchFocus">Tab here to see focus</label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Small Variant -->
+  <div class="demo-section">
+    <h2>Small Variant (32px × 16px)</h2>
+    <p>Compact switch using <code>.form-switch-sm</code> modifier.</p>
+    <div class="demo-container">
+      <div class="demo-label">Small OFF state</div>
+      <div class="form-check form-switch form-switch-sm">
+        <input class="form-check-input" type="checkbox" role="switch" id="switchSmallOff">
+        <label class="form-check-label" for="switchSmallOff">Small switch label</label>
+      </div>
+      <div class="demo-label">Small ON state (checked)</div>
+      <div class="form-check form-switch form-switch-sm">
+        <input class="form-check-input" type="checkbox" role="switch" id="switchSmallOn" checked>
+        <label class="form-check-label" for="switchSmallOn">Small switch label</label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Disabled States -->
+  <div class="demo-section">
+    <h2>Disabled States</h2>
+    <p>Disabled switches with muted styling.</p>
+    <div class="demo-container">
+      <div class="demo-label">Disabled OFF state</div>
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" role="switch" id="switchDisabledOff" disabled>
+        <label class="form-check-label" for="switchDisabledOff">Disabled switch</label>
+      </div>
+      <div class="demo-label">Disabled ON state</div>
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" role="switch" id="switchDisabledOn" checked disabled>
+        <label class="form-check-label" for="switchDisabledOn">Disabled switch</label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Without Labels -->
+  <div class="demo-section">
+    <h2>Without Labels</h2>
+    <p>Switches without visible labels (use aria-label for accessibility).</p>
+    <div class="demo-container">
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" role="switch" id="switchNoLabel" aria-label="Toggle option">
+      </div>
+    </div>
+  </div>
+
+  <!-- HTML Structure Reference -->
+  <div class="demo-section">
+    <h2>HTML Structure Reference</h2>
+    <p>Copy this HTML structure to use the switch component.</p>
+    <pre><code>&lt;!-- Default switch --&gt;
+&lt;div class="form-check form-switch"&gt;
+  &lt;input class="form-check-input" type="checkbox" role="switch" id="switchId"&gt;
+  &lt;label class="form-check-label" for="switchId"&gt;Switch label&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;!-- Small variant --&gt;
+&lt;div class="form-check form-switch form-switch-sm"&gt;
+  &lt;input class="form-check-input" type="checkbox" role="switch" id="switchSmall"&gt;
+  &lt;label class="form-check-label" for="switchSmall"&gt;Small switch&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;!-- Checked (ON) state --&gt;
+&lt;div class="form-check form-switch"&gt;
+  &lt;input class="form-check-input" type="checkbox" role="switch" id="switchChecked" checked&gt;
+  &lt;label class="form-check-label" for="switchChecked"&gt;Checked switch&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;!-- Disabled state --&gt;
+&lt;div class="form-check form-switch"&gt;
+  &lt;input class="form-check-input" type="checkbox" role="switch" id="switchDisabled" disabled&gt;
+  &lt;label class="form-check-label" for="switchDisabled"&gt;Disabled switch&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+  </div>
+
+  <!-- Carbon Design Specs -->
+  <div class="demo-section">
+    <h2>Carbon Design Specifications</h2>
+    <table class="table table-sm">
+      <thead>
+        <tr>
+          <th>Property</th>
+          <th>Default Value</th>
+          <th>Small Value</th>
+          <th>Carbon Token</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Track width</td>
+          <td><code>48px (3rem)</code></td>
+          <td><code>32px (2rem)</code></td>
+          <td>Carbon standard</td>
+        </tr>
+        <tr>
+          <td>Track height</td>
+          <td><code>24px (1.5rem)</code></td>
+          <td><code>16px (1rem)</code></td>
+          <td>Carbon standard</td>
+        </tr>
+        <tr>
+          <td>Handle diameter</td>
+          <td><code>18px (1.125rem)</code></td>
+          <td><code>10px (0.625rem)</code></td>
+          <td>Carbon standard</td>
+        </tr>
+        <tr>
+          <td>Border radius</td>
+          <td><code>12px (0.75rem)</code></td>
+          <td><code>8px (0.5rem)</code></td>
+          <td>Pill shape</td>
+        </tr>
+        <tr>
+          <td>Handle color</td>
+          <td colspan="2"><code>#ffffff</code></td>
+          <td>White</td>
+        </tr>
+        <tr>
+          <td>Track OFF color</td>
+          <td colspan="2"><code>#8d8d8d</code></td>
+          <td><code>$toggle-off</code> (Gray 50)</td>
+        </tr>
+        <tr>
+          <td>Track ON color</td>
+          <td colspan="2"><code>#24a148</code></td>
+          <td><code>$support-success</code> (Green 50)</td>
+        </tr>
+        <tr>
+          <td>Disabled track</td>
+          <td colspan="2"><code>#c6c6c6</code></td>
+          <td><code>$field-disabled</code> (Gray 30)</td>
+        </tr>
+        <tr>
+          <td>Disabled handle</td>
+          <td colspan="2"><code>#8d8d8d</code></td>
+          <td>Gray 50</td>
+        </tr>
+        <tr>
+          <td>Focus outline</td>
+          <td colspan="2"><code>#0f62fe</code></td>
+          <td><code>$focus</code> (Blue 60)</td>
+        </tr>
+        <tr>
+          <td>Focus offset</td>
+          <td colspan="2"><code>1px</code></td>
+          <td>Carbon standard</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- CSS Classes Reference -->
+  <div class="demo-section">
+    <h2>CSS Classes Reference</h2>
+    <table class="table table-sm">
+      <thead>
+        <tr>
+          <th>Class</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>.form-check</code></td>
+          <td>Base wrapper class (Bootstrap)</td>
+        </tr>
+        <tr>
+          <td><code>.form-switch</code></td>
+          <td>Switch modifier on wrapper</td>
+        </tr>
+        <tr>
+          <td><code>.form-switch-sm</code></td>
+          <td>Small variant modifier</td>
+        </tr>
+        <tr>
+          <td><code>.form-check-input</code></td>
+          <td>The actual checkbox input (styled as switch)</td>
+        </tr>
+        <tr>
+          <td><code>.form-check-label</code></td>
+          <td>Label element for the switch</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>

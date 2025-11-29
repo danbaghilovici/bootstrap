@@ -1,0 +1,46 @@
+// Carbon Toast Customizations
+// Left accent border and variant classes for notification status
+// Reference: https://carbondesignsystem.com/components/notification/style/
+
+// -----------------------------------------------------------------------------
+// Base Toast - Left Accent Border
+// -----------------------------------------------------------------------------
+.toast {
+  border-left-width: 3px;
+  border-left-color: $primary;  // Carbon: Blue 60 (default)
+}
+
+// -----------------------------------------------------------------------------
+// Toast Variants (Status Colors)
+// -----------------------------------------------------------------------------
+.toast-success {
+  border-left-color: $success;  // Carbon: Green 50 (#24a148)
+}
+
+.toast-warning {
+  border-left-color: $warning;  // Carbon: Yellow 30 (#f1c21b)
+}
+
+.toast-danger {
+  border-left-color: $danger;   // Carbon: Red 60 (#da1e28)
+}
+
+.toast-info {
+  border-left-color: $info;     // Carbon: Blue 70 (#0043ce)
+}
+
+// -----------------------------------------------------------------------------
+// Toast Header Timestamp Color
+// -----------------------------------------------------------------------------
+.toast-header .text-body-secondary {
+  color: $gray-700 !important;  // Carbon: $text-secondary (#525252)
+}
+
+// -----------------------------------------------------------------------------
+// Close Button Focus State
+// -----------------------------------------------------------------------------
+.toast-header .btn-close:focus {
+  outline: 2px solid $primary;  // Carbon: $focus (Blue 60)
+  outline-offset: -2px;
+  box-shadow: none;
+}

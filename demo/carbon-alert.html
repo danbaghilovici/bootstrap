@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Carbon Design System Alert Demo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="../dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      body {
+        font-family: 'IBM Plex Sans', sans-serif;
+      }
+      code {
+        font-family: 'IBM Plex Mono', monospace;
+      }
+      section {
+        margin-bottom: 3rem;
+      }
+      h2 {
+        border-bottom: 1px solid var(--bs-gray-300);
+        padding-bottom: 0.5rem;
+        margin-bottom: 1.5rem;
+      }
+      .spec-table {
+        font-size: 0.875rem;
+      }
+      .spec-table th {
+        font-weight: 600;
+      }
+      .demo-box {
+        background: var(--bs-gray-100);
+        padding: 1.5rem;
+        border-radius: 0;
+        margin-bottom: 1rem;
+      }
+    </style>
+  </head>
+  <body class="py-5">
+    <div class="container">
+      <!-- Header -->
+      <header class="mb-5">
+        <h1>Carbon Design System Alert</h1>
+        <p class="lead text-body-secondary">Bootstrap theme customized with IBM Carbon Design System notification styling</p>
+      </header>
+
+      <!-- Default Alerts -->
+      <section>
+        <h2>Default Alerts (Low-Contrast)</h2>
+        <p class="text-body-secondary mb-4">Carbon-styled alerts with 3px left accent border, subtle background, and square corners</p>
+
+        <div class="demo-box">
+          <div class="alert alert-danger" role="alert">
+            <strong>Error:</strong> This is a danger/error alert — check it out!
+          </div>
+          <div class="alert alert-success" role="alert">
+            <strong>Success:</strong> This is a success alert — check it out!
+          </div>
+          <div class="alert alert-warning" role="alert">
+            <strong>Warning:</strong> This is a warning alert — check it out!
+          </div>
+          <div class="alert alert-info" role="alert">
+            <strong>Info:</strong> This is an info alert — check it out!
+          </div>
+          <div class="alert alert-primary" role="alert">
+            <strong>Primary:</strong> This is a primary alert — check it out!
+          </div>
+          <div class="alert alert-secondary" role="alert">
+            <strong>Secondary:</strong> This is a secondary alert — check it out!
+          </div>
+        </div>
+
+        <table class="table spec-table">
+          <thead>
+            <tr>
+              <th>Property</th>
+              <th>Carbon Value</th>
+              <th>Bootstrap Default</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Left border width</td>
+              <td><code>3px</code></td>
+              <td><code>1px</code> (all sides)</td>
+            </tr>
+            <tr>
+              <td>Border radius</td>
+              <td><code>0</code> (square)</td>
+              <td><code>0.375rem</code></td>
+            </tr>
+            <tr>
+              <td>Padding</td>
+              <td><code>12px 16px</code></td>
+              <td><code>16px</code></td>
+            </tr>
+            <tr>
+              <td>Text color</td>
+              <td><code>#161616</code> (dark)</td>
+              <td>Variant-specific</td>
+            </tr>
+            <tr>
+              <td>Border color (top/right/bottom)</td>
+              <td><code>#e0e0e0</code></td>
+              <td>Variant-specific</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Alerts with Links -->
+      <section>
+        <h2>Alerts with Links</h2>
+        <p class="text-body-secondary mb-4">Alert links use a darker shade of the status color</p>
+
+        <div class="demo-box">
+          <div class="alert alert-danger" role="alert">
+            This is a danger alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+          </div>
+          <div class="alert alert-success" role="alert">
+            This is a success alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+          </div>
+          <div class="alert alert-warning" role="alert">
+            This is a warning alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+          </div>
+          <div class="alert alert-info" role="alert">
+            This is an info alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+          </div>
+        </div>
+      </section>
+
+      <!-- Alert with Heading -->
+      <section>
+        <h2>Alert with Heading</h2>
+        <p class="text-body-secondary mb-4">Alerts can contain headings for more structured content</p>
+
+        <div class="demo-box">
+          <div class="alert alert-success" role="alert">
+            <h4 class="alert-heading">Well done!</h4>
+            <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+            <hr>
+            <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Dismissible Alerts -->
+      <section>
+        <h2>Dismissible Alerts</h2>
+        <p class="text-body-secondary mb-4">Dismissible alerts with close button and focus states</p>
+
+        <div class="demo-box">
+          <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>Error!</strong> You should check in on some of those fields below.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+          <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Success!</strong> Your changes have been saved.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+          <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>Warning!</strong> Better check yourself, you're not looking too good.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+          <div class="alert alert-info alert-dismissible fade show" role="alert">
+            <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        </div>
+
+        <p class="text-body-secondary"><strong>Focus test:</strong> Tab to the close buttons to see the Carbon focus ring (2px solid Blue 60)</p>
+      </section>
+
+      <!-- High-Contrast Alerts -->
+      <section>
+        <h2>High-Contrast Alerts (Optional)</h2>
+        <p class="text-body-secondary mb-4">Add <code>.alert-high-contrast</code> for more prominent alerts</p>
+
+        <div class="demo-box">
+          <div class="alert alert-danger alert-high-contrast" role="alert">
+            <strong>Critical Error:</strong> This is a high-contrast danger alert for critical messages.
+          </div>
+          <div class="alert alert-success alert-high-contrast" role="alert">
+            <strong>Success:</strong> This is a high-contrast success alert.
+          </div>
+          <div class="alert alert-warning alert-high-contrast" role="alert">
+            <strong>Warning:</strong> This is a high-contrast warning alert.
+          </div>
+          <div class="alert alert-info alert-high-contrast" role="alert">
+            <strong>Info:</strong> This is a high-contrast info alert.
+          </div>
+          <div class="alert alert-primary alert-high-contrast" role="alert">
+            <strong>Primary:</strong> This is a high-contrast primary alert.
+          </div>
+          <div class="alert alert-secondary alert-high-contrast" role="alert">
+            <strong>Secondary:</strong> This is a high-contrast secondary alert.
+          </div>
+        </div>
+
+        <table class="table spec-table">
+          <thead>
+            <tr>
+              <th>Property</th>
+              <th>High-Contrast Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Background</td>
+              <td>Full status color</td>
+            </tr>
+            <tr>
+              <td>Text color</td>
+              <td><code>#fff</code> (white) or <code>#161616</code> for warning</td>
+            </tr>
+            <tr>
+              <td>Left border</td>
+              <td>None (removed)</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Focus States -->
+      <section>
+        <h2>Focus States</h2>
+        <p class="text-body-secondary mb-4">Interactive elements use Carbon's 2px solid Blue 60 focus ring</p>
+
+        <div class="demo-box">
+          <div class="alert alert-info" role="alert">
+            Tab to this <a href="#" class="alert-link">alert link</a> to see the focus ring styling.
+          </div>
+          <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            Tab to the close button to see the focus ring.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        </div>
+
+        <table class="table spec-table">
+          <thead>
+            <tr>
+              <th>Element</th>
+              <th>Focus Style</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>.alert-link</code></td>
+              <td><code>outline: 2px solid #0f62fe; outline-offset: 2px</code></td>
+            </tr>
+            <tr>
+              <td><code>.btn-close</code></td>
+              <td><code>outline: 2px solid #0f62fe; outline-offset: -2px</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Color Reference -->
+      <section>
+        <h2>Color Reference</h2>
+        <p class="text-body-secondary mb-4">Carbon color tokens used for alert variants</p>
+
+        <table class="table spec-table">
+          <thead>
+            <tr>
+              <th>Variant</th>
+              <th>Left Border Color</th>
+              <th>Carbon Token</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>.alert-danger</code></td>
+              <td><span style="display:inline-block;width:16px;height:16px;background:#da1e28;vertical-align:middle;margin-right:8px;"></span><code>#da1e28</code></td>
+              <td>Red 60</td>
+            </tr>
+            <tr>
+              <td><code>.alert-success</code></td>
+              <td><span style="display:inline-block;width:16px;height:16px;background:#24a148;vertical-align:middle;margin-right:8px;"></span><code>#24a148</code></td>
+              <td>Green 50</td>
+            </tr>
+            <tr>
+              <td><code>.alert-warning</code></td>
+              <td><span style="display:inline-block;width:16px;height:16px;background:#f1c21b;vertical-align:middle;margin-right:8px;"></span><code>#f1c21b</code></td>
+              <td>Yellow 30</td>
+            </tr>
+            <tr>
+              <td><code>.alert-info</code></td>
+              <td><span style="display:inline-block;width:16px;height:16px;background:#0043ce;vertical-align:middle;margin-right:8px;"></span><code>#0043ce</code></td>
+              <td>Blue 70</td>
+            </tr>
+            <tr>
+              <td><code>.alert-primary</code></td>
+              <td><span style="display:inline-block;width:16px;height:16px;background:#0f62fe;vertical-align:middle;margin-right:8px;"></span><code>#0f62fe</code></td>
+              <td>Blue 60</td>
+            </tr>
+            <tr>
+              <td><code>.alert-secondary</code></td>
+              <td><span style="display:inline-block;width:16px;height:16px;background:#525252;vertical-align:middle;margin-right:8px;"></span><code>#525252</code></td>
+              <td>Gray 70</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+    </div>
+  </body>
+</html>

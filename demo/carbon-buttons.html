@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Carbon Design System Buttons Demo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+      body {
+        font-family: 'IBM Plex Sans', sans-serif;
+      }
+      code {
+        font-family: 'IBM Plex Mono', monospace;
+      }
+      section {
+        margin-bottom: 3rem;
+      }
+      h2 {
+        border-bottom: 1px solid var(--bs-gray-300);
+        padding-bottom: 0.5rem;
+        margin-bottom: 1.5rem;
+      }
+      .button-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        align-items: center;
+        margin-bottom: 1rem;
+      }
+      .spec-table {
+        font-size: 0.875rem;
+      }
+      .spec-table th {
+        font-weight: 600;
+      }
+      .demo-box {
+        background: var(--bs-gray-100);
+        padding: 1.5rem;
+        border-radius: 0;
+        margin-bottom: 1rem;
+      }
+      .dark-demo-box {
+        background: #161616;
+        padding: 1.5rem;
+        border-radius: 0;
+        margin-bottom: 1rem;
+      }
+    </style>
+  </head>
+  <body class="py-5">
+    <div class="container">
+      <!-- Header -->
+      <header class="mb-5">
+        <h1>Carbon Design System Buttons</h1>
+        <p class="lead text-body-secondary">Bootstrap theme customized with IBM Carbon Design System button styling</p>
+      </header>
+
+      <!-- Button Variants -->
+      <section>
+        <h2>Button Variants</h2>
+        <p class="text-body-secondary mb-4">Carbon-styled buttons with rectangular shape (0 border radius) and flat design (no shadows)</p>
+
+        <div class="demo-box">
+          <div class="button-row">
+            <button type="button" class="btn btn-primary">Primary</button>
+            <button type="button" class="btn btn-secondary">Secondary</button>
+            <button type="button" class="btn btn-success">Success</button>
+            <button type="button" class="btn btn-danger">Danger</button>
+            <button type="button" class="btn btn-warning">Warning</button>
+            <button type="button" class="btn btn-info">Info</button>
+            <button type="button" class="btn btn-light">Light</button>
+            <button type="button" class="btn btn-dark">Dark</button>
+          </div>
+        </div>
+
+        <table class="table spec-table">
+          <thead>
+            <tr>
+              <th>Property</th>
+              <th>Carbon Value</th>
+              <th>Bootstrap Default</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Border Radius</td>
+              <td><code>0</code></td>
+              <td><code>0.375rem</code></td>
+            </tr>
+            <tr>
+              <td>Box Shadow</td>
+              <td><code>none</code></td>
+              <td><code>inset 0 1px 0...</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Button Sizes -->
+      <section>
+        <h2>Button Sizes</h2>
+        <p class="text-body-secondary mb-4">Carbon button heights: Small (32px), Default (40px), Large (48px)</p>
+
+        <div class="demo-box">
+          <div class="button-row mb-3">
+            <button type="button" class="btn btn-primary btn-sm">Small Button</button>
+            <span class="text-body-secondary">~32px height</span>
+          </div>
+          <div class="button-row mb-3">
+            <button type="button" class="btn btn-primary">Default Button</button>
+            <span class="text-body-secondary">40px height</span>
+          </div>
+          <div class="button-row">
+            <button type="button" class="btn btn-primary btn-lg">Large Button</button>
+            <span class="text-body-secondary">48px height</span>
+          </div>
+        </div>
+
+        <table class="table spec-table">
+          <thead>
+            <tr>
+              <th>Size</th>
+              <th>Height</th>
+              <th>Padding Y</th>
+              <th>Padding X</th>
+              <th>Font Size</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Small (<code>.btn-sm</code>)</td>
+              <td>~32px</td>
+              <td><code>.3125rem</code> (5px)</td>
+              <td><code>1rem</code> (16px)</td>
+              <td><code>.875rem</code> (14px)</td>
+            </tr>
+            <tr>
+              <td>Default (<code>.btn</code>)</td>
+              <td>40px</td>
+              <td><code>.625rem</code> (10px)</td>
+              <td><code>1rem</code> (16px)</td>
+              <td><code>.875rem</code> (14px)</td>
+            </tr>
+            <tr>
+              <td>Large (<code>.btn-lg</code>)</td>
+              <td>48px</td>
+              <td><code>.875rem</code> (14px)</td>
+              <td><code>1rem</code> (16px)</td>
+              <td><code>.875rem</code> (14px)</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Long Text Buttons -->
+      <section>
+        <h2>Long Text Buttons</h2>
+        <p class="text-body-secondary mb-4">Buttons with longer labels maintain proper height and padding</p>
+
+        <div class="demo-box">
+          <h6 class="text-body-secondary mb-3">Default Size</h6>
+          <div class="button-row mb-4">
+            <button type="button" class="btn btn-primary">Submit Application Form</button>
+            <button type="button" class="btn btn-secondary">Download All Selected Files</button>
+            <button type="button" class="btn btn-outline-primary">Accept Terms and Conditions</button>
+          </div>
+
+          <h6 class="text-body-secondary mb-3">Small Size</h6>
+          <div class="button-row mb-4">
+            <button type="button" class="btn btn-primary btn-sm">Submit Application Form</button>
+            <button type="button" class="btn btn-secondary btn-sm">Download All Selected Files</button>
+            <button type="button" class="btn btn-outline-primary btn-sm">Accept Terms and Conditions</button>
+          </div>
+
+          <h6 class="text-body-secondary mb-3">Large Size</h6>
+          <div class="button-row">
+            <button type="button" class="btn btn-primary btn-lg">Submit Application Form</button>
+            <button type="button" class="btn btn-secondary btn-lg">Download All Selected Files</button>
+            <button type="button" class="btn btn-outline-primary btn-lg">Accept Terms and Conditions</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Outline Buttons -->
+      <section>
+        <h2>Outline Buttons</h2>
+        <p class="text-body-secondary mb-4">Outline variants inherit Carbon's rectangular shape and sizing</p>
+
+        <div class="demo-box">
+          <div class="button-row">
+            <button type="button" class="btn btn-outline-primary">Primary</button>
+            <button type="button" class="btn btn-outline-secondary">Secondary</button>
+            <button type="button" class="btn btn-outline-success">Success</button>
+            <button type="button" class="btn btn-outline-danger">Danger</button>
+            <button type="button" class="btn btn-outline-warning">Warning</button>
+            <button type="button" class="btn btn-outline-info">Info</button>
+            <button type="button" class="btn btn-outline-light">Light</button>
+            <button type="button" class="btn btn-outline-dark">Dark</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Buttons with Icons -->
+      <section>
+        <h2>Buttons with Icons</h2>
+        <p class="text-body-secondary mb-4">Buttons can include Bootstrap Icons for enhanced visual communication</p>
+
+        <div class="demo-box">
+          <h6 class="text-body-secondary mb-3">Icon-Only Buttons</h6>
+          <div class="button-row mb-4">
+            <button type="button" class="btn btn-primary"><i class="bi bi-plus"></i></button>
+            <button type="button" class="btn btn-secondary"><i class="bi bi-pencil"></i></button>
+            <button type="button" class="btn btn-danger"><i class="bi bi-trash"></i></button>
+            <button type="button" class="btn btn-outline-primary"><i class="bi bi-download"></i></button>
+            <button type="button" class="btn btn-outline-secondary"><i class="bi bi-upload"></i></button>
+          </div>
+
+          <h6 class="text-body-secondary mb-3">Icon + Text (Icon Left)</h6>
+          <div class="button-row mb-4">
+            <button type="button" class="btn btn-primary"><i class="bi bi-plus me-2"></i>Add Item</button>
+            <button type="button" class="btn btn-secondary"><i class="bi bi-download me-2"></i>Download</button>
+            <button type="button" class="btn btn-danger"><i class="bi bi-trash me-2"></i>Delete</button>
+            <button type="button" class="btn btn-outline-primary"><i class="bi bi-save me-2"></i>Save Changes</button>
+          </div>
+
+          <h6 class="text-body-secondary mb-3">Text + Icon (Icon Right)</h6>
+          <div class="button-row mb-4">
+            <button type="button" class="btn btn-primary">Next<i class="bi bi-arrow-right ms-2"></i></button>
+            <button type="button" class="btn btn-secondary">Continue<i class="bi bi-chevron-right ms-2"></i></button>
+            <button type="button" class="btn btn-outline-primary">Learn More<i class="bi bi-box-arrow-up-right ms-2"></i></button>
+          </div>
+
+          <h6 class="text-body-secondary mb-3">Icons in Different Sizes</h6>
+          <div class="button-row mb-4">
+            <button type="button" class="btn btn-primary btn-sm"><i class="bi bi-check me-2"></i>Confirm (Small)</button>
+            <button type="button" class="btn btn-primary"><i class="bi bi-check me-2"></i>Confirm (Default)</button>
+            <button type="button" class="btn btn-primary btn-lg"><i class="bi bi-check me-2"></i>Confirm (Large)</button>
+          </div>
+
+          <h6 class="text-body-secondary mb-3">Icon-Only in Different Sizes</h6>
+          <div class="button-row">
+            <button type="button" class="btn btn-outline-secondary btn-sm"><i class="bi bi-x"></i></button>
+            <button type="button" class="btn btn-outline-secondary"><i class="bi bi-x"></i></button>
+            <button type="button" class="btn btn-outline-secondary btn-lg"><i class="bi bi-x"></i></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Focus States -->
+      <section>
+        <h2>Focus States</h2>
+        <p class="text-body-secondary mb-4">Carbon uses a 2px inset outline in Blue 60 (#0f62fe) for focus indicators</p>
+
+        <div class="demo-box">
+          <p class="mb-3"><strong>Tab through these buttons to see the focus ring:</strong></p>
+          <div class="button-row">
+            <button type="button" class="btn btn-primary">Primary Focus</button>
+            <button type="button" class="btn btn-secondary">Secondary Focus</button>
+            <button type="button" class="btn btn-outline-primary">Outline Focus</button>
+          </div>
+        </div>
+
+        <table class="table spec-table">
+          <thead>
+            <tr>
+              <th>Property</th>
+              <th>Carbon Value</th>
+              <th>Bootstrap Default</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Focus Width</td>
+              <td><code>2px</code></td>
+              <td><code>.25rem</code> (4px)</td>
+            </tr>
+            <tr>
+              <td>Focus Style</td>
+              <td><code>inset 0 0 0 2px #0f62fe</code></td>
+              <td><code>0 0 0 .25rem rgba()</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Hover States -->
+      <section>
+        <h2>Hover States</h2>
+        <p class="text-body-secondary mb-4">Hover over buttons to see the state change with 150ms transition</p>
+
+        <div class="demo-box">
+          <div class="button-row">
+            <button type="button" class="btn btn-primary">Hover Me (Primary)</button>
+            <button type="button" class="btn btn-secondary">Hover Me (Secondary)</button>
+            <button type="button" class="btn btn-danger">Hover Me (Danger)</button>
+          </div>
+        </div>
+
+        <table class="table spec-table">
+          <thead>
+            <tr>
+              <th>Property</th>
+              <th>Carbon Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Transition</td>
+              <td><code>background-color 150ms ease-in-out, border-color 150ms ease-in-out, color 150ms ease-in-out</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Disabled States -->
+      <section>
+        <h2>Disabled States</h2>
+        <p class="text-body-secondary mb-4">Disabled buttons are non-interactive with <code>cursor: not-allowed</code></p>
+
+        <div class="demo-box">
+          <div class="button-row">
+            <button type="button" class="btn btn-primary" disabled>Disabled Primary</button>
+            <button type="button" class="btn btn-secondary" disabled>Disabled Secondary</button>
+            <button type="button" class="btn btn-outline-primary" disabled>Disabled Outline</button>
+          </div>
+        </div>
+
+        <div class="alert alert-info">
+          <strong>Note:</strong> Carbon specifies #c6c6c6 background with #8d8d8d text for disabled buttons.
+          Bootstrap's variable system only supports opacity-based disabled styling.
+          This is a documented limitation of the variable-only customization approach.
+        </div>
+      </section>
+
+      <!-- Button Groups -->
+      <section>
+        <h2>Button Groups</h2>
+        <p class="text-body-secondary mb-4">Button groups render buttons close together with no gaps</p>
+
+        <div class="demo-box">
+          <h6 class="text-body-secondary mb-3">Horizontal Button Group</h6>
+          <div class="button-row mb-4">
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-primary">Left</button>
+              <button type="button" class="btn btn-primary">Middle</button>
+              <button type="button" class="btn btn-primary">Right</button>
+            </div>
+            <div class="btn-group" role="group" aria-label="Outline example">
+              <button type="button" class="btn btn-outline-secondary">Left</button>
+              <button type="button" class="btn btn-outline-secondary">Middle</button>
+              <button type="button" class="btn btn-outline-secondary">Right</button>
+            </div>
+          </div>
+
+          <h6 class="text-body-secondary mb-3">Vertical Button Group</h6>
+          <div class="d-flex gap-4 mb-4">
+            <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+              <button type="button" class="btn btn-primary">Top</button>
+              <button type="button" class="btn btn-primary">Middle</button>
+              <button type="button" class="btn btn-primary">Bottom</button>
+            </div>
+            <div class="btn-group-vertical" role="group" aria-label="Vertical outline group">
+              <button type="button" class="btn btn-outline-secondary">Top</button>
+              <button type="button" class="btn btn-outline-secondary">Middle</button>
+              <button type="button" class="btn btn-outline-secondary">Bottom</button>
+            </div>
+          </div>
+
+          <h6 class="text-body-secondary mb-3">Button Toolbar (Multiple Groups)</h6>
+          <div class="btn-toolbar mb-4" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="btn-group me-2" role="group" aria-label="First group">
+              <button type="button" class="btn btn-primary"><i class="bi bi-skip-backward"></i></button>
+              <button type="button" class="btn btn-primary"><i class="bi bi-play"></i></button>
+              <button type="button" class="btn btn-primary"><i class="bi bi-skip-forward"></i></button>
+            </div>
+            <div class="btn-group me-2" role="group" aria-label="Second group">
+              <button type="button" class="btn btn-secondary"><i class="bi bi-volume-mute"></i></button>
+              <button type="button" class="btn btn-secondary"><i class="bi bi-volume-up"></i></button>
+            </div>
+            <div class="btn-group" role="group" aria-label="Third group">
+              <button type="button" class="btn btn-outline-secondary"><i class="bi bi-shuffle"></i></button>
+              <button type="button" class="btn btn-outline-secondary"><i class="bi bi-repeat"></i></button>
+            </div>
+          </div>
+
+          <h6 class="text-body-secondary mb-3">Button Groups in Different Sizes</h6>
+          <div class="mb-3">
+            <div class="btn-group btn-group-sm" role="group" aria-label="Small group">
+              <button type="button" class="btn btn-primary">Small</button>
+              <button type="button" class="btn btn-primary">Group</button>
+              <button type="button" class="btn btn-primary">Buttons</button>
+            </div>
+          </div>
+          <div class="mb-3">
+            <div class="btn-group" role="group" aria-label="Default group">
+              <button type="button" class="btn btn-primary">Default</button>
+              <button type="button" class="btn btn-primary">Group</button>
+              <button type="button" class="btn btn-primary">Buttons</button>
+            </div>
+          </div>
+          <div>
+            <div class="btn-group btn-group-lg" role="group" aria-label="Large group">
+              <button type="button" class="btn btn-primary">Large</button>
+              <button type="button" class="btn btn-primary">Group</button>
+              <button type="button" class="btn btn-primary">Buttons</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Button with Icons (placeholder) -->
+      <section>
+        <h2>Button Elements</h2>
+        <p class="text-body-secondary mb-4">Different HTML elements styled as buttons</p>
+
+        <div class="demo-box">
+          <div class="button-row">
+            <a class="btn btn-primary" href="#" role="button">Link Button</a>
+            <button class="btn btn-primary" type="submit">Button Element</button>
+            <input class="btn btn-primary" type="button" value="Input Button">
+            <input class="btn btn-primary" type="submit" value="Submit Input">
+          </div>
+        </div>
+      </section>
+
+      <!-- Dark Background Demo -->
+      <section>
+        <h2>Buttons on Dark Background</h2>
+        <p class="text-body-secondary mb-4">Testing button visibility on dark backgrounds (Carbon Gray 100)</p>
+
+        <div class="dark-demo-box">
+          <div class="button-row">
+            <button type="button" class="btn btn-primary">Primary</button>
+            <button type="button" class="btn btn-secondary">Secondary</button>
+            <button type="button" class="btn btn-light">Light</button>
+            <button type="button" class="btn btn-outline-light">Outline Light</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Specification Summary -->
+      <section>
+        <h2>Carbon Button Specifications Summary</h2>
+
+        <table class="table spec-table">
+          <thead>
+            <tr>
+              <th>Property</th>
+              <th>Variable</th>
+              <th>Value</th>
+              <th>Carbon Token</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Border Radius</td>
+              <td><code>$btn-border-radius</code></td>
+              <td><code>0</code></td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>Font Size</td>
+              <td><code>$btn-font-size</code></td>
+              <td><code>.875rem</code> (14px)</td>
+              <td>label-01</td>
+            </tr>
+            <tr>
+              <td>Font Weight</td>
+              <td><code>$btn-font-weight</code></td>
+              <td><code>400</code></td>
+              <td>label-01</td>
+            </tr>
+            <tr>
+              <td>Line Height</td>
+              <td><code>$btn-line-height</code></td>
+              <td><code>1.29</code></td>
+              <td>label-01</td>
+            </tr>
+            <tr>
+              <td>Horizontal Padding</td>
+              <td><code>$btn-padding-x</code></td>
+              <td><code>1rem</code> (16px)</td>
+              <td>spacing-05</td>
+            </tr>
+            <tr>
+              <td>Focus Ring</td>
+              <td><code>$btn-focus-box-shadow</code></td>
+              <td><code>inset 0 0 0 2px #0f62fe</code></td>
+              <td>Blue 60</td>
+            </tr>
+            <tr>
+              <td>Box Shadow</td>
+              <td><code>$btn-box-shadow</code></td>
+              <td><code>none</code></td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>Transition</td>
+              <td><code>$btn-transition</code></td>
+              <td><code>150ms ease-in-out</code></td>
+              <td>-</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Footer -->
+      <footer class="mt-5 pt-4 border-top text-body-secondary">
+        <p>
+          <small>
+            Carbon Design System button integration for Bootstrap 5.3.8<br>
+            Reference: <a href="https://carbondesignsystem.com/components/button/style/" target="_blank">Carbon Button Documentation</a>
+          </small>
+        </p>
+      </footer>
+    </div>
+
+    <script src="../dist/js/bootstrap.bundle.js"></script>
+  </body>
+</html>

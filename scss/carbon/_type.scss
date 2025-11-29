@@ -1,0 +1,10 @@
+// Carbon Typography Customizations
+// Custom list markers per Carbon Design System
+
+ul {
+  list-style-type: "– "; // En dash with space
+}
+
+ul ul {
+  list-style-type: square;
+}

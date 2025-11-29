@@ -1,0 +1,1012 @@
+// Carbon Design System Variable Overrides
+//
+// This file contains all Bootstrap variable overrides to match IBM's Carbon Design System.
+// These variables MUST be imported BEFORE Bootstrap's _variables.scss to take effect,
+// as Bootstrap uses !default which only assigns if the variable is not already set.
+//
+// Reference: https://carbondesignsystem.com/
+
+// ============================================================================
+// Carbon Design System Typography Overrides
+// ============================================================================
+// Reference: https://carbondesignsystem.com/elements/typography/overview/
+// ============================================================================
+
+// -----------------------------------------------------------------------------
+// Font Families (Carbon: IBM Plex)
+// -----------------------------------------------------------------------------
+// stylelint-disable scss/dollar-variable-default, value-keyword-case
+$font-family-sans-serif: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; // Carbon: IBM Plex Sans
+$font-family-monospace: "IBM Plex Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; // Carbon: IBM Plex Mono
+// stylelint-enable value-keyword-case
+
+// -----------------------------------------------------------------------------
+// Base Typography (Carbon: body-long-02)
+// -----------------------------------------------------------------------------
+$font-size-base: 1rem;        // Carbon: 16px
+$font-weight-base: 400;       // Carbon: regular
+$line-height-base: 1.5;       // Carbon: body-long-02
+$font-size-sm: .875rem;       // Carbon: 14px (body-short-01)
+$font-size-lg: 1.25rem;       // Carbon: 20px
+
+// -----------------------------------------------------------------------------
+// Heading Typography (Carbon: productive headings)
+// -----------------------------------------------------------------------------
+$h1-font-size: 2rem;          // Carbon: productive-heading-05
+$h2-font-size: 1.75rem;       // Carbon: productive-heading-04
+$h3-font-size: 1.25rem;       // Carbon: productive-heading-03
+$h4-font-size: 1rem;          // Carbon: productive-heading-02
+$h5-font-size: .875rem;       // Carbon: productive-heading-01
+$h6-font-size: .875rem;       // Carbon: productive-heading-01
+$headings-font-weight: 400;   // Carbon: h1-h3 use 400 (design decision)
+$headings-line-height: 1.3;   // Carbon: balanced value (design decision)
+
+// -----------------------------------------------------------------------------
+// Display Typography (Carbon: expressive style)
+// -----------------------------------------------------------------------------
+$display-font-sizes: (
+  1: 3.75rem,   // 60px - Carbon expressive
+  2: 3.25rem,   // 52px
+  3: 2.75rem,   // 44px
+  4: 2.25rem,   // 36px
+  5: 2rem,      // 32px
+  6: 1.75rem    // 28px
+);
+$display-font-weight: 300;    // Carbon: light weight for display
+$display-line-height: 1.2;    // Carbon: tighter for large text
+
+// -----------------------------------------------------------------------------
+// Utility Typography
+// -----------------------------------------------------------------------------
+$lead-font-size: 1.25rem;     // Carbon: emphasis text
+$lead-font-weight: 300;       // Carbon: light emphasis
+$small-font-size: .875em;     // Carbon: 14px equivalent
+$blockquote-font-size: 1.25rem; // Carbon: quote styling
+$code-font-size: .875em;      // Carbon: code-02
+
+// -----------------------------------------------------------------------------
+// Responsive Font Sizing (RFS) Tuning
+// -----------------------------------------------------------------------------
+$rfs-base-value: 1rem;        // Carbon: minimum body size
+$rfs-breakpoint: 1056px;      // Carbon: 66rem breakpoint
+$rfs-factor: 8;               // Carbon: more aggressive than default (10)
+
+// stylelint-enable scss/dollar-variable-default
+// ============================================================================
+// End Carbon Typography Overrides
+// ============================================================================
+
+// ============================================================================
+// Carbon Design System Spacing Overrides
+// ============================================================================
+// Reference: https://carbondesignsystem.com/elements/spacing/overview/
+// ============================================================================
+
+// stylelint-disable scss/dollar-variable-default
+
+// -----------------------------------------------------------------------------
+// Base Spacer (Carbon: spacing-05)
+// -----------------------------------------------------------------------------
+$spacer: 1rem; // Carbon: 16px (spacing-05)
+
+// -----------------------------------------------------------------------------
+// Spacers Map (Carbon Spacing Scale)
+// -----------------------------------------------------------------------------
+// Keys 0-5: Bootstrap-compatible values mapped to nearest Carbon tokens
+// Keys 6-9: Additional Carbon spacing values
+// -----------------------------------------------------------------------------
+$spacers: (
+  0: 0,                    // No spacing
+  1: $spacer * .25,        // Carbon: spacing-02 (4px)
+  2: $spacer * .5,         // Carbon: spacing-03 (8px)
+  3: $spacer,              // Carbon: spacing-05 (16px)
+  4: $spacer * 1.5,        // Carbon: spacing-06 (24px)
+  5: $spacer * 3,          // Carbon: spacing-09 (48px)
+  6: $spacer * .125,       // Carbon: spacing-01 (2px)
+  7: $spacer * .75,        // Carbon: spacing-04 (12px)
+  8: $spacer * 2,          // Carbon: spacing-07 (32px)
+  9: $spacer * 2.5,        // Carbon: spacing-08 (40px)
+);
+
+// stylelint-enable scss/dollar-variable-default
+// ============================================================================
+// End Carbon Spacing Overrides
+// ============================================================================
+
+// ============================================================================
+// Carbon Design System Grid Overrides
+// ============================================================================
+// Reference: https://carbondesignsystem.com/elements/2x-grid/overview/
+// ============================================================================
+
+// stylelint-disable scss/dollar-variable-default
+
+// -----------------------------------------------------------------------------
+// Grid Breakpoints (Carbon 2x Grid)
+// -----------------------------------------------------------------------------
+$grid-breakpoints: (
+  xs: 0,
+  sm: 320px,    // Carbon: sm
+  md: 672px,    // Carbon: md
+  lg: 1056px,   // Carbon: lg
+  xl: 1312px,   // Carbon: xlg
+  xxl: 1584px   // Carbon: max
+);
+
+// -----------------------------------------------------------------------------
+// Container Max-Widths
+// -----------------------------------------------------------------------------
+$container-max-widths: (
+  sm: 288px,    // Carbon: sm - gutter
+  md: 640px,    // Carbon: md - gutter
+  lg: 1024px,   // Carbon: lg - gutter
+  xl: 1280px,   // Carbon: xlg - gutter
+  xxl: 1584px   // Carbon: max-width
+);
+
+// -----------------------------------------------------------------------------
+// Grid Configuration
+// -----------------------------------------------------------------------------
+$grid-columns: 16;              // Carbon: 16-column grid
+$grid-gutter-width: 2rem;       // Carbon: wide mode (32px)
+$grid-row-columns: 8;           // Half of grid columns
+
+// -----------------------------------------------------------------------------
+// Container Padding
+// -----------------------------------------------------------------------------
+$container-padding-x: $grid-gutter-width; // Carbon: matches gutter
+
+// stylelint-enable scss/dollar-variable-default
+// ============================================================================
+// End Carbon Grid Overrides
+// ============================================================================
+
+// ============================================================================
+// Carbon Design System Color Overrides
+// ============================================================================
+// Reference: https://carbondesignsystem.com/elements/color/overview/
+// ============================================================================
+
+// stylelint-disable scss/dollar-variable-default
+
+// -----------------------------------------------------------------------------
+// Gray Scale (Carbon Gray Palette)
+// -----------------------------------------------------------------------------
+$white:    #fff;
+$gray-100: #f4f4f4; // Carbon: Gray 10
+$gray-200: #e0e0e0; // Carbon: Gray 20
+$gray-300: #c6c6c6; // Carbon: Gray 30
+$gray-400: #a8a8a8; // Carbon: Gray 40
+$gray-500: #8d8d8d; // Carbon: Gray 50
+$gray-600: #6f6f6f; // Carbon: Gray 60
+$gray-700: #525252; // Carbon: Gray 70
+$gray-800: #393939; // Carbon: Gray 80
+$gray-900: #161616; // Carbon: Gray 100
+$black:    #000;
+
+// -----------------------------------------------------------------------------
+// Base Colors (Carbon Color Palette)
+// -----------------------------------------------------------------------------
+$blue:    #0f62fe; // Carbon: Blue 60 (interactive-01)
+$red:     #da1e28; // Carbon: Red 60 (danger)
+$green:   #24a148; // Carbon: Green 50 (success)
+$yellow:  #f1c21b; // Carbon: Yellow 30 (warning)
+$cyan:    #1192e8; // Carbon: Cyan 50
+
+// -----------------------------------------------------------------------------
+// Theme Colors
+// -----------------------------------------------------------------------------
+$primary:   #0f62fe; // Carbon: Blue 60 (interactive-01)
+$secondary: #393939; // Carbon: Gray 80 (interactive-02)
+$success:   #24a148; // Carbon: Green 50 (support-02)
+$info:      #0043ce; // Carbon: Blue 70 (support-04)
+$warning:   #f1c21b; // Carbon: Yellow 30 (support-03)
+$danger:    #da1e28; // Carbon: Red 60 (support-01)
+$light:     #f4f4f4; // Carbon: Gray 10
+$dark:      #161616; // Carbon: Gray 100
+
+// -----------------------------------------------------------------------------
+// Body Colors
+// -----------------------------------------------------------------------------
+$body-color:          #161616; // Carbon: text-01 (Gray 100)
+$body-bg:             #fff; // Carbon: ui-background
+$body-secondary-color: #525252; // Carbon: text-02 (Gray 70)
+$body-tertiary-color:  #8d8d8d; // Carbon: text-03 (Gray 50)
+$body-emphasis-color:  #000; // Carbon: text emphasis
+
+// -----------------------------------------------------------------------------
+// Link Colors
+// -----------------------------------------------------------------------------
+// Reference: https://carbondesignsystem.com/components/link/style
+$link-color:            $primary; // Carbon: link-01 (Blue 60)
+$link-hover-color:      $info;    // Carbon: hover-primary-text (Blue 70)
+$link-decoration:       underline; // Carbon: links have underline
+$link-hover-decoration: underline; // Carbon: maintain underline on hover
+
+// stylelint-enable scss/dollar-variable-default
+// ============================================================================
+// End Carbon Color Overrides
+// ============================================================================
+
+// ============================================================================
+// Carbon Button Overrides
+// ============================================================================
+// Reference: https://carbondesignsystem.com/components/button/style
+// stylelint-disable scss/dollar-variable-default
+
+// -----------------------------------------------------------------------------
+// Button Shape
+// -----------------------------------------------------------------------------
+// Carbon buttons have no border radius (rectangular)
+$btn-border-radius:    0;
+$btn-border-radius-sm: 0;
+$btn-border-radius-lg: 0;
+
+// -----------------------------------------------------------------------------
+// Button Sizing
+// -----------------------------------------------------------------------------
+// Carbon button heights: sm=32px, md=40px, lg=48px
+// All sizes use 14px (0.875rem) font with 16px (1rem) horizontal padding
+// Height = (padding-y × 2) + (font-size × line-height) + (border × 2)
+
+// Default button (40px height): 10×2 + 18 + 2 = 40px
+$btn-padding-y:   .625rem;   // Carbon: 10px vertical padding
+$btn-padding-x:   1rem;      // Carbon: spacing-05 (16px)
+$btn-font-size:   .875rem;   // Carbon: label-01 (14px)
+$btn-line-height: 1.29;      // Carbon: 18px line height (14 × 1.29)
+
+// Small button (32px height): 5×2 + 18 + 2 = 30px (closest to 32px)
+$btn-padding-y-sm:   .3125rem;  // Carbon: 5px vertical padding
+$btn-padding-x-sm:   1rem;      // Carbon: spacing-05 (16px)
+$btn-font-size-sm:   .875rem;   // Carbon: label-01 (14px)
+
+// Large button (48px height): 14×2 + 18 + 2 = 48px
+$btn-padding-y-lg:   .875rem;   // Carbon: 14px vertical padding
+$btn-padding-x-lg:   1rem;      // Carbon: spacing-05 (16px)
+$btn-font-size-lg:   .875rem;   // Carbon: label-01 (14px)
+
+// -----------------------------------------------------------------------------
+// Button Typography
+// -----------------------------------------------------------------------------
+$btn-font-weight: 400;  // Carbon: label-01 uses regular weight
+
+// -----------------------------------------------------------------------------
+// Button Focus States
+// -----------------------------------------------------------------------------
+// Carbon uses 2px inset outline; Bootstrap uses box-shadow for focus
+// inset box-shadow achieves similar visual appearance
+$btn-focus-width:      2px;
+$btn-focus-box-shadow: inset 0 0 0 2px #0f62fe;  // Carbon: Blue 60 focus
+
+// -----------------------------------------------------------------------------
+// Button Box Shadows
+// -----------------------------------------------------------------------------
+// Carbon buttons have flat design - no decorative shadows
+$btn-box-shadow:        none;
+$btn-active-box-shadow: none;
+
+// -----------------------------------------------------------------------------
+// Button Transitions
+// -----------------------------------------------------------------------------
+$btn-transition: background-color 150ms ease-in-out, border-color 150ms ease-in-out, color 150ms ease-in-out;
+
+// -----------------------------------------------------------------------------
+// Button Disabled State
+// -----------------------------------------------------------------------------
+// Carbon uses explicit disabled colors (#c6c6c6 bg, #8d8d8d text)
+// Bootstrap only supports opacity-based disabled styling via variables
+// Setting opacity to 1 prevents dimming; exact Carbon colors require CSS overrides
+$btn-disabled-opacity: 1;
+
+// stylelint-enable scss/dollar-variable-default
+// ============================================================================
+// End Carbon Button Overrides
+// ============================================================================
+
+// ============================================================================
+// Carbon Border Radius Overrides
+// ============================================================================
+// Reference: https://carbondesignsystem.com/elements/spacing/overview/
+// Carbon uses rectangular elements with 0 border-radius for most components
+// stylelint-disable scss/dollar-variable-default
+
+// -----------------------------------------------------------------------------
+// Base Border Radius
+// -----------------------------------------------------------------------------
+// Carbon uses square corners (0px border-radius) for all UI elements
+$border-radius:      0;
+$border-radius-sm:   0;
+$border-radius-lg:   0;
+$border-radius-xl:   0;
+$border-radius-xxl:  0;
+$border-radius-pill: 0;  // Pill utilities will be removed
+
+// -----------------------------------------------------------------------------
+// Form-Specific Border Radius
+// -----------------------------------------------------------------------------
+// Checkboxes should be square in Carbon, radio buttons remain circular
+$form-check-input-border-radius: 0;
+// $form-check-radio-border-radius: 50%; // Keep default - radios must be circular
+
+// stylelint-enable scss/dollar-variable-default
+// ============================================================================
+// End Carbon Border Radius Overrides
+// ============================================================================
+
+// ============================================================================
+// Carbon List Group Overrides
+// ============================================================================
+// Reference: https://carbondesignsystem.com/components/list/style
+// stylelint-disable scss/dollar-variable-default
+
+// -----------------------------------------------------------------------------
+// List Group Spacing
+// -----------------------------------------------------------------------------
+// Carbon uses spacing-04 (12px) for list item vertical padding
+$list-group-item-padding-y: $spacer * .75; // Carbon: spacing-04 (12px)
+
+// -----------------------------------------------------------------------------
+// List Group Colors
+// -----------------------------------------------------------------------------
+// Action items use primary text color, not secondary
+$list-group-action-color: $body-color; // Carbon: text-01
+
+// -----------------------------------------------------------------------------
+// List Group Interaction States
+// -----------------------------------------------------------------------------
+// Hover uses ui-01 (Gray 10), active uses Gray 20
+$list-group-hover-bg:         $gray-100; // Carbon: ui-01 (Gray 10)
+$list-group-action-active-bg: $gray-200; // Carbon: ui-02 (Gray 20)
+
+// -----------------------------------------------------------------------------
+// List Group Disabled State
+// -----------------------------------------------------------------------------
+$list-group-disabled-color: $gray-500; // Carbon: text-03 (Gray 50)
+
+// stylelint-enable scss/dollar-variable-default
+// ============================================================================
+// End Carbon List Group Overrides
+// ============================================================================
+
+// ============================================================================
+// Carbon Accordion Overrides
+// ============================================================================
+// Reference: https://carbondesignsystem.com/components/accordion/style
+// stylelint-disable scss/dollar-variable-default
+
+// -----------------------------------------------------------------------------
+// Accordion Spacing
+// -----------------------------------------------------------------------------
+// Carbon uses spacing-04 (12px) vertical, spacing-05 (16px) horizontal
+$accordion-padding-y: $spacer * .75; // Carbon: spacing-04 (12px)
+$accordion-padding-x: $spacer;       // Carbon: spacing-05 (16px)
+
+// -----------------------------------------------------------------------------
+// Accordion Border
+// -----------------------------------------------------------------------------
+// Carbon uses Gray 30 for accordion borders
+$accordion-border-color: $gray-300; // Carbon: ui-03 (Gray 30)
+
+// -----------------------------------------------------------------------------
+// Accordion Active/Expanded State
+// -----------------------------------------------------------------------------
+// Carbon accordion headers don't change color when expanded
+$accordion-button-active-bg:    $body-bg;    // Carbon: no background change
+$accordion-button-active-color: $body-color; // Carbon: text-01
+
+// -----------------------------------------------------------------------------
+// Accordion Icon
+// -----------------------------------------------------------------------------
+// Keep icon color consistent in both states
+$accordion-icon-active-color: $body-color; // Carbon: icon-01
+
+// -----------------------------------------------------------------------------
+// Accordion Focus State
+// -----------------------------------------------------------------------------
+// Disable box-shadow focus - custom outline applied in carbon/_accordion.scss
+$accordion-button-focus-box-shadow: none;
+
+// stylelint-enable scss/dollar-variable-default
+// ============================================================================
+// End Carbon Accordion Overrides
+// ============================================================================
+
+// ============================================================================
+// Carbon Alert Overrides
+// ============================================================================
+// Reference: https://carbondesignsystem.com/components/notification/style
+// stylelint-disable scss/dollar-variable-default
+
+// -----------------------------------------------------------------------------
+// Alert Spacing
+// -----------------------------------------------------------------------------
+// Carbon uses spacing-04 (12px) vertical, spacing-05 (16px) horizontal
+$alert-padding-y: $spacer * .75;           // Carbon: spacing-04 (12px)
+$alert-padding-x: $spacer;                  // Carbon: spacing-05 (16px)
+
+// -----------------------------------------------------------------------------
+// Alert Border
+// -----------------------------------------------------------------------------
+// Carbon notifications have square corners and subtle borders
+$alert-border-radius: 0;                    // Carbon: square corners
+$alert-border-width: 1px;                   // Base border width
+
+// -----------------------------------------------------------------------------
+// Alert Typography
+// -----------------------------------------------------------------------------
+$alert-link-font-weight: 600; // Carbon: semibold
+
+// stylelint-enable scss/dollar-variable-default
+// ============================================================================
+// End Carbon Alert Overrides
+// ============================================================================
+
+// ============================================================================
+// Carbon Breadcrumb Overrides
+// ============================================================================
+// Reference: https://carbondesignsystem.com/components/breadcrumb/style
+// stylelint-disable scss/dollar-variable-default
+
+// -----------------------------------------------------------------------------
+// Breadcrumb Typography
+// -----------------------------------------------------------------------------
+// Carbon uses body-compact-01 token (14px)
+$breadcrumb-font-size: .875rem;                     // Carbon: body-compact-01 (14px)
+
+// -----------------------------------------------------------------------------
+// Breadcrumb Spacing
+// -----------------------------------------------------------------------------
+// Carbon uses spacing-03 (8px) between items
+$breadcrumb-item-padding-x: .5rem;                  // Carbon: spacing-03 (8px)
+
+// -----------------------------------------------------------------------------
+// Breadcrumb Colors
+// -----------------------------------------------------------------------------
+// Separator and active item use text-primary (Gray 100)
+$breadcrumb-divider-color: $body-color;             // Carbon: $text-primary (#161616)
+$breadcrumb-active-color: $body-color;              // Carbon: $text-primary (#161616)
+
+// stylelint-enable scss/dollar-variable-default
+// ============================================================================
+// End Carbon Breadcrumb Overrides
+// ============================================================================
+
+// ============================================================================
+// Carbon Pagination Overrides
+// ============================================================================
+// Reference: https://carbondesignsystem.com/components/pagination/style
+// stylelint-disable scss/dollar-variable-default
+
+// -----------------------------------------------------------------------------
+// Pagination Typography
+// -----------------------------------------------------------------------------
+// Carbon uses body-compact-01 token (14px)
+$pagination-font-size: .875rem;                     // Carbon: body-compact-01 (14px)
+
+// -----------------------------------------------------------------------------
+// Pagination Sizing - Default (40px height)
+// -----------------------------------------------------------------------------
+// Height = (padding-y × 2) + (font-size × line-height) + (border × 2)
+// 40px = (10px × 2) + (14px × 1.29) + (1px × 2) ≈ 40px
+$pagination-padding-y: .625rem;                     // Carbon: 10px
+$pagination-padding-x: 1rem;                        // Carbon: spacing-05 (16px)
+
+// -----------------------------------------------------------------------------
+// Pagination Sizing - Small (32px height)
+// -----------------------------------------------------------------------------
+// 32px = (5px × 2) + (14px × 1.29) + (1px × 2) ≈ 30px (closest achievable)
+$pagination-padding-y-sm: .3125rem;                 // Carbon: sm (5px)
+$pagination-padding-x-sm: 1rem;                     // Carbon: spacing-05 (16px)
+
+// -----------------------------------------------------------------------------
+// Pagination Sizing - Large (48px height)
+// -----------------------------------------------------------------------------
+// 48px = (14px × 2) + (14px × 1.29) + (1px × 2) ≈ 48px
+$pagination-padding-y-lg: .875rem;                  // Carbon: lg (14px)
+$pagination-padding-x-lg: 1rem;                     // Carbon: spacing-05 (16px)
+
+// -----------------------------------------------------------------------------
+// Pagination Colors - Default State
+// -----------------------------------------------------------------------------
+$pagination-color: $body-color;                     // Carbon: $text-primary (#161616)
+$pagination-bg: $body-bg;                           // Carbon: $layer (white)
+$pagination-border-color: $gray-200;                // Carbon: $border-subtle (Gray 20)
+
+// -----------------------------------------------------------------------------
+// Pagination Colors - Hover State
+// -----------------------------------------------------------------------------
+$pagination-hover-color: $body-color;               // Carbon: $text-primary
+$pagination-hover-bg: $gray-100;                    // Carbon: $layer-hover (Gray 10)
+$pagination-hover-border-color: $gray-200;          // Carbon: $border-subtle
+
+// -----------------------------------------------------------------------------
+// Pagination Colors - Focus State
+// -----------------------------------------------------------------------------
+$pagination-focus-color: $body-color;               // Carbon: $text-primary
+$pagination-focus-bg: $body-bg;                     // Carbon: maintain background
+$pagination-focus-box-shadow: none;                 // Disable - use outline instead
+
+// -----------------------------------------------------------------------------
+// Pagination Colors - Active State
+// -----------------------------------------------------------------------------
+$pagination-active-color: $white;                   // Carbon: $text-on-color
+$pagination-active-bg: $primary;                    // Carbon: $interactive (Blue 60)
+$pagination-active-border-color: $primary;          // Carbon: match background
+
+// -----------------------------------------------------------------------------
+// Pagination Colors - Disabled State
+// -----------------------------------------------------------------------------
+$pagination-disabled-color: $gray-500;              // Carbon: $text-disabled (Gray 50)
+$pagination-disabled-bg: $body-bg;                  // Carbon: maintain background
+$pagination-disabled-border-color: $gray-200;       // Carbon: $border-subtle
+
+// -----------------------------------------------------------------------------
+// Pagination Shape
+// -----------------------------------------------------------------------------
+// Carbon uses rectangular elements
+$pagination-border-radius: 0;
+$pagination-border-radius-sm: 0;
+$pagination-border-radius-lg: 0;
+
+// stylelint-enable scss/dollar-variable-default
+// ============================================================================
+// End Carbon Pagination Overrides
+// ============================================================================
+
+// ============================================================================
+// Carbon Pagination Nav Overrides
+// ============================================================================
+// Reference: https://carbondesignsystem.com/components/pagination/usage/
+// stylelint-disable scss/dollar-variable-default
+
+// -----------------------------------------------------------------------------
+// Pagination Nav Sizing
+// -----------------------------------------------------------------------------
+$pagination-nav-height:       2.5rem;              // Carbon: 40px default
+$pagination-nav-height-sm:    2rem;                // Carbon: 32px small
+$pagination-nav-height-lg:    3rem;                // Carbon: 48px large
+$pagination-nav-font-size:    .875rem;             // Carbon: body-compact-01 (14px)
+$pagination-nav-padding-x:    1rem;                // Carbon: spacing-05 (16px)
+
+// -----------------------------------------------------------------------------
+// Pagination Nav Colors
+// -----------------------------------------------------------------------------
+$pagination-nav-bg:           $body-bg;            // Carbon: $layer
+$pagination-nav-color:        $body-color;         // Carbon: $text-primary
+$pagination-nav-border-color: $gray-200;           // Carbon: $border-subtle
+
+// -----------------------------------------------------------------------------
+// Pagination Nav Select
+// -----------------------------------------------------------------------------
+$pagination-nav-select-bg:           $gray-100;    // Carbon: $field (Gray 10)
+$pagination-nav-select-hover-bg:     $gray-200;    // Carbon: $field-hover
+$pagination-nav-select-border-color: $gray-300;    // Carbon: $border-strong
+$pagination-nav-select-disabled-color: $gray-500;  // Carbon: $text-disabled
+
+// -----------------------------------------------------------------------------
+// Pagination Nav Buttons
+// -----------------------------------------------------------------------------
+$pagination-nav-btn-hover-bg:     $gray-200;       // Carbon: $layer-hover
+$pagination-nav-btn-disabled-color: $gray-300;     // Carbon: $icon-disabled
+$pagination-nav-btn-focus-color:  $primary;        // Carbon: $focus (Blue 60)
+
+// stylelint-enable scss/dollar-variable-default
+// ============================================================================
+// End Carbon Pagination Nav Overrides
+// ============================================================================
+
+// ============================================================================
+// Carbon Popover Overrides
+// ============================================================================
+// Reference: https://carbondesignsystem.com/components/popover/style/
+// ============================================================================
+
+// stylelint-disable scss/dollar-variable-default
+
+// -----------------------------------------------------------------------------
+// Popover Container
+// -----------------------------------------------------------------------------
+$popover-font-size:         .875rem;              // Carbon: 14px body text
+$popover-bg:                $body-bg;             // Carbon: $layer (white)
+$popover-max-width:         368px;                // Carbon: max-inline-size
+$popover-border-width:      1px;                  // Carbon: subtle border
+$popover-border-color:      $gray-200;            // Carbon: $border-subtle
+$popover-border-radius:     2px;                  // Carbon: 2px standard radius
+$popover-box-shadow:        0 2px 2px rgba(0, 0, 0, .2); // Carbon: drop shadow
+
+// -----------------------------------------------------------------------------
+// Popover Header
+// -----------------------------------------------------------------------------
+$popover-header-font-size:  1rem;                 // Carbon: 16px header
+$popover-header-bg:         $body-bg;             // Carbon: same as body (no distinct header bg)
+$popover-header-color:      $body-color;          // Carbon: $text-primary
+$popover-header-padding-y:  .5rem;                // Carbon: 8px vertical
+$popover-header-padding-x:  1rem;                 // Carbon: spacing-05 (16px)
+
+// -----------------------------------------------------------------------------
+// Popover Body
+// -----------------------------------------------------------------------------
+$popover-body-color:        $body-color;          // Carbon: $text-primary
+$popover-body-padding-y:    1rem;                 // Carbon: spacing-05 (16px)
+$popover-body-padding-x:    1rem;                 // Carbon: spacing-05 (16px)
+
+// -----------------------------------------------------------------------------
+// Popover Arrow/Caret
+// -----------------------------------------------------------------------------
+$popover-arrow-width:       .75rem;               // Carbon: 12px
+$popover-arrow-height:      .375rem;              // Carbon: 6px
+
+// stylelint-enable scss/dollar-variable-default
+// ============================================================================
+// End Carbon Popover Overrides
+// ============================================================================
+
+// ============================================================================
+// Carbon Progress Bar Overrides
+// ============================================================================
+// Reference: https://carbondesignsystem.com/components/progress-bar/style/
+// ============================================================================
+
+// stylelint-disable scss/dollar-variable-default
+
+// -----------------------------------------------------------------------------
+// Progress Track
+// -----------------------------------------------------------------------------
+$progress-height:           .5rem;                // Carbon: 8px default
+$progress-bg:               $gray-100;            // Carbon: $layer (Gray 10)
+$progress-border-radius:    0;                    // Carbon: square corners
+$progress-box-shadow:       none;                 // Carbon: flat design
+
+// -----------------------------------------------------------------------------
+// Progress Bar (Indicator)
+// -----------------------------------------------------------------------------
+$progress-bar-color:        $white;               // Carbon: text on bar
+$progress-bar-bg:           $primary;             // Carbon: $interactive (Blue 60)
+$progress-bar-transition:   width .4s ease;       // Carbon: smooth transition
+
+// -----------------------------------------------------------------------------
+// Progress Font
+// -----------------------------------------------------------------------------
+$progress-font-size:        .75rem;               // Carbon: 12px for labels
+
+// stylelint-enable scss/dollar-variable-default
+// ============================================================================
+// End Carbon Progress Bar Overrides
+// ============================================================================
+
+// ============================================================================
+// Carbon Switch/Toggle Overrides
+// ============================================================================
+// Reference: https://carbondesignsystem.com/components/toggle/style/
+// ============================================================================
+
+// stylelint-disable scss/dollar-variable-default
+
+// -----------------------------------------------------------------------------
+// Switch Track
+// -----------------------------------------------------------------------------
+$form-switch-width:           3rem;                 // Carbon: 48px
+$form-switch-padding-start:   3.5rem;                // Carbon: 48px + 8px gap
+$form-switch-border-radius:   .75rem;               // Carbon: 12px pill shape
+$form-switch-transition:      background-position .15s ease-in-out, background-color .15s ease-in-out;
+
+// -----------------------------------------------------------------------------
+// Switch Handle Colors (SVG circle)
+// -----------------------------------------------------------------------------
+// OFF state: gray track, white handle
+$form-switch-color:           $white;               // Carbon: white handle
+$form-switch-bg-image:        url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$form-switch-color}'/></svg>");
+
+// Focus state: same white handle
+$form-switch-focus-color:     $white;
+$form-switch-focus-bg-image:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$form-switch-focus-color}'/></svg>");
+
+// Checked state: white handle on green track
+$form-switch-checked-color:   $white;
+$form-switch-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$form-switch-checked-color}'/></svg>");
+
+// stylelint-enable scss/dollar-variable-default
+// ============================================================================
+// End Carbon Switch/Toggle Overrides
+// ============================================================================
+
+// ============================================================================
+// Carbon Tooltip Overrides
+// ============================================================================
+// Reference: https://carbondesignsystem.com/components/tooltip/style/
+// ============================================================================
+
+// stylelint-disable scss/dollar-variable-default
+
+// -----------------------------------------------------------------------------
+// Tooltip Container
+// -----------------------------------------------------------------------------
+$tooltip-font-size:         .875rem;              // Carbon: 14px body text
+$tooltip-max-width:         288px;                // Carbon: standard tooltip width
+$tooltip-color:             $white;               // Carbon: white text on dark bg
+$tooltip-bg:                $gray-800;            // Carbon: Gray 80 (#393939)
+$tooltip-border-radius:     2px;                  // Carbon: 2px standard radius
+$tooltip-opacity:           1;                    // Carbon: fully opaque
+
+// -----------------------------------------------------------------------------
+// Tooltip Padding
+// -----------------------------------------------------------------------------
+$tooltip-padding-y:         .5rem;                // Carbon: 8px vertical
+$tooltip-padding-x:         1rem;                 // Carbon: 16px horizontal
+
+// -----------------------------------------------------------------------------
+// Tooltip Arrow/Caret
+// -----------------------------------------------------------------------------
+$tooltip-arrow-width:       .5rem;                // Carbon: 8px
+$tooltip-arrow-height:      .25rem;               // Carbon: 4px
+
+// stylelint-enable scss/dollar-variable-default
+// ============================================================================
+// End Carbon Tooltip Overrides
+// ============================================================================
+
+// ============================================================================
+// Carbon Modal Overrides
+// ============================================================================
+// Reference: https://carbondesignsystem.com/components/modal/style/
+// ============================================================================
+
+// stylelint-disable scss/dollar-variable-default
+
+// -----------------------------------------------------------------------------
+// Modal Container
+// -----------------------------------------------------------------------------
+$modal-inner-padding:               1rem;                 // Carbon: 16px spacing-05
+$modal-content-color:               $body-color;          // Carbon: $text-primary
+$modal-content-bg:                  $body-bg;             // Carbon: $layer (white)
+$modal-content-border-color:        $gray-200;            // Carbon: $border-subtle
+$modal-content-border-width:        1px;                  // Carbon: standard border
+$modal-content-border-radius:       0;                    // Carbon: square corners
+$modal-content-box-shadow-xs:       0 2px 6px rgba(0, 0, 0, .3);  // Carbon: drop shadow
+$modal-content-box-shadow-sm-up:    0 2px 6px rgba(0, 0, 0, .3);  // Carbon: same shadow
+
+// -----------------------------------------------------------------------------
+// Modal Header
+// -----------------------------------------------------------------------------
+$modal-header-border-color:         $gray-200;            // Carbon: $border-subtle
+$modal-header-border-width:         1px;                  // Carbon: standard border
+$modal-header-padding-y:            1rem;                 // Carbon: 16px
+$modal-header-padding-x:            1rem;                 // Carbon: 16px
+
+// -----------------------------------------------------------------------------
+// Modal Footer
+// -----------------------------------------------------------------------------
+$modal-footer-bg:                   $body-bg;             // Carbon: white background
+$modal-footer-border-color:         $gray-200;            // Carbon: $border-subtle
+$modal-footer-border-width:         1px;                  // Carbon: standard border
+
+// -----------------------------------------------------------------------------
+// Modal Backdrop
+// -----------------------------------------------------------------------------
+$modal-backdrop-bg:                 $gray-900;            // Carbon: Gray 100 (#161616)
+$modal-backdrop-opacity:            .5;                   // Carbon: 50% opacity
+
+// -----------------------------------------------------------------------------
+// Modal Sizes
+// -----------------------------------------------------------------------------
+$modal-sm:                          448px;                // Carbon: small modal
+$modal-md:                          576px;                // Carbon: default modal
+$modal-lg:                          672px;                // Carbon: large modal
+$modal-xl:                          896px;                // Carbon: extra-large modal
+
+// stylelint-enable scss/dollar-variable-default
+// ============================================================================
+// End Carbon Modal Overrides
+// ============================================================================
+
+// ============================================================================
+// Carbon Form Overrides
+// ============================================================================
+// Reference: https://carbondesignsystem.com/components/form/style/
+// ============================================================================
+
+// stylelint-disable scss/dollar-variable-default
+
+// -----------------------------------------------------------------------------
+// Form Label
+// -----------------------------------------------------------------------------
+$form-label-margin-bottom:        .5rem;                // Carbon: 8px
+$form-label-font-size:            .75rem;               // Carbon: 12px label-01
+$form-label-font-weight:          400;                  // Carbon: regular weight
+$form-label-color:                $gray-700;            // Carbon: $text-secondary (#525252)
+
+// -----------------------------------------------------------------------------
+// Form Text (Helper Text)
+// -----------------------------------------------------------------------------
+$form-text-margin-top:            .25rem;               // Carbon: 4px
+$form-text-font-size:             .75rem;               // Carbon: 12px helper-text-01
+$form-text-color:                 $gray-700;            // Carbon: $text-secondary (#525252)
+
+// -----------------------------------------------------------------------------
+// Input Sizing - Default (40px height)
+// -----------------------------------------------------------------------------
+// Height = (padding-y × 2) + (font-size × line-height) + (border × 2)
+// 40px = (10px × 2) + (16px × 1.25) + (1px × 2) = 42px (close)
+$input-btn-padding-y:             .625rem;              // Carbon: 10px
+$input-btn-padding-x:             1rem;                 // Carbon: spacing-05 (16px)
+$input-btn-font-size:             1rem;                 // Carbon: body-01 (16px)
+$input-btn-line-height:           1.25;                 // Carbon: adjusted for height
+
+// -----------------------------------------------------------------------------
+// Input Sizing - Small (32px height)
+// -----------------------------------------------------------------------------
+// 32px = (5px × 2) + (14px × 1.29) + (1px × 2) ≈ 30px
+$input-btn-padding-y-sm:          .3125rem;             // Carbon: 5px
+$input-btn-padding-x-sm:          1rem;                 // Carbon: spacing-05 (16px)
+$input-btn-font-size-sm:          .875rem;              // Carbon: body-compact-01 (14px)
+
+// -----------------------------------------------------------------------------
+// Input Sizing - Large (48px height)
+// -----------------------------------------------------------------------------
+// 48px = (14px × 2) + (16px × 1.25) + (1px × 2) = 50px (close)
+$input-btn-padding-y-lg:          .875rem;              // Carbon: 14px
+$input-btn-padding-x-lg:          1rem;                 // Carbon: spacing-05 (16px)
+$input-btn-font-size-lg:          1rem;                 // Carbon: body-01 (16px)
+
+// -----------------------------------------------------------------------------
+// Input Colors
+// -----------------------------------------------------------------------------
+$input-bg:                        $body-bg;             // Carbon: $field (#ffffff)
+$input-color:                     $body-color;          // Carbon: $text-primary (#161616)
+$input-border-color:              $gray-500;            // Carbon: $border-strong (#8d8d8d)
+$input-placeholder-color:         $gray-600;            // Carbon: $text-placeholder (#6f6f6f)
+
+// -----------------------------------------------------------------------------
+// Input Disabled State
+// -----------------------------------------------------------------------------
+$input-disabled-color:            $gray-300;            // Carbon: $text-disabled (#c6c6c6)
+$input-disabled-bg:               $gray-100;            // Carbon: $field-disabled (#f4f4f4)
+$input-disabled-border-color:     $gray-300;            // Carbon: $border-disabled (#c6c6c6)
+
+// -----------------------------------------------------------------------------
+// Input Focus State
+// -----------------------------------------------------------------------------
+// Note: Carbon uses outline, not box-shadow. Custom CSS needed for outline.
+// These variables disable Bootstrap's default box-shadow focus.
+$input-focus-border-color:        $primary;             // Carbon: $focus (#0f62fe)
+$input-focus-box-shadow:          none;                 // Disable box-shadow, use outline
+$input-btn-focus-box-shadow:      none;                 // Disable shared focus shadow
+
+// -----------------------------------------------------------------------------
+// Input Border
+// -----------------------------------------------------------------------------
+// Border radius already set to 0 globally
+$input-border-width:              1px;                  // Carbon: standard border
+
+// -----------------------------------------------------------------------------
+// Input Group Addon
+// -----------------------------------------------------------------------------
+$input-group-addon-bg:            $gray-200;            // Carbon: $layer-02 (#e0e0e0)
+$input-group-addon-border-color:  $gray-500;            // Carbon: match input border
+
+// -----------------------------------------------------------------------------
+// Form Select
+// -----------------------------------------------------------------------------
+// Most select variables inherit from $input-* variables
+// Border radius already set to 0 globally
+$form-select-focus-box-shadow:    none;                 // Disable box-shadow, use outline
+
+// -----------------------------------------------------------------------------
+// Form Validation
+// -----------------------------------------------------------------------------
+$form-feedback-valid-color:       $success;             // Carbon: #24a148
+$form-feedback-invalid-color:     $danger;              // Carbon: #da1e28
+$form-valid-color:                $success;             // Carbon: #24a148
+$form-valid-border-color:         $success;             // Carbon: #24a148
+$form-invalid-color:              $danger;              // Carbon: #da1e28
+$form-invalid-border-color:       $danger;              // Carbon: #da1e28
+
+// stylelint-enable scss/dollar-variable-default
+// ============================================================================
+// End Carbon Form Overrides
+// ============================================================================
+
+// ============================================================================
+// Carbon Toast Overrides
+// ============================================================================
+// Reference: https://carbondesignsystem.com/components/notification/style/
+// ============================================================================
+
+// stylelint-disable scss/dollar-variable-default
+
+// -----------------------------------------------------------------------------
+// Toast Container
+// -----------------------------------------------------------------------------
+$toast-max-width:                 350px;                // Carbon: standard width
+$toast-padding-x:                 .75rem;               // Carbon: 12px horizontal
+$toast-padding-y:                 .75rem;               // Carbon: 12px vertical
+$toast-font-size:                 .875rem;              // Carbon: 14px body text
+$toast-color:                     $body-color;          // Carbon: $text-primary (#161616)
+$toast-background-color:          $body-bg;             // Carbon: white (no transparency)
+$toast-border-width:              1px;                  // Carbon: standard border
+$toast-border-color:              $gray-200;            // Carbon: $border-subtle (#e0e0e0)
+$toast-border-radius:             0;                    // Carbon: square corners
+$toast-box-shadow:                0 2px 6px rgba(0, 0, 0, .3); // Carbon: drop shadow
+
+// -----------------------------------------------------------------------------
+// Toast Header
+// -----------------------------------------------------------------------------
+$toast-header-color:              $body-color;          // Carbon: $text-primary (#161616)
+$toast-header-background-color:   $body-bg;             // Carbon: white
+$toast-header-border-color:       $gray-200;            // Carbon: $border-subtle (#e0e0e0)
+
+// stylelint-enable scss/dollar-variable-default
+// ============================================================================
+// End Carbon Toast Overrides
+// ============================================================================
+
+// ============================================================================
+// Carbon Dropdown Overrides
+// ============================================================================
+// Reference: https://carbondesignsystem.com/components/dropdown/style/
+// ============================================================================
+
+// stylelint-disable scss/dollar-variable-default
+
+// -----------------------------------------------------------------------------
+// Dropdown Spacer (Gap between trigger and menu)
+// -----------------------------------------------------------------------------
+$dropdown-spacer:                 0;                    // Carbon: no gap, flush with trigger
+
+// -----------------------------------------------------------------------------
+// Dropdown Menu Container
+// -----------------------------------------------------------------------------
+$dropdown-min-width:              0;                    // Carbon: no fixed min-width
+$dropdown-padding-x:              0;                    // Carbon: no horizontal padding
+$dropdown-padding-y:              0;                    // Carbon: no container padding
+$dropdown-font-size:              .875rem;              // Carbon: 14px body text
+$dropdown-color:                  $body-color;          // Carbon: $text-primary (#161616)
+$dropdown-bg:                     $body-bg;             // Carbon: white
+$dropdown-border-color:           $gray-200;            // Carbon: $border-subtle (#e0e0e0)
+$dropdown-border-radius:          0;                    // Carbon: square corners
+$dropdown-border-width:           1px;                  // Carbon: standard border
+$dropdown-box-shadow:             0 2px 6px rgba(0, 0, 0, .3); // Carbon: drop shadow
+
+// -----------------------------------------------------------------------------
+// Dropdown Divider
+// -----------------------------------------------------------------------------
+$dropdown-divider-bg:             $gray-200;            // Carbon: $border-subtle (#e0e0e0)
+$dropdown-divider-margin-y:       0;
+
+// -----------------------------------------------------------------------------
+// Dropdown Item
+// -----------------------------------------------------------------------------
+$dropdown-item-padding-y:         .5rem;                // Carbon: 8px vertical
+$dropdown-item-padding-x:         1rem;                 // Carbon: 16px horizontal
+$dropdown-link-color:             $body-color;          // Carbon: $text-primary (#161616)
+$dropdown-link-hover-color:       $body-color;          // Carbon: maintain text color
+$dropdown-link-hover-bg:          $gray-200;            // Carbon: $hover-ui (#e0e0e0)
+$dropdown-link-active-color:      $white;               // Carbon: white on blue
+$dropdown-link-active-bg:         $primary;             // Carbon: Blue 60 (#0f62fe)
+$dropdown-link-disabled-color:    $gray-300;            // Carbon: $text-disabled (#c6c6c6)
+
+// -----------------------------------------------------------------------------
+// Dropdown Header
+// -----------------------------------------------------------------------------
+$dropdown-header-color:           $gray-700;            // Carbon: $text-secondary (#525252)
+$dropdown-header-padding-y:       .5rem;                // Carbon: 8px
+$dropdown-header-padding-x:       1rem;                 // Carbon: 16px
+
+// -----------------------------------------------------------------------------
+// Dropdown Dark Variant
+// -----------------------------------------------------------------------------
+$dropdown-dark-color:             $gray-100;            // Carbon: light text
+$dropdown-dark-bg:                $gray-800;            // Carbon: Gray 80
+$dropdown-dark-border-color:      $gray-700;            // Carbon: Gray 70
+$dropdown-dark-link-color:        $gray-100;            // Carbon: light text
+$dropdown-dark-link-hover-color:  $white;               // Carbon: white on hover
+$dropdown-dark-link-hover-bg:     $gray-700;            // Carbon: Gray 70
+$dropdown-dark-link-active-color: $white;               // Carbon: white
+$dropdown-dark-link-active-bg:    $primary;             // Carbon: Blue 60
+$dropdown-dark-link-disabled-color: $gray-500;          // Carbon: Gray 50
+$dropdown-dark-header-color:      $gray-400;            // Carbon: Gray 40
+
+// stylelint-enable scss/dollar-variable-default
+// ============================================================================
+// End Carbon Dropdown Overrides
+// ============================================================================

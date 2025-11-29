@@ -1,0 +1,27 @@
+// Carbon Breadcrumb Customizations
+// Link colors and focus states for navigation breadcrumbs
+// Reference: https://carbondesignsystem.com/components/breadcrumb/style
+
+// Link styling
+.breadcrumb-item {
+  a {
+    color: $primary;               // Blue 60
+    text-decoration: none;
+    white-space: nowrap;
+
+    &:hover {
+      color: $link-hover-color;    // Blue 70
+      text-decoration: underline;
+    }
+
+    &:focus {
+      outline: 1px solid $primary; // Blue 60
+      outline-offset: 0;
+    }
+  }
+
+  // Active/current page styling
+  &.active {
+    cursor: auto;
+  }
+}

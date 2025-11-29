@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carbon Form Demo</title>
+  <link rel="stylesheet" href="../dist/css/bootstrap.css">
+  <style>
+    body {
+      padding: 2rem;
+      background-color: #f4f4f4;
+    }
+    .demo-section {
+      background: white;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .demo-section h2 {
+      margin-bottom: 1rem;
+      font-size: 1.25rem;
+    }
+    .demo-section p {
+      color: #525252;
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+    }
+    .demo-container {
+      background: #e0e0e0;
+      padding: 2rem;
+    }
+    .demo-container .row {
+      --bs-gutter-x: 1.5rem;
+      --bs-gutter-y: 1rem;
+    }
+    pre {
+      background: #161616;
+      color: #f4f4f4;
+      padding: 1rem;
+      margin-top: 1rem;
+      font-size: 0.75rem;
+      overflow-x: auto;
+    }
+    code {
+      font-family: "IBM Plex Mono", monospace;
+    }
+  </style>
+</head>
+<body>
+  <h1>Carbon Form Demo</h1>
+  <p>Form components styled with Carbon Design System specifications.</p>
+
+  <!-- Text Input Sizes -->
+  <div class="demo-section">
+    <h2>Text Input Sizes</h2>
+    <p>Form inputs are available in small (32px), default (40px), and large (48px) sizes.</p>
+    <div class="demo-container">
+      <div class="row">
+        <div class="col-md-4">
+          <label for="inputSm" class="form-label">Small Input</label>
+          <input type="text" class="form-control form-control-sm" id="inputSm" placeholder="Small input">
+        </div>
+        <div class="col-md-4">
+          <label for="inputDefault" class="form-label">Default Input</label>
+          <input type="text" class="form-control" id="inputDefault" placeholder="Default input">
+        </div>
+        <div class="col-md-4">
+          <label for="inputLg" class="form-label">Large Input</label>
+          <input type="text" class="form-control form-control-lg" id="inputLg" placeholder="Large input">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Input States -->
+  <div class="demo-section">
+    <h2>Input States</h2>
+    <p>Form inputs show different visual states for normal, focus, hover, and disabled.</p>
+    <div class="demo-container">
+      <div class="row">
+        <div class="col-md-3">
+          <label for="inputNormal" class="form-label">Normal</label>
+          <input type="text" class="form-control" id="inputNormal" placeholder="Normal state">
+        </div>
+        <div class="col-md-3">
+          <label for="inputFocus" class="form-label">Focus (click to see)</label>
+          <input type="text" class="form-control" id="inputFocus" placeholder="Click to focus">
+        </div>
+        <div class="col-md-3">
+          <label for="inputHover" class="form-label">Hover (hover to see)</label>
+          <input type="text" class="form-control" id="inputHover" placeholder="Hover over me">
+        </div>
+        <div class="col-md-3">
+          <label for="inputDisabled" class="form-label">Disabled</label>
+          <input type="text" class="form-control" id="inputDisabled" placeholder="Disabled input" disabled>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Labels and Helper Text -->
+  <div class="demo-section">
+    <h2>Labels and Helper Text</h2>
+    <p>Labels are 12px gray text above the input. Helper text provides additional context below.</p>
+    <div class="demo-container">
+      <div class="row">
+        <div class="col-md-6">
+          <label for="inputWithHelper" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="inputWithHelper" placeholder="name@example.com">
+          <div class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="col-md-6">
+          <label for="inputRequired" class="form-label">Username <span class="text-danger">*</span></label>
+          <input type="text" class="form-control" id="inputRequired" placeholder="Enter username">
+          <div class="form-text">Must be 3-20 characters long.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Select Dropdowns -->
+  <div class="demo-section">
+    <h2>Select Dropdowns</h2>
+    <p>Select elements match the styling of text inputs with consistent sizes.</p>
+    <div class="demo-container">
+      <div class="row">
+        <div class="col-md-4">
+          <label for="selectSm" class="form-label">Small Select</label>
+          <select class="form-select form-select-sm" id="selectSm">
+            <option selected>Choose an option</option>
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <label for="selectDefault" class="form-label">Default Select</label>
+          <select class="form-select" id="selectDefault">
+            <option selected>Choose an option</option>
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <label for="selectLg" class="form-label">Large Select</label>
+          <select class="form-select form-select-lg" id="selectLg">
+            <option selected>Choose an option</option>
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+          </select>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-md-4">
+          <label for="selectDisabled" class="form-label">Disabled Select</label>
+          <select class="form-select" id="selectDisabled" disabled>
+            <option selected>Disabled select</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Textarea -->
+  <div class="demo-section">
+    <h2>Textarea</h2>
+    <p>Textareas share the same styling as text inputs.</p>
+    <div class="demo-container">
+      <div class="row">
+        <div class="col-md-6">
+          <label for="textareaDefault" class="form-label">Description</label>
+          <textarea class="form-control" id="textareaDefault" rows="3" placeholder="Enter a description..."></textarea>
+          <div class="form-text">Maximum 500 characters.</div>
+        </div>
+        <div class="col-md-6">
+          <label for="textareaDisabled" class="form-label">Disabled Textarea</label>
+          <textarea class="form-control" id="textareaDisabled" rows="3" placeholder="Disabled textarea" disabled></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Input Groups -->
+  <div class="demo-section">
+    <h2>Input Groups</h2>
+    <p>Input groups combine inputs with prepended or appended text/buttons.</p>
+    <div class="demo-container">
+      <div class="row">
+        <div class="col-md-4">
+          <label for="inputGroupPrepend" class="form-label">With Prepend</label>
+          <div class="input-group">
+            <span class="input-group-text">@</span>
+            <input type="text" class="form-control" id="inputGroupPrepend" placeholder="Username">
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label for="inputGroupAppend" class="form-label">With Append</label>
+          <div class="input-group">
+            <input type="text" class="form-control" id="inputGroupAppend" placeholder="Amount">
+            <span class="input-group-text">.00</span>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label for="inputGroupBoth" class="form-label">Both Sides</label>
+          <div class="input-group">
+            <span class="input-group-text">$</span>
+            <input type="text" class="form-control" id="inputGroupBoth" placeholder="0">
+            <span class="input-group-text">.00</span>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-md-6">
+          <label for="inputGroupButton" class="form-label">With Button</label>
+          <div class="input-group">
+            <input type="text" class="form-control" id="inputGroupButton" placeholder="Search...">
+            <button class="btn btn-primary" type="button">Search</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Validation States -->
+  <div class="demo-section">
+    <h2>Validation States</h2>
+    <p>Valid and invalid states provide visual feedback with colored borders and messages.</p>
+    <div class="demo-container">
+      <div class="row">
+        <div class="col-md-6">
+          <label for="inputValid" class="form-label">Valid Input</label>
+          <input type="text" class="form-control is-valid" id="inputValid" value="Correct value">
+          <div class="valid-feedback">Looks good!</div>
+        </div>
+        <div class="col-md-6">
+          <label for="inputInvalid" class="form-label">Invalid Input</label>
+          <input type="text" class="form-control is-invalid" id="inputInvalid" value="Wrong value">
+          <div class="invalid-feedback">Please provide a valid value.</div>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-md-6">
+          <label for="selectValid" class="form-label">Valid Select</label>
+          <select class="form-select is-valid" id="selectValid">
+            <option selected>Option 1</option>
+          </select>
+          <div class="valid-feedback">Great choice!</div>
+        </div>
+        <div class="col-md-6">
+          <label for="selectInvalid" class="form-label">Invalid Select</label>
+          <select class="form-select is-invalid" id="selectInvalid">
+            <option selected>Please select...</option>
+          </select>
+          <div class="invalid-feedback">Please select an option.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Password Input -->
+  <div class="demo-section">
+    <h2>Password Input</h2>
+    <p>Password inputs with helper text for requirements.</p>
+    <div class="demo-container">
+      <div class="row">
+        <div class="col-md-6">
+          <label for="inputPassword" class="form-label">Password</label>
+          <input type="password" class="form-control" id="inputPassword" placeholder="Enter password">
+          <div class="form-text">Must be at least 8 characters with 1 number.</div>
+        </div>
+        <div class="col-md-6">
+          <label for="inputPasswordConfirm" class="form-label">Confirm Password</label>
+          <input type="password" class="form-control" id="inputPasswordConfirm" placeholder="Confirm password">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HTML Structure Reference -->
+  <div class="demo-section">
+    <h2>HTML Structure Reference</h2>
+    <p>Copy these HTML structures to use form components.</p>
+    <pre><code>&lt;!-- Basic input with label and helper text --&gt;
+&lt;label for="inputId" class="form-label"&gt;Label Text&lt;/label&gt;
+&lt;input type="text" class="form-control" id="inputId" placeholder="Placeholder"&gt;
+&lt;div class="form-text"&gt;Helper text goes here.&lt;/div&gt;
+
+&lt;!-- Size variants --&gt;
+&lt;input type="text" class="form-control form-control-sm"&gt;  &lt;!-- 32px --&gt;
+&lt;input type="text" class="form-control"&gt;                  &lt;!-- 40px --&gt;
+&lt;input type="text" class="form-control form-control-lg"&gt;  &lt;!-- 48px --&gt;
+
+&lt;!-- Select dropdown --&gt;
+&lt;select class="form-select"&gt;
+  &lt;option selected&gt;Choose...&lt;/option&gt;
+  &lt;option value="1"&gt;Option 1&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;!-- Input group --&gt;
+&lt;div class="input-group"&gt;
+  &lt;span class="input-group-text"&gt;@&lt;/span&gt;
+  &lt;input type="text" class="form-control" placeholder="Username"&gt;
+&lt;/div&gt;
+
+&lt;!-- Validation states --&gt;
+&lt;input type="text" class="form-control is-valid"&gt;
+&lt;div class="valid-feedback"&gt;Success message&lt;/div&gt;
+
+&lt;input type="text" class="form-control is-invalid"&gt;
+&lt;div class="invalid-feedback"&gt;Error message&lt;/div&gt;
+
+&lt;!-- Disabled state --&gt;
+&lt;input type="text" class="form-control" disabled&gt;</code></pre>
+  </div>
+
+  <!-- Carbon Design Specs -->
+  <div class="demo-section">
+    <h2>Carbon Design Specifications</h2>
+    <table class="table table-sm">
+      <thead>
+        <tr>
+          <th>Property</th>
+          <th>Value</th>
+          <th>Carbon Token</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Input background</td>
+          <td><code>#ffffff</code></td>
+          <td><code>$field</code></td>
+        </tr>
+        <tr>
+          <td>Input text color</td>
+          <td><code>#161616</code></td>
+          <td><code>$text-primary</code> (Gray 100)</td>
+        </tr>
+        <tr>
+          <td>Input border color</td>
+          <td><code>#8d8d8d</code></td>
+          <td><code>$border-strong</code> (Gray 50)</td>
+        </tr>
+        <tr>
+          <td>Input border radius</td>
+          <td><code>0</code></td>
+          <td>Square corners</td>
+        </tr>
+        <tr>
+          <td>Placeholder color</td>
+          <td><code>#6f6f6f</code></td>
+          <td><code>$text-placeholder</code> (Gray 60)</td>
+        </tr>
+        <tr>
+          <td>Focus outline</td>
+          <td><code>2px solid #0f62fe</code></td>
+          <td><code>$focus</code> (Blue 60)</td>
+        </tr>
+        <tr>
+          <td>Focus outline offset</td>
+          <td><code>-2px</code></td>
+          <td>Inset outline</td>
+        </tr>
+        <tr>
+          <td>Hover border</td>
+          <td><code>#161616</code></td>
+          <td><code>$border-strong-hover</code> (Gray 100)</td>
+        </tr>
+        <tr>
+          <td>Disabled background</td>
+          <td><code>#f4f4f4</code></td>
+          <td><code>$field-disabled</code> (Gray 10)</td>
+        </tr>
+        <tr>
+          <td>Disabled text</td>
+          <td><code>#c6c6c6</code></td>
+          <td><code>$text-disabled</code> (Gray 30)</td>
+        </tr>
+        <tr>
+          <td>Label font size</td>
+          <td><code>0.75rem (12px)</code></td>
+          <td>label-01</td>
+        </tr>
+        <tr>
+          <td>Label color</td>
+          <td><code>#525252</code></td>
+          <td><code>$text-secondary</code> (Gray 70)</td>
+        </tr>
+        <tr>
+          <td>Helper text size</td>
+          <td><code>0.75rem (12px)</code></td>
+          <td>helper-text-01</td>
+        </tr>
+        <tr>
+          <td>Small height</td>
+          <td><code>~32px</code></td>
+          <td>Carbon sm</td>
+        </tr>
+        <tr>
+          <td>Default height</td>
+          <td><code>~40px</code></td>
+          <td>Carbon md</td>
+        </tr>
+        <tr>
+          <td>Large height</td>
+          <td><code>~48px</code></td>
+          <td>Carbon lg</td>
+        </tr>
+        <tr>
+          <td>Input group addon bg</td>
+          <td><code>#e0e0e0</code></td>
+          <td><code>$layer-02</code> (Gray 20)</td>
+        </tr>
+        <tr>
+          <td>Valid color</td>
+          <td><code>#24a148</code></td>
+          <td><code>$support-success</code> (Green 50)</td>
+        </tr>
+        <tr>
+          <td>Invalid color</td>
+          <td><code>#da1e28</code></td>
+          <td><code>$support-error</code> (Red 60)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- CSS Classes Reference -->
+  <div class="demo-section">
+    <h2>CSS Classes Reference</h2>
+    <table class="table table-sm">
+      <thead>
+        <tr>
+          <th>Class</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>.form-control</code></td>
+          <td>Base class for text inputs and textareas</td>
+        </tr>
+        <tr>
+          <td><code>.form-control-sm</code></td>
+          <td>Small input (32px height)</td>
+        </tr>
+        <tr>
+          <td><code>.form-control-lg</code></td>
+          <td>Large input (48px height)</td>
+        </tr>
+        <tr>
+          <td><code>.form-select</code></td>
+          <td>Base class for select dropdowns</td>
+        </tr>
+        <tr>
+          <td><code>.form-select-sm</code></td>
+          <td>Small select (32px height)</td>
+        </tr>
+        <tr>
+          <td><code>.form-select-lg</code></td>
+          <td>Large select (48px height)</td>
+        </tr>
+        <tr>
+          <td><code>.form-label</code></td>
+          <td>Label styling (12px, gray)</td>
+        </tr>
+        <tr>
+          <td><code>.form-text</code></td>
+          <td>Helper text styling (12px, gray)</td>
+        </tr>
+        <tr>
+          <td><code>.input-group</code></td>
+          <td>Container for input with addons</td>
+        </tr>
+        <tr>
+          <td><code>.input-group-text</code></td>
+          <td>Text addon for input groups</td>
+        </tr>
+        <tr>
+          <td><code>.is-valid</code></td>
+          <td>Valid state (green border)</td>
+        </tr>
+        <tr>
+          <td><code>.is-invalid</code></td>
+          <td>Invalid state (red border)</td>
+        </tr>
+        <tr>
+          <td><code>.valid-feedback</code></td>
+          <td>Success message text (green)</td>
+        </tr>
+        <tr>
+          <td><code>.invalid-feedback</code></td>
+          <td>Error message text (red)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="../dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

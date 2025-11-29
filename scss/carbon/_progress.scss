@@ -1,0 +1,26 @@
+// Carbon Progress Bar Customizations
+// Size variants and status states not achievable via variable overrides
+// Reference: https://carbondesignsystem.com/components/progress-bar/style/
+
+// -----------------------------------------------------------------------------
+// Small Variant (4px height)
+// -----------------------------------------------------------------------------
+.progress-sm {
+  --#{$prefix}progress-height: .25rem;  // Carbon: 4px small
+}
+
+// -----------------------------------------------------------------------------
+// Status States
+// -----------------------------------------------------------------------------
+
+// Success state
+.progress-success .progress-bar,
+.progress-bar-success {
+  --#{$prefix}progress-bar-bg: #{$success};  // Carbon: $support-success
+}
+
+// Error state
+.progress-error .progress-bar,
+.progress-bar-error {
+  --#{$prefix}progress-bar-bg: #{$danger};   // Carbon: $support-error
+}

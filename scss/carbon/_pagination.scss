@@ -1,0 +1,9 @@
+// Carbon Pagination Customizations
+// Focus state outline (cannot be done via variables)
+
+.page-link {
+  &:focus {
+    outline: 2px solid $primary;    // Carbon: Blue 60 focus outline
+    outline-offset: -2px;           // Carbon: inset outline style
+  }
+}

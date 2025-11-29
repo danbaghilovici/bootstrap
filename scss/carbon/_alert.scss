@@ -1,0 +1,90 @@
+// Carbon Alert Customizations
+// Left accent border and refined styling for inline notifications
+// Reference: https://carbondesignsystem.com/components/notification/style
+
+// Base alert styles
+.alert {
+  // Override border to be subtle gray on top/right/bottom
+  border-color: #e0e0e0; // Carbon: ui-03
+  // Left border will be set per-variant below
+  border-left-width: 3px;
+
+  // Ensure dark text for readability
+  color: $body-color; // #161616
+}
+
+// Generate left border colors and backgrounds for each variant
+@each $state, $value in $theme-colors {
+  .alert-#{$state} {
+    // Left accent border in status color
+    border-left-color: $value;
+    // Dark text for readability
+    --#{$prefix}alert-color: #{$body-color};
+    // Light tinted background
+    --#{$prefix}alert-bg: #{tint-color($value, 90%)};
+    // Subtle gray border (except left)
+    --#{$prefix}alert-border-color: #e0e0e0;
+    // Link color matches status
+    --#{$prefix}alert-link-color: #{shade-color($value, 20%)};
+  }
+}
+
+// Focus states for interactive elements
+.alert-link:focus {
+  outline: 2px solid #0f62fe; // Carbon: Blue 60
+  outline-offset: 2px;
+}
+
+.alert-dismissible .btn-close:focus {
+  outline: 2px solid #0f62fe; // Carbon: Blue 60
+  outline-offset: -2px;
+  box-shadow: none;
+}
+
+// High-contrast variant (optional)
+// Use for critical/prominent alerts that need more visibility
+.alert-high-contrast {
+  border-left-width: 0;
+  color: #fff;
+
+  .alert-link {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  &.alert-danger {
+    --#{$prefix}alert-bg: #{$danger};
+    --#{$prefix}alert-color: #fff;
+    --#{$prefix}alert-border-color: #{$danger};
+  }
+
+  &.alert-success {
+    --#{$prefix}alert-bg: #{$success};
+    --#{$prefix}alert-color: #fff;
+    --#{$prefix}alert-border-color: #{$success};
+  }
+
+  &.alert-warning {
+    --#{$prefix}alert-bg: #{$warning};
+    --#{$prefix}alert-color: #161616; // Dark text for yellow background
+    --#{$prefix}alert-border-color: #{$warning};
+  }
+
+  &.alert-info {
+    --#{$prefix}alert-bg: #{$info};
+    --#{$prefix}alert-color: #fff;
+    --#{$prefix}alert-border-color: #{$info};
+  }
+
+  &.alert-primary {
+    --#{$prefix}alert-bg: #{$primary};
+    --#{$prefix}alert-color: #fff;
+    --#{$prefix}alert-border-color: #{$primary};
+  }
+
+  &.alert-secondary {
+    --#{$prefix}alert-bg: #{$secondary};
+    --#{$prefix}alert-color: #fff;
+    --#{$prefix}alert-border-color: #{$secondary};
+  }
+}

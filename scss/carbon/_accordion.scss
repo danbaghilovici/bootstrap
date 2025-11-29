@@ -1,0 +1,27 @@
+// Carbon Accordion Customizations
+// Focus states and expanded state styles
+
+// Remove the box-shadow border that Bootstrap adds to expanded accordion buttons
+.accordion-button:not(.collapsed) {
+  box-shadow: none;
+}
+
+// Reset default focus styles on button
+.accordion-button:focus {
+  z-index: 3;
+  outline: none;
+  box-shadow: none;
+}
+
+// Focus ring on header using outline
+// Outline extends beyond the element, covering the accordion-item border
+.accordion-header:has(.accordion-button:focus) {
+  position: relative;
+  z-index: 2;
+  outline: 2px solid #0f62fe;
+  outline-offset: 0;
+}
+
+.accordion-item:focus-within {
+  z-index: 2;
+}

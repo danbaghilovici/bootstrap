@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Carbon Design System Typography Demo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'IBM Plex Sans', sans-serif;
+      }
+      code, pre {
+        font-family: 'IBM Plex Mono', monospace;
+      }
+      section {
+        margin-bottom: 3rem;
+      }
+      h2 {
+        border-bottom: 1px solid var(--bs-gray-300);
+        padding-bottom: 0.5rem;
+        margin-bottom: 1.5rem;
+      }
+      .type-specimen {
+        padding: 1rem;
+        background: var(--bs-gray-100);
+        border-radius: 0.25rem;
+        margin-bottom: 0.5rem;
+      }
+      .type-info {
+        font-size: 0.875rem;
+        color: var(--bs-gray-600);
+      }
+      .weight-demo {
+        font-size: 1.5rem;
+        margin-bottom: 0.25rem;
+      }
+    </style>
+  </head>
+  <body class="py-5">
+    <div class="container">
+      <!-- Header -->
+      <header class="mb-5">
+        <h1>Carbon Design System Typography</h1>
+        <p class="lead text-body-secondary">Bootstrap theme customized with IBM Carbon Design System typography scale</p>
+      </header>
+
+      <!-- Font Families -->
+      <section>
+        <h2>Font Families</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="type-specimen">
+              <p class="fs-4 mb-1" style="font-family: 'IBM Plex Sans', sans-serif;">IBM Plex Sans</p>
+              <p class="mb-0">The quick brown fox jumps over the lazy dog.</p>
+              <p class="mb-0">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+              <p class="mb-0">abcdefghijklmnopqrstuvwxyz</p>
+              <p class="mb-0">0123456789</p>
+            </div>
+            <p class="type-info"><code>$font-family-sans-serif</code> - Used for body text and headings</p>
+          </div>
+          <div class="col-md-6">
+            <div class="type-specimen">
+              <p class="fs-4 mb-1" style="font-family: 'IBM Plex Mono', monospace;">IBM Plex Mono</p>
+              <p class="mb-0" style="font-family: 'IBM Plex Mono', monospace;">The quick brown fox jumps over the lazy dog.</p>
+              <p class="mb-0" style="font-family: 'IBM Plex Mono', monospace;">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+              <p class="mb-0" style="font-family: 'IBM Plex Mono', monospace;">abcdefghijklmnopqrstuvwxyz</p>
+              <p class="mb-0" style="font-family: 'IBM Plex Mono', monospace;">0123456789</p>
+            </div>
+            <p class="type-info"><code>$font-family-monospace</code> - Used for code and technical content</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Base Typography -->
+      <section>
+        <h2>Base Typography</h2>
+        <div class="row mb-4">
+          <div class="col-md-4">
+            <div class="type-specimen text-center">
+              <p class="display-4 mb-0">16px</p>
+              <p class="mb-0">1rem</p>
+            </div>
+            <p class="type-info text-center"><code>$font-size-base</code></p>
+          </div>
+          <div class="col-md-4">
+            <div class="type-specimen text-center">
+              <p class="display-4 mb-0">1.5</p>
+              <p class="mb-0">line-height</p>
+            </div>
+            <p class="type-info text-center"><code>$line-height-base</code></p>
+          </div>
+          <div class="col-md-4">
+            <div class="type-specimen text-center">
+              <p class="display-4 mb-0">400</p>
+              <p class="mb-0">font-weight</p>
+            </div>
+            <p class="type-info text-center"><code>$font-weight-base</code></p>
+          </div>
+        </div>
+        <p>This is standard body text at 16px (1rem) with a line-height of 1.5. Carbon's body-long-02 token provides comfortable reading with adequate line spacing for longer passages of text. The text uses IBM Plex Sans at regular weight (400).</p>
+        <p class="text-body-secondary">This is secondary body text using the text-body-secondary class, which applies Gray 70 (#525252) for supporting content that should be visually subordinate to primary text.</p>
+      </section>
+
+      <!-- Headings -->
+      <section>
+        <h2>Headings (Productive)</h2>
+        <p class="text-body-secondary mb-4">Carbon productive headings optimized for UI and shorter content</p>
+
+        <div class="mb-4">
+          <h1>Heading 1 - productive-heading-05</h1>
+          <p class="type-info">2rem (32px) / font-weight: 400 / <code>$h1-font-size</code></p>
+        </div>
+
+        <div class="mb-4">
+          <h2 style="border: none; padding: 0; margin-bottom: 0.5rem;">Heading 2 - productive-heading-04</h2>
+          <p class="type-info">1.75rem (28px) / font-weight: 400 / <code>$h2-font-size</code></p>
+        </div>
+
+        <div class="mb-4">
+          <h3>Heading 3 - productive-heading-03</h3>
+          <p class="type-info">1.25rem (20px) / font-weight: 400 / <code>$h3-font-size</code></p>
+        </div>
+
+        <div class="mb-4">
+          <h4>Heading 4 - productive-heading-02</h4>
+          <p class="type-info">1rem (16px) / font-weight: 400 / <code>$h4-font-size</code></p>
+        </div>
+
+        <div class="mb-4">
+          <h5>Heading 5 - productive-heading-01</h5>
+          <p class="type-info">0.875rem (14px) / font-weight: 400 / <code>$h5-font-size</code></p>
+        </div>
+
+        <div class="mb-4">
+          <h6>Heading 6 - productive-heading-01</h6>
+          <p class="type-info">0.875rem (14px) / font-weight: 400 / <code>$h6-font-size</code></p>
+        </div>
+      </section>
+
+      <!-- Display Headings -->
+      <section>
+        <h2>Display Headings (Expressive)</h2>
+        <p class="text-body-secondary mb-4">Carbon expressive headings for marketing and editorial content</p>
+
+        <div class="mb-4">
+          <p class="display-1">Display 1</p>
+          <p class="type-info">3.75rem (60px) / font-weight: 300 / <code>.display-1</code></p>
+        </div>
+
+        <div class="mb-4">
+          <p class="display-2">Display 2</p>
+          <p class="type-info">3.25rem (52px) / font-weight: 300 / <code>.display-2</code></p>
+        </div>
+
+        <div class="mb-4">
+          <p class="display-3">Display 3</p>
+          <p class="type-info">2.75rem (44px) / font-weight: 300 / <code>.display-3</code></p>
+        </div>
+
+        <div class="mb-4">
+          <p class="display-4">Display 4</p>
+          <p class="type-info">2.25rem (36px) / font-weight: 300 / <code>.display-4</code></p>
+        </div>
+
+        <div class="mb-4">
+          <p class="display-5">Display 5</p>
+          <p class="type-info">2rem (32px) / font-weight: 300 / <code>.display-5</code></p>
+        </div>
+
+        <div class="mb-4">
+          <p class="display-6">Display 6</p>
+          <p class="type-info">1.75rem (28px) / font-weight: 300 / <code>.display-6</code></p>
+        </div>
+      </section>
+
+      <!-- Font Weights -->
+      <section>
+        <h2>Font Weights</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <p class="weight-demo" style="font-weight: 300;">Light (300) - The quick brown fox</p>
+            <p class="weight-demo" style="font-weight: 400;">Regular (400) - The quick brown fox</p>
+            <p class="weight-demo" style="font-weight: 500;">Medium (500) - The quick brown fox</p>
+            <p class="weight-demo" style="font-weight: 600;">SemiBold (600) - The quick brown fox</p>
+            <p class="weight-demo" style="font-weight: 700;">Bold (700) - The quick brown fox</p>
+          </div>
+          <div class="col-md-6">
+            <p class="type-info">
+              <strong>Usage in Carbon:</strong><br>
+              300 - Display headings, expressive text<br>
+              400 - Body text, h1-h3 headings<br>
+              500 - Emphasis, labels<br>
+              600 - h4-h6 headings, buttons<br>
+              700 - Strong emphasis
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Utility Text -->
+      <section>
+        <h2>Utility Text Styles</h2>
+
+        <div class="mb-4">
+          <p class="lead">This is lead text using the .lead class. It's used for introductory paragraphs that should stand out from regular body text. Carbon uses 1.25rem (20px) with light weight (300).</p>
+          <p class="type-info"><code>.lead</code> - 1.25rem / font-weight: 300</p>
+        </div>
+
+        <div class="mb-4">
+          <p><small>This is small text using the &lt;small&gt; element or .small class. Used for fine print, captions, and secondary information at 0.875em (14px equivalent).</small></p>
+          <p class="type-info"><code>&lt;small&gt;</code> or <code>.small</code> - 0.875em</p>
+        </div>
+
+        <div class="mb-4">
+          <blockquote class="blockquote">
+            <p>"Good design is as little design as possible. Less, but better, because it concentrates on the essential aspects."</p>
+          </blockquote>
+          <figcaption class="blockquote-footer">Dieter Rams</figcaption>
+          <p class="type-info"><code>.blockquote</code> - 1.25rem</p>
+        </div>
+      </section>
+
+      <!-- Code -->
+      <section>
+        <h2>Code Typography</h2>
+
+        <div class="mb-4">
+          <p>Inline code uses IBM Plex Mono: <code>const greeting = "Hello, Carbon!";</code></p>
+          <p class="type-info"><code>&lt;code&gt;</code> - 0.875em / IBM Plex Mono</p>
+        </div>
+
+        <div class="mb-4">
+          <pre><code>// Code block example
+function greet(name) {
+  return `Hello, ${name}!`;
+}
+
+const colors = {
+  primary: '#0f62fe',   // Blue 60
+  danger: '#da1e28',    // Red 60
+  success: '#24a148'    // Green 50
+};</code></pre>
+          <p class="type-info"><code>&lt;pre&gt;&lt;code&gt;</code> - IBM Plex Mono for code blocks</p>
+        </div>
+
+        <div class="mb-4">
+          <p>Keyboard input: Press <kbd>Ctrl</kbd> + <kbd>S</kbd> to save</p>
+          <p class="type-info"><code>&lt;kbd&gt;</code> - Keyboard input styling</p>
+        </div>
+      </section>
+
+      <!-- Type Scale Summary -->
+      <section>
+        <h2>Type Scale Summary</h2>
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Element</th>
+                <th>Size</th>
+                <th>Weight</th>
+                <th>Carbon Token</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Body</td>
+                <td>1rem (16px)</td>
+                <td>400</td>
+                <td>body-long-02</td>
+              </tr>
+              <tr>
+                <td>Small</td>
+                <td>0.875rem (14px)</td>
+                <td>400</td>
+                <td>body-short-01</td>
+              </tr>
+              <tr>
+                <td>h1</td>
+                <td>2rem (32px)</td>
+                <td>400</td>
+                <td>productive-heading-05</td>
+              </tr>
+              <tr>
+                <td>h2</td>
+                <td>1.75rem (28px)</td>
+                <td>400</td>
+                <td>productive-heading-04</td>
+              </tr>
+              <tr>
+                <td>h3</td>
+                <td>1.25rem (20px)</td>
+                <td>400</td>
+                <td>productive-heading-03</td>
+              </tr>
+              <tr>
+                <td>h4</td>
+                <td>1rem (16px)</td>
+                <td>400</td>
+                <td>productive-heading-02</td>
+              </tr>
+              <tr>
+                <td>h5, h6</td>
+                <td>0.875rem (14px)</td>
+                <td>400</td>
+                <td>productive-heading-01</td>
+              </tr>
+              <tr>
+                <td>Display 1</td>
+                <td>3.75rem (60px)</td>
+                <td>300</td>
+                <td>expressive</td>
+              </tr>
+              <tr>
+                <td>Lead</td>
+                <td>1.25rem (20px)</td>
+                <td>300</td>
+                <td>emphasis</td>
+              </tr>
+              <tr>
+                <td>Code</td>
+                <td>0.875em</td>
+                <td>400</td>
+                <td>code-02</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="mt-5 pt-4 border-top text-body-secondary">
+        <p>
+          <small>
+            Carbon Design System typography integration for Bootstrap 5.3.8<br>
+            Reference: <a href="https://carbondesignsystem.com/elements/typography/overview/" target="_blank">Carbon Typography Documentation</a>
+          </small>
+        </p>
+      </footer>
+    </div>
+
+    <script src="../dist/js/bootstrap.bundle.js"></script>
+  </body>
+</html>

@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Carbon Design System Colors Demo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'IBM Plex Sans', sans-serif;
+      }
+      code {
+        font-family: 'IBM Plex Mono', monospace;
+      }
+      .color-swatch {
+        height: 80px;
+        display: flex;
+        align-items: flex-end;
+        padding: 0.5rem;
+        border-radius: 0.25rem;
+      }
+      .color-swatch code {
+        font-size: 0.75rem;
+      }
+      .gray-swatch {
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .gray-swatch code {
+        font-size: 0.7rem;
+      }
+      section {
+        margin-bottom: 3rem;
+      }
+      h2 {
+        border-bottom: 1px solid var(--bs-gray-300);
+        padding-bottom: 0.5rem;
+        margin-bottom: 1.5rem;
+      }
+    </style>
+  </head>
+  <body class="py-5">
+    <div class="container">
+      <!-- Header -->
+      <header class="mb-5">
+        <h1>Carbon Design System Colors</h1>
+        <p class="lead text-body-secondary">Bootstrap theme customized with IBM Carbon Design System color palette</p>
+      </header>
+
+      <!-- Theme Colors -->
+      <section>
+        <h2>Theme Colors</h2>
+        <div class="row g-3">
+          <div class="col-6 col-md-3">
+            <div class="color-swatch bg-primary text-white">
+              <code class="text-white">Primary<br>#0f62fe<br>Blue 60</code>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="color-swatch bg-secondary text-white">
+              <code class="text-white">Secondary<br>#393939<br>Gray 80</code>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="color-swatch bg-success text-white">
+              <code class="text-white">Success<br>#24a148<br>Green 50</code>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="color-swatch bg-info text-white">
+              <code class="text-white">Info<br>#0043ce<br>Blue 70</code>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="color-swatch bg-warning text-dark">
+              <code class="text-dark">Warning<br>#f1c21b<br>Yellow 30</code>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="color-swatch bg-danger text-white">
+              <code class="text-white">Danger<br>#da1e28<br>Red 60</code>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="color-swatch bg-light text-dark border">
+              <code class="text-dark">Light<br>#f4f4f4<br>Gray 10</code>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="color-swatch bg-dark text-white">
+              <code class="text-white">Dark<br>#161616<br>Gray 100</code>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Buttons -->
+      <section>
+        <h2>Buttons</h2>
+        <h5>Filled Buttons</h5>
+        <div class="mb-3">
+          <button type="button" class="btn btn-primary">Primary</button>
+          <button type="button" class="btn btn-secondary">Secondary</button>
+          <button type="button" class="btn btn-success">Success</button>
+          <button type="button" class="btn btn-info">Info</button>
+          <button type="button" class="btn btn-warning">Warning</button>
+          <button type="button" class="btn btn-danger">Danger</button>
+          <button type="button" class="btn btn-light">Light</button>
+          <button type="button" class="btn btn-dark">Dark</button>
+        </div>
+        <h5>Outline Buttons</h5>
+        <div class="mb-3">
+          <button type="button" class="btn btn-outline-primary">Primary</button>
+          <button type="button" class="btn btn-outline-secondary">Secondary</button>
+          <button type="button" class="btn btn-outline-success">Success</button>
+          <button type="button" class="btn btn-outline-info">Info</button>
+          <button type="button" class="btn btn-outline-warning">Warning</button>
+          <button type="button" class="btn btn-outline-danger">Danger</button>
+          <button type="button" class="btn btn-outline-light">Light</button>
+          <button type="button" class="btn btn-outline-dark">Dark</button>
+        </div>
+      </section>
+
+      <!-- Alerts -->
+      <section>
+        <h2>Alerts</h2>
+        <div class="alert alert-primary" role="alert">
+          <strong>Primary Alert:</strong> Using Carbon Blue 60 (#0f62fe)
+        </div>
+        <div class="alert alert-success" role="alert">
+          <strong>Success Alert:</strong> Using Carbon Green 50 (#24a148)
+        </div>
+        <div class="alert alert-warning" role="alert">
+          <strong>Warning Alert:</strong> Using Carbon Yellow 30 (#f1c21b)
+        </div>
+        <div class="alert alert-danger" role="alert">
+          <strong>Danger Alert:</strong> Using Carbon Red 60 (#da1e28)
+        </div>
+        <div class="alert alert-info" role="alert">
+          <strong>Info Alert:</strong> Using Carbon Blue 70 (#0043ce)
+        </div>
+      </section>
+
+      <!-- Badges -->
+      <section>
+        <h2>Badges</h2>
+        <span class="badge text-bg-primary">Primary</span>
+        <span class="badge text-bg-secondary">Secondary</span>
+        <span class="badge text-bg-success">Success</span>
+        <span class="badge text-bg-info">Info</span>
+        <span class="badge text-bg-warning">Warning</span>
+        <span class="badge text-bg-danger">Danger</span>
+        <span class="badge text-bg-light">Light</span>
+        <span class="badge text-bg-dark">Dark</span>
+      </section>
+
+      <!-- Cards -->
+      <section>
+        <h2>Cards</h2>
+        <div class="row g-3">
+          <div class="col-md-4">
+            <div class="card border-primary">
+              <div class="card-header bg-primary text-white">Primary Header</div>
+              <div class="card-body">
+                <p class="card-text">Card with primary border and header using Blue 60.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card border-success">
+              <div class="card-header bg-success text-white">Success Header</div>
+              <div class="card-body">
+                <p class="card-text">Card with success border and header using Green 50.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card border-danger">
+              <div class="card-header bg-danger text-white">Danger Header</div>
+              <div class="card-body">
+                <p class="card-text">Card with danger border and header using Red 60.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gray Scale -->
+      <section>
+        <h2>Gray Scale</h2>
+        <p class="text-body-secondary mb-3">Carbon Gray palette mapped to Bootstrap's gray variables</p>
+        <div class="row g-0">
+          <div class="col">
+            <div class="gray-swatch text-dark" style="background-color: #f4f4f4;">
+              <code class="text-dark">$gray-100</code>
+              <code class="text-dark">#f4f4f4</code>
+              <small class="text-body-secondary">Gray 10</small>
+            </div>
+          </div>
+          <div class="col">
+            <div class="gray-swatch text-dark" style="background-color: #e0e0e0;">
+              <code class="text-dark">$gray-200</code>
+              <code class="text-dark">#e0e0e0</code>
+              <small class="text-body-secondary">Gray 20</small>
+            </div>
+          </div>
+          <div class="col">
+            <div class="gray-swatch text-dark" style="background-color: #c6c6c6;">
+              <code class="text-dark">$gray-300</code>
+              <code class="text-dark">#c6c6c6</code>
+              <small class="text-body-secondary">Gray 30</small>
+            </div>
+          </div>
+          <div class="col">
+            <div class="gray-swatch text-dark" style="background-color: #a8a8a8;">
+              <code class="text-dark">$gray-400</code>
+              <code class="text-dark">#a8a8a8</code>
+              <small class="text-body-secondary">Gray 40</small>
+            </div>
+          </div>
+          <div class="col">
+            <div class="gray-swatch text-white" style="background-color: #8d8d8d;">
+              <code class="text-white">$gray-500</code>
+              <code class="text-white">#8d8d8d</code>
+              <small class="text-white-50">Gray 50</small>
+            </div>
+          </div>
+          <div class="col">
+            <div class="gray-swatch text-white" style="background-color: #6f6f6f;">
+              <code class="text-white">$gray-600</code>
+              <code class="text-white">#6f6f6f</code>
+              <small class="text-white-50">Gray 60</small>
+            </div>
+          </div>
+          <div class="col">
+            <div class="gray-swatch text-white" style="background-color: #525252;">
+              <code class="text-white">$gray-700</code>
+              <code class="text-white">#525252</code>
+              <small class="text-white-50">Gray 70</small>
+            </div>
+          </div>
+          <div class="col">
+            <div class="gray-swatch text-white" style="background-color: #393939;">
+              <code class="text-white">$gray-800</code>
+              <code class="text-white">#393939</code>
+              <small class="text-white-50">Gray 80</small>
+            </div>
+          </div>
+          <div class="col">
+            <div class="gray-swatch text-white" style="background-color: #161616;">
+              <code class="text-white">$gray-900</code>
+              <code class="text-white">#161616</code>
+              <small class="text-white-50">Gray 100</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Text Colors -->
+      <section>
+        <h2>Text Colors</h2>
+        <div class="mb-4">
+          <p class="fs-5" style="color: #161616;"><strong>Body Text (text-01)</strong> - #161616 (Gray 100)</p>
+          <p>This is primary body text using Carbon's text-01 token. It provides maximum contrast for readability.</p>
+        </div>
+        <div class="mb-4">
+          <p class="fs-5 text-body-secondary"><strong>Secondary Text (text-02)</strong> - #525252 (Gray 70)</p>
+          <p class="text-body-secondary">This is secondary text using Carbon's text-02 token. Used for supporting information.</p>
+        </div>
+        <div class="mb-4">
+          <p class="fs-5 text-body-tertiary"><strong>Tertiary Text (text-03)</strong> - #8d8d8d (Gray 50)</p>
+          <p class="text-body-tertiary">This is tertiary text using Carbon's text-03 token. Used for placeholder or hint text.</p>
+        </div>
+      </section>
+
+      <!-- Links -->
+      <section>
+        <h2>Links</h2>
+        <p>
+          Links use Carbon Blue 60 (<code>#0f62fe</code>) as the default color and
+          Blue 70 (<code>#0043ce</code>) on hover.
+          <a href="#">This is an example link</a> - hover to see the color change.
+        </p>
+        <p>
+          Links can also appear in different contexts:
+          <a href="#" class="link-primary">Primary link</a>,
+          <a href="#" class="link-secondary">Secondary link</a>,
+          <a href="#" class="link-success">Success link</a>,
+          <a href="#" class="link-danger">Danger link</a>.
+        </p>
+      </section>
+
+      <!-- Background Utilities -->
+      <section>
+        <h2>Background Utilities</h2>
+        <div class="row g-3">
+          <div class="col-md-3">
+            <div class="p-3 bg-primary text-white rounded">
+              <strong>.bg-primary</strong><br>
+              Blue 60
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="p-3 bg-secondary text-white rounded">
+              <strong>.bg-secondary</strong><br>
+              Gray 80
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="p-3 bg-light text-dark rounded border">
+              <strong>.bg-light</strong><br>
+              Gray 10
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="p-3 bg-dark text-white rounded">
+              <strong>.bg-dark</strong><br>
+              Gray 100
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="mt-5 pt-4 border-top text-body-secondary">
+        <p>
+          <small>
+            Carbon Design System color integration for Bootstrap 5.3.8<br>
+            Reference: <a href="https://carbondesignsystem.com/elements/color/overview/" target="_blank">Carbon Color Documentation</a>
+          </small>
+        </p>
+      </footer>
+    </div>
+
+    <script src="../dist/js/bootstrap.bundle.js"></script>
+  </body>
+</html>

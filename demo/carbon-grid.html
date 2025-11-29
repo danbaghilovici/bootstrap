@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Carbon Design System Grid Demo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'IBM Plex Sans', sans-serif;
+      }
+      code {
+        font-family: 'IBM Plex Mono', monospace;
+      }
+      section {
+        margin-bottom: 3rem;
+      }
+      h2 {
+        border-bottom: 1px solid var(--bs-gray-300);
+        padding-bottom: 0.5rem;
+        margin-bottom: 1.5rem;
+      }
+      .grid-demo .col,
+      .grid-demo [class^="col-"] {
+        background: var(--bs-primary);
+        color: white;
+        padding: 0.75rem 0.5rem;
+        text-align: center;
+        font-size: 0.875rem;
+        border: 1px solid rgba(255,255,255,0.2);
+      }
+      .grid-demo .row {
+        margin-bottom: 1rem;
+      }
+      .breakpoint-card {
+        text-align: center;
+        padding: 1rem;
+        border-radius: 0.25rem;
+      }
+      .breakpoint-value {
+        font-size: 2rem;
+        font-weight: 600;
+      }
+      .container-demo {
+        background: var(--bs-gray-100);
+        padding: 1rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        border: 2px dashed var(--bs-gray-400);
+      }
+      .gutter-demo .col {
+        background: var(--bs-info);
+        color: white;
+        padding: 1rem;
+        text-align: center;
+      }
+      .gutter-inner {
+        background: var(--bs-primary);
+        padding: 0.5rem;
+      }
+      .current-breakpoint {
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem;
+        background: var(--bs-dark);
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 0.25rem;
+        font-size: 0.875rem;
+        z-index: 1000;
+      }
+    </style>
+  </head>
+  <body class="py-5">
+    <!-- Current Breakpoint Indicator -->
+    <div class="current-breakpoint">
+      Breakpoint:
+      <span class="d-inline d-sm-none">xs (&lt;320px)</span>
+      <span class="d-none d-sm-inline d-md-none">sm (320px+)</span>
+      <span class="d-none d-md-inline d-lg-none">md (672px+)</span>
+      <span class="d-none d-lg-inline d-xl-none">lg (1056px+)</span>
+      <span class="d-none d-xl-inline d-xxl-none">xl (1312px+)</span>
+      <span class="d-none d-xxl-inline">xxl (1584px+)</span>
+    </div>
+
+    <div class="container">
+      <!-- Header -->
+      <header class="mb-5">
+        <h1>Carbon Design System 2x Grid</h1>
+        <p class="lead text-body-secondary">Bootstrap theme customized with IBM Carbon Design System grid breakpoints and 16-column layout</p>
+      </header>
+
+      <!-- Breakpoints -->
+      <section>
+        <h2>Breakpoints</h2>
+        <p class="text-body-secondary mb-4">Carbon 2x grid breakpoints mapped to Bootstrap's responsive tiers</p>
+
+        <div class="row g-3">
+          <div class="col-md-4 col-lg-2">
+            <div class="breakpoint-card bg-light">
+              <div class="breakpoint-value text-primary">xs</div>
+              <div><code>0</code></div>
+              <small class="text-body-secondary">Default</small>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-2">
+            <div class="breakpoint-card bg-light">
+              <div class="breakpoint-value text-primary">sm</div>
+              <div><code>320px</code></div>
+              <small class="text-body-secondary">Carbon: sm</small>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-2">
+            <div class="breakpoint-card bg-light">
+              <div class="breakpoint-value text-primary">md</div>
+              <div><code>672px</code></div>
+              <small class="text-body-secondary">Carbon: md</small>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-2">
+            <div class="breakpoint-card bg-light">
+              <div class="breakpoint-value text-primary">lg</div>
+              <div><code>1056px</code></div>
+              <small class="text-body-secondary">Carbon: lg</small>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-2">
+            <div class="breakpoint-card bg-light">
+              <div class="breakpoint-value text-primary">xl</div>
+              <div><code>1312px</code></div>
+              <small class="text-body-secondary">Carbon: xlg</small>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-2">
+            <div class="breakpoint-card bg-light">
+              <div class="breakpoint-value text-primary">xxl</div>
+              <div><code>1584px</code></div>
+              <small class="text-body-secondary">Carbon: max</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 16-Column Grid -->
+      <section>
+        <h2>16-Column Grid</h2>
+        <p class="text-body-secondary mb-4">Carbon uses a 16-column grid system for finer layout control</p>
+
+        <div class="grid-demo">
+          <div class="row">
+            <div class="col-1">1</div>
+            <div class="col-1">1</div>
+            <div class="col-1">1</div>
+            <div class="col-1">1</div>
+            <div class="col-1">1</div>
+            <div class="col-1">1</div>
+            <div class="col-1">1</div>
+            <div class="col-1">1</div>
+            <div class="col-1">1</div>
+            <div class="col-1">1</div>
+            <div class="col-1">1</div>
+            <div class="col-1">1</div>
+            <div class="col-1">1</div>
+            <div class="col-1">1</div>
+            <div class="col-1">1</div>
+            <div class="col-1">1</div>
+          </div>
+          <p class="text-body-secondary text-center"><code>.col-1</code> x 16 = 100%</p>
+
+          <div class="row">
+            <div class="col-4">col-4</div>
+            <div class="col-4">col-4</div>
+            <div class="col-4">col-4</div>
+            <div class="col-4">col-4</div>
+          </div>
+          <p class="text-body-secondary text-center"><code>.col-4</code> x 4 = 100% (25% each)</p>
+
+          <div class="row">
+            <div class="col-8">col-8</div>
+            <div class="col-8">col-8</div>
+          </div>
+          <p class="text-body-secondary text-center"><code>.col-8</code> x 2 = 100% (50% each)</p>
+
+          <div class="row">
+            <div class="col-12">col-12</div>
+            <div class="col-4">col-4</div>
+          </div>
+          <p class="text-body-secondary text-center"><code>.col-12</code> (75%) + <code>.col-4</code> (25%) = 100%</p>
+
+          <div class="row">
+            <div class="col-16">col-16</div>
+          </div>
+          <p class="text-body-secondary text-center"><code>.col-16</code> = 100%</p>
+        </div>
+      </section>
+
+      <!-- Responsive Columns -->
+      <section>
+        <h2>Responsive Columns</h2>
+        <p class="text-body-secondary mb-4">Columns adapt at Carbon breakpoints. Resize your browser to see changes.</p>
+
+        <div class="grid-demo">
+          <div class="row">
+            <div class="col-16 col-md-8 col-lg-4">
+              <small>col-16 col-md-8 col-lg-4</small>
+            </div>
+            <div class="col-16 col-md-8 col-lg-4">
+              <small>col-16 col-md-8 col-lg-4</small>
+            </div>
+            <div class="col-16 col-md-8 col-lg-4">
+              <small>col-16 col-md-8 col-lg-4</small>
+            </div>
+            <div class="col-16 col-md-8 col-lg-4">
+              <small>col-16 col-md-8 col-lg-4</small>
+            </div>
+          </div>
+          <p class="text-body-secondary text-center">
+            <strong>xs/sm:</strong> 1 column (100%) |
+            <strong>md:</strong> 2 columns (50%) |
+            <strong>lg+:</strong> 4 columns (25%)
+          </p>
+        </div>
+
+        <div class="grid-demo mt-4">
+          <div class="row">
+            <div class="col-16 col-md-10 col-xl-12">
+              Main Content (col-16 col-md-10 col-xl-12)
+            </div>
+            <div class="col-16 col-md-6 col-xl-4">
+              Sidebar (col-16 col-md-6 col-xl-4)
+            </div>
+          </div>
+          <p class="text-body-secondary text-center">
+            Typical content + sidebar layout
+          </p>
+        </div>
+      </section>
+
+      <!-- Container Widths -->
+      <section>
+        <h2>Container Max-Widths</h2>
+        <p class="text-body-secondary mb-4">Container widths calculated as breakpoint minus gutter (32px)</p>
+
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Breakpoint</th>
+                <th>Breakpoint Width</th>
+                <th>Container Max-Width</th>
+                <th>Calculation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>sm</td>
+                <td>320px</td>
+                <td><code>288px</code></td>
+                <td>320px - 32px</td>
+              </tr>
+              <tr>
+                <td>md</td>
+                <td>672px</td>
+                <td><code>640px</code></td>
+                <td>672px - 32px</td>
+              </tr>
+              <tr>
+                <td>lg</td>
+                <td>1056px</td>
+                <td><code>1024px</code></td>
+                <td>1056px - 32px</td>
+              </tr>
+              <tr>
+                <td>xl</td>
+                <td>1312px</td>
+                <td><code>1280px</code></td>
+                <td>1312px - 32px</td>
+              </tr>
+              <tr>
+                <td>xxl</td>
+                <td>1584px</td>
+                <td><code>1584px</code></td>
+                <td>Carbon max-width</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h5 class="mt-4">Container Demo</h5>
+        <div class="container-demo">
+          <code>.container</code> - Responsive max-width at each breakpoint
+        </div>
+      </section>
+
+      <!-- Gutter Width -->
+      <section>
+        <h2>Gutter Width</h2>
+        <p class="text-body-secondary mb-4">Carbon wide mode uses 32px (2rem) gutters</p>
+
+        <div class="gutter-demo">
+          <div class="row">
+            <div class="col-4">
+              <div class="gutter-inner">Column</div>
+            </div>
+            <div class="col-4">
+              <div class="gutter-inner">Column</div>
+            </div>
+            <div class="col-4">
+              <div class="gutter-inner">Column</div>
+            </div>
+            <div class="col-4">
+              <div class="gutter-inner">Column</div>
+            </div>
+          </div>
+        </div>
+        <p class="text-body-secondary text-center mt-2">
+          <code>$grid-gutter-width: 2rem</code> (32px) - Light blue shows gutter, dark blue shows content
+        </p>
+
+        <h5 class="mt-4">Gutter Modifiers</h5>
+        <div class="grid-demo">
+          <p><strong>.g-0</strong> - No gutters:</p>
+          <div class="row g-0 mb-3">
+            <div class="col-4">col-4</div>
+            <div class="col-4">col-4</div>
+            <div class="col-4">col-4</div>
+            <div class="col-4">col-4</div>
+          </div>
+
+          <p><strong>.gx-5</strong> - Large horizontal gutters (48px):</p>
+          <div class="row gx-5 mb-3">
+            <div class="col-8">col-8</div>
+            <div class="col-8">col-8</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Offset Classes -->
+      <section>
+        <h2>Offset Classes</h2>
+        <p class="text-body-secondary mb-4">Push columns to the right using offset classes (up to offset-15)</p>
+
+        <div class="grid-demo">
+          <div class="row">
+            <div class="col-4">col-4</div>
+            <div class="col-4 offset-4">col-4 offset-4</div>
+          </div>
+
+          <div class="row">
+            <div class="col-8 offset-4">col-8 offset-4</div>
+          </div>
+
+          <div class="row">
+            <div class="col-6 offset-2">col-6 offset-2</div>
+            <div class="col-6 offset-2">col-6 offset-2</div>
+          </div>
+
+          <div class="row">
+            <div class="col-4 offset-6">col-4 offset-6</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Row Columns -->
+      <section>
+        <h2>Row Columns</h2>
+        <p class="text-body-secondary mb-4">Quickly set equal-width columns using <code>.row-cols-*</code> (up to 8)</p>
+
+        <div class="grid-demo">
+          <p><strong>.row-cols-4</strong> - 4 equal columns:</p>
+          <div class="row row-cols-4 mb-3">
+            <div class="col">Column</div>
+            <div class="col">Column</div>
+            <div class="col">Column</div>
+            <div class="col">Column</div>
+            <div class="col">Column</div>
+            <div class="col">Column</div>
+            <div class="col">Column</div>
+            <div class="col">Column</div>
+          </div>
+
+          <p><strong>.row-cols-8</strong> - 8 equal columns:</p>
+          <div class="row row-cols-8">
+            <div class="col">1</div>
+            <div class="col">2</div>
+            <div class="col">3</div>
+            <div class="col">4</div>
+            <div class="col">5</div>
+            <div class="col">6</div>
+            <div class="col">7</div>
+            <div class="col">8</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Grid Summary -->
+      <section>
+        <h2>Grid Configuration Summary</h2>
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Variable</th>
+                <th>Value</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>$grid-columns</code></td>
+                <td>16</td>
+                <td>Total columns in the grid</td>
+              </tr>
+              <tr>
+                <td><code>$grid-gutter-width</code></td>
+                <td>2rem (32px)</td>
+                <td>Carbon wide mode gutter</td>
+              </tr>
+              <tr>
+                <td><code>$grid-row-columns</code></td>
+                <td>8</td>
+                <td>Max for .row-cols-* classes</td>
+              </tr>
+              <tr>
+                <td><code>$container-padding-x</code></td>
+                <td>2rem (32px)</td>
+                <td>Container horizontal padding</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="mt-5 pt-4 border-top text-body-secondary">
+        <p>
+          <small>
+            Carbon Design System 2x grid integration for Bootstrap 5.3.8<br>
+            Reference: <a href="https://carbondesignsystem.com/elements/2x-grid/overview/" target="_blank">Carbon 2x Grid Documentation</a>
+          </small>
+        </p>
+      </footer>
+    </div>
+
+    <script src="../dist/js/bootstrap.bundle.js"></script>
+  </body>
+</html>

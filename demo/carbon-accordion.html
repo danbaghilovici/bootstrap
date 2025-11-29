@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Carbon Design System Accordion Demo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'IBM Plex Sans', sans-serif;
+      }
+      code {
+        font-family: 'IBM Plex Mono', monospace;
+      }
+      section {
+        margin-bottom: 3rem;
+      }
+      h2 {
+        border-bottom: 1px solid var(--bs-gray-300);
+        padding-bottom: 0.5rem;
+        margin-bottom: 1.5rem;
+      }
+      .spec-table {
+        font-size: 0.875rem;
+      }
+      .spec-table th {
+        font-weight: 600;
+      }
+      .demo-box {
+        background: var(--bs-gray-100);
+        padding: 1.5rem;
+        border-radius: 0;
+        margin-bottom: 1rem;
+      }
+    </style>
+  </head>
+  <body class="py-5">
+    <div class="container">
+      <!-- Header -->
+      <header class="mb-5">
+        <h1>Carbon Design System Accordion</h1>
+        <p class="lead text-body-secondary">Bootstrap theme customized with IBM Carbon Design System accordion styling</p>
+      </header>
+
+      <!-- Default Accordion -->
+      <section>
+        <h2>Default Accordion</h2>
+        <p class="text-body-secondary mb-4">Carbon-styled accordion with square corners, reduced padding, and no background change on expand</p>
+
+        <div class="demo-box">
+          <div class="accordion" id="accordionDefault">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                  Accordion Item #1
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionDefault">
+                <div class="accordion-body">
+                  <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Accordion Item #2
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionDefault">
+                <div class="accordion-body">
+                  <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Accordion Item #3
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionDefault">
+                <div class="accordion-body">
+                  <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <table class="table spec-table">
+          <thead>
+            <tr>
+              <th>Property</th>
+              <th>Carbon Value</th>
+              <th>Bootstrap Default</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Border Radius</td>
+              <td><code>0</code></td>
+              <td><code>var(--bs-border-radius)</code></td>
+            </tr>
+            <tr>
+              <td>Button Padding Y</td>
+              <td><code>0.75rem</code> (12px)</td>
+              <td><code>1rem</code> (16px)</td>
+            </tr>
+            <tr>
+              <td>Button Padding X</td>
+              <td><code>1rem</code> (16px)</td>
+              <td><code>1.25rem</code> (20px)</td>
+            </tr>
+            <tr>
+              <td>Border Color</td>
+              <td><code>#c6c6c6</code> (Gray 30)</td>
+              <td><code>var(--bs-border-color)</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- First Item Expanded -->
+      <section>
+        <h2>First Item Expanded by Default</h2>
+        <p class="text-body-secondary mb-4">Notice the expanded header has the same background as collapsed (no primary color background)</p>
+
+        <div class="demo-box">
+          <div class="accordion" id="accordionExpanded">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#expandedOne" aria-expanded="true" aria-controls="expandedOne">
+                  Expanded Accordion Item
+                </button>
+              </h2>
+              <div id="expandedOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExpanded">
+                <div class="accordion-body">
+                  <strong>This item is expanded by default.</strong> In Carbon Design System, expanded accordion headers maintain the same background color as collapsed headers. The chevron icon rotates 180 degrees to indicate the expanded state.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#expandedTwo" aria-expanded="false" aria-controls="expandedTwo">
+                  Collapsed Accordion Item
+                </button>
+              </h2>
+              <div id="expandedTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExpanded">
+                <div class="accordion-body">
+                  This is the second item's content.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <table class="table spec-table">
+          <thead>
+            <tr>
+              <th>State</th>
+              <th>Background</th>
+              <th>Text Color</th>
+              <th>Icon</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Collapsed</td>
+              <td><code>#fff</code> (body-bg)</td>
+              <td><code>#161616</code> (body-color)</td>
+              <td>Chevron down</td>
+            </tr>
+            <tr>
+              <td>Expanded</td>
+              <td><code>#fff</code> (body-bg)</td>
+              <td><code>#161616</code> (body-color)</td>
+              <td>Chevron up (180° rotation)</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Flush Accordion -->
+      <section>
+        <h2>Flush Accordion</h2>
+        <p class="text-body-secondary mb-4">Removes left, right, and outer borders for edge-to-edge styling within containers</p>
+
+        <div class="demo-box">
+          <div class="accordion accordion-flush" id="accordionFlush">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flushOne" aria-expanded="false" aria-controls="flushOne">
+                  Flush Accordion Item #1
+                </button>
+              </h2>
+              <div id="flushOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlush">
+                <div class="accordion-body">
+                  This is flush accordion content. Notice how the left and right borders are removed, creating an edge-to-edge appearance perfect for sidebars or nested containers.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flushTwo" aria-expanded="false" aria-controls="flushTwo">
+                  Flush Accordion Item #2
+                </button>
+              </h2>
+              <div id="flushTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlush">
+                <div class="accordion-body">
+                  Second flush accordion item content.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flushThree" aria-expanded="false" aria-controls="flushThree">
+                  Flush Accordion Item #3
+                </button>
+              </h2>
+              <div id="flushThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlush">
+                <div class="accordion-body">
+                  Third flush accordion item content.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="alert alert-info">
+          <strong>Flush variant:</strong> Uses <code>.accordion-flush</code> class to remove left/right borders and outer borders on first/last items.
+        </div>
+      </section>
+
+      <!-- Always Open Accordion -->
+      <section>
+        <h2>Always Open (Multiple Expanded)</h2>
+        <p class="text-body-secondary mb-4">Remove <code>data-bs-parent</code> to allow multiple items to stay open simultaneously</p>
+
+        <div class="demo-box">
+          <div class="accordion" id="accordionAlwaysOpen">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#alwaysOne" aria-expanded="true" aria-controls="alwaysOne">
+                  Always Open Item #1 (Expanded)
+                </button>
+              </h2>
+              <div id="alwaysOne" class="accordion-collapse collapse show">
+                <div class="accordion-body">
+                  <strong>This item stays open</strong> when you open other items. This is useful for FAQ sections or when users need to compare content across multiple sections.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#alwaysTwo" aria-expanded="true" aria-controls="alwaysTwo">
+                  Always Open Item #2 (Expanded)
+                </button>
+              </h2>
+              <div id="alwaysTwo" class="accordion-collapse collapse show">
+                <div class="accordion-body">
+                  <strong>This item also stays open.</strong> You can close individual items without affecting others.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#alwaysThree" aria-expanded="false" aria-controls="alwaysThree">
+                  Always Open Item #3 (Collapsed)
+                </button>
+              </h2>
+              <div id="alwaysThree" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  Open this item - the others will remain open.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Focus States -->
+      <section>
+        <h2>Focus States</h2>
+        <p class="text-body-secondary mb-4">Tab through accordion buttons to see the focus ring (inherits from button focus styles)</p>
+
+        <div class="demo-box">
+          <div class="accordion" id="accordionFocus">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#focusOne" aria-expanded="false" aria-controls="focusOne">
+                  Tab to this button to see focus ring
+                </button>
+              </h2>
+              <div id="focusOne" class="accordion-collapse collapse" data-bs-parent="#accordionFocus">
+                <div class="accordion-body">
+                  Focus ring should use the Carbon Blue 60 inset style.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#focusTwo" aria-expanded="false" aria-controls="focusTwo">
+                  Press Enter or Space to toggle
+                </button>
+              </h2>
+              <div id="focusTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFocus">
+                <div class="accordion-body">
+                  Keyboard navigation works as expected.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Accordion with Rich Content -->
+      <section>
+        <h2>Accordion with Rich Content</h2>
+        <p class="text-body-secondary mb-4">Accordions can contain any HTML content including lists, tables, and nested components</p>
+
+        <div class="demo-box">
+          <div class="accordion" id="accordionRich">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#richOne" aria-expanded="false" aria-controls="richOne">
+                  Content with Lists
+                </button>
+              </h2>
+              <div id="richOne" class="accordion-collapse collapse" data-bs-parent="#accordionRich">
+                <div class="accordion-body">
+                  <p>Here's a list inside an accordion:</p>
+                  <ul>
+                    <li>First list item with important information</li>
+                    <li>Second list item with more details</li>
+                    <li>Third list item for additional context</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#richTwo" aria-expanded="false" aria-controls="richTwo">
+                  Content with Code
+                </button>
+              </h2>
+              <div id="richTwo" class="accordion-collapse collapse" data-bs-parent="#accordionRich">
+                <div class="accordion-body">
+                  <p>Example of using the accordion in your HTML:</p>
+                  <pre><code>&lt;div class="accordion" id="myAccordion"&gt;
+  &lt;div class="accordion-item"&gt;
+    &lt;h2 class="accordion-header"&gt;
+      &lt;button class="accordion-button"&gt;...&lt;/button&gt;
+    &lt;/h2&gt;
+    &lt;div class="accordion-collapse collapse"&gt;
+      &lt;div class="accordion-body"&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Specification Summary -->
+      <section>
+        <h2>Carbon Accordion Specifications Summary</h2>
+
+        <table class="table spec-table">
+          <thead>
+            <tr>
+              <th>Property</th>
+              <th>Variable</th>
+              <th>Value</th>
+              <th>Carbon Token</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Padding Y</td>
+              <td><code>$accordion-padding-y</code></td>
+              <td><code>0.75rem</code> (12px)</td>
+              <td>spacing-04</td>
+            </tr>
+            <tr>
+              <td>Padding X</td>
+              <td><code>$accordion-padding-x</code></td>
+              <td><code>1rem</code> (16px)</td>
+              <td>spacing-05</td>
+            </tr>
+            <tr>
+              <td>Border Color</td>
+              <td><code>$accordion-border-color</code></td>
+              <td><code>#c6c6c6</code></td>
+              <td>ui-03 (Gray 30)</td>
+            </tr>
+            <tr>
+              <td>Border Radius</td>
+              <td><code>$accordion-border-radius</code></td>
+              <td><code>0</code></td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>Active Background</td>
+              <td><code>$accordion-button-active-bg</code></td>
+              <td><code>#fff</code></td>
+              <td>ui-background</td>
+            </tr>
+            <tr>
+              <td>Active Text Color</td>
+              <td><code>$accordion-button-active-color</code></td>
+              <td><code>#161616</code></td>
+              <td>text-01</td>
+            </tr>
+            <tr>
+              <td>Icon Active Color</td>
+              <td><code>$accordion-icon-active-color</code></td>
+              <td><code>#161616</code></td>
+              <td>icon-01</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Footer -->
+      <footer class="mt-5 pt-4 border-top text-body-secondary">
+        <p>
+          <small>
+            Carbon Design System accordion integration for Bootstrap 5.3.8<br>
+            Reference: <a href="https://carbondesignsystem.com/components/accordion/style/" target="_blank">Carbon Accordion Documentation</a>
+          </small>
+        </p>
+      </footer>
+    </div>
+
+    <script src="../dist/js/bootstrap.bundle.js"></script>
+  </body>
+</html>

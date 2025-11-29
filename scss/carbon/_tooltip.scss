@@ -1,0 +1,10 @@
+// Carbon Tooltip Customizations
+// Box-shadow not available via Bootstrap variables
+// Reference: https://carbondesignsystem.com/components/tooltip/style/
+
+// -----------------------------------------------------------------------------
+// Tooltip Shadow
+// -----------------------------------------------------------------------------
+.tooltip-inner {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .3);  // Carbon: drop shadow
+}

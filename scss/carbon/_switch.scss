@@ -1,0 +1,86 @@
+// Carbon Switch/Toggle Customizations
+// Fixed dimensions and Carbon-specific styling
+// Reference: https://carbondesignsystem.com/components/toggle/style/
+
+// -----------------------------------------------------------------------------
+// Track Overrides
+// -----------------------------------------------------------------------------
+.form-switch .form-check-input {
+  // Fixed dimensions (Carbon: 48px × 24px)
+  width: 3rem;              // 48px
+  height: 1.5rem;           // 24px
+  margin-top: 0;            // Reset Bootstrap's alignment for taller switch
+
+  // OFF state track color
+  background-color: $gray-500;  // Carbon: $toggle-off (#8d8d8d)
+  // Handle position: 3px from left edge
+  background-position: left 3px center;
+  // Handle sizing via background-size
+  // SVG viewBox is 8×8, we want 18px handle
+  background-size: 1.125rem;  // 18px handle
+  border: 0;
+
+  &:focus {
+    background-color: $gray-500;
+    box-shadow: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $primary;  // Carbon: $focus (Blue 60)
+    outline-offset: 1px;
+  }
+
+  // ON state
+  &:checked {
+    background-color: $success;  // Carbon: $support-success (#24a148)
+    // Handle translates 24px to the right (48px - 18px - 3px - 3px = 24px)
+    background-position: right 3px center;
+  }
+
+  &:checked:focus {
+    background-color: $success;
+  }
+
+  // Disabled state
+  &:disabled {
+    background-color: $gray-300;  // Carbon: disabled track
+    opacity: 1;  // Override Bootstrap's opacity
+
+    // Dimmed handle for disabled
+    --#{$prefix}form-switch-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='%238d8d8d'/></svg>");
+  }
+
+  &:disabled:checked {
+    background-color: $gray-300;
+  }
+}
+
+// Disabled label styling
+.form-switch .form-check-input:disabled ~ .form-check-label {
+  color: $gray-300;  // Carbon: $text-disabled
+  opacity: 1;
+}
+
+// -----------------------------------------------------------------------------
+// Small Variant
+// -----------------------------------------------------------------------------
+.form-switch-sm .form-check-input {
+  // Small dimensions (Carbon: 32px × 16px)
+  width: 2rem;              // 32px
+  height: 1rem;             // 16px
+
+  // Handle position: 3px from edge
+  background-position: left 3px center;
+  // Smaller handle: 10px
+  background-size: .625rem;  // 10px handle
+
+  &:checked {
+    // Handle translates 16px (32px - 10px - 3px - 3px = 16px)
+    background-position: right 3px center;
+  }
+}
+
+.form-switch-sm {
+  // Adjust padding for smaller switch
+  padding-left: 2.5rem;  // 32px + 8px gap
+}

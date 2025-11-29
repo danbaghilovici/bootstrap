@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carbon Popover Demo</title>
+  <link rel="stylesheet" href="../dist/css/bootstrap.css">
+  <style>
+    body {
+      padding: 2rem;
+      background-color: #f4f4f4;
+    }
+    .demo-section {
+      background: white;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .demo-section h2 {
+      margin-bottom: 1rem;
+      font-size: 1.25rem;
+    }
+    .demo-section p {
+      color: #525252;
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+    }
+    .demo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 150px;
+      background: #e0e0e0;
+      padding: 3rem;
+      gap: 1rem;
+    }
+    .demo-container-placements {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      padding: 4rem 2rem;
+    }
+    pre {
+      background: #161616;
+      color: #f4f4f4;
+      padding: 1rem;
+      margin-top: 1rem;
+      font-size: 0.75rem;
+      overflow-x: auto;
+    }
+    code {
+      font-family: "IBM Plex Mono", monospace;
+    }
+  </style>
+</head>
+<body>
+  <h1>Carbon Popover Demo</h1>
+  <p>Popover component styled with Carbon Design System specifications.</p>
+
+  <!-- All Placements -->
+  <div class="demo-section">
+    <h2>Popover Placements</h2>
+    <p>Popovers can be positioned on top, bottom, left, or right of the trigger element.</p>
+    <div class="demo-container demo-container-placements">
+      <button type="button" class="btn btn-secondary" data-bs-toggle="popover" data-bs-placement="top" data-bs-title="Top Popover" data-bs-content="This popover appears above the trigger element.">
+        Top
+      </button>
+      <button type="button" class="btn btn-secondary" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-title="Bottom Popover" data-bs-content="This popover appears below the trigger element.">
+        Bottom
+      </button>
+      <button type="button" class="btn btn-secondary" data-bs-toggle="popover" data-bs-placement="left" data-bs-title="Left Popover" data-bs-content="This popover appears to the left of the trigger element.">
+        Left
+      </button>
+      <button type="button" class="btn btn-secondary" data-bs-toggle="popover" data-bs-placement="right" data-bs-title="Right Popover" data-bs-content="This popover appears to the right of the trigger element.">
+        Right
+      </button>
+    </div>
+  </div>
+
+  <!-- Body Only (No Header) -->
+  <div class="demo-section">
+    <h2>Body Only (No Header)</h2>
+    <p>Popover with content only, no title/header.</p>
+    <div class="demo-container">
+      <button type="button" class="btn btn-primary" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="This is a simple popover with body content only. No header is displayed.">
+        Click for popover
+      </button>
+    </div>
+  </div>
+
+  <!-- With Header and Body -->
+  <div class="demo-section">
+    <h2>With Header and Body</h2>
+    <p>Popover with both a title (header) and content (body).</p>
+    <div class="demo-container">
+      <button type="button" class="btn btn-primary" data-bs-toggle="popover" data-bs-placement="right" data-bs-title="Popover Title" data-bs-content="This popover has both a header and body content. The header uses 16px font size and the body uses 14px.">
+        Click for popover
+      </button>
+    </div>
+  </div>
+
+  <!-- Long Content (Max Width Test) -->
+  <div class="demo-section">
+    <h2>Long Content (Max Width: 368px)</h2>
+    <p>Popover with long content to demonstrate the max-width constraint of 368px.</p>
+    <div class="demo-container">
+      <button type="button" class="btn btn-primary" data-bs-toggle="popover" data-bs-placement="right" data-bs-title="Extended Information" data-bs-content="This popover contains a longer piece of content to demonstrate how the component handles text that exceeds a single line. The Carbon Design System specifies a maximum width of 368px for popovers, which ensures readability while preventing the popover from becoming too wide. The text will wrap naturally within this constraint.">
+        Click for long content
+      </button>
+    </div>
+  </div>
+
+  <!-- Dismissible -->
+  <div class="demo-section">
+    <h2>Dismissible Popover</h2>
+    <p>Click anywhere outside the popover to dismiss it.</p>
+    <div class="demo-container">
+      <a tabindex="0" class="btn btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-title="Dismissible Popover" data-bs-content="Click anywhere outside this popover to close it.">
+        Dismissible popover
+      </a>
+    </div>
+  </div>
+
+  <!-- HTML Structure Reference -->
+  <div class="demo-section">
+    <h2>HTML Structure Reference</h2>
+    <p>Copy this HTML structure to use the popover component.</p>
+    <pre><code>&lt;!-- Basic popover trigger --&gt;
+&lt;button type="button" class="btn btn-primary"
+        data-bs-toggle="popover"
+        data-bs-placement="right"
+        data-bs-title="Popover Title"
+        data-bs-content="Popover content goes here."&gt;
+  Click me
+&lt;/button&gt;
+
+&lt;!-- Body only (no header) --&gt;
+&lt;button type="button" class="btn btn-secondary"
+        data-bs-toggle="popover"
+        data-bs-content="Body content only, no title."&gt;
+  No header
+&lt;/button&gt;
+
+&lt;!-- Dismissible popover --&gt;
+&lt;a tabindex="0" class="btn btn-danger" role="button"
+   data-bs-toggle="popover"
+   data-bs-trigger="focus"
+   data-bs-title="Dismissible"
+   data-bs-content="Click outside to close."&gt;
+  Dismissible
+&lt;/a&gt;</code></pre>
+  </div>
+
+  <!-- Carbon Design Specs -->
+  <div class="demo-section">
+    <h2>Carbon Design Specifications</h2>
+    <table class="table table-sm">
+      <thead>
+        <tr>
+          <th>Property</th>
+          <th>Value</th>
+          <th>Carbon Token</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Background</td>
+          <td><code>#ffffff</code></td>
+          <td><code>$layer</code></td>
+        </tr>
+        <tr>
+          <td>Border</td>
+          <td><code>#e0e0e0</code></td>
+          <td><code>$border-subtle</code></td>
+        </tr>
+        <tr>
+          <td>Border radius</td>
+          <td><code>2px</code></td>
+          <td>Carbon standard</td>
+        </tr>
+        <tr>
+          <td>Box shadow</td>
+          <td><code>0 2px 2px rgba(0,0,0,0.2)</code></td>
+          <td>Carbon drop shadow</td>
+        </tr>
+        <tr>
+          <td>Body font size</td>
+          <td><code>14px (0.875rem)</code></td>
+          <td><code>body-compact-01</code></td>
+        </tr>
+        <tr>
+          <td>Header font size</td>
+          <td><code>16px (1rem)</code></td>
+          <td><code>body-01</code></td>
+        </tr>
+        <tr>
+          <td>Padding</td>
+          <td><code>16px (1rem)</code></td>
+          <td><code>spacing-05</code></td>
+        </tr>
+        <tr>
+          <td>Max width</td>
+          <td><code>368px</code></td>
+          <td>Carbon max-inline-size</td>
+        </tr>
+        <tr>
+          <td>Arrow width</td>
+          <td><code>12px (0.75rem)</code></td>
+          <td>Carbon caret</td>
+        </tr>
+        <tr>
+          <td>Arrow height</td>
+          <td><code>6px (0.375rem)</code></td>
+          <td>Carbon caret</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Initialize all popovers
+    const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+    const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl));
+  </script>
+</body>
+</html>

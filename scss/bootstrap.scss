@@ -5,11 +5,13 @@
 // scss-docs-start import-stack
 // Configuration
 @import "functions";
-@import "variables";
+@import "variables-carbon";  // Carbon overrides FIRST
+@import "variables";         // Bootstrap defaults (with !default)
 @import "variables-dark";
 @import "maps";
 @import "mixins";
 @import "utilities";
+@import "utilities-custom";  // Carbon utility customizations
 
 // Layout & components
 @import "root";
@@ -21,31 +23,34 @@
 @import "tables";
 @import "forms";
 @import "buttons";
-@import "transitions";
+// @import "transitions";
 @import "dropdown";
 @import "button-group";
 @import "nav";
 @import "navbar";
 @import "card";
-@import "accordion";
+// @import "accordion";
 @import "breadcrumb";
 @import "pagination";
 @import "badge";
 @import "alert";
-@import "progress";
+// @import "progress";
 @import "list-group";
 @import "close";
-@import "toasts";
-@import "modal";
+// @import "toasts";
+// @import "modal";
 @import "tooltip";
-@import "popover";
-@import "carousel";
-@import "spinners";
+// @import "popover";
+// @import "carousel";
+// @import "spinners";
 @import "offcanvas";
-@import "placeholders";
+// @import "placeholders";
 
 // Helpers
 @import "helpers";
+
+// Carbon custom styles (cannot be done via variables)
+@import "carbon/index";
 
 // Utilities
 @import "utilities/api";
