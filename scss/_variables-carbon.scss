@@ -147,9 +147,9 @@ $container-max-widths: (
 // -----------------------------------------------------------------------------
 // Grid Configuration
 // -----------------------------------------------------------------------------
-$grid-columns: 16;              // Carbon: 16-column grid
+$grid-columns: 18;              // Carbon: 16-column grid but we are going with 18
 $grid-gutter-width: 2rem;       // Carbon: wide mode (32px)
-$grid-row-columns: 8;           // Half of grid columns
+$grid-row-columns: 9;           // Half of grid columns
 
 // -----------------------------------------------------------------------------
 // Container Padding
@@ -1005,6 +1005,17 @@ $dropdown-dark-link-active-color: $white;               // Carbon: white
 $dropdown-dark-link-active-bg:    $primary;             // Carbon: Blue 60
 $dropdown-dark-link-disabled-color: $gray-500;          // Carbon: Gray 50
 $dropdown-dark-header-color:      $gray-400;            // Carbon: Gray 40
+
+// -----------------------------------------------------------------------------
+// Container Max-Widths Override
+// -----------------------------------------------------------------------------
+$container-max-widths: (
+  sm: 95%,
+  md: 95%,
+  lg: 95%,
+  xl: 95%,
+  xxl: 95%
+);
 
 // stylelint-enable scss/dollar-variable-default
 // ============================================================================

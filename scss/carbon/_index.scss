@@ -2,16 +2,21 @@
 // Styles that cannot be achieved via Bootstrap variable overrides
 // Reference: https://carbondesignsystem.com/
 
+@import "focus";
 @import "type";
-// @import "accordion";
+@import "accordion";
 @import "alert";
 @import "breadcrumb";
 @import "pagination";
 @import "pagination-nav";
-// @import "progress";
+@import "progress";
 @import "switch";
 @import "tooltip";
-// @import "modal";
+@import "modal";
 @import "form";
-// @import "toast";
+@import "toast";
 @import "dropdown";
+
+.bi{
+    font-size: 1rem;
+}

@@ -1,0 +1,9 @@
+// Carbon Focus States
+// Global focus outline for all interactive elements
+// Reference: https://carbondesignsystem.com/guidelines/accessibility/keyboard/
+
+*:focus {
+  outline: 2px solid $primary;  // Carbon: Blue 60 (#0f62fe)
+  outline-offset: -2px;         // Carbon: inset outline
+  box-shadow: none;             // Disable Bootstrap's focus shadow
+}
