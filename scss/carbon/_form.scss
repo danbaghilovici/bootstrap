@@ -40,3 +40,10 @@
 .input-group:focus-within .input-group-text {
   border-color: $primary;       // Carbon: match focus border
 }
+//---
+
+.form-control{
+  @extend .bg-light !optional;
+  border: 0;
+  border-bottom: 1px solid $gray-400 !important; // Carbon: $border-weak (#e0e0e0)
+}

@@ -16,7 +16,104 @@
 @import "form";
 @import "toast";
 @import "dropdown";
+@import "card";
+@import "buttons";
 
 .bi{
     font-size: 1rem;
+}
+
+.tab-content {
+  display: flex;
+}
+
+.tab-content > .tab-pane {
+  display: block; /* undo "display: none;" */
+  visibility: hidden;
+  margin-right: -100%;
+  width: 100%;
+}
+
+.tab-content > .active {
+  visibility: visible;
+}
+
+ nav.navbar {
+     &:has(nav#TableOfContents){
+         @extend .sticky-top !optional;
+         @extend .z-3 !optional;
+     }
+     & nav#TableOfContents{
+         @extend .w-100 !optional;
+         & > ul{
+             @extend .list-group !optional;
+             @extend .list-group-horizontal !optional;
+             // display: flex;
+             // flex-direction: row;
+             width: 100%;
+             overflow: scroll;
+             & > li{
+                 // flex: none;
+
+                 & > a{
+                     // box-sizing: content-box;
+                     @extend .list-group-item-action !optional;
+                     @extend .list-group-item !optional;
+                     width: max-content;
+                 }
+                 // width: auto;
+                 &:has(a.active){
+                     // border-bottom: solid 4px rgb(212, 24, 96);
+                     @extend .list-group-item-secondary !optional;
+                 }
+             }
+         }
+
+ }
+ }
+
+
+
+aside nav.navbar {
+    &:has(nav#TableOfContents){
+        //@include media-breakpoint-down(lg){
+        //    position: fixed;
+        //    top: $navbar-brand-height;
+        //    right: 0;
+        //    left: 0;
+        //    z-index: map-get($zindex-levels, 3) !important;
+        //}
+    }
+    & nav#TableOfContents{
+        & >ul{
+            list-style-type: none;
+            @extend .list-group !optional;
+            &> li{
+                list-style: none;
+                & > a{
+                    // box-sizing: content-box;
+                    @extend .list-group-item-action !optional;
+                    @extend .list-group-item !optional;
+                    }
+                &:has(a.active){
+                    @extend .list-group-item-secondary !optional;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+@for $i from 1 through 5 {
+   .text-clamped-#{$i} {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: $i;
+              line-clamp: $i;
+      -webkit-box-orient: vertical;
+      line-height: $line-height-base;
+      min-height: calc(#{$line-height-base}em * #{$i});
+   }
 }

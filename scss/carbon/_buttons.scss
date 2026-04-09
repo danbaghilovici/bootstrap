@@ -1,0 +1,38 @@
+// Carbon button layout
+// Reference: https://carbondesignsystem.com/components/button/style
+
+// All buttons: top-left text alignment
+.btn {
+  display: inline-flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+// Carbon 2XL expressive button layout for .btn-xxl
+// Text top-left, icon top-right, asymmetric padding
+.btn-xxl {
+  // Position context for absolute icon
+  position: relative;
+
+  // Carbon 2XL height: 96px
+  min-height: 6rem;
+
+  // Asymmetric padding: 64px right for icon space
+  // Carbon: spacing-05 left (16px), spacing-10 right (64px)
+  padding: 1rem 4rem 1rem 1rem;
+
+  // Expressive font size
+  font-size: 1rem;
+}
+
+// Icon positioning for .btn-xxl
+// Supports Bootstrap Icons (.bi) and generic .icon class
+.btn-xxl .bi,
+.btn-xxl [class^="bi-"],
+.btn-xxl [class*=" bi-"],
+.btn-xxl .icon {
+  position: absolute;
+  top: 1rem; // Carbon: spacing-05
+  right: 1rem; // Carbon: spacing-05
+}

@@ -1,0 +1,5 @@
+// Card hover state for clickable cards with stretched-link
+.card:has(.stretched-link):hover {
+  background-color: var(--bs-tertiary-bg);
+  cursor: pointer;
+}
