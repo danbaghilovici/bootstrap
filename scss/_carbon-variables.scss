@@ -1,0 +1,51 @@
+// ============================================================================
+// Carbon Design System → Bootstrap Sass variable overrides
+// ----------------------------------------------------------------------------
+// Imported by scss/bootstrap.scss AFTER "functions" but BEFORE "variables", so
+// these win over Bootstrap's `!default` values and get baked into the build.
+// Rebuild the dist (npm run css / dist) then run ../../copy.sh to publish the
+// CSS into themes/bs-carbon/static/css.
+// ============================================================================
+
+// --- Brand / accent --------------------------------------------------------
+$primary: #0f62fe;            // Carbon Interactive (Blue 60)
+
+// --- Full theme-color palette → Carbon -------------------------------------
+// So STOCK Bootstrap classes (.btn-*, .bg-*, .text-bg-*, .alert-*, .border-*)
+// render in Carbon colors, not Bootstrap defaults. These feed Bootstrap's
+// $theme-colors map (built right after this file is imported).
+$secondary: #525252;          // Gray 70
+$success:   #24a148;          // Carbon support-success
+$info:      #0043ce;          // Carbon Blue 70
+$warning:   #f1c21b;          // Carbon support-warning (needs dark text)
+$danger:    #da1e28;          // Carbon support-error
+$light:     #f4f4f4;          // Gray 10
+$dark:      #161616;          // Gray 100  (so bg-dark / text-bg-dark = the Carbon shell)
+
+// --- Square edges everywhere (Carbon signature) ----------------------------
+$border-radius:      0;
+$border-radius-sm:   0;
+$border-radius-lg:   0;
+$border-radius-xl:   0;
+
+// --- Typography: IBM Plex --------------------------------------------------
+// NOTE: the Hugo theme must load these webfonts (e.g. Google Fonts link in the
+// <head> partial); this only sets the family.
+$font-family-sans-serif: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+$font-family-monospace:  "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+$headings-font-weight:   400;   // Carbon headings are lighter than Bootstrap's 500
+
+// --- :root fallback (= Carbon White) ---------------------------------------
+// The four themes themselves are defined as custom color modes in
+// _carbon-components.scss (White / Gray 10 / Gray 90 / Gray 100). These set the
+// pre-JS default only.
+$body-bg:               #ffffff;
+$body-color:            #161616;
+$border-color:          #e0e0e0;
+
+// --- Component variables expressible directly in Sass ----------------------
+$btn-font-size:      .875rem;
+$btn-padding-y:      .75rem;
+$btn-padding-x:      1rem;
+$badge-font-weight:  400;
+$badge-font-size:    .75rem;
